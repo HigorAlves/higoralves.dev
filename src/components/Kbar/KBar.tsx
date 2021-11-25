@@ -1,7 +1,13 @@
 import React, { forwardRef } from 'react'
 
 import { useMantineColorScheme } from '@mantine/core'
-import { KBarPortal, KBarProvider, KBarResults, useMatches } from 'kbar'
+import {
+	KBarPortal,
+	KBarPositioner,
+	KBarProvider,
+	KBarResults,
+	useMatches
+} from 'kbar'
 import { useRouter } from 'next/router'
 
 import * as S from './styles.kbar'
@@ -9,6 +15,7 @@ import * as S from './styles.kbar'
 export function KBar(props: any) {
 	const { toggleColorScheme } = useMantineColorScheme()
 	const router = useRouter()
+	const { classes } = S.default()
 
 	const actions = [
 		{
@@ -17,8 +24,7 @@ export function KBar(props: any) {
 			shortcut: ['u'],
 			keywords: 'copy-url',
 			section: 'General',
-			perform: () => navigator.clipboard.writeText(window.location.href),
-			icon: <S.Icon className='ri-file-copy-line' />
+			perform: () => navigator.clipboard.writeText(window.location.href)
 		},
 		{
 			id: 'email',
@@ -26,8 +32,7 @@ export function KBar(props: any) {
 			shortcut: ['e'],
 			keywords: 'send-email',
 			section: 'General',
-			perform: () => window.open('mailto:higorhaalves@gmail.com', '_blank'),
-			icon: <S.Icon className='ri-mail-line' />
+			perform: () => window.open('mailto:higorhaalves@gmail.com', '_blank')
 		},
 		{
 			id: 'colorSchema',
@@ -35,8 +40,7 @@ export function KBar(props: any) {
 			shortcut: ['c'],
 			keywords: 'color-schema',
 			section: 'General',
-			perform: () => toggleColorScheme(),
-			icon: <S.Icon className='ri-mail-line' />
+			perform: () => toggleColorScheme()
 		},
 		{
 			id: 'home',
@@ -44,8 +48,7 @@ export function KBar(props: any) {
 			shortcut: ['g', 'h'],
 			keywords: 'go-home',
 			section: 'Go To',
-			perform: () => router.push('/'),
-			icon: <S.Icon className='ri-home-5-line' />
+			perform: () => router.push('/')
 		},
 		{
 			id: 'github',
@@ -53,8 +56,7 @@ export function KBar(props: any) {
 			shortcut: ['f', 'g'],
 			keywords: 'go-github',
 			section: 'Follow',
-			perform: () => window.open('https://github.com/higoralves', '_blank'),
-			icon: <S.Icon className='ri-github-line' />
+			perform: () => window.open('https://github.com/higoralves', '_blank')
 		},
 		{
 			id: 'linkedin',
@@ -63,8 +65,7 @@ export function KBar(props: any) {
 			keywords: 'go-linkedin',
 			section: 'Follow',
 			perform: () =>
-				window.open('https://linkedin.com/in/higoralvesdev', '_blank'),
-			icon: <S.Icon className='ri-linkedin-line' />
+				window.open('https://linkedin.com/in/higoralvesdev', '_blank')
 		},
 		{
 			id: 'instagram',
@@ -73,20 +74,19 @@ export function KBar(props: any) {
 			keywords: 'go-instagram',
 			section: 'Follow',
 			perform: () =>
-				window.open('https://instagram.com/higoralves.dev/', '_blank'),
-			icon: <S.Icon className='ri-instagram-line' />
+				window.open('https://instagram.com/higoralves.dev/', '_blank')
 		}
 	]
 
 	return (
 		<KBarProvider actions={actions}>
 			<KBarPortal>
-				<S.Positioner>
+				<KBarPositioner className={classes.positioner}>
 					<S.Animator className='kbar-blur'>
 						<S.Search placeholder='Type a command or search…' />
 						<RenderResults />
 					</S.Animator>
-				</S.Positioner>
+				</KBarPositioner>
 			</KBarPortal>
 
 			{props.children}

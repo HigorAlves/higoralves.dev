@@ -1,22 +1,23 @@
 import styled from '@emotion/styled'
-import { KBarAnimator, KBarPositioner, KBarSearch } from 'kbar'
+import { createStyles } from '@mantine/core'
+import { KBarAnimator, KBarSearch } from 'kbar'
 
-export const Icon = styled.i`
-	font-size: 20px;
-	position: relative;
-	top: -2px;
-`
+export default createStyles(theme => {
+	const isDarkTheme = theme.colorScheme === 'dark'
 
-export const Positioner = styled(KBarPositioner)`
-	position: fixed;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	width: 100%;
-	inset: 0;
-	padding: 14vh 0 16px;
-	background: rgba(0, 0, 0, 0.8);
-`
+	return {
+		positioner: {
+			position: 'fixed',
+			display: 'flex',
+			alignItems: 'flex-start',
+			justifyContent: 'center',
+			width: '100%',
+			inset: 0,
+			padding: '14vh 0 15px',
+			background: isDarkTheme ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.9)'
+		}
+	}
+})
 
 export const Animator = styled(KBarAnimator)`
 	max-width: 600px;
