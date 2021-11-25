@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { MantineProvider } from '@mantine/core'
+import {
+	ColorScheme,
+	ColorSchemeProvider,
+	MantineProvider
+} from '@mantine/core'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import { KBar } from '../components'
+import { KBar } from '~/components'
+import { darkTheme, lightTheme } from '~/Theme'
+
+import '../../public/static/css/main.css'
 
 export default function App(props: AppProps) {
 	const { Component, pageProps } = props
+	const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
+	const toggleColorScheme = (value: ColorScheme) => setColorScheme(value)
 
 	return (
 		<>
@@ -25,17 +34,20 @@ export default function App(props: AppProps) {
 				/>
 			</Head>
 
-			<MantineProvider
-				withGlobalStyles
-				withNormalizeCSS
-				theme={{
-					colorScheme: 'dark'
-				}}
+			<ColorSchemeProvider
+				colorScheme={colorScheme}
+				toggleColorScheme={toggleColorScheme}
 			>
-				<KBar>
-					<Component {...pageProps} />
-				</KBar>
-			</MantineProvider>
+				<MantineProvider
+					withGlobalStyles
+					withNormalizeCSS
+					theme={colorScheme === 'dark' ? darkTheme : lightTheme}
+				>
+					<KBar>
+						<Component {...pageProps} />
+					</KBar>
+				</MantineProvider>
+			</ColorSchemeProvider>
 		</>
 	)
 }
