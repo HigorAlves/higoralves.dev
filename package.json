@@ -1,22 +1,49 @@
 {
-  "name": "higoralves.dev",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.0.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "@types/node": "16.11.10",
-    "@types/react": "17.0.37",
-    "eslint": "7",
-    "eslint-config-next": "12.0.4",
-    "typescript": "4.5.2"
-  }
+	"name": "higoralves.dev",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"prettier": "prettier -c -w .",
+		"release": "standard-version",
+		"release:major": "yarn run release --release-as major --no-verify",
+		"release:minor": "yarn run release --release-as minor --no-verify",
+		"release:patch": "yarn run release --release-as patch --no-verify",
+		"release:alpha": "yarn run release --prerelease alpha --no-verify",
+		"release:beta": "yarn run release --prerelease beta --no-verify",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"*.{tsx,ts,json}": [
+			"pretty-quick --staged"
+		]
+	},
+	"dependencies": {
+		"next": "12.0.4",
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^15.0.0",
+		"@commitlint/config-conventional": "^15.0.0",
+		"@types/node": "16.11.10",
+		"@types/react": "17.0.37",
+		"@typescript-eslint/eslint-plugin": "^5.4.0",
+		"eslint": "7",
+		"eslint-config-next": "12.0.4",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-config-standard": "^16.0.3",
+		"eslint-plugin-import": "^2.25.3",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-promise": "^5.1.1",
+		"eslint-plugin-standard": "^5.0.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.1.2",
+		"prettier": "^2.5.0",
+		"pretty-quick": "^3.1.2",
+		"standard-version": "^9.3.2",
+		"typescript": "4.5.2"
+	}
 }
