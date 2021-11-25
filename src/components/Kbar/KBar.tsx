@@ -1,11 +1,13 @@
 import React, { forwardRef } from 'react'
 
+import { useMantineColorScheme } from '@mantine/core'
 import { KBarPortal, KBarProvider, KBarResults, useMatches } from 'kbar'
 import { useRouter } from 'next/router'
 
 import * as S from './styles.kbar'
 
 export function KBar(props: any) {
+	const { toggleColorScheme } = useMantineColorScheme()
 	const router = useRouter()
 
 	const actions = [
@@ -25,6 +27,15 @@ export function KBar(props: any) {
 			keywords: 'send-email',
 			section: 'General',
 			perform: () => window.open('mailto:higorhaalves@gmail.com', '_blank'),
+			icon: <S.Icon className='ri-mail-line' />
+		},
+		{
+			id: 'colorSchema',
+			name: 'Change Color',
+			shortcut: ['c'],
+			keywords: 'color-schema',
+			section: 'General',
+			perform: () => toggleColorScheme(),
 			icon: <S.Icon className='ri-mail-line' />
 		},
 		{
