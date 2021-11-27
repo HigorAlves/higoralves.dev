@@ -1,21 +1,23 @@
 import React, { forwardRef } from 'react'
 
-import { useMantineColorScheme } from '@mantine/core'
+import { Kbd, useMantineColorScheme } from '@mantine/core'
 import {
+	KBarAnimator,
 	KBarPortal,
 	KBarPositioner,
 	KBarProvider,
 	KBarResults,
+	KBarSearch,
 	useMatches
 } from 'kbar'
 import { useRouter } from 'next/router'
 
-import * as S from './styles.kbar'
+import useStyles from './styles.kbar'
 
 export function KBar(props: any) {
 	const { toggleColorScheme } = useMantineColorScheme()
 	const router = useRouter()
-	const { classes } = S.default()
+	const { classes } = useStyles()
 
 	const actions = [
 		{
@@ -82,10 +84,13 @@ export function KBar(props: any) {
 		<KBarProvider actions={actions}>
 			<KBarPortal>
 				<KBarPositioner className={classes.positioner}>
-					<S.Animator className='kbar-blur'>
-						<S.Search placeholder='Type a command or search…' />
+					<KBarAnimator className={classes.animator}>
+						<KBarSearch
+							className={classes.search}
+							placeholder='Type a command or search…'
+						/>
 						<RenderResults />
-					</S.Animator>
+					</KBarAnimator>
 				</KBarPositioner>
 			</KBarPortal>
 
@@ -96,13 +101,14 @@ export function KBar(props: any) {
 
 function RenderResults() {
 	const { results } = useMatches()
+	const { classes } = useStyles()
 
 	return (
 		<KBarResults
 			items={results}
 			onRender={({ item, active }) =>
 				typeof item === 'string' ? (
-					<S.GroupName>{item}</S.GroupName>
+					<div className={classes.groupName}>{item}</div>
 				) : (
 					<ResultItem action={item} active={active} />
 				)
@@ -112,22 +118,18 @@ function RenderResults() {
 }
 
 const ResultItem = forwardRef(({ action, active }: any, ref: any) => {
+	const { classes } = useStyles(active)
+
 	return (
-		<S.Result ref={ref} active={active}>
-			<S.Action>
+		<div ref={ref} className={classes.result}>
+			<div>
 				{action.icon}
-				<S.ActionRow>
-					<span>{action.name}</span>
-				</S.ActionRow>
-			</S.Action>
+				<div>{action.name}</div>
+			</div>
 			{action.shortcut?.length ? (
-				<S.Shortcut>
-					{action.shortcut.map((shortcut: string) => (
-						<S.Kbd key={shortcut}>{shortcut}</S.Kbd>
-					))}
-				</S.Shortcut>
+				<Kbd>{action.shortcut.map((shortcut: string) => shortcut)}</Kbd>
 			) : null}
-		</S.Result>
+		</div>
 	)
 })
 
