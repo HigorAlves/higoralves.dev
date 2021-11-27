@@ -4,7 +4,6 @@
 		"plugin:import/errors",
 		"plugin:import/warnings",
 		"plugin:import/typescript",
-		"standard",
 		"plugin:@typescript-eslint/recommended",
 		"prettier",
 		"plugin:prettier/recommended",
@@ -20,7 +19,7 @@
 		"complexity": [
 			"error",
 			{
-				"max": 6
+				"max": 8
 			}
 		],
 		"react/react-in-jsx-scope": "off",

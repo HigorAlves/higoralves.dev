@@ -1,10 +1,10 @@
-import styled from '@emotion/styled'
 import { createStyles } from '@mantine/core'
-import { KBarAnimator, KBarSearch } from 'kbar'
 
-export default createStyles(theme => {
+export default createStyles((theme, active) => {
 	const isDarkTheme = theme.colorScheme === 'dark'
-
+	const isActive = active != null && active
+	const hoverDark = isActive ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.0)'
+	const hoverLight = isActive ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.0)'
 	return {
 		positioner: {
 			position: 'fixed',
@@ -14,78 +14,46 @@ export default createStyles(theme => {
 			width: '100%',
 			inset: 0,
 			padding: '14vh 0 15px',
-			background: isDarkTheme ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.9)'
+			background: isDarkTheme
+				? 'rgba(0, 0, 0, 0.4)'
+				: 'rgba(255, 255, 255, 0.4)'
+		},
+		animator: {
+			maxWidth: 600,
+			width: '100%',
+			borderRadius: 8,
+			overflow: 'hidden',
+			boxShadow: '0 4px 30px rgba(0, 0, 0, 0.2)',
+			backdropFilter: 'blur(7.6px)',
+			'-webkit-backdrop-filter': 'blur(7.6px)'
+		},
+		search: {
+			padding: '12px 16px',
+			width: '100%',
+			outline: 'none',
+			border: 'none',
+			margin: 0,
+			background: isDarkTheme ? 'rgba(0, 0, 0, 0)' : 'rgba(255, 255, 255, 0.4)',
+			color: 'var(--primaryColor)'
+		},
+		groupName: {
+			padding: '8px 16px',
+			fontSize: 10,
+			textTransform: 'uppercase',
+			letterSpacing: 1,
+			background: isDarkTheme
+				? 'rgba(255, 255, 255, 0.01)'
+				: 'rgba(0, 0, 0, 0.01)'
+		},
+		result: {
+			padding: '12px 16px',
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'space-between',
+			cursor: 'pointer',
+			margin: 0,
+			background: isDarkTheme ? hoverDark : hoverLight,
+			transition: 'all 0.2s ease-out'
 		}
 	}
 })
-
-export const Animator = styled(KBarAnimator)`
-	max-width: 600px;
-	width: 100%;
-	color: var(--primaryColor);
-	border-radius: 8px;
-	overflow: hidden;
-`
-
-export const Search = styled(KBarSearch)`
-	padding: 12px 16px;
-	font-size: 16px;
-	width: 100%;
-	box-sizing: border-box;
-	outline: none;
-	border: none;
-	margin: 0;
-	background: var(--commandColor);
-	color: var(--primaryColor);
-`
-
-export const GroupName = styled.div`
-	padding: 8px 16px;
-	font-size: 10px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	background: var(--commandColor);
-`
-
-export const ActionRow = styled.div`
-	display: flex;
-	flex-direction: column;
-`
-
-export const Kbd = styled.kbd`
-	padding: 4px 8px;
-	text-transform: uppercase;
-	color: var(--secondaryColor);
-	background: rgba(255, 255, 255, 0.1);
-`
-
-interface ResultProps {
-	active: boolean
-}
-
-export const Result = styled.div<ResultProps>`
-	padding: 12px 16px;
-	display: flex;
-	background: ${({ active }) =>
-		active ? 'rgba(255, 255, 255, 0.1)' : 'var(--commandColor)'};
-	border-left: ${({ active }) =>
-		`2px solid ${active ? 'var(--primaryColor)' : 'transparent'}`};
-	align-items: center;
-	justify-content: space-between;
-	margin: 0;
-	cursor: pointer;
-	color: ${({ active }) =>
-		active ? 'var(--primaryColor)' : 'var(--secondaryColor)'};
-`
-
-export const Shortcut = styled.div`
-	display: grid;
-	grid-auto-flow: column;
-	gap: 4px;
-`
-
-export const Action = styled.div`
-	display: flex;
-	gap: 8px;
-	align-items: center;
-`
