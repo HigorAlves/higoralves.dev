@@ -18,25 +18,17 @@ D
 commitlint.config.js,4/7/474754c7aadafbf6e1e131ed23261323f5873cdc
 =
 .editorconfig,6/2/626a747c8694eaae66f2afb3d1a745b045782c70
-C
-src/pages/index.tsx,d/2/d2d3bb60cab7e8c869b5fdf0a820b7edf2fc7859
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-9
-	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
 G
 src/pages/_document.tsx,0/5/052f85edfc3fbb9d129530f0f8b191ff6c16f7ce
-G
-src/components/index.ts,0/b/0b1c4105b7145ce4f9e5d21dfe3f33c3a5921a58
 J
 public/static/css/main.css,5/a/5ab75f5f7d5a43a3757524e271c8c7f49bd8d932
 =
 tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
 B
-src/pages/_app.tsx,2/e/2eefa41a18ed6ea3f58b3748f9e5559a28e77646
-A
-src/Theme/dark.ts,8/1/8187349703cd86a6cda5cecf133c99fc4485a1a8
-B
 src/Theme/index.ts,a/3/a39e80bd05959b04e774ebb4212084c3f5330845
 B
 src/Theme/light.ts,c/c/ccbfd9c272bbaa57d58e5a6033b49647780604b2
+>
+.eslintrc.json,7/1/71c20a341bfe32aa5cd5b4384e94f942bab6a7d3
+A
+src/Theme/dark.ts,8/1/8187349703cd86a6cda5cecf133c99fc4485a1a8

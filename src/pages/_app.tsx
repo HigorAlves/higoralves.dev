@@ -16,7 +16,8 @@ import '../../public/static/css/main.css'
 export default function App(props: AppProps) {
 	const { Component, pageProps } = props
 	const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
-	const toggleColorScheme = (value: ColorScheme) => setColorScheme(value)
+	const toggleColorScheme = (value?: ColorScheme) =>
+		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
 
 	return (
 		<>

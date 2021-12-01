@@ -23,7 +23,9 @@ export default createStyles((theme, active) => {
 			width: '100%',
 			borderRadius: 8,
 			overflow: 'hidden',
-			boxShadow: '0 4px 30px rgba(0, 0, 0, 0.2)',
+			boxShadow: isDarkTheme
+				? '0 4px 30px rgba(255, 255, 255, 0.04)'
+				: '0 4px 30px rgba(0, 0, 0, 0.2)',
 			backdropFilter: 'blur(7.6px)',
 			'-webkit-backdrop-filter': 'blur(7.6px)'
 		},
