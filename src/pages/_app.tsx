@@ -5,19 +5,30 @@ import {
 	ColorSchemeProvider,
 	MantineProvider
 } from '@mantine/core'
+import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import { KBar } from '~/components'
+import { Layout, LayoutTypes } from '~/layouts'
 import { darkTheme, lightTheme } from '~/Theme'
-
 import '../../public/static/css/main.css'
 
-export default function App(props: AppProps) {
+type NextPageWithLayout = NextPage & {
+	layout?: LayoutTypes
+}
+
+type AppPropsWithLayout = AppProps & {
+	Component: NextPageWithLayout
+}
+
+export default function App(props: AppPropsWithLayout) {
 	const { Component, pageProps } = props
 	const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
 	const toggleColorScheme = (value?: ColorScheme) =>
 		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
+
+	const layoutType = Component.layout ?? 'base'
 
 	return (
 		<>
@@ -45,7 +56,9 @@ export default function App(props: AppProps) {
 					theme={colorScheme === 'dark' ? darkTheme : lightTheme}
 				>
 					<KBar>
-						<Component {...pageProps} />
+						<Layout type={layoutType}>
+							<Component {...pageProps} />
+						</Layout>
 					</KBar>
 				</MantineProvider>
 			</ColorSchemeProvider>
