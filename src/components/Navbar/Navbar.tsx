@@ -75,7 +75,9 @@ export function Navbar() {
 	return (
 		<Container size={'xl'} className={classes.container}>
 			<Link href={'/'} passHref>
-				<Title className={classes.title}>Higor Alves</Title>
+				<Title order={2} className={classes.title}>
+					Higor Alves
+				</Title>
 			</Link>
 
 			{matches && <NavOptions />}

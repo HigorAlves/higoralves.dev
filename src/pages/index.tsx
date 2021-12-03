@@ -1,14 +1,13 @@
-import type { NextPage } from 'next'
+import React from 'react'
 
-import { Navbar } from '~/components'
-
-const Home: NextPage = () => {
+function Home() {
 	return (
-		<main>
-			<Navbar />
-			<h1>helllow</h1>
-		</main>
+		<>
+			<div>teste</div>
+		</>
 	)
 }
+
+Home.layout = 'base'
 
 export default Home
