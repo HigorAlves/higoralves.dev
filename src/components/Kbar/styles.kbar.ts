@@ -5,6 +5,7 @@ export default createStyles((theme, active) => {
 	const isActive = active != null && active
 	const hoverDark = isActive ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.0)'
 	const hoverLight = isActive ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.0)'
+
 	return {
 		positioner: {
 			position: 'fixed',

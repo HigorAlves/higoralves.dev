@@ -73,16 +73,18 @@ export function Navbar() {
 	}
 
 	return (
-		<Container size={'xl'} className={classes.container}>
-			<Link href={'/'} passHref>
-				<Title order={2} className={classes.title}>
-					Higor Alves
-				</Title>
-			</Link>
+		<header>
+			<Container size={'xl'} className={classes.container}>
+				<Link href={'/'} passHref>
+					<Title order={2} className={classes.title}>
+						Higor Alves
+					</Title>
+				</Link>
 
-			{matches && <NavOptions />}
+				{matches && <NavOptions />}
 
-			<ToggleButton />
-		</Container>
+				<ToggleButton />
+			</Container>
+		</header>
 	)
 }
