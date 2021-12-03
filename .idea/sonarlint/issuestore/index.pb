@@ -36,5 +36,3 @@ A
 	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-R
-"src/components/Kbar/styles.kbar.ts,6/a/6a5844514e81dee01b03deb705d42a6002b79703
