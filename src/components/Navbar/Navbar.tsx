@@ -1,6 +1,11 @@
 import React from 'react'
 
-import { ActionIcon, Container, useMantineColorScheme } from '@mantine/core'
+import {
+	ActionIcon,
+	Container,
+	Text,
+	useMantineColorScheme
+} from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { CodeIcon, MoonIcon, SunIcon } from '@modulz/radix-icons'
 import { useKBar } from 'kbar'
@@ -76,9 +81,14 @@ export function Navbar() {
 		<header>
 			<Container size={'xl'} className={classes.container}>
 				<Link href={'/'} passHref>
-					<Title order={2} white>
-						Higor Alves
-					</Title>
+					<div>
+						<Title order={2} white>
+							Higor Alves
+						</Title>
+						<Text size={'xs'} align={'right'} color={'gray'}>
+							Keep Moving Foward
+						</Text>
+					</div>
 				</Link>
 
 				{matches && <NavOptions />}
