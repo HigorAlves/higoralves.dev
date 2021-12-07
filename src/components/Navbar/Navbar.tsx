@@ -76,7 +76,7 @@ export function Navbar() {
 		<header>
 			<Container size={'xl'} className={classes.container}>
 				<Link href={'/'} passHref>
-					<Title order={2} className={classes.title}>
+					<Title order={2} white>
 						Higor Alves
 					</Title>
 				</Link>
