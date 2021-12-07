@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react'
 
 import { Kbd, useMantineColorScheme } from '@mantine/core'
+import { useHotkeys } from '@mantine/hooks'
 import {
 	KBarAnimator,
 	KBarPortal,
@@ -18,6 +19,11 @@ export function KBar(props: any) {
 	const { toggleColorScheme } = useMantineColorScheme()
 	const router = useRouter()
 	const { classes } = useStyles()
+	useHotkeys([
+		['mod+u', () => navigator.clipboard.writeText(window.location.href)],
+		['mod+e', () => window.open('mailto:higorhaalves@gmail.com', '_blank')],
+		['mod+c', () => toggleColorScheme()]
+	])
 
 	const actions = [
 		{
