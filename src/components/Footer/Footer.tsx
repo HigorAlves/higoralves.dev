@@ -24,7 +24,7 @@ export function Footer() {
 	]
 
 	return (
-		<footer>
+		<footer data-testid={'footer'}>
 			<Container className={classes.wrapper}>
 				<ul>
 					{socials.map(social => (
