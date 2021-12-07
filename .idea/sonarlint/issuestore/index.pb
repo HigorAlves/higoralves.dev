@@ -20,8 +20,6 @@ G
 src/pages/_document.tsx,0/5/052f85edfc3fbb9d129530f0f8b191ff6c16f7ce
 J
 public/static/css/main.css,5/a/5ab75f5f7d5a43a3757524e271c8c7f49bd8d932
-=
-tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
 B
 src/Theme/index.ts,a/3/a39e80bd05959b04e774ebb4212084c3f5330845
 B
@@ -30,8 +28,6 @@ B
 .eslintrc.json,7/1/71c20a341bfe32aa5cd5b4384e94f942bab6a7d3
 A
 src/Theme/dark.ts,8/1/8187349703cd86a6cda5cecf133c99fc4485a1a8
-9
-	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
 G
 src/components/index.ts,0/b/0b1c4105b7145ce4f9e5d21dfe3f33c3a5921a58
 E
@@ -40,3 +36,23 @@ E
 	next.d.ts,8/4/840f9b9331e1295d4b03cf8369ec09f7b28fbe9e
 R
 "src/components/Kbar/styles.kbar.ts,6/a/6a5844514e81dee01b03deb705d42a6002b79703
+T
+$src/components/Title/title.styles.ts,1/b/1b100309cc7a58fc562ece4f617b9bb15e3c2838
+K
+src/layouts/base.layout.tsx,d/a/da59e5b8384c7efe725e4e01eb983c452878e835
+>
+next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
+V
+&src/components/Navbar/styles.navbar.ts,e/4/e40c3ad69db0782e8de16c3c8adf2b85c3b6d63d
+C
+src/pages/index.tsx,d/2/d2d3bb60cab7e8c869b5fdf0a820b7edf2fc7859
+P
+ src/components/Navbar/Navbar.tsx,2/d/2d2bdd51082d5f690392b9bba104c2d87c570cea
+<
+CHANGELOG.md,a/b/ab09011fa121d0a2bb9fa4ca76094f2482b902b7
+C
+src/pages/about.tsx,0/0/00f529562c859ca33a4a6ef004ea5b949fd46cc7
+N
+src/components/Title/Title.tsx,e/4/e401fe26ac73a8b4fd505ea269b44ee8ab75e3be
+B
+src/pages/_app.tsx,2/e/2eefa41a18ed6ea3f58b3748f9e5559a28e77646
