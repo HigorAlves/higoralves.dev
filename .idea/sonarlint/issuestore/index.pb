@@ -1,8 +1,6 @@
 
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
->
-next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
 ;
 .prettierrc,2/0/20137a9e94744624390b6748bc96df5ca1579b71
 L
@@ -36,3 +34,15 @@ A
 	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+B
+src/pages/_app.tsx,2/e/2eefa41a18ed6ea3f58b3748f9e5559a28e77646
+G
+src/components/index.ts,0/b/0b1c4105b7145ce4f9e5d21dfe3f33c3a5921a58
+E
+src/layouts/index.tsx,7/f/7f1498393f1a2e8c8041aa15c863fbeace7bffcd
+9
+	next.d.ts,8/4/840f9b9331e1295d4b03cf8369ec09f7b28fbe9e
+L
+src/components/Kbar/KBar.tsx,0/5/056dcae37465181a34f7eb29bd4a740b1773426b
+R
+"src/components/Kbar/styles.kbar.ts,6/a/6a5844514e81dee01b03deb705d42a6002b79703

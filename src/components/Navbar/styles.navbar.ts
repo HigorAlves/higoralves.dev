@@ -8,9 +8,6 @@ export default createStyles(theme => ({
 		justifyContent: 'space-between',
 		flexWrap: 'wrap'
 	},
-	title: {
-		cursor: 'pointer'
-	},
 	nav: {
 		textAlign: 'center',
 
