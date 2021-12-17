@@ -1,5 +1,6 @@
 import { createStyles } from '@mantine/core'
 
+// eslint-disable-next-line complexity
 export default createStyles((theme, active) => {
 	const isDarkTheme = theme.colorScheme === 'dark'
 	const isActive = active != null && active

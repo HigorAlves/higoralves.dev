@@ -22,6 +22,7 @@
 				"max": 8
 			}
 		],
+		"@typescript-eslint/ban-ts-comment": "warn",
 		"react/react-in-jsx-scope": "off",
 		"prettier/prettier": "error",
 		"import/no-unresolved": "off",
