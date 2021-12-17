@@ -87,7 +87,7 @@ export function KBar(props: any) {
 	]
 
 	return (
-		<KBarProvider actions={actions}>
+		<KBarProvider actions={actions} data-testid={'kbar-provider'}>
 			<KBarPortal>
 				<KBarPositioner className={classes.positioner}>
 					<KBarAnimator className={classes.animator}>

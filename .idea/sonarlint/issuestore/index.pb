@@ -18,18 +18,12 @@ D
 .editorconfig,6/2/626a747c8694eaae66f2afb3d1a745b045782c70
 G
 src/pages/_document.tsx,0/5/052f85edfc3fbb9d129530f0f8b191ff6c16f7ce
-J
-public/static/css/main.css,5/a/5ab75f5f7d5a43a3757524e271c8c7f49bd8d932
 B
 src/Theme/index.ts,a/3/a39e80bd05959b04e774ebb4212084c3f5330845
 B
 src/Theme/light.ts,c/c/ccbfd9c272bbaa57d58e5a6033b49647780604b2
->
-.eslintrc.json,7/1/71c20a341bfe32aa5cd5b4384e94f942bab6a7d3
 A
 src/Theme/dark.ts,8/1/8187349703cd86a6cda5cecf133c99fc4485a1a8
-G
-src/components/index.ts,0/b/0b1c4105b7145ce4f9e5d21dfe3f33c3a5921a58
 E
 src/layouts/index.tsx,7/f/7f1498393f1a2e8c8041aa15c863fbeace7bffcd
 9
@@ -40,19 +34,25 @@ T
 $src/components/Title/title.styles.ts,1/b/1b100309cc7a58fc562ece4f617b9bb15e3c2838
 K
 src/layouts/base.layout.tsx,d/a/da59e5b8384c7efe725e4e01eb983c452878e835
->
-next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
 V
 &src/components/Navbar/styles.navbar.ts,e/4/e40c3ad69db0782e8de16c3c8adf2b85c3b6d63d
-C
-src/pages/index.tsx,d/2/d2d3bb60cab7e8c869b5fdf0a820b7edf2fc7859
 P
  src/components/Navbar/Navbar.tsx,2/d/2d2bdd51082d5f690392b9bba104c2d87c570cea
 <
 CHANGELOG.md,a/b/ab09011fa121d0a2bb9fa4ca76094f2482b902b7
-C
-src/pages/about.tsx,0/0/00f529562c859ca33a4a6ef004ea5b949fd46cc7
 N
 src/components/Title/Title.tsx,e/4/e401fe26ac73a8b4fd505ea269b44ee8ab75e3be
+V
+&src/components/Footer/footer.styles.ts,3/5/3532917dc9c09bc3ff34e95fe0f3a652e9f99c31
+=
+tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
 B
-src/pages/_app.tsx,2/e/2eefa41a18ed6ea3f58b3748f9e5559a28e77646
+tsconfig.jest.json,4/9/494d90c5e15aa2f7c51588fa9ffbbab88a7a6fd7
+>
+jest.config.js,8/8/881d5d47bdc17ef8facebef59b68b5fc099a0293
+=
+jest.setup.ts,3/c/3c7a58d3269ae7ac90cb5a6ad2539259f1e21cad
+U
+%src/components/Footer/footer.test.tsx,a/5/a5c1d9bd2ab4a258dcaf2f035ab64fa9f026a209
+P
+ src/components/Footer/Footer.tsx,7/8/784ee3257dd1ab5f97d2efb955f2027722ea4e6c

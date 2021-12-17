@@ -11,9 +11,9 @@ import {
 } from '@mantine/core'
 import { useClipboard } from '@mantine/hooks'
 import { ClipboardCopyIcon, DownloadIcon } from '@modulz/radix-icons'
-import Image from 'next/image'
+import { Canvas } from '@react-three/fiber'
 
-import { Title } from '~/components'
+import { Ball, Title } from '~/components'
 
 export default function About() {
 	const clipboard = useClipboard({ timeout: 500 })
@@ -35,18 +35,16 @@ export default function About() {
 			<Space h={'xl'} />
 
 			<Grid align='flex-start'>
-				<Col span={12} md={6} style={{ width: '100%' }}>
-					<Image
-						src={
-							'https://res.cloudinary.com/kentcdodds-com/image/upload/w_1800,q_auto,f_auto/kentcdodds.com/illustrations/snowboard_nqqlyr'
-						}
-						alt={''}
-						width='100%'
-						height='90%'
-						layout={'responsive'}
-						objectFit='contain'
-						priority
-					/>
+				<Col span={12} md={6}>
+					<Canvas
+						style={{
+							height: '40vh'
+						}}
+					>
+						<ambientLight intensity={0.5} />
+						<directionalLight position={[-2, 5, 2]} intensity={1} />
+						<Ball />
+					</Canvas>
 				</Col>
 				<Col span={12} md={6}>
 					<Title
