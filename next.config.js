@@ -3,7 +3,11 @@ module.exports = {
 	reactStrictMode: true,
 	trailingSlash: true,
 	images: {
-		domains: ['res.cloudinary.com', 'images.ctfassets.net']
+		domains: [
+			'res.cloudinary.com',
+			'images.ctfassets.net',
+			'downloads.ctfassets.net'
+		]
 	},
 	i18n: {
 		locales: ['en', 'pt'],

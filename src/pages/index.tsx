@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { Button, Col, Grid, Space, Text, Title } from '@mantine/core'
+import { Canvas } from '@react-three/fiber'
 import { useKBar } from 'kbar'
-import Image from 'next/image'
+
+import { Ball } from '~/components'
 
 export default function Home() {
 	const { query } = useKBar()
-	const imageUrl =
-		'https://res.cloudinary.com/kentcdodds-com/image/upload/w_1800,q_auto,f_auto/kentcdodds.com/illustrations/kody-flying_blue'
 
 	return (
 		<Grid justify='center' align='center' gutter={40}>
@@ -39,14 +39,15 @@ export default function Home() {
 			</Col>
 
 			<Col span={12} md={6}>
-				<Image
-					src={imageUrl}
-					alt={'panda-profile'}
-					width='100%'
-					height='100%'
-					layout={'responsive'}
-					objectFit='contain'
-				/>
+				<Canvas
+					style={{
+						height: '60vh'
+					}}
+				>
+					<ambientLight intensity={0.5} />
+					<directionalLight position={[-2, 5, 2]} intensity={1} />
+					<Ball />
+				</Canvas>
 			</Col>
 		</Grid>
 	)
