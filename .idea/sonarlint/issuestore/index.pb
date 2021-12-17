@@ -28,8 +28,6 @@ E
 src/layouts/index.tsx,7/f/7f1498393f1a2e8c8041aa15c863fbeace7bffcd
 9
 	next.d.ts,8/4/840f9b9331e1295d4b03cf8369ec09f7b28fbe9e
-R
-"src/components/Kbar/styles.kbar.ts,6/a/6a5844514e81dee01b03deb705d42a6002b79703
 T
 $src/components/Title/title.styles.ts,1/b/1b100309cc7a58fc562ece4f617b9bb15e3c2838
 K
