@@ -4,19 +4,15 @@ import { Space, Text } from '@mantine/core'
 import Image from 'next/image'
 
 import { Link, Title } from '~/components'
+import { IProject } from '~/services/Contentful'
 
-interface Props {
-	company: string
-	slug: string
-	country: string
-	description: string
-	cover: {
-		title: string
-		url: string
-	}
-}
-
-export function Project({ cover, country, description, slug, company }: Props) {
+export function Project({
+	cover,
+	country,
+	description,
+	slug,
+	company
+}: IProject) {
 	return (
 		<article>
 			<Link href={`/project/${slug}`}>
