@@ -1,7 +1,7 @@
 {
 	"name": "higoralves.dev",
 	"private": true,
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -32,6 +32,8 @@
 		"@modulz/radix-icons": "^4.0.0",
 		"@react-three/drei": "^8.3.1",
 		"@react-three/fiber": "^7.0.24",
+		"graphql": "^16.2.0",
+		"graphql-request": "^3.7.0",
 		"kbar": "^0.1.0-beta.22",
 		"next": "12.0.4",
 		"react": "17.0.2",

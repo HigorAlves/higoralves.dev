@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/HigorAlves/higoralves.dev/compare/v1.0.1...v1.0.2) (2021-12-18)
+
+
+### :sparkles: Features
+
+* static project list ([209aab2](https://github.com/HigorAlves/higoralves.dev/commit/209aab2cff94588fa73a5f3966800ef3137f898e))
+
 ### 1.0.1 (2021-12-17)
 
 
