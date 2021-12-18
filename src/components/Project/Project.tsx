@@ -3,46 +3,49 @@ import React from 'react'
 import { Space, Text } from '@mantine/core'
 import Image from 'next/image'
 
-import { Title } from '~/components'
+import { Link, Title } from '~/components'
 
 interface Props {
 	company: string
 	slug: string
-	cover: {
-		link: string
-		alt: string
-	}
-	description: string
 	country: string
+	description: string
+	cover: {
+		title: string
+		url: string
+	}
 }
 
-export function Project() {
+export function Project({ cover, country, description, slug, company }: Props) {
 	return (
 		<article>
-			<Image
-				src={
-					'https://images.ctfassets.net/r6pyx054np7y/4qJHx16eatzku7hpDETS5H/c51e75219a5f611a7326007a188fda70/tc_cover.png?h=372'
-				}
-				width={279}
-				height={372}
-				alt={'project-photo'}
-				objectFit={'cover'}
-				objectPosition={'center'}
-			/>
+			<Link href={`/project/${slug}`}>
+				<>
+					<div style={{ borderRadius: '6px', overflow: 'hidden' }}>
+						<Image
+							src={cover.url}
+							width={350}
+							height={300}
+							layout={'responsive'}
+							alt={cover.title}
+							objectFit={'cover'}
+							objectPosition={'center'}
+						/>
+					</div>
 
-			<Space h={'md'} />
-			<section>
-				<Title order={2} white>
-					Traders Club
-				</Title>
-				<Text lineClamp={2}>
-					Uma comunidade de investidores para você não investir sozinho
-				</Text>
+					<Space h={'md'} />
+					<div>
+						<Title order={2} white>
+							{company}
+						</Title>
+						<Text lineClamp={2}>{description}</Text>
 
-				<Text align={'right'} mt={'sm'} size={'xs'}>
-					Brazil - São Paulo
-				</Text>
-			</section>
+						<Text align={'right'} mt={'sm'} size={'xs'}>
+							{country}
+						</Text>
+					</div>
+				</>
+			</Link>
 		</article>
 	)
 }
