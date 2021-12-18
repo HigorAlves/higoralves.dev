@@ -1,22 +1,5 @@
 import { gql } from 'graphql-request'
 
-export interface IProject {
-	company: string
-	slug: string
-	country: string
-	description: string
-	cover: {
-		title: string
-		url: string
-	}
-}
-
-export interface ProjectsCollection {
-	projectCollection: {
-		items: IProject[]
-	}
-}
-
 export const getProjects = gql`
 	query getProjects($locale: String) {
 		projectCollection(locale: $locale) {
@@ -28,6 +11,33 @@ export const getProjects = gql`
 				cover {
 					title
 					url
+				}
+			}
+		}
+	}
+`
+
+export const getProject = gql`
+	query getProject($locale: String, $slug: String) {
+		projectCollection(locale: $locale, where: { slug: $slug }) {
+			items {
+				title
+				cover {
+					title
+					url
+				}
+				company
+				country
+				description
+				technologiesCollection(limit: 20) {
+					items {
+						name
+						officialPage
+						icon {
+							url
+							title
+						}
+					}
 				}
 			}
 		}

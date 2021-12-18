@@ -7,3 +7,4 @@ export default new ContentfulGraphQLClient({
 })
 
 export * from './queries'
+export * from './interfaces'
