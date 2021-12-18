@@ -22,7 +22,7 @@ export function Navbar() {
 	const matches = useMediaQuery('(min-width: 430px)')
 	const { colorScheme, toggleColorScheme } = useMantineColorScheme()
 
-	const pages: string[] = ['About']
+	const pages: string[] = ['About', 'Projects']
 	const dark = colorScheme === 'dark'
 
 	function NavOptions() {
