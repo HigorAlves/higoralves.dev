@@ -3,8 +3,34 @@ import React from 'react'
 import { Col, Container, Grid, Space, Text } from '@mantine/core'
 
 import { Project, Title } from '~/components'
+import {
+	default as Contentful,
+	getProjects,
+	IProject,
+	ProjectsCollection
+} from '~/services/Contentful'
 
-export default function Projects() {
+export const getServerSideProps = async (context: { locale: any }) => {
+	const { locale } = context
+	const { projectCollection }: ProjectsCollection = await Contentful.request(
+		getProjects,
+		{
+			locale
+		}
+	)
+
+	return {
+		props: {
+			projects: projectCollection.items
+		}
+	}
+}
+
+type Props = {
+	projects: IProject[]
+}
+
+export default function Projects({ projects }: Props) {
 	return (
 		<Container>
 			<Title
@@ -22,16 +48,18 @@ export default function Projects() {
 				been discontinued.
 			</Text>
 			<Space h={60} />
-			<Grid grow>
-				<Col span={12} md={6} lg={4}>
-					<Project />
-				</Col>
-				<Col span={12} md={6} lg={4}>
-					2
-				</Col>
-				<Col span={12} md={6} lg={4}>
-					3
-				</Col>
+			<Grid gutter={40}>
+				{projects.map(project => (
+					<Col span={12} md={6} lg={4} key={project.slug}>
+						<Project
+							company={project.company}
+							slug={project.slug}
+							country={project.country}
+							description={project.description}
+							cover={project.cover}
+						/>
+					</Col>
+				))}
 			</Grid>
 		</Container>
 	)
