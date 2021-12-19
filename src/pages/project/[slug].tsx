@@ -29,6 +29,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 	}
 }
 
+// todo -> Adicionar animações no site
+// todo -> Adicionar um carrousel com imagens do projeto
+
 type Props = {
 	project: IProject
 }
@@ -64,7 +67,7 @@ export default function Project({ project }: Props) {
 							height={20}
 							layout={'responsive'}
 							alt={tech.icon.title}
-							objectFit={'fill'}
+							objectFit={'contain'}
 							objectPosition={'center'}
 						/>
 						<Text mt={'lg'} align={'center'}>
