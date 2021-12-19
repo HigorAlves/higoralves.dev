@@ -84,3 +84,15 @@ L
 next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
 R
 "src/components/Link/styles.link.ts,5/8/58b9e9074c5545abf768fabea318aa337dbb2cc2
+C
+src/pages/about.tsx,0/0/00f529562c859ca33a4a6ef004ea5b949fd46cc7
+F
+src/pages/projects.tsx,4/2/42f756ada9747e49b56016d5522651ddf93d0728
+P
+ src/services/Contentful/index.ts,f/d/fd6bddaf54f69aae4537aac1c717913b5f4c8888
+U
+%src/services/Contentful/interfaces.ts,b/9/b9b35e5a98f9c39f5856bf361c105827397b786c
+R
+"src/components/Project/Project.tsx,a/1/a150209f31113717df1065cf0bb600b6a48ed994
+R
+"src/services/Contentful/queries.ts,8/5/859b4c656f90d78254665380a640385f25d2d8ab
