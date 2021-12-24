@@ -7,7 +7,7 @@ import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import Image from 'next/image'
 
-import { Title } from '~/components'
+import { Technology, Title } from '~/components'
 import {
 	default as Contentful,
 	getProject,
@@ -63,26 +63,18 @@ export default function Project({ project }: Props) {
 			<Title mt={'xl'} align={'center'} white>
 				{project.title as string}
 			</Title>
+
 			<MDXRemote {...project.source} components={components} />
+
 			<Space h={60} />
 			<Title order={3} mb={'xl'}>
 				Technologies used
 			</Title>
+
 			<Grid>
 				{project.technologiesCollection?.items.map(tech => (
 					<Col span={12} md={1} lg={2} key={tech.name}>
-						<Image
-							src={tech.icon.url}
-							width={30}
-							height={20}
-							layout={'responsive'}
-							alt={tech.icon.title}
-							objectFit={'contain'}
-							objectPosition={'center'}
-						/>
-						<Text mt={'lg'} align={'center'}>
-							{tech.name}
-						</Text>
+						<Technology icon={tech.icon} name={tech.name} />
 					</Col>
 				))}
 			</Grid>
