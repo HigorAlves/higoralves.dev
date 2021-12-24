@@ -8,6 +8,7 @@ export const getProjects = gql`
 				slug
 				country
 				description
+				title
 				cover {
 					title
 					url

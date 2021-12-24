@@ -11,7 +11,8 @@ export function Project({
 	country,
 	description,
 	slug,
-	company
+	company,
+	title
 }: IProject) {
 	return (
 		<article>
@@ -32,13 +33,18 @@ export function Project({
 					<Space h={'md'} />
 					<div>
 						<Title order={2} white>
-							{company}
+							{title}
 						</Title>
 						<Text lineClamp={2}>{description}</Text>
 
-						<Text align={'right'} mt={'sm'} size={'xs'}>
-							{country}
-						</Text>
+						<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+							<Text align={'left'} mt={'sm'} size={'xs'}>
+								Client: {company}
+							</Text>
+							<Text align={'right'} mt={'sm'} size={'xs'}>
+								{country}
+							</Text>
+						</div>
 					</div>
 				</>
 			</Link>
