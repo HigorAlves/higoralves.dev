@@ -52,6 +52,7 @@ export default function Projects({ projects }: Props) {
 				{projects.map(project => (
 					<Col span={12} md={6} lg={4} key={project.slug}>
 						<Project
+							title={project.title}
 							company={project.company}
 							slug={project.slug}
 							country={project.country}

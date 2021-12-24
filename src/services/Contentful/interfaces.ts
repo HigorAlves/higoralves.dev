@@ -1,12 +1,12 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 export interface IProject {
-	title?: string
+	title: string
 	company: string
 	slug: string
 	country: string
 	description: string
-	source: MDXRemoteSerializeResult<Record<string, unknown>>
+	source?: MDXRemoteSerializeResult<Record<string, unknown>>
 	cover: {
 		title: string
 		url: string
