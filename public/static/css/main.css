@@ -56,3 +56,27 @@
 	font-weight: normal;
 	font-style: italic;
 }
+
+.swiper-slide {
+	height: 29rem !important;
+	width: 50rem !important;
+	opacity: 70%;
+	transition: all 0.2s ease-in !important;
+}
+
+.swiper-slide-next div {
+	height: 25rem !important;
+	margin-top: 2rem;
+}
+
+.swiper-slide-prev div {
+	height: 25rem !important;
+	margin-top: 2rem;
+}
+
+
+.swiper-slide-active {
+	height: 29rem !important;
+	width: 50rem !important;
+	opacity: 100%;
+}

@@ -64,7 +64,7 @@ export default function Project({ project }: Props) {
 				{project.title as string}
 			</Title>
 
-			<MDXRemote {...project.source} components={components} />
+			<MDXRemote {...(project.source as any)} components={components} />
 
 			<Space h={60} />
 			<Title order={3} mb={'xl'}>
