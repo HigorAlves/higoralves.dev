@@ -3,6 +3,8 @@ import React from 'react'
 import { Col, Container, Grid, Space, Text } from '@mantine/core'
 // @ts-ignore
 import { GetServerSideProps } from 'next'
+import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from 'next-mdx-remote/serialize'
 import Image from 'next/image'
 
 import { Title } from '~/components'
@@ -11,6 +13,12 @@ import {
 	getProject,
 	IProject
 } from '~/services/Contentful'
+
+const components = {
+	p: (props: { children: React.ReactChild }) => (
+		<Text mt={'xl'}>{props.children}</Text>
+	)
+}
 
 // @ts-ignore
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -21,16 +29,18 @@ export const getServerSideProps: GetServerSideProps = async context => {
 		slug
 	})
 
-	const project = projectCollection.items[0]
+	const project: IProject = projectCollection.items[0]
+	const mdxSource = await serialize(project.description)
+
 	return {
 		props: {
-			project
+			project: {
+				...project,
+				source: mdxSource
+			}
 		}
 	}
 }
-
-// todo -> Adicionar animações no site
-// todo -> Adicionar um carrousel com imagens do projeto
 
 type Props = {
 	project: IProject
@@ -53,7 +63,7 @@ export default function Project({ project }: Props) {
 			<Title mt={'xl'} align={'center'} white>
 				{project.title as string}
 			</Title>
-			<Text mt={'xl'}>{project.description}</Text>
+			<MDXRemote {...project.source} components={components} />
 			<Space h={60} />
 			<Title order={3} mb={'xl'}>
 				Technologies used
