@@ -6,6 +6,10 @@ import { useKBar } from 'kbar'
 
 import { Ball } from '~/components'
 
+export function getStaticProps() {
+	return {}
+}
+
 export default function Home() {
 	const { query } = useKBar()
 
