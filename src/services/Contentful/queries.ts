@@ -28,6 +28,8 @@ export const getProject = gql`
 					url
 				}
 				company
+				site
+				meta
 				country
 				description
 				technologiesCollection(limit: 20) {
