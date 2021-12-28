@@ -5,6 +5,7 @@ import {
 	ColorSchemeProvider,
 	MantineProvider
 } from '@mantine/core'
+import { AnimatePresence } from 'framer-motion'
 // @ts-ignore
 import { NextPage } from 'next'
 import { AppProps } from 'next/app'
@@ -25,7 +26,7 @@ type AppPropsWithLayout = AppProps & {
 }
 
 export default function App(props: AppPropsWithLayout) {
-	const { Component, pageProps } = props
+	const { Component, pageProps, router } = props
 	const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
 	const toggleColorScheme = (value?: ColorScheme) =>
 		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
@@ -59,7 +60,9 @@ export default function App(props: AppPropsWithLayout) {
 				>
 					<KBar>
 						<Layout type={layoutType}>
-							<Component {...pageProps} />
+							<AnimatePresence>
+								<Component key={router.route} {...pageProps} />
+							</AnimatePresence>
 						</Layout>
 					</KBar>
 				</MantineProvider>
