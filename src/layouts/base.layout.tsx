@@ -2,10 +2,12 @@ import React, { ReactNode } from 'react'
 
 import { Container, createStyles } from '@mantine/core'
 
-import { Footer, Navbar } from '~/components'
+import { Footer, Navbar, SEOHead } from '~/components'
+import { Meta } from '~/layouts/index'
 
 interface Props {
 	children: ReactNode
+	meta: Meta
 }
 
 const useStyles = createStyles(() => ({
@@ -14,11 +16,12 @@ const useStyles = createStyles(() => ({
 	}
 }))
 
-function BaseLayout({ children }: Props): JSX.Element {
+function BaseLayout({ children, meta }: Props): JSX.Element {
 	const { classes } = useStyles()
 
 	return (
 		<>
+			<SEOHead meta={meta} />
 			<Navbar />
 			<main className={classes.wrapper}>
 				<Container size={'lg'}>{children}</Container>

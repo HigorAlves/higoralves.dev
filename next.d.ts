@@ -5,7 +5,7 @@ import type {
 } from 'next'
 import type { AppProps } from 'next/app'
 
-import { LayoutTypes } from '~/layouts'
+import { LayoutTypes, Meta } from '~/layouts'
 
 declare module 'next' {
 	type NextLayoutComponentType<P = {}> = NextComponentType<
@@ -14,6 +14,7 @@ declare module 'next' {
 		P
 	> & {
 		layout?: LayoutTypes
+		meta?: Meta
 	}
 }
 

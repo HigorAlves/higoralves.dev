@@ -23,15 +23,14 @@ export const getProject = gql`
 		projectCollection(locale: $locale, where: { slug: $slug }) {
 			items {
 				title
+				company
+				site
+				country
+				description
 				cover {
 					title
 					url
 				}
-				company
-				site
-				meta
-				country
-				description
 				technologiesCollection(limit: 20) {
 					items {
 						name

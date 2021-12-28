@@ -9,16 +9,16 @@ import { AnimatePresence } from 'framer-motion'
 // @ts-ignore
 import { NextPage } from 'next'
 import { AppProps } from 'next/app'
-import Head from 'next/head'
 
 import { KBar } from '~/components'
-import { Layout, LayoutTypes } from '~/layouts'
+import { Layout, LayoutTypes, Meta } from '~/layouts'
 import { darkTheme, lightTheme } from '~/Theme'
 
 import '../../public/static/css/main.css'
 
 type NextPageWithLayout = NextPage & {
 	layout?: LayoutTypes
+	meta?: Meta
 }
 
 type AppPropsWithLayout = AppProps & {
@@ -32,41 +32,26 @@ export default function App(props: AppPropsWithLayout) {
 		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
 
 	const layoutType = Component.layout ?? 'base'
+	const { meta } = Component
 
 	return (
-		<>
-			<Head>
-				<title>Higor Alves</title>
-
-				<meta charSet='utf-8' />
-				<meta content='Higor Alves' name='author' />
-				<meta property='og:type' content='website' />
-				<meta content='summary_large_image' name='twitter:card' />
-				<meta name='theme-color' content='#08070b' />
-				<meta
-					name='viewport'
-					content='minimum-scale=1, initial-scale=1, width=device-width'
-				/>
-			</Head>
-
-			<ColorSchemeProvider
-				colorScheme={colorScheme}
-				toggleColorScheme={toggleColorScheme}
+		<ColorSchemeProvider
+			colorScheme={colorScheme}
+			toggleColorScheme={toggleColorScheme}
+		>
+			<MantineProvider
+				withGlobalStyles
+				withNormalizeCSS
+				theme={colorScheme === 'dark' ? darkTheme : lightTheme}
 			>
-				<MantineProvider
-					withGlobalStyles
-					withNormalizeCSS
-					theme={colorScheme === 'dark' ? darkTheme : lightTheme}
-				>
-					<KBar>
-						<Layout type={layoutType}>
-							<AnimatePresence>
-								<Component key={router.route} {...pageProps} />
-							</AnimatePresence>
-						</Layout>
-					</KBar>
-				</MantineProvider>
-			</ColorSchemeProvider>
-		</>
+				<KBar>
+					<Layout type={layoutType} meta={meta}>
+						<AnimatePresence>
+							<Component key={router.route} {...pageProps} />
+						</AnimatePresence>
+					</Layout>
+				</KBar>
+			</MantineProvider>
+		</ColorSchemeProvider>
 	)
 }
