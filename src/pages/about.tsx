@@ -15,6 +15,7 @@ import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
 
 import { Ball, Title } from '~/components'
+import { Meta } from '~/layouts'
 import { containerVariants } from '~/layouts/animation'
 
 export default function About() {
@@ -117,3 +118,18 @@ export default function About() {
 		</Container>
 	)
 }
+
+const meta: Meta = {
+	image: {
+		title: '',
+		url: ''
+	},
+	title: 'About // Higor Alves',
+	type: 'website',
+	description: 'Explore. Work. Live',
+	twitter: '@higorhaalves',
+	url: 'https://higoralves.dev',
+	name: 'Higor Alves'
+}
+
+About.meta = meta

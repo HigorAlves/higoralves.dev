@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { useKBar } from 'kbar'
 
 import { Ball } from '~/components'
+import { Meta } from '~/layouts'
 import { containerVariants, itemVariants } from '~/layouts/animation'
 
 export default function Home() {
@@ -75,3 +76,18 @@ export default function Home() {
 		</Grid>
 	)
 }
+
+const meta: Meta = {
+	image: {
+		title: '',
+		url: ''
+	},
+	title: 'Higor Alves',
+	type: 'website',
+	description: 'Senior Software Developer',
+	twitter: '@higorhaalves',
+	url: 'https://higoralves.dev',
+	name: 'Higor Alves'
+}
+
+Home.meta = meta

@@ -4,6 +4,7 @@ import { Col, Grid, Space, Text } from '@mantine/core'
 import { motion } from 'framer-motion'
 
 import { Project, Title } from '~/components'
+import { Meta } from '~/layouts'
 import { containerVariants, itemVariants } from '~/layouts/animation'
 import {
 	default as Contentful,
@@ -32,7 +33,7 @@ type Props = {
 	projects: IProject[]
 }
 
-export default function Index({ projects }: Props) {
+export default function Projects({ projects }: Props) {
 	return (
 		<motion.section
 			initial={'hidden'}
@@ -79,3 +80,18 @@ export default function Index({ projects }: Props) {
 		</motion.section>
 	)
 }
+
+const meta: Meta = {
+	image: {
+		title: '',
+		url: ''
+	},
+	title: 'Projects // Higor Alves',
+	type: 'website',
+	description: 'Work. Hobby. Open Source',
+	twitter: '@higorhaalves',
+	url: 'https://higoralves.dev',
+	name: 'Higor Alves'
+}
+
+Projects.meta = meta
