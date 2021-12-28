@@ -17,7 +17,17 @@ import {
 const components = {
 	p: (props: { children: React.ReactChild }) => (
 		<Text mt={'xl'}>{props.children}</Text>
-	)
+	),
+	h1: (props: { children: string }) => (
+		<Title order={1}>{props.children}</Title>
+	),
+	h2: (props: { children: string }) => (
+		<Title order={2}>{props.children}</Title>
+	),
+	h3: (props: { children: string }) => (
+		<Title order={3}>{props.children}</Title>
+	),
+	h4: (props: { children: string }) => <Title order={4}>{props.children}</Title>
 }
 
 // @ts-ignore
@@ -71,7 +81,7 @@ export default function Project({ project }: Props) {
 				Technologies used
 			</Title>
 
-			<Grid>
+			<Grid gutter={20}>
 				{project.technologiesCollection?.items.map(tech => (
 					<Col span={12} md={1} lg={2} key={tech.name}>
 						<Technology icon={tech.icon} name={tech.name} />
