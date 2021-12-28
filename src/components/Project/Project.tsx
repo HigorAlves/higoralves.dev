@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Space, Text } from '@mantine/core'
+import { Space, Text, Card, Badge, Group } from '@mantine/core'
 import Image from 'next/image'
 
 import { Link, Title } from '~/components'
@@ -16,9 +16,15 @@ export function Project({
 }: IProject) {
 	return (
 		<article>
-			<Link href={`/project/${slug}`}>
-				<>
-					<div style={{ borderRadius: '6px', overflow: 'hidden' }}>
+			<Link href={`/projects/${slug}`}>
+				<Card shadow={'xs'} padding={'lg'}>
+					<Card.Section
+						style={{
+							borderTopRightRadius: '6px',
+							borderTopLeftRadius: '6px',
+							overflow: 'hidden'
+						}}
+					>
 						<Image
 							src={cover.url}
 							width={350}
@@ -28,7 +34,7 @@ export function Project({
 							objectFit={'cover'}
 							objectPosition={'center'}
 						/>
-					</div>
+					</Card.Section>
 
 					<Space h={'md'} />
 					<div>
@@ -37,16 +43,19 @@ export function Project({
 						</Title>
 						<Text lineClamp={2}>{description}</Text>
 
-						<div style={{ display: 'flex', justifyContent: 'space-between' }}>
-							<Text align={'left'} mt={'sm'} size={'xs'}>
-								Client: {company}
-							</Text>
-							<Text align={'right'} mt={'sm'} size={'xs'}>
+						<Group position={'apart'} mt={'sm'}>
+							<Badge
+								variant={'gradient'}
+								gradient={{ from: 'cyan', to: 'teal' }}
+							>
+								{company}
+							</Badge>
+							<Text align={'right'} size={'xs'}>
 								{country}
 							</Text>
-						</div>
+						</Group>
 					</div>
-				</>
+				</Card>
 			</Link>
 		</article>
 	)
