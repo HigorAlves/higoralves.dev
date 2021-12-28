@@ -30,9 +30,9 @@ type Props = {
 	projects: IProject[]
 }
 
-export default function Projects({ projects }: Props) {
+export default function Index({ projects }: Props) {
 	return (
-		<Container>
+		<section data-testid={'section-projects'}>
 			<Title
 				gradient={'cyanToGreen'}
 				order={1}
@@ -48,7 +48,7 @@ export default function Projects({ projects }: Props) {
 				been discontinued.
 			</Text>
 			<Space h={60} />
-			<Grid gutter={40}>
+			<Grid gutter={26}>
 				{projects.map(project => (
 					<Col span={12} md={6} lg={4} key={project.slug}>
 						<Project
@@ -62,6 +62,6 @@ export default function Projects({ projects }: Props) {
 					</Col>
 				))}
 			</Grid>
-		</Container>
+		</section>
 	)
 }
