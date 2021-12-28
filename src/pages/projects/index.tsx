@@ -1,8 +1,10 @@
 import React from 'react'
 
-import { Col, Container, Grid, Space, Text } from '@mantine/core'
+import { Col, Grid, Space, Text } from '@mantine/core'
+import { motion } from 'framer-motion'
 
 import { Project, Title } from '~/components'
+import { containerVariants, itemVariants } from '~/layouts/animation'
 import {
 	default as Contentful,
 	getProjects,
@@ -32,7 +34,12 @@ type Props = {
 
 export default function Index({ projects }: Props) {
 	return (
-		<section data-testid={'section-projects'}>
+		<motion.section
+			initial={'hidden'}
+			animate={'visible'}
+			exit={'exit'}
+			variants={containerVariants}
+		>
 			<Title
 				gradient={'cyanToGreen'}
 				order={1}
@@ -51,17 +58,24 @@ export default function Index({ projects }: Props) {
 			<Grid gutter={26}>
 				{projects.map(project => (
 					<Col span={12} md={6} lg={4} key={project.slug}>
-						<Project
-							title={project.title}
-							company={project.company}
-							slug={project.slug}
-							country={project.country}
-							description={project.description}
-							cover={project.cover}
-						/>
+						<motion.div
+							variants={itemVariants}
+							initial={'hidden'}
+							animate={'visible'}
+							exit={'exit'}
+						>
+							<Project
+								title={project.title}
+								company={project.company}
+								slug={project.slug}
+								country={project.country}
+								description={project.description}
+								cover={project.cover}
+							/>
+						</motion.div>
 					</Col>
 				))}
 			</Grid>
-		</section>
+		</motion.section>
 	)
 }
