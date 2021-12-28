@@ -13,6 +13,7 @@ import Head from 'next/head'
 import { KBar } from '~/components'
 import { Layout, LayoutTypes } from '~/layouts'
 import { darkTheme, lightTheme } from '~/Theme'
+
 import '../../public/static/css/main.css'
 
 type NextPageWithLayout = NextPage & {
