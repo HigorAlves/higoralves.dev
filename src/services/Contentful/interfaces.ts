@@ -14,7 +14,7 @@ export interface IProject {
 	technologiesCollection?: {
 		items: Technology[]
 	}
-	seo: SEO
+	seo?: SEO
 }
 
 export interface Technology {
