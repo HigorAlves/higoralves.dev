@@ -1,8 +1,8 @@
 import { gql } from 'graphql-request'
 
 export const getProjectsPaths = gql`
-	query getProjects($locale: String) {
-		projectCollection(locale: $locale) {
+	query getProjects {
+		projectCollection {
 			items {
 				slug
 			}
@@ -44,6 +44,15 @@ export const getProject = gql`
 				seo {
 					... on SeoHeader {
 						title
+						type
+						url
+						name
+						description
+						twitter
+						image {
+							url
+							title
+						}
 					}
 				}
 				technologiesCollection(limit: 20) {
