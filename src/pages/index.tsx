@@ -63,15 +63,22 @@ export default function Home() {
 				</motion.div>
 			</Col>
 			<Col span={12} md={6}>
-				<Canvas
-					style={{
-						height: '60vh'
-					}}
+				<motion.div
+					variants={itemVariants}
+					initial={'hidden'}
+					animate={'visible'}
+					exit={'exit'}
 				>
-					<ambientLight intensity={0.5} />
-					<directionalLight position={[-2, 5, 2]} intensity={1} />
-					<Ball />
-				</Canvas>
+					<Canvas
+						style={{
+							height: '60vh'
+						}}
+					>
+						<ambientLight intensity={0.5} />
+						<directionalLight position={[-2, 5, 2]} intensity={1} />
+						<Ball />
+					</Canvas>
+				</motion.div>
 			</Col>
 		</Grid>
 	)

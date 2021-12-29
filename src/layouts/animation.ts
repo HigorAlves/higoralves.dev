@@ -5,14 +5,7 @@ export const containerVariants = {
 	},
 	visible: {
 		opacity: 1,
-		y: 0,
-		transition: {
-			delay: 0.5,
-			ease: 'easeInOut',
-			when: 'beforeChildren',
-			delayChildren: 1.5,
-			staggerDirection: 1
-		}
+		y: 0
 	},
 	exit: {
 		opacity: 0,
@@ -26,7 +19,7 @@ export const containerVariants = {
 export const itemVariants = {
 	hidden: {
 		opacity: 0,
-		y: -20
+		y: -30
 	},
 	visible: {
 		opacity: 1,
@@ -34,6 +27,6 @@ export const itemVariants = {
 	},
 	exit: {
 		opacity: 0,
-		y: -20
+		y: -30
 	}
 }
