@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Col, Grid, Space, Text } from '@mantine/core'
 import { motion } from 'framer-motion'
+// @ts-ignore
+import { GetStaticPropsContext } from 'next'
 
 import { Project, Title } from '~/components'
 import { Meta } from '~/layouts'
@@ -13,7 +15,7 @@ import {
 	ProjectsCollection
 } from '~/services/Contentful'
 
-export const getServerSideProps = async (context: { locale: any }) => {
+export async function getStaticProps(context: GetStaticPropsContext) {
 	const { locale } = context
 	const { projectCollection }: ProjectsCollection = await Contentful.request(
 		getProjects,
@@ -25,7 +27,8 @@ export const getServerSideProps = async (context: { locale: any }) => {
 	return {
 		props: {
 			projects: projectCollection.items
-		}
+		},
+		revalidate: 60 * 60 * 10 // 10 days
 	}
 }
 
