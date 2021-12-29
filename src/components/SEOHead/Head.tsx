@@ -20,12 +20,29 @@ export function SEOHead({ meta }: Props) {
 				name='viewport'
 				content='minimum-scale=1, initial-scale=1, width=device-width'
 			/>
+			<link
+				rel='apple-touch-icon'
+				sizes='180x180'
+				href='/static/favicon/apple-touch-icon.png'
+			/>
+			<link
+				rel='icon'
+				type='image/png'
+				sizes='32x32'
+				href='/static/favicon/favicon-32x32.png'
+			/>
+			<link
+				rel='icon'
+				type='image/png'
+				sizes='16x16'
+				href='/static/favicon/favicon-16x16.png'
+			/>
+			<link rel='manifest' href='/site.webmanifest' />
 
 			<meta
 				property='og:site_name'
 				content={meta?.name ? meta.name : 'Higor Alves'}
 			/>
-
 			<meta
 				property='og:title'
 				content={meta?.title ? meta.title : 'Higor Alves'}
