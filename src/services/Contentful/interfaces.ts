@@ -14,6 +14,7 @@ export interface IProject {
 	technologiesCollection?: {
 		items: Technology[]
 	}
+	seo: SEO
 }
 
 export interface Technology {
@@ -29,4 +30,17 @@ export interface ProjectsCollection {
 	projectCollection: {
 		items: IProject[]
 	}
+}
+
+interface SEO {
+	title: string
+	type: 'article' | 'place' | 'website'
+	image: {
+		url: string
+		title: string
+	}
+	url: string
+	name: string
+	description: string
+	twitter: string
 }
