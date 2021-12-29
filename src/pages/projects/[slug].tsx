@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Col, Container, Grid, Space, Text } from '@mantine/core'
 // @ts-ignore
-import { GetServerSideProps } from 'next'
+import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import Image from 'next/image'
@@ -11,8 +11,16 @@ import { Technology, Title } from '~/components'
 import {
 	default as Contentful,
 	getProject,
+	getProjectsPaths,
 	IProject
 } from '~/services/Contentful'
+
+interface Path {
+	params: {
+		slug: string
+	}
+	locale: 'pt-BR' | 'en-US'
+}
 
 const components = {
 	p: (props: { children: React.ReactChild }) => (
@@ -30,8 +38,23 @@ const components = {
 	h4: (props: { children: string }) => <Title order={4}>{props.children}</Title>
 }
 
-// @ts-ignore
-export const getServerSideProps: GetServerSideProps = async context => {
+export async function getStaticPaths() {
+	const { projectCollection } = await Contentful.request(getProjectsPaths)
+
+	const slugs = projectCollection.items
+	const paths: Path[] = []
+	slugs.forEach((item: { slug: string }) => {
+		paths.push({ params: { slug: item.slug }, locale: 'en-US' })
+		paths.push({ params: { slug: item.slug }, locale: 'pt-BR' })
+	})
+
+	return {
+		paths,
+		fallback: false
+	}
+}
+
+export async function getStaticProps(context: GetStaticPropsContext) {
 	const { locale, params } = context
 	const slug = params.slug
 	const { projectCollection } = await Contentful.request(getProject, {
@@ -48,7 +71,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
 				...project,
 				source: mdxSource
 			}
-		}
+		},
+		revalidate: 60 * 60 * 10
 	}
 }
 
