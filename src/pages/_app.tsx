@@ -46,7 +46,7 @@ export default function App(props: AppPropsWithLayout) {
 			>
 				<KBar>
 					<Layout type={layoutType} meta={meta}>
-						<AnimatePresence>
+						<AnimatePresence exitBeforeEnter>
 							<Component key={router.route} {...pageProps} />
 						</AnimatePresence>
 					</Layout>
