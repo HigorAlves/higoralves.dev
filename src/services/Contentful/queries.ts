@@ -41,6 +41,11 @@ export const getProject = gql`
 					title
 					url
 				}
+				seo {
+					... on SeoHeader {
+						title
+					}
+				}
 				technologiesCollection(limit: 20) {
 					items {
 						name
