@@ -1,5 +1,15 @@
 import { gql } from 'graphql-request'
 
+export const getProjectsPaths = gql`
+	query getProjects($locale: String) {
+		projectCollection(locale: $locale) {
+			items {
+				slug
+			}
+		}
+	}
+`
+
 export const getProjects = gql`
 	query getProjects($locale: String) {
 		projectCollection(locale: $locale) {
