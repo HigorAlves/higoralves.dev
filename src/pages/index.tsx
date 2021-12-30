@@ -42,7 +42,7 @@ export default function Home() {
 						animate={'visible'}
 						exit={'exit'}
 					>
-						<Text weight={700}>Senior Software Engineering at X-Team</Text>
+						<Text weight={700}>Senior Software Engineering</Text>
 					</motion.div>
 					<Space h='sm' />
 					<motion.div
