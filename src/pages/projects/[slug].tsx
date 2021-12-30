@@ -41,9 +41,6 @@ const components = {
 	p: (props: { children: React.ReactChild }) => (
 		<Text mt={'xl'}>{props.children}</Text>
 	),
-	h1: (props: { children: string }) => (
-		<Title order={1}>{props.children}</Title>
-	),
 	h2: (props: { children: string }) => (
 		<Title order={2} mt={'md'}>
 			{props.children}
@@ -53,8 +50,7 @@ const components = {
 		<Title order={3} mt={'md'}>
 			{props.children}
 		</Title>
-	),
-	h4: (props: { children: string }) => <Title order={4}>{props.children}</Title>
+	)
 }
 
 export async function getStaticPaths() {
