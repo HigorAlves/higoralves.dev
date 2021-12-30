@@ -7,7 +7,7 @@ import { GetStaticPropsContext } from 'next'
 
 import { Project, Title } from '~/components'
 import { Meta } from '~/layouts'
-import { containerVariants, itemVariants } from '~/layouts/animation'
+import { containerVariants } from '~/layouts/animation'
 import {
 	default as Contentful,
 	getProjects,
