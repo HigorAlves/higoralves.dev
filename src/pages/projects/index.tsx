@@ -60,13 +60,24 @@ export default function Projects({ projects }: Props) {
 			</Text>
 			<Space h={60} />
 			<Grid gutter={26}>
-				{projects.map(project => (
+				{projects.map((project, index) => (
 					<Col span={12} md={6} lg={4} key={project.slug}>
 						<motion.div
-							variants={itemVariants}
-							initial={'hidden'}
-							animate={'visible'}
-							exit={'exit'}
+							initial={{
+								opacity: 0,
+								y: -30
+							}}
+							animate={{
+								opacity: 1,
+								y: 0,
+								transition: {
+									delay: 0.2 + index / 5
+								}
+							}}
+							exit={{
+								opacity: 0,
+								y: -30
+							}}
 						>
 							<Project
 								title={project.title}
