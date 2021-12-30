@@ -162,7 +162,7 @@ export default function Project({ project }: Props) {
 									<GlobeIcon size={12} />
 								</ThemeIcon>
 								<Link href={project.site as string} target={'_blank'}>
-									<Text color={'yellow'}>EduLivre.org</Text>
+									<Text color={'yellow'}>Official Website</Text>
 								</Link>
 							</Group>
 						</Col>
