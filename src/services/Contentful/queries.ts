@@ -37,6 +37,8 @@ export const getProject = gql`
 				site
 				country
 				description
+				role
+				industry
 				cover {
 					title
 					url

@@ -6,6 +6,9 @@ export interface IProject {
 	slug: string
 	country: string
 	description: string
+	seo?: SEO
+	role?: string
+	industry?: string
 	source?: MDXRemoteSerializeResult<Record<string, unknown>>
 	cover: {
 		title: string
@@ -14,7 +17,6 @@ export interface IProject {
 	technologiesCollection?: {
 		items: Technology[]
 	}
-	seo?: SEO
 }
 
 export interface Technology {
