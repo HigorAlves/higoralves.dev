@@ -10,7 +10,7 @@ import {
 	Text
 } from '@mantine/core'
 import { useClipboard } from '@mantine/hooks'
-import { ClipboardCopyIcon, DownloadIcon } from '@modulz/radix-icons'
+import { CopyIcon, DownloadIcon } from '@primer/octicons-react'
 import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
 
@@ -92,7 +92,7 @@ export default function About() {
 				</Text>
 				<Blockquote>{bio}</Blockquote>
 				<Button
-					leftIcon={<ClipboardCopyIcon />}
+					leftIcon={<CopyIcon />}
 					variant='outline'
 					color={clipboard.copied ? 'orange' : 'yellow'}
 					onClick={() => clipboard.copy(bio)}

@@ -75,6 +75,7 @@ export default function Projects({ projects }: Props) {
 								country={project.country}
 								description={project.description}
 								cover={project.cover}
+								role={project.role}
 							/>
 						</motion.div>
 					</Col>

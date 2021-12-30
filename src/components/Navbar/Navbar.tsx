@@ -7,7 +7,7 @@ import {
 	useMantineColorScheme
 } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
-import { CodeIcon, MoonIcon, SunIcon } from '@modulz/radix-icons'
+import { CodeIcon, MoonIcon, SunIcon } from '@primer/octicons-react'
 import { useKBar } from 'kbar'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -57,11 +57,7 @@ export function Navbar() {
 					title='Toggle color scheme'
 					size={'xl'}
 				>
-					{dark ? (
-						<SunIcon style={{ width: 18, height: 18 }} />
-					) : (
-						<MoonIcon style={{ width: 18, height: 18 }} />
-					)}
+					{dark ? <SunIcon /> : <MoonIcon />}
 				</ActionIcon>
 				<ActionIcon
 					variant='outline'
@@ -71,7 +67,7 @@ export function Navbar() {
 					style={{ marginLeft: 26 }}
 					size={'xl'}
 				>
-					<CodeIcon style={{ width: 18, height: 18 }} />
+					<CodeIcon />
 				</ActionIcon>
 			</div>
 		)

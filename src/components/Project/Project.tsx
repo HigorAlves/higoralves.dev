@@ -12,7 +12,8 @@ export function Project({
 	description,
 	slug,
 	company,
-	title
+	title,
+	role
 }: IProject) {
 	return (
 		<article>
@@ -41,6 +42,9 @@ export function Project({
 						<Title order={2} white>
 							{title}
 						</Title>
+						<Text weight={'bold'} mb={'sm'} size={'sm'}>
+							{role}
+						</Text>
 						<Text lineClamp={2}>{description}</Text>
 
 						<Group position={'apart'} mt={'sm'}>

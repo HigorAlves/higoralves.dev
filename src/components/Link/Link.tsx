@@ -7,14 +7,17 @@ import useStyles from './styles.link'
 interface Props {
 	children: React.ReactNode
 	href: string
+	target?: '_blank' | '_self'
 }
 
-export function LinkWrapper({ children, href }: Props) {
+export function LinkWrapper({ children, href, target = '_self' }: Props) {
 	const { classes } = useStyles()
 
 	return (
 		<Link href={href} passHref>
-			<a className={classes.link}>{children}</a>
+			<a className={classes.link} target={target}>
+				{children}
+			</a>
 		</Link>
 	)
 }
