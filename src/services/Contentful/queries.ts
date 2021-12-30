@@ -19,6 +19,7 @@ export const getProjects = gql`
 				country
 				description
 				title
+				role
 				cover {
 					title
 					url

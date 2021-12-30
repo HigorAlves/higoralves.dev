@@ -1,13 +1,28 @@
 import React from 'react'
 
-import { Col, Container, Grid, Space, Text } from '@mantine/core'
+import {
+	Col,
+	Container,
+	Grid,
+	Group,
+	Space,
+	Text,
+	ThemeIcon
+} from '@mantine/core'
+import {
+	BriefcaseIcon,
+	LocationIcon,
+	OrganizationIcon,
+	GlobeIcon,
+	RubyIcon
+} from '@primer/octicons-react'
 // @ts-ignore
 import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import Image from 'next/image'
 
-import { Technology, Title } from '~/components'
+import { Link, Technology, Title } from '~/components'
 import {
 	default as Contentful,
 	getProject,
@@ -30,10 +45,14 @@ const components = {
 		<Title order={1}>{props.children}</Title>
 	),
 	h2: (props: { children: string }) => (
-		<Title order={2}>{props.children}</Title>
+		<Title order={2} mt={'md'}>
+			{props.children}
+		</Title>
 	),
 	h3: (props: { children: string }) => (
-		<Title order={3}>{props.children}</Title>
+		<Title order={3} mt={'md'}>
+			{props.children}
+		</Title>
 	),
 	h4: (props: { children: string }) => <Title order={4}>{props.children}</Title>
 }
@@ -100,7 +119,58 @@ export default function Project({ project }: Props) {
 
 			<MDXRemote {...(project.source as any)} components={components} />
 
-			<Space h={60} />
+			<section>
+				<Space h={30} />
+				<Title order={2} mb={'sm'}>
+					Details
+				</Title>
+				<Grid>
+					<Col span={12} md={3} lg={3}>
+						<Group>
+							<ThemeIcon color='yellow' size={24} radius='xl'>
+								<RubyIcon size={12} />
+							</ThemeIcon>
+							<Text>{project.company}</Text>
+						</Group>
+					</Col>
+					<Col span={12} md={4} lg={3}>
+						<Group>
+							<ThemeIcon color='yellow' size={24} radius='xl'>
+								<OrganizationIcon size={12} />
+							</ThemeIcon>
+							<Text>{project.industry}</Text>
+						</Group>
+					</Col>
+					<Col span={12} md={4} lg={3}>
+						<Group>
+							<ThemeIcon color='yellow' size={24} radius='xl'>
+								<BriefcaseIcon size={12} />
+							</ThemeIcon>
+							<Text>{project.role}</Text>
+						</Group>
+					</Col>
+					<Col span={12} md={4} lg={3}>
+						<Group>
+							<ThemeIcon color='yellow' size={24} radius='xl'>
+								<LocationIcon size={12} />
+							</ThemeIcon>
+							<Text>{project.country}</Text>
+						</Group>
+					</Col>
+					<Col span={12} md={4} lg={3}>
+						<Group>
+							<ThemeIcon color='yellow' size={24} radius='xl'>
+								<GlobeIcon size={12} />
+							</ThemeIcon>
+							<Link href={project.site as string} target={'_blank'}>
+								<Text color={'yellow'}>EduLivre.org</Text>
+							</Link>
+						</Group>
+					</Col>
+				</Grid>
+			</section>
+
+			<Space h={30} />
 			<Title order={3} mb={'xl'}>
 				Technologies used
 			</Title>

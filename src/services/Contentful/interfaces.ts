@@ -9,6 +9,7 @@ export interface IProject {
 	seo?: SEO
 	role?: string
 	industry?: string
+	site?: string
 	source?: MDXRemoteSerializeResult<Record<string, unknown>>
 	cover: {
 		title: string
