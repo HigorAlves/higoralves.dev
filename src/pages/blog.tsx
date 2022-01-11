@@ -1,16 +1,6 @@
 import React from 'react'
 
-import {
-	Card,
-	Group,
-	Text,
-	Badge,
-	Space,
-	Grid,
-	Col,
-	Button
-} from '@mantine/core'
-import Image from 'next/image'
+import { Text, Space } from '@mantine/core'
 
 import { FeatureBlogPost, Title } from '~/components'
 
