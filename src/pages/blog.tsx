@@ -27,7 +27,7 @@ export default function Blog() {
 				>
 					Learn development with great articles.
 				</Title>
-				<Text>
+				<Text lineClamp={2}>
 					Find the latest of my writing here, you can learn web development,
 					software engineering, and tech career in both English and Portuguese.
 				</Text>
@@ -49,10 +49,12 @@ export default function Blog() {
 						<Col span={8}>
 							<Group
 								position='apart'
-								style={{ marginBottom: 5 }}
+								style={{
+									marginBottom: 5
+								}}
 								spacing={'xl'}
 							>
-								<Title white order={2}>
+								<Title order={2} white>
 									How I build a modern website in 2021
 								</Title>
 								<Text>
@@ -83,6 +85,7 @@ export default function Blog() {
 									src={
 										'https://res.cloudinary.com/kentcdodds-com/image/upload/w_2100,q_auto,f_auto,b_rgb:e6e9ee/kentcdodds.com/content/blog/how-i-built-a-modern-website-in-2021/banner_iplhop'
 									}
+									alt={'cover image example'}
 									width={410}
 									height={513}
 									layout={'responsive'}
