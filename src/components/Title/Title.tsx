@@ -12,6 +12,7 @@ interface Component {
 		| 'pinkToPurple'
 		| 'cyanToGreen'
 		| 'purpleToGreen'
+		| 'grapeToPink'
 	white?: boolean
 	weight?: 'thin'
 }
@@ -36,7 +37,8 @@ export function Title({
 				[classes.gradientPinkPurple]: gradient === 'pinkToPurple',
 				[classes.gradientCyanGreen]: gradient === 'cyanToGreen',
 				[classes.gradientPurpleCyan]: gradient === 'purpleToCyan',
-				[classes.gradientPurpleGreen]: gradient === 'purpleToGreen'
+				[classes.gradientPurpleGreen]: gradient === 'purpleToGreen',
+				[classes.gradientGrapeToPink]: gradient === 'grapeToPink'
 			})}
 			{...rest}
 		>
