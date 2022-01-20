@@ -75,7 +75,7 @@ export const getProject = gql`
 
 export const getBlogPosts = gql`
 	query getProjects($locale: String) {
-		blogPostCollection(locale: $locale) {
+		blogpostCollection(locale: $locale) {
 			items {
 				title
 				slug
@@ -93,7 +93,7 @@ export const getBlogPosts = gql`
 
 export const getBlogPost = gql`
 	query getProjects($locale: String, $slug: String) {
-		blogPostCollection(locale: $locale, where: { slug: $slug }) {
+		blogpostCollection(locale: $locale, where: { slug: $slug }) {
 			items {
 				title
 				slug

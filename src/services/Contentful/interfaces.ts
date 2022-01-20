@@ -35,6 +35,25 @@ export interface ProjectsCollection {
 	}
 }
 
+export interface BlogPost {
+	title: string
+	slug: string
+	category: string
+	metaTags: string
+	content: string
+	timeToRead: string
+	cover: {
+		title: string
+		url: string
+	}
+}
+
+export interface BlogPostsCollection {
+	blogpostCollection: {
+		items: BlogPost[]
+	}
+}
+
 interface SEO {
 	title: string
 	type: 'article' | 'place' | 'website'
