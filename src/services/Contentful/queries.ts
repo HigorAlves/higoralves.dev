@@ -72,3 +72,39 @@ export const getProject = gql`
 		}
 	}
 `
+
+export const getBlogPosts = gql`
+	query getProjects($locale: String) {
+		blogPostCollection(locale: $locale) {
+			items {
+				title
+				slug
+				cover {
+					title
+					url
+				}
+				category
+				metaTags
+				content
+			}
+		}
+	}
+`
+
+export const getBlogPost = gql`
+	query getProjects($locale: String, $slug: String) {
+		blogPostCollection(locale: $locale, where: { slug: $slug }) {
+			items {
+				title
+				slug
+				cover {
+					title
+					url
+				}
+				category
+				metaTags
+				content
+			}
+		}
+	}
+`
