@@ -1,10 +1,13 @@
 import React from 'react'
 
-import { Text, Space } from '@mantine/core'
+import { Text, Space, Grid, Col } from '@mantine/core'
 
-import { FeatureBlogPost, Title } from '~/components'
+import { FeatureBlogPost, SingleBlogPost, Title } from '~/components'
 
 export default function Blog() {
+	const image =
+		'https://res.cloudinary.com/kentcdodds-com/image/upload/w_2100,q_auto,f_auto,b_rgb:e6e9ee/kentcdodds.com/content/blog/how-i-built-a-modern-website-in-2021/banner_iplhop'
+
 	return (
 		<div>
 			<section id={'blog-title-section'}>
@@ -26,6 +29,19 @@ export default function Blog() {
 			<Space h={60} />
 
 			<FeatureBlogPost />
+
+			<Space h={60} />
+
+			<Grid justify={'center'} align={'center'}>
+				<Col span={12} md={4} lg={4}>
+					<SingleBlogPost
+						image={image}
+						title={'Blockchain title'}
+						date={'November 14th, 2022'}
+						timeToRead={5}
+					/>
+				</Col>
+			</Grid>
 		</div>
 	)
 }

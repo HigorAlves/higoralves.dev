@@ -57,8 +57,7 @@ export function FeatureBlogPost() {
 						<Card.Section
 							style={{
 								position: 'relative',
-								borderTopRightRadius: '6px',
-								borderTopLeftRadius: '6px',
+								borderRadius: '6px',
 								overflow: 'hidden'
 							}}
 						>
