@@ -5,7 +5,12 @@ import { Text, Space, Grid, Col } from '@mantine/core'
 import { GetStaticPropsContext } from 'next'
 import readTime from 'reading-time'
 
-import { FeatureBlogPost, SingleBlogPost, Title } from '~/components'
+import {
+	BlogHeader,
+	FeatureBlogPost,
+	SingleBlogPost,
+	Title
+} from '~/components'
 import Contentful, {
 	BlogPost,
 	BlogPostsCollection,
@@ -43,26 +48,9 @@ type Props = {
 export default function Blog({ posts }: Props) {
 	return (
 		<div>
-			<section id={'blog-title-section'}>
-				<Title
-					gradient={'grapeToPink'}
-					order={1}
-					sx={() => ({
-						fontSize: '3rem'
-					})}
-				>
-					Learn development with great articles.
-				</Title>
-				<Text lineClamp={2}>
-					Find the latest of my writing here, you can learn web development,
-					software engineering, and tech career in both English and Portuguese.
-				</Text>
-			</section>
-
+			<BlogHeader />
 			<Space h={60} />
-
 			<FeatureBlogPost />
-
 			<Space h={60} />
 
 			<Grid justify={'left'} align={'center'}>
