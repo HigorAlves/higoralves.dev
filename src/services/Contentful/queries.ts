@@ -86,6 +86,9 @@ export const getBlogPosts = gql`
 				category
 				metaTags
 				content
+				sys {
+					firstPublishedAt
+				}
 			}
 		}
 	}

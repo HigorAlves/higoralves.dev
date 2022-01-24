@@ -42,9 +42,13 @@ export interface BlogPost {
 	metaTags: string
 	content: string
 	timeToRead: string
+	date: string
 	cover: {
 		title: string
 		url: string
+	}
+	sys: {
+		firstPublishedAt: Date
 	}
 }
 
