@@ -1,16 +1,12 @@
 import React from 'react'
 
 import { Text, Space, Grid, Col } from '@mantine/core'
+import { motion } from 'framer-motion'
 // @ts-ignore
 import { GetStaticPropsContext } from 'next'
 import readTime from 'reading-time'
 
-import {
-	BlogHeader,
-	FeatureBlogPost,
-	SingleBlogPost,
-	Title
-} from '~/components'
+import { BlogHeader, SingleBlogPost } from '~/components'
 import Contentful, {
 	BlogPost,
 	BlogPostsCollection,
@@ -46,24 +42,43 @@ type Props = {
 }
 
 export default function Blog({ posts }: Props) {
+	const variants = {
+		animate: {
+			opacity: 1,
+			y: 0,
+			transition: {
+				delay: 0.2
+			}
+		},
+		initial: { opacity: 0, y: -30 },
+		exit: { opacity: 0, y: -30 }
+	}
+
 	return (
 		<div>
 			<BlogHeader />
-			<Space h={60} />
-			<FeatureBlogPost />
+			{/*<Space h={60} />*/}
+			{/*<FeatureBlogPost />*/}
 			<Space h={60} />
 
 			<Grid justify={'left'} align={'center'}>
 				{posts.map(post => (
 					<Col span={12} md={4} lg={4} key={post.slug}>
-						<SingleBlogPost
-							image={post.cover.url}
-							alt={post.cover.title}
-							title={post.title}
-							date={post.date}
-							slug={post.slug}
-							timeToRead={post.timeToRead}
-						/>
+						<motion.div
+							variants={variants}
+							initial={'initial'}
+							animate={'animate'}
+							exit={'exit'}
+						>
+							<SingleBlogPost
+								image={post.cover.url}
+								alt={post.cover.title}
+								title={post.title}
+								date={post.date}
+								slug={post.slug}
+								timeToRead={post.timeToRead}
+							/>
+						</motion.div>
 					</Col>
 				))}
 			</Grid>
