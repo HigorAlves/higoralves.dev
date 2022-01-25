@@ -35,7 +35,7 @@ export function Navbar() {
 						return (
 							<li key={page}>
 								<Link href={path} passHref>
-									<a className={router.pathname === path ? 'active' : ''}>
+									<a className={router.pathname.includes(path) ? 'active' : ''}>
 										{page}
 									</a>
 								</Link>
