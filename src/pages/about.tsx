@@ -69,7 +69,7 @@ export default function About() {
 						</Title>
 						<Space h='xs' />
 						<Title order={2}>
-							Building world-class products that make developers happy.
+							Building world-class products that make people happy.
 						</Title>
 						<Space h='xl' />
 						<Text>
