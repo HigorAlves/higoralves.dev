@@ -43,6 +43,7 @@ export interface BlogPost {
 	content: string
 	timeToRead: string
 	date: string
+	source?: any
 	cover: {
 		title: string
 		url: string
