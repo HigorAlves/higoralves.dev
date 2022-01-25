@@ -47,7 +47,7 @@ export interface BlogPost {
 	title: string
 	slug: string
 	category: string
-	metaTags: Meta
+	seo: SEO
 	content: string
 	timeToRead: string
 	date: string

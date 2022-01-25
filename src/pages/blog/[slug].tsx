@@ -62,7 +62,7 @@ type Props = {
 export default function Project({ post }: Props) {
 	return (
 		<>
-			<SEOHead meta={post.metaTags} />
+			<SEOHead meta={post.seo} />
 			<Container>
 				<div style={{ borderRadius: '8px', overflow: 'hidden' }}>
 					<Image

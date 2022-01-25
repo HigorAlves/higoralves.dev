@@ -105,8 +105,21 @@ export const getBlogPost = gql`
 					url
 				}
 				category
-				metaTags
 				content
+				seo {
+					... on SeoHeader {
+						title
+						type
+						url
+						name
+						description
+						twitter
+						image {
+							url
+							title
+						}
+					}
+				}
 			}
 		}
 	}
