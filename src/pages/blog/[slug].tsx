@@ -1,47 +1,22 @@
 import React from 'react'
 
-import {
-	Col,
-	Container,
-	Grid,
-	Group,
-	Space,
-	Text,
-	ThemeIcon
-} from '@mantine/core'
-import {
-	BriefcaseIcon,
-	LocationIcon,
-	OrganizationIcon,
-	GlobeIcon,
-	RubyIcon
-} from '@primer/octicons-react'
+import { Container } from '@mantine/core'
 // @ts-ignore
 import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import Image from 'next/image'
 
-import { Link, SEOHead, Technology, Title } from '~/components'
-import { Meta } from '~/layouts'
+import { SEOHead, Title } from '~/components'
 import {
 	BlogPost,
 	BlogPostsCollection,
 	default as Contentful,
 	getBlogPost,
 	getBlogPosts,
-	getProject,
-	getProjectsPaths,
-	IProject
+	Path
 } from '~/services/Contentful'
 import ComponentsMap from '~/services/Contentful/componentsMap'
-
-interface Path {
-	params: {
-		slug: string
-	}
-	locale: 'pt-BR' | 'en-US'
-}
 
 export async function getStaticPaths() {
 	const data: BlogPostsCollection = await Contentful.request(getBlogPosts)
@@ -87,7 +62,7 @@ type Props = {
 export default function Project({ post }: Props) {
 	return (
 		<>
-			{/*<SEOHead meta={post.seo as Meta} />*/}
+			<SEOHead meta={post.metaTags} />
 			<Container>
 				<div style={{ borderRadius: '8px', overflow: 'hidden' }}>
 					<Image

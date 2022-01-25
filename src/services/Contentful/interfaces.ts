@@ -1,5 +1,7 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
+import { Meta } from '~/layouts'
+
 export interface IProject {
 	title: string
 	company: string
@@ -34,12 +36,18 @@ export interface ProjectsCollection {
 		items: IProject[]
 	}
 }
+export interface Path {
+	params: {
+		slug: string
+	}
+	locale: 'pt-BR' | 'en-US'
+}
 
 export interface BlogPost {
 	title: string
 	slug: string
 	category: string
-	metaTags: string
+	metaTags: Meta
 	content: string
 	timeToRead: string
 	date: string

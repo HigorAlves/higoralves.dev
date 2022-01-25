@@ -28,31 +28,10 @@ import {
 	default as Contentful,
 	getProject,
 	getProjectsPaths,
-	IProject
+	IProject,
+	Path
 } from '~/services/Contentful'
-
-interface Path {
-	params: {
-		slug: string
-	}
-	locale: 'pt-BR' | 'en-US'
-}
-
-const components = {
-	p: (props: { children: React.ReactChild }) => (
-		<Text mt={'xl'}>{props.children}</Text>
-	),
-	h2: (props: { children: string }) => (
-		<Title order={2} mt={'md'}>
-			{props.children}
-		</Title>
-	),
-	h3: (props: { children: string }) => (
-		<Title order={3} mt={'md'}>
-			{props.children}
-		</Title>
-	)
-}
+import ComponentsMap from '~/services/Contentful/componentsMap'
 
 export async function getStaticPaths() {
 	const { projectCollection } = await Contentful.request(getProjectsPaths)
@@ -116,7 +95,7 @@ export default function Project({ project }: Props) {
 					{project.title as string}
 				</Title>
 
-				<MDXRemote {...(project.source as any)} components={components} />
+				<MDXRemote {...(project.source as any)} components={ComponentsMap} />
 
 				<section>
 					<Space h={30} />
