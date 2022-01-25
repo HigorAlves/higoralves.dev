@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Text, Space, Grid, Col } from '@mantine/core'
+import { Space, Grid, Col } from '@mantine/core'
 import { motion } from 'framer-motion'
 // @ts-ignore
 import { GetStaticPropsContext } from 'next'
