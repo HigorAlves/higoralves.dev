@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {
 	ColorScheme,
 	ColorSchemeProvider,
 	MantineProvider
 } from '@mantine/core'
+import { logEvent } from 'firebase/analytics'
 import { AnimatePresence } from 'framer-motion'
 // @ts-ignore
 import { NextPage } from 'next'
 import { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
 
 import { KBar } from '~/components'
 import { Layout, LayoutTypes, Meta } from '~/layouts'
+import { analytics } from '~/services/Firebase/setupFirebase'
 import { darkTheme, lightTheme } from '~/Theme'
 
 import '../../public/static/css/main.css'
@@ -26,13 +29,22 @@ type AppPropsWithLayout = AppProps & {
 }
 
 export default function App(props: AppPropsWithLayout) {
-	const { Component, pageProps, router } = props
+	const { Component, pageProps } = props
+	const router = useRouter()
 	const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
 	const toggleColorScheme = (value?: ColorScheme) =>
 		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
 
 	const layoutType = Component.layout ?? 'base'
 	const { meta } = Component
+
+	useEffect(() => {
+		function handleAnalyticsRouteChange() {
+			logEvent(analytics, `page_view`)
+		}
+
+		router.events.on('routeChangeComplete', handleAnalyticsRouteChange)
+	}, [])
 
 	return (
 		<ColorSchemeProvider
