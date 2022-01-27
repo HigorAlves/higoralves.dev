@@ -7,7 +7,7 @@ import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import Image from 'next/image'
 
-import { SEOHead, Title } from '~/components'
+import { ContentfulImage, SEOHead, Title } from '~/components'
 import {
 	BlogPost,
 	BlogPostsCollection,
@@ -65,7 +65,7 @@ export default function Project({ post }: Props) {
 			<SEOHead meta={post.seo} />
 			<Container>
 				<div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-					<Image
+					<ContentfulImage
 						src={post.cover.url}
 						width={1920}
 						height={1080}
