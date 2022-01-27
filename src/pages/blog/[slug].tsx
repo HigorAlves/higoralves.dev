@@ -5,9 +5,9 @@ import { Container } from '@mantine/core'
 import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import Image from 'next/image'
 
 import { ContentfulImage, SEOHead, Title } from '~/components'
+import ComponentsMap from '~/components/Contentful/componentsMap'
 import {
 	BlogPost,
 	BlogPostsCollection,
@@ -16,7 +16,6 @@ import {
 	getBlogPosts,
 	Path
 } from '~/services/Contentful'
-import ComponentsMap from '~/services/Contentful/componentsMap'
 
 export async function getStaticPaths() {
 	const data: BlogPostsCollection = await Contentful.request(getBlogPosts)

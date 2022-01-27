@@ -20,9 +20,9 @@ import {
 import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import Image from 'next/image'
 
-import { Link, SEOHead, Technology, Title } from '~/components'
+import { ContentfulImage, Link, SEOHead, Technology, Title } from '~/components'
+import ComponentsMap from '~/components/Contentful/componentsMap'
 import { Meta } from '~/layouts'
 import {
 	default as Contentful,
@@ -31,7 +31,6 @@ import {
 	IProject,
 	Path
 } from '~/services/Contentful'
-import ComponentsMap from '~/services/Contentful/componentsMap'
 
 export async function getStaticPaths() {
 	const { projectCollection } = await Contentful.request(getProjectsPaths)
@@ -81,7 +80,7 @@ export default function Project({ project }: Props) {
 			<SEOHead meta={project.seo as Meta} />
 			<Container>
 				<div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-					<Image
+					<ContentfulImage
 						src={project.cover.url}
 						width={1920}
 						height={1080}

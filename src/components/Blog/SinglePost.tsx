@@ -1,10 +1,9 @@
 import React from 'react'
 
 import { Text } from '@mantine/core'
-import Image from 'next/image'
 
 import createStyles from './blog.styles'
-import { Title } from '~/components'
+import { ContentfulImage, Title } from '~/components'
 import { LinkWrapper } from '~/components/Link/Link'
 
 type Props = {
@@ -24,7 +23,7 @@ export function SingleBlogPost(props: Props): JSX.Element {
 		<LinkWrapper href={`${baseBlogUrl}/${props.slug}`}>
 			<article className={classes.wrapper}>
 				<div className={classes.imageWrapper}>
-					<Image
+					<ContentfulImage
 						alt={props.alt}
 						src={props.image}
 						layout={'responsive'}

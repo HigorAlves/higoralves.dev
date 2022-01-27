@@ -1,9 +1,8 @@
 import React from 'react'
 
 import { Space, Text, Card, Badge, Group } from '@mantine/core'
-import Image from 'next/image'
 
-import { Link, Title } from '~/components'
+import { ContentfulImage, Link, Title } from '~/components'
 import { IProject } from '~/services/Contentful'
 
 export function Project({
@@ -26,7 +25,7 @@ export function Project({
 							overflow: 'hidden'
 						}}
 					>
-						<Image
+						<ContentfulImage
 							src={cover.url}
 							width={350}
 							height={300}
