@@ -2,6 +2,107 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.2.0 (2022-01-28)
+
+
+### :art: Styling
+
+* command bar with responsive color schema ([63c48e5](https://github.com/HigorAlves/higoralves.dev/commit/63c48e5d8658f22904be8ed3af4e10fc59302882))
+* creating light style for kbar ([e73e18c](https://github.com/HigorAlves/higoralves.dev/commit/e73e18c63018dabe5ad635c9c62e99b626c0f11c))
+
+
+### :rocket: Build System
+
+* eslint rules ([0d4772e](https://github.com/HigorAlves/higoralves.dev/commit/0d4772e9740b62b2e2e19d47c3242df4735216c3))
+
+
+### :bug: Bug Fixes
+
+* contain image to maintain aspect ratio ([0ca9974](https://github.com/HigorAlves/higoralves.dev/commit/0ca99741e8a3db21293d3f20c93496a656f9e55d))
+* exit animation ([910825e](https://github.com/HigorAlves/higoralves.dev/commit/910825e0c028417ae59f416bca29c9e49373aa54))
+* name of the field ([3f9ada0](https://github.com/HigorAlves/higoralves.dev/commit/3f9ada0fe045c34d2bd1e476844f4ad970aeb99c))
+* project animate delay ([c02eb98](https://github.com/HigorAlves/higoralves.dev/commit/c02eb98c60f6e0746cd6eab6a94c71ee36c25332))
+* remove fonts ([4c9dece](https://github.com/HigorAlves/higoralves.dev/commit/4c9dece6dce429755cc17b4578838612918f9d7c))
+* remove unsude code ([c620896](https://github.com/HigorAlves/higoralves.dev/commit/c620896ef7cac0d2fc75496aa0573e7bad058af3))
+* removing .env ([cf226be](https://github.com/HigorAlves/higoralves.dev/commit/cf226be30dc7b0dfb2476eae0c0c7b8ef0faad4d))
+* removing meta tag from contentful query ([e381e7c](https://github.com/HigorAlves/higoralves.dev/commit/e381e7c72d96f498627ae2d5e7bcffc495866cca))
+* seo field is optional ([e940c85](https://github.com/HigorAlves/higoralves.dev/commit/e940c854045e901ea6215400bff73c6046e2a2b4))
+* slider component export ([0246f5b](https://github.com/HigorAlves/higoralves.dev/commit/0246f5b74274036a389321f763c01cdc3d070000))
+
+
+### :recycle: Code Refactoring
+
+* includes routes names for sub routes ([e9ffcb1](https://github.com/HigorAlves/higoralves.dev/commit/e9ffcb1f5509a796c31d1a4c4a770a6f9a4ae0e4))
+* seo system for blog posts ([f176f79](https://github.com/HigorAlves/higoralves.dev/commit/f176f7984c30164935433db9477f4a5d0a7265f9))
+
+
+### :triangular_flag_on_post: Others
+
+* card component for projects ([260685b](https://github.com/HigorAlves/higoralves.dev/commit/260685b934f4ea6ce1a97ad5e54a10417f6a8937))
+* carrer name ([5032262](https://github.com/HigorAlves/higoralves.dev/commit/503226227fb5dcaf6061f13252ba2b040474887a))
+* get dynamic seo from contentful ([41df872](https://github.com/HigorAlves/higoralves.dev/commit/41df872927cfc990d01a6780d3b10329169606bf))
+* initial project configuration ([70e3304](https://github.com/HigorAlves/higoralves.dev/commit/70e330465e86b668263f9eb53ce1fdac5a72ee90))
+* mdx resolution page ([4fb69b8](https://github.com/HigorAlves/higoralves.dev/commit/4fb69b841569cfa96b112006cbd2bc711f65ffbd))
+* new components for mdx ([6567e6b](https://github.com/HigorAlves/higoralves.dev/commit/6567e6b3ddd209bea28dc4039eb4e669831cb851))
+* new phrase edit ([a8f12c8](https://github.com/HigorAlves/higoralves.dev/commit/a8f12c820f279b22c98290c0bcb5f63e14d776bc))
+* new props on project interface ([30311e8](https://github.com/HigorAlves/higoralves.dev/commit/30311e855f3905353add6d3651c16355c8ff0efc))
+* new underline text ([15469b8](https://github.com/HigorAlves/higoralves.dev/commit/15469b8e6acac4ea124102a261b890a42f393898))
+* notifications provider ([3ce762d](https://github.com/HigorAlves/higoralves.dev/commit/3ce762d8a5fa87382ecc6722b6c4f1b368790bbe))
+* project list ([e80a4dd](https://github.com/HigorAlves/higoralves.dev/commit/e80a4dd31f0c677d0d98f3aad4b5492918a7daef))
+* **release:** 1.0.1 ([b34e450](https://github.com/HigorAlves/higoralves.dev/commit/b34e450e600ee2ed4d0e33bd05c7b018d4faf404))
+* **release:** 1.0.2 ([68128ca](https://github.com/HigorAlves/higoralves.dev/commit/68128caca0b07e246170989e7dee0ba93434aa80))
+* **release:** 1.1.0 ([af0b9fe](https://github.com/HigorAlves/higoralves.dev/commit/af0b9fe4b4ce9a1a946cb9bbc3e12aef54d7a9ac))
+* **release:** null ([d8cbfa0](https://github.com/HigorAlves/higoralves.dev/commit/d8cbfa0f3f4a42d74e436f8e557a2336b96a6e1a))
+* static site for project page ([7fbda89](https://github.com/HigorAlves/higoralves.dev/commit/7fbda89ab62ca8d12611f78dca8c1658766d8bbb))
+* technology component ([88cd7d6](https://github.com/HigorAlves/higoralves.dev/commit/88cd7d6d4c100e19646288c63fcf616ede4bde71))
+* title for the projects list ([3e6629f](https://github.com/HigorAlves/higoralves.dev/commit/3e6629f05782d143f3e02b8f366cc39f76f8e876))
+* unused files ([6d43307](https://github.com/HigorAlves/higoralves.dev/commit/6d43307b61bd8791f885510fc2e4ddca91904eaf))
+
+
+### :zap: Performance Improvements
+
+* remove all default images to contentful image loader ([15df93e](https://github.com/HigorAlves/higoralves.dev/commit/15df93efdac4b884b6809c5dfebc28ca690cda68))
+* remove unsude code ([7dc3ecd](https://github.com/HigorAlves/higoralves.dev/commit/7dc3ecdfa44f1636fd8b93e9be706df819d65cd1))
+* removed unused code imports ([8f80990](https://github.com/HigorAlves/higoralves.dev/commit/8f80990a78d8186f78a3789b4970815a6479e34b))
+* removed unused code imports ([17c9978](https://github.com/HigorAlves/higoralves.dev/commit/17c99786a8960cf1691e32b8da9698da3279c9c9))
+* removed unused code imports ([7be45a2](https://github.com/HigorAlves/higoralves.dev/commit/7be45a2cf59bd15a366a6d8e8b0579c875d1f9ee))
+* seo for project page ([36c26e1](https://github.com/HigorAlves/higoralves.dev/commit/36c26e151fb17b09c12b2a9a8766f546d0b630a4))
+
+
+### :sparkles: Features
+
+* basic animations ([7f5ce29](https://github.com/HigorAlves/higoralves.dev/commit/7f5ce2995775df1d5c4b80a715088f312e203693))
+* blog integration with contentful ([edf2728](https://github.com/HigorAlves/higoralves.dev/commit/edf27284567f6ec446bcf0b7f30b055c2136013c))
+* blog list render ([7da42fd](https://github.com/HigorAlves/higoralves.dev/commit/7da42fd7eb60e0477c3275e0e7e386e14ea18d85))
+* blog post page ([a26eeb2](https://github.com/HigorAlves/higoralves.dev/commit/a26eeb2765ceaf5ddd4a525772abca7963aedad4))
+* blog posts animation ([43fa204](https://github.com/HigorAlves/higoralves.dev/commit/43fa204bf852fd772a43d76a954b65004cfd4ab3))
+* color schema for light and dark ([bdd4a19](https://github.com/HigorAlves/higoralves.dev/commit/bdd4a198f8e0d1e39799861de1c447906e732564))
+* component map for MDX ([d5da702](https://github.com/HigorAlves/higoralves.dev/commit/d5da702c34c1fb726750a5e9715d9cbf76a52c89))
+* contentful image component ([6910f36](https://github.com/HigorAlves/higoralves.dev/commit/6910f3607d66cde6bacc93c885611de3434707b2))
+* favicon and site manifest ([b080e56](https://github.com/HigorAlves/higoralves.dev/commit/b080e568b5d2be319ac4f9b69085c6afd21a1060))
+* feature blog component ([86bc80e](https://github.com/HigorAlves/higoralves.dev/commit/86bc80e3e93bad9383f96250524b53dca0a1a728))
+* feature blog post component ([b4ebe73](https://github.com/HigorAlves/higoralves.dev/commit/b4ebe73ab4ae59d4f642f65981dbbef9a26f7bd4))
+* footer component ([2a3d8b0](https://github.com/HigorAlves/higoralves.dev/commit/2a3d8b0d8f52248b3bd4b715ea78f5f5e96a452a))
+* get project paths ([8171d3e](https://github.com/HigorAlves/higoralves.dev/commit/8171d3ee8c00a5e0f18a10a0cd639170f3d32a4a))
+* google analytics integration ([1a3e04e](https://github.com/HigorAlves/higoralves.dev/commit/1a3e04e388d7af8edf6fe308c1008b65bb5f7ff9))
+* home page design ([356704a](https://github.com/HigorAlves/higoralves.dev/commit/356704a6444679cba29140f62d82b0416e5865a7))
+* hotkeys inside browser ([4a9700c](https://github.com/HigorAlves/higoralves.dev/commit/4a9700c87a395e52319fb025deeb1582ec8d526c))
+* kbar component ([1997e0d](https://github.com/HigorAlves/higoralves.dev/commit/1997e0d9a1aecd45c75569b7210cb450e9dfa6b2))
+* layout pattern for the application ([7f746b5](https://github.com/HigorAlves/higoralves.dev/commit/7f746b5f0d90484427ac150c25f45bf528e153ef))
+* navbar blog redirect and image alt ([cb875ca](https://github.com/HigorAlves/higoralves.dev/commit/cb875caa70861ffc4e8ba15848a3c42f9befc431))
+* new 3d object ([a8a9d57](https://github.com/HigorAlves/higoralves.dev/commit/a8a9d574e2d180bd83a187b50dfc4cb8208df1f2))
+* new about page ([7ac69ab](https://github.com/HigorAlves/higoralves.dev/commit/7ac69ab9004041aea8616aaa8526d60bbb6bf55e))
+* new components for the blog ([cb2b5cc](https://github.com/HigorAlves/higoralves.dev/commit/cb2b5cc0048df618398c256a8a9027cdcf4d1b3f))
+* new details part for the projects ([061aac6](https://github.com/HigorAlves/higoralves.dev/commit/061aac6766a7174ce2553b9fb1a581f36f722c60))
+* new test configuration ([a196093](https://github.com/HigorAlves/higoralves.dev/commit/a196093220ced8f09dc7c610cc95c9d8be1b117c))
+* queries for blog posts ([5306e99](https://github.com/HigorAlves/higoralves.dev/commit/5306e992ecad2e7dabe5a166464d0b159e100121))
+* responsive navbar ([96aec71](https://github.com/HigorAlves/higoralves.dev/commit/96aec71507cc493ad162f73ed2e93c4414166cff))
+* single blog post component ([2dc6b86](https://github.com/HigorAlves/higoralves.dev/commit/2dc6b86b34b4ea59dc3fd453c4939762e3c4acea))
+* single page project ([62ae3ec](https://github.com/HigorAlves/higoralves.dev/commit/62ae3ec7bf6d98819f5fe55e264d23a650bb7362))
+* ssg for project page ([ca9d688](https://github.com/HigorAlves/higoralves.dev/commit/ca9d688acbfd7f199639388d1f75b60c84fc65bc))
+* static project list ([1f43123](https://github.com/HigorAlves/higoralves.dev/commit/1f4312316bf2bdc2cab963b003e470345a20336d))
+* static seo generation ([e9fab35](https://github.com/HigorAlves/higoralves.dev/commit/e9fab35e6936cb816f9cdfa86b0f02bda2dd7224))
+
 ## [1.1.0](https://github.com/HigorAlves/higoralves.dev/compare/v1.0.2...v1.1.0) (2021-12-30)
 
 
