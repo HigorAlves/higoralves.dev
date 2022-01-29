@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import {
 	ColorScheme,
 	ColorSchemeProvider,
 	MantineProvider
 } from '@mantine/core'
-import { logEvent } from 'firebase/analytics'
 import { AnimatePresence } from 'framer-motion'
 // @ts-ignore
 import { NextPage } from 'next'
@@ -13,8 +12,8 @@ import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 
 import { KBar } from '~/components'
+import { FirebaseTrackingProvider } from '~/Context/FirebaseTrackingProvider'
 import { Layout, LayoutTypes, Meta } from '~/layouts'
-import { analytics } from '~/services/Firebase/setupFirebase'
 import { darkTheme, lightTheme } from '~/Theme'
 
 import '../../public/static/css/main.css'
@@ -38,14 +37,6 @@ export default function App(props: AppPropsWithLayout) {
 	const layoutType = Component.layout ?? 'base'
 	const { meta } = Component
 
-	useEffect(() => {
-		function handleAnalyticsRouteChange() {
-			logEvent(analytics, `page_view`)
-		}
-
-		router.events.on('routeChangeComplete', handleAnalyticsRouteChange)
-	}, [])
-
 	return (
 		<ColorSchemeProvider
 			colorScheme={colorScheme}
@@ -58,9 +49,11 @@ export default function App(props: AppPropsWithLayout) {
 			>
 				<KBar>
 					<Layout type={layoutType} meta={meta}>
-						<AnimatePresence exitBeforeEnter>
-							<Component key={router.route} {...pageProps} />
-						</AnimatePresence>
+						<FirebaseTrackingProvider>
+							<AnimatePresence exitBeforeEnter>
+								<Component key={router.route} {...pageProps} />
+							</AnimatePresence>
+						</FirebaseTrackingProvider>
 					</Layout>
 				</KBar>
 			</MantineProvider>
