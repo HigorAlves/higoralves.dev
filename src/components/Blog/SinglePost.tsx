@@ -2,9 +2,10 @@ import React from 'react'
 
 import { Text } from '@mantine/core'
 
-import createStyles from './blog.styles'
 import { ContentfulImage, Title } from '~/components'
 import { LinkWrapper } from '~/components/Link/Link'
+
+import createStyles from './blog.styles'
 
 type Props = {
 	image: string

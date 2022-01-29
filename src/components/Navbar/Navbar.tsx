@@ -12,8 +12,9 @@ import { useKBar } from 'kbar'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import useStyles from './styles.navbar'
 import { Title } from '~/components'
+
+import useStyles from './styles.navbar'
 
 export function Navbar() {
 	const { classes } = useStyles()
