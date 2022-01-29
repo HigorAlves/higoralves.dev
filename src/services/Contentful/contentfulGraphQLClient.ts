@@ -11,9 +11,7 @@ class ContentfulGraphQLClient extends GraphQLClient {
 
 	constructor({ spaceId, token, env }: Props) {
 		super(`${ContentfulGraphQLClient.API_BASE}${spaceId}/environments/${env}`, {
-			headers: {
-				authorization: `Bearer ${'o1sIGch7sDXrLhb2PokTS6aIzDIPNExWc-_Nhvaduk0'}`
-			}
+			headers: { authorization: `Bearer ${token}` }
 		})
 	}
 }
