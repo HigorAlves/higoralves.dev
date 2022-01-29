@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { GetStaticPropsContext } from 'next'
 import readTime from 'reading-time'
 
-import { BlogHeader, SingleBlogPost } from '~/components'
+import { BlogHeader, SingleBlogPost, Title } from '~/components'
 import Contentful, {
 	BlogPost,
 	BlogPostsCollection,
@@ -60,6 +60,8 @@ export default function Blog({ posts }: Props) {
 			{/*<Space h={60} />*/}
 			{/*<FeatureBlogPost />*/}
 			<Space h={60} />
+
+			{posts.length <= 0 ? <Title order={4}>No posts yet :C</Title> : null}
 
 			<Grid justify={'left'} align={'center'}>
 				{posts.map(post => (
