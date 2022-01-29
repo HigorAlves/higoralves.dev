@@ -21,3 +21,7 @@
 	width: 50rem !important;
 	opacity: 100%;
 }
+
+::selection {
+	background: rgb(255, 212, 59);
+}
