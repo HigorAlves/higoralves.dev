@@ -30,15 +30,9 @@ export default createStyles(theme => ({
 			display: 'inline-block',
 			position: 'relative',
 			color:
-				theme.colorScheme === 'dark'
-					? theme.colors.gray[5]
-					: theme.colors.dark[5],
+				theme.colorScheme === 'dark' ? theme.colors.gray[4] : theme.colors.dark,
 
 			'&.active': {
-				color:
-					theme.colorScheme === 'dark'
-						? theme.colors.yellow[5]
-						: theme.colors.yellow[9],
 				'&:after': {
 					content: `""`,
 					position: 'absolute',
@@ -55,15 +49,10 @@ export default createStyles(theme => ({
 			},
 
 			'&:hover': {
-				backgroundColor:
-					theme.colorScheme === 'dark'
-						? theme.colors.dark[5]
-						: theme.colors.gray[1],
 				color:
 					theme.colorScheme === 'dark'
-						? theme.colors.yellow[4]
-						: theme.colors.yellow[9],
-				borderRadius: 4
+						? theme.colors.gray[1]
+						: theme.colors.dark[1]
 			}
 		}
 	}
