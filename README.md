@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# About
+
+This is an application that I'm developing for exercise my knowledge
+and to make my life easier.
+
+## Design
+
+The [components](https://xd.adobe.com/view/6c643653-7296-41e4-b055-a49ac879e755-3937/?fullscreen)
+design are being made with **Adobe XD**.
+
 ## Getting Started
 
 First, run the development server:
