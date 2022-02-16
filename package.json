@@ -24,8 +24,6 @@
 		]
 	},
 	"dependencies": {
-		"@emotion/react": "^11.7.1",
-		"@emotion/styled": "^11.6.0",
 		"@mantine/core": "^3.6.7",
 		"@mantine/hooks": "^3.6.7",
 		"@mantine/next": "^3.6.7",

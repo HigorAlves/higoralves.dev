@@ -1,17 +1,16 @@
 import React from 'react'
 
 import { Button, Col, Grid, Space, Text, Title } from '@mantine/core'
+import { useNotifications } from '@mantine/notifications'
 import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
-import { useKBar } from 'kbar'
 
 import { Ball } from '~/components'
 import { Meta } from '~/layouts'
 import { containerVariants, itemVariants } from '~/layouts/animation'
 
 export default function Home() {
-	const { query } = useKBar()
-
+	const notifications = useNotifications()
 	return (
 		<Grid justify='center' align='center' gutter={40}>
 			<Col span={12} md={5}>
@@ -53,7 +52,12 @@ export default function Home() {
 					>
 						<Button
 							color={'yellow'}
-							onClick={query.toggle}
+							onClick={() =>
+								notifications.showNotification({
+									title: 'Default notification',
+									message: 'Hey there, your code is awesome! 🤥'
+								})
+							}
 							variant={'light'}
 							size={'xs'}
 						>

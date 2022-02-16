@@ -19,7 +19,7 @@ import useStyles from './styles.navbar'
 export function Navbar() {
 	const { classes } = useStyles()
 	const router = useRouter()
-	const { query } = useKBar()
+	// const { query } = useKBar()
 	const matches = useMediaQuery('(min-width: 430px)')
 	const { colorScheme, toggleColorScheme } = useMantineColorScheme()
 
@@ -63,7 +63,7 @@ export function Navbar() {
 				<ActionIcon
 					variant='outline'
 					color={dark ? 'white' : 'black'}
-					onClick={query.toggle}
+					// onClick={query.toggle}
 					title='Toggle commands'
 					style={{ marginLeft: 26 }}
 					size={'xl'}

@@ -5,12 +5,12 @@ import {
 	ColorSchemeProvider,
 	MantineProvider
 } from '@mantine/core'
+import { NotificationsProvider } from '@mantine/notifications'
 import { AnimatePresence } from 'framer-motion'
 import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 
-import { KBar } from '~/components'
 import { FirebaseTrackingProvider } from '~/Context/FirebaseTrackingProvider'
 import { Layout, LayoutTypes, Meta } from '~/layouts'
 import { darkTheme, lightTheme } from '~/Theme'
@@ -46,15 +46,15 @@ export default function App(props: AppPropsWithLayout) {
 				withNormalizeCSS
 				theme={colorScheme === 'dark' ? darkTheme : lightTheme}
 			>
-				<KBar>
+				<NotificationsProvider>
 					<Layout type={layoutType} meta={meta}>
 						<FirebaseTrackingProvider>
-							<AnimatePresence exitBeforeEnter>
-								<Component key={router.route} {...pageProps} />
-							</AnimatePresence>
+							{/*<AnimatePresence exitBeforeEnter>*/}
+							<Component key={router.route} {...pageProps} />
+							{/*</AnimatePresence>*/}
 						</FirebaseTrackingProvider>
 					</Layout>
-				</KBar>
+				</NotificationsProvider>
 			</MantineProvider>
 		</ColorSchemeProvider>
 	)

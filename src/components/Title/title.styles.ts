@@ -22,32 +22,32 @@ export const useClasses = createStyles(theme => ({
 	},
 	gradientYellowToPink: {
 		background: `linear-gradient(${gradientDegree}, ${colors.yellow} 0%, ${colors.pink} 100%)`,
-		'-webkit-background-clip': 'text',
-		'-webkit-text-fill-color': 'transparent'
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent'
 	},
 	gradientGrapeToPink: {
 		background: `linear-gradient(${gradientDegree}, ${colors.grape} 0%, ${colors.pink} 100%)`,
-		'-webkit-background-clip': 'text',
-		'-webkit-text-fill-color': 'transparent'
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent'
 	},
 	gradientPurpleCyan: {
 		background: `linear-gradient(${gradientDegree}, ${colors.purple} 0%, ${colors.cyan} 100%)`,
-		'-webkit-background-clip': 'text',
-		'-webkit-text-fill-color': 'transparent'
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent'
 	},
 	gradientPinkPurple: {
 		background: `linear-gradient(${gradientDegree}, ${colors.pink} 0%, ${colors.purple} 100%)`,
-		'-webkit-background-clip': 'text',
-		'-webkit-text-fill-color': 'transparent'
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent'
 	},
 	gradientCyanGreen: {
 		background: `linear-gradient(${gradientDegree}, ${colors.cyan} 0%, ${colors.green} 100%)`,
-		'-webkit-background-clip': 'text',
-		'-webkit-text-fill-color': 'transparent'
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent'
 	},
 	gradientPurpleGreen: {
 		background: `linear-gradient(${gradientDegree}, ${colors.purple} 0%, ${colors.green} 100%)`,
-		'-webkit-background-clip': 'text',
-		'-webkit-text-fill-color': 'transparent'
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent'
 	}
 }))
