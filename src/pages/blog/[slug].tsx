@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { Container } from '@mantine/core'
-// @ts-ignore
 import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -35,7 +34,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: GetStaticPropsContext) {
 	const { locale, params } = context
-	const slug = params.slug
+	const slug = params?.slug
 	const data: BlogPostsCollection = await Contentful.request(getBlogPost, {
 		locale,
 		slug

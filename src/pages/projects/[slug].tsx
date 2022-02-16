@@ -50,7 +50,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: GetStaticPropsContext) {
 	const { locale, params } = context
-	const slug = params.slug
+	const slug = params?.slug
 	const { projectCollection } = await Contentful.request(getProject, {
 		locale,
 		slug

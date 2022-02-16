@@ -6,7 +6,6 @@ import {
 	MantineProvider
 } from '@mantine/core'
 import { AnimatePresence } from 'framer-motion'
-// @ts-ignore
 import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
@@ -20,7 +19,7 @@ import '../../public/static/css/main.css'
 
 type NextPageWithLayout = NextPage & {
 	layout?: LayoutTypes
-	meta?: Meta
+	meta: Meta
 }
 
 type AppPropsWithLayout = AppProps & {

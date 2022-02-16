@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Space, Grid, Col } from '@mantine/core'
 import { motion } from 'framer-motion'
-// @ts-ignore
 import { GetStaticPropsContext } from 'next'
 import readTime from 'reading-time'
 
@@ -24,7 +23,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 		const { text } = readTime(item.content)
 		return {
 			...item,
-			date: dateFormatSmall(item.sys.firstPublishedAt, locale),
+			date: dateFormatSmall(item.sys.firstPublishedAt, locale ?? 'en-US'),
 			timeToRead: text
 		}
 	})
