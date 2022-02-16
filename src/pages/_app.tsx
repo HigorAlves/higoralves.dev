@@ -49,9 +49,9 @@ export default function App(props: AppPropsWithLayout) {
 				<NotificationsProvider>
 					<Layout type={layoutType} meta={meta}>
 						<FirebaseTrackingProvider>
-							{/*<AnimatePresence exitBeforeEnter>*/}
-							<Component key={router.route} {...pageProps} />
-							{/*</AnimatePresence>*/}
+							<AnimatePresence exitBeforeEnter>
+								<Component key={router.route} {...pageProps} />
+							</AnimatePresence>
 						</FirebaseTrackingProvider>
 					</Layout>
 				</NotificationsProvider>
