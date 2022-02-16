@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core'
 
 export default createStyles(theme => ({
 	container: {
-		height: 130,
+		paddingTop: 5,
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-between',
@@ -10,6 +10,7 @@ export default createStyles(theme => ({
 	},
 	nav: {
 		textAlign: 'center',
+		cursor: 'pointer',
 
 		'& ul': {
 			margin: 0,

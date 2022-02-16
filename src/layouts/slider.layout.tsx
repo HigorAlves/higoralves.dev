@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 import { createStyles } from '@mantine/core'
 
-import { Footer, Navbar } from '~/components'
+import { AppShell, Footer } from '~/components'
 
 interface Props {
 	children: ReactNode
@@ -19,8 +19,9 @@ function BaseLayout({ children }: Props): JSX.Element {
 
 	return (
 		<>
-			<Navbar />
-			<main className={classes.wrapper}>{children}</main>
+			<AppShell>
+				<main className={classes.wrapper}>{children}</main>
+			</AppShell>
 			<Footer />
 		</>
 	)

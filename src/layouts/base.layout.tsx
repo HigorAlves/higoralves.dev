@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 import { Container, createStyles } from '@mantine/core'
 
-import { Footer, Navbar, SEOHead } from '~/components'
+import { AppShell, Footer, SEOHead } from '~/components'
 import { Meta } from '~/layouts/index'
 
 interface Props {
@@ -22,10 +22,11 @@ function BaseLayout({ children, meta }: Props): JSX.Element {
 	return (
 		<>
 			<SEOHead meta={meta} />
-			<Navbar />
-			<main className={classes.wrapper}>
-				<Container size={'lg'}>{children}</Container>
-			</main>
+			<AppShell>
+				<main className={classes.wrapper}>
+					<Container size={'lg'}>{children}</Container>
+				</main>
+			</AppShell>
 			<Footer />
 		</>
 	)
