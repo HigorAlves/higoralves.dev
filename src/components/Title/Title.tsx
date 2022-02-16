@@ -13,8 +13,9 @@ interface Component {
 		| 'cyanToGreen'
 		| 'purpleToGreen'
 		| 'grapeToPink'
+		| 'orangeToPink'
 	white?: boolean
-	weight?: 'thin'
+	weight?: 'thin' | 'regular' | 'light' | 'bold'
 }
 
 type Props = Component & TitleProps
@@ -32,7 +33,11 @@ export function Title({
 		<Component
 			className={cx({
 				[classes.base]: white,
-				[classes.light]: weight === 'thin',
+				[classes.thin]: weight === 'thin',
+				[classes.light]: weight === 'light',
+				[classes.regular]: weight === 'regular',
+				[classes.bold]: weight === 'bold',
+				[classes.gradientOrangeToPink]: gradient === 'orangeToPink',
 				[classes.gradientYellowToPink]: gradient === 'yellowToPink',
 				[classes.gradientPinkPurple]: gradient === 'pinkToPurple',
 				[classes.gradientCyanGreen]: gradient === 'cyanToGreen',

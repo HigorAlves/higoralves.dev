@@ -1,6 +1,6 @@
 {
 	"name": "higoralves.dev",
-	"private": true,
+	"private": false,
 	"version": "1.2.0",
 	"scripts": {
 		"dev": "next dev",
@@ -29,8 +29,6 @@
 		"@mantine/next": "^3.6.7",
 		"@mantine/notifications": "^3.6.7",
 		"@primer/octicons-react": "^16.3.1",
-		"@react-three/drei": "^8.10.0",
-		"@react-three/fiber": "^7.0.26",
 		"firebase": "^9.6.6",
 		"framer-motion": "^6.2.6",
 		"graphql": "^16.3.0",
@@ -41,8 +39,7 @@
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
 		"reading-time": "^1.5.0",
-		"swiper": "^8.0.6",
-		"three": "^0.137.5"
+		"swiper": "^8.0.6"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^16.2.1",

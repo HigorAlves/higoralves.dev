@@ -17,8 +17,22 @@ export const useClasses = createStyles(theme => ({
 	base: {
 		color: theme.colorScheme === 'dark' ? theme.white : theme.colors.dark[9]
 	},
+	thin: {
+		fontWeight: 100
+	},
 	light: {
 		fontWeight: 300
+	},
+	regular: {
+		fontWeight: 400
+	},
+	bold: {
+		fontWeight: 700
+	},
+	gradientOrangeToPink: {
+		background: `linear-gradient(${gradientDegree}, ${theme.colors.orange} 0%, ${theme.colors.pink[5]} 100%)`,
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent'
 	},
 	gradientYellowToPink: {
 		background: `linear-gradient(${gradientDegree}, ${colors.yellow} 0%, ${colors.pink} 100%)`,

@@ -1,11 +1,6 @@
 import React from 'react'
 
-import {
-	ActionIcon,
-	Space,
-	Tooltip,
-	useMantineColorScheme
-} from '@mantine/core'
+import { ActionIcon, Tooltip, useMantineColorScheme } from '@mantine/core'
 import {
 	RocketIcon,
 	MoonIcon,
@@ -28,7 +23,7 @@ function ToolTipAction({ label, children, space, onClick }: WrapperProps) {
 			position='bottom'
 			placement='center'
 			gutter={10}
-			color='yellow'
+			color='orange'
 			transition='skew-up'
 			transitionDuration={300}
 		>

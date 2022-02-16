@@ -11,10 +11,9 @@ import {
 } from '@mantine/core'
 import { useClipboard } from '@mantine/hooks'
 import { CopyIcon, DownloadIcon } from '@primer/octicons-react'
-import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
 
-import { Ball, Title } from '~/components'
+import { Title } from '~/components'
 import { Meta } from '~/layouts'
 import { containerVariants } from '~/layouts/animation'
 
@@ -44,17 +43,7 @@ export default function About() {
 				<Space h={'xl'} />
 
 				<Grid align='flex-start'>
-					<Col span={12} md={6}>
-						<Canvas
-							style={{
-								height: '40vh'
-							}}
-						>
-							<ambientLight intensity={0.5} />
-							<directionalLight position={[-2, 5, 2]} intensity={1} />
-							<Ball />
-						</Canvas>
-					</Col>
+					<Col span={12} md={6} />
 					<Col span={12} md={6}>
 						<Title
 							order={1}
