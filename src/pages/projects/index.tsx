@@ -2,12 +2,10 @@ import React from 'react'
 
 import { Col, Grid, Space, Text } from '@mantine/core'
 import { motion } from 'framer-motion'
-// @ts-ignore
 import { GetStaticPropsContext } from 'next'
 
-import { Project, Title } from '~/components'
+import { Project, Title, UpDownMotion } from '~/components'
 import { Meta } from '~/layouts'
-import { containerVariants } from '~/layouts/animation'
 import {
 	default as Contentful,
 	getProjects,
@@ -38,12 +36,7 @@ type Props = {
 
 export default function Projects({ projects }: Props) {
 	return (
-		<motion.section
-			initial={'hidden'}
-			animate={'visible'}
-			exit={'exit'}
-			variants={containerVariants}
-		>
+		<UpDownMotion>
 			<Title
 				gradient={'cyanToGreen'}
 				order={1}
@@ -92,7 +85,7 @@ export default function Projects({ projects }: Props) {
 					</Col>
 				))}
 			</Grid>
-		</motion.section>
+		</UpDownMotion>
 	)
 }
 

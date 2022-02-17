@@ -1,11 +1,10 @@
 import React from 'react'
 
 import { Space, Grid, Col } from '@mantine/core'
-import { motion } from 'framer-motion'
 import { GetStaticPropsContext } from 'next'
 import readTime from 'reading-time'
 
-import { BlogHeader, SingleBlogPost, Title } from '~/components'
+import { BlogHeader, SingleBlogPost, Title, UpDownMotion } from '~/components'
 import Contentful, {
 	BlogPost,
 	BlogPostsCollection,
@@ -41,36 +40,22 @@ type Props = {
 }
 
 export default function Blog({ posts }: Props) {
-	const variants = {
-		animate: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				delay: 0.2
-			}
-		},
-		initial: { opacity: 0, y: -30 },
-		exit: { opacity: 0, y: -30 }
-	}
-
 	return (
 		<div>
-			<BlogHeader />
-			{/*<Space h={60} />*/}
-			{/*<FeatureBlogPost />*/}
-			<Space h={60} />
+			<UpDownMotion>
+				<BlogHeader />
+				{/*<Space h={60} />*/}
+				{/*<FeatureBlogPost />*/}
+				<Space h={60} />
+			</UpDownMotion>
 
-			{posts.length <= 0 ? <Title order={4}>No posts yet :C</Title> : null}
-
+			<UpDownMotion>
+				{posts.length <= 0 ? <Title order={4}>No posts yet :C</Title> : null}
+			</UpDownMotion>
 			<Grid justify={'left'} align={'center'}>
 				{posts.map(post => (
 					<Col span={12} md={4} lg={4} key={post.slug}>
-						<motion.div
-							variants={variants}
-							initial={'initial'}
-							animate={'animate'}
-							exit={'exit'}
-						>
+						<UpDownMotion>
 							<SingleBlogPost
 								image={post.cover.url}
 								alt={post.cover.title}
@@ -79,7 +64,7 @@ export default function Blog({ posts }: Props) {
 								slug={post.slug}
 								timeToRead={post.timeToRead}
 							/>
-						</motion.div>
+						</UpDownMotion>
 					</Col>
 				))}
 			</Grid>
