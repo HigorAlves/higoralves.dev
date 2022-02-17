@@ -2,6 +2,7 @@
 module.exports = {
 	reactStrictMode: true,
 	trailingSlash: true,
+	productionBrowserSourceMaps: true,
 	images: {
 		domains: [
 			'res.cloudinary.com',
