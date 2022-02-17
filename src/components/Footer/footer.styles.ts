@@ -22,8 +22,8 @@ export default createStyles(theme => {
 					'&:hover': {
 						color:
 							theme.colorScheme === 'dark'
-								? theme.colors.yellow[4]
-								: theme.colors.yellow[9]
+								? theme.colors.gray[1]
+								: theme.colors.dark[1]
 					}
 				}
 			}

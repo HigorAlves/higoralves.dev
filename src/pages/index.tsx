@@ -1,43 +1,24 @@
 import React from 'react'
 
 import { Button, Col, Grid, Space, Text } from '@mantine/core'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-import { Title } from '~/components'
+import { Title, UpDownMotion } from '~/components'
 import { Meta } from '~/layouts'
-import { containerVariants } from '~/layouts/animation'
-
-type Props = {
-	children: React.ReactNode
-}
-
-function MotionWrapper({ children }: Props) {
-	return (
-		<motion.div
-			initial={'hidden'}
-			animate={'visible'}
-			exit={'exit'}
-			variants={containerVariants}
-		>
-			{children}
-		</motion.div>
-	)
-}
 
 export default function Home() {
 	return (
 		<Grid justify='center' align='center' gutter={40}>
 			<Col span={12} md={5}>
-				<MotionWrapper>
+				<UpDownMotion>
 					<Title white order={1} gradient={'orangeToPink'}>
 						Build and ship your app faster
 					</Title>
-				</MotionWrapper>
+				</UpDownMotion>
 
 				<Space h={'xl'} />
 
-				<MotionWrapper>
+				<UpDownMotion>
 					<Title order={2} weight={'regular'} white>
 						Helping companies make the world a better place through quality
 						software.
@@ -45,20 +26,20 @@ export default function Home() {
 
 					<Space h='sm' />
 
-					<MotionWrapper>
+					<UpDownMotion>
 						<Text weight={'thin'}>Senior Software Engineering</Text>
-					</MotionWrapper>
+					</UpDownMotion>
 					<Space h='sm' />
-					<MotionWrapper>
+					<UpDownMotion>
 						<Button color={'orange'} variant={'light'} size={'xs'}>
 							Press to start →
 						</Button>
-					</MotionWrapper>
-				</MotionWrapper>
+					</UpDownMotion>
+				</UpDownMotion>
 			</Col>
 
 			<Col span={12} md={6}>
-				<MotionWrapper>
+				<UpDownMotion>
 					<div style={{ position: 'relative' }}>
 						<Image
 							src={'/static/images/building.png'}
@@ -70,7 +51,7 @@ export default function Home() {
 							alt={'Company'}
 						/>
 					</div>
-				</MotionWrapper>
+				</UpDownMotion>
 			</Col>
 		</Grid>
 	)

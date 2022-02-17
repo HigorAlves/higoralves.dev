@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Container } from '@mantine/core'
+import { LogoGithubIcon } from '@primer/octicons-react'
 import Link from 'next/link'
 
 import useStyles from './footer.styles'
@@ -11,7 +12,8 @@ export function Footer() {
 	const socials = [
 		{
 			name: 'Github',
-			link: 'https://github.com/higoralves'
+			link: 'https://github.com/higoralves',
+			icon: LogoGithubIcon
 		},
 		{
 			name: 'Linkedin',

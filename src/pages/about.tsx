@@ -11,11 +11,9 @@ import {
 } from '@mantine/core'
 import { useClipboard } from '@mantine/hooks'
 import { CopyIcon, DownloadIcon } from '@primer/octicons-react'
-import { motion } from 'framer-motion'
 
-import { Title } from '~/components'
+import { Title, UpDownMotion } from '~/components'
 import { Meta } from '~/layouts'
-import { containerVariants } from '~/layouts/animation'
 
 export default function About() {
 	const clipboard = useClipboard({ timeout: 500 })
@@ -24,12 +22,7 @@ export default function About() {
 
 	return (
 		<Container>
-			<motion.div
-				initial={'hidden'}
-				animate={'visible'}
-				exit={'exit'}
-				variants={containerVariants}
-			>
+			<UpDownMotion>
 				<Title
 					order={1}
 					gradient={'yellowToPink'}
@@ -41,31 +34,25 @@ export default function About() {
 				</Title>
 
 				<Space h={'xl'} />
-
 				<Grid align='flex-start'>
 					<Col span={12} md={6} />
 					<Col span={12} md={6}>
-						<Title
-							order={1}
-							sx={theme => ({
-								color:
-									theme.colorScheme === 'dark'
-										? theme.white
-										: theme.colors.dark[9]
-							})}
-						>
+						<Title order={1} white>
 							Hi, I&apos;m Higor Alves, I&apos;m a Software Engineering.
 						</Title>
+
 						<Space h='xs' />
 						<Title order={2}>
 							Building world-class products that make people happy.
 						</Title>
+
 						<Space h='xl' />
 						<Text>
 							I&apos;m currently the Senior Software Engineering at X-Team.
 							Before that, I was the SE at Toro Investimento. I&apos;m
 							originally from Brazil and now living in sunny California.
 						</Text>
+
 						<Space h='xl' />
 						<Text>
 							When I&apos;m not working, I like running, and explore other
@@ -103,7 +90,7 @@ export default function About() {
 						Download Headshot
 					</a>
 				</Button>
-			</motion.div>
+			</UpDownMotion>
 		</Container>
 	)
 }
