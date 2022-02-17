@@ -1,7 +1,6 @@
 import { createStyles } from '@mantine/core'
 
 export default createStyles(theme => {
-	console.log(theme.colors.orange[9])
 	return {
 		wrapper: {
 			cursor: 'pointer'
