@@ -11,7 +11,7 @@ import {
 } from '~/components'
 import MediumApi from '~/services/Api/medium'
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 	const posts = await MediumApi()
 	return {
 		props: {
@@ -29,15 +29,20 @@ export default function Blog({ posts }: Props) {
 		<div>
 			<UpDownMotion>
 				<BlogHeader />
-				<Space h={60} />
-				<FeatureBlogPost
-					alt={posts[0].title}
-					title={posts[0].title}
-					date={posts[0].date}
-					slug={posts[0].link}
-					image={posts[0].image}
-					timeToRead={posts[0].timeToRead}
-				/>
+				{posts.length > 0 ? (
+					<>
+						<Space h={60} />
+						<FeatureBlogPost
+							alt={posts[0].title}
+							title={posts[0].title}
+							date={posts[0].date}
+							slug={posts[0].link}
+							image={posts[0].image}
+							timeToRead={posts[0].timeToRead}
+						/>
+					</>
+				) : null}
+
 				<Space h={60} />
 			</UpDownMotion>
 
