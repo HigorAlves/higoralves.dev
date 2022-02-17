@@ -1,7 +1,6 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
+Sitemap: https://higoralves.dev/api/sitemap.xml
 
 User-agent: *
-Allow: /
+Allow: /*
 
-Sitemap: https://higoralves.dev/sitemap.xml
+Disallow: /api/*
