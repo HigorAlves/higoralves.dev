@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Space, Grid, Col } from '@mantine/core'
 
@@ -10,21 +10,20 @@ import {
 	UpDownMotion
 } from '~/components'
 import MediumApi from '~/services/Api/medium'
+import { BlogPost } from '~/services/Contentful'
 
-export async function getStaticProps() {
-	const posts = await MediumApi()
-	return {
-		props: {
-			posts
-		},
-		revalidate: 60 * 60 * 10
+export default function Blog() {
+	const [posts, setPosts] = useState<BlogPost[]>([])
+
+	async function getPosts() {
+		const { posts } = await MediumApi()
+		setPosts(posts)
 	}
-}
-type Props = {
-	posts: any[]
-}
 
-export default function Blog({ posts }: Props) {
+	useEffect(() => {
+		getPosts()
+	}, [])
+
 	return (
 		<div>
 			<UpDownMotion>

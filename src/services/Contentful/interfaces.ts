@@ -45,20 +45,11 @@ export interface Path {
 
 export interface BlogPost {
 	title: string
-	slug: string
-	category: string
-	seo: SEO
+	link: string
+	image: string
 	content: string
 	timeToRead: string
 	date: string
-	source?: any
-	cover: {
-		title: string
-		url: string
-	}
-	sys: {
-		firstPublishedAt: Date
-	}
 }
 
 export interface BlogPostsCollection {
