@@ -43,8 +43,8 @@ export default createStyles(theme => ({
 					transformOrigin: 'bottom right',
 					backgroundColor:
 						theme.colorScheme === 'dark'
-							? theme.colors.yellow[5]
-							: theme.colors.yellow[9]
+							? theme.colors.orange[5]
+							: theme.colors.orange[9]
 				}
 			},
 
