@@ -2,6 +2,60 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/HigorAlves/higoralves.dev/compare/v1.2.0...v1.3.0) (2022-02-17)
+
+
+### :triangular_flag_on_post: Others
+
+* no posts message ([a89b1f3](https://github.com/HigorAlves/higoralves.dev/commit/a89b1f3a0f3ede698795a0b62e99b5724dfd4544))
+
+
+### :art: Styling
+
+* selection color ([b04299d](https://github.com/HigorAlves/higoralves.dev/commit/b04299d46dcdb84737406f061123185ddf5280e1))
+
+
+### :memo: Docs
+
+* improve readme ([024037c](https://github.com/HigorAlves/higoralves.dev/commit/024037c4f4b6cbe620a4bfc670a9a9a35ebf11e3))
+
+
+### :rocket: Build System
+
+* removed unnecessary type file ([c634f3d](https://github.com/HigorAlves/higoralves.dev/commit/c634f3d3699dcb162a00b62e284fc243ff70ab32))
+* update package dependencies ([6a37dd6](https://github.com/HigorAlves/higoralves.dev/commit/6a37dd635bba99aa3e1d8f131b52860672081da9))
+* updated packages ([83a76da](https://github.com/HigorAlves/higoralves.dev/commit/83a76da1a16abbb0e8e656ad9606e16627f749e8))
+
+
+### :bug: Bug Fixes
+
+* analytics working on client side ([c12c816](https://github.com/HigorAlves/higoralves.dev/commit/c12c816136786935144003f0d60f447f9f534903))
+* animated presence for animations ([a871fdf](https://github.com/HigorAlves/higoralves.dev/commit/a871fdf42273ad7fe1be101e8590e038aa5e3747))
+* blog page without slug variation ([110c4f2](https://github.com/HigorAlves/higoralves.dev/commit/110c4f217c469ad2da5753a8cae51eba00afe13e))
+* change ssr to static ([2dec190](https://github.com/HigorAlves/higoralves.dev/commit/2dec19021063a524febee8851281f3e950b12d95))
+* change static to ssr ([e1124a5](https://github.com/HigorAlves/higoralves.dev/commit/e1124a542d2783010ebd6eb70ea07b9309e2605a))
+* colors for a pattern in cards and everything ([449f323](https://github.com/HigorAlves/higoralves.dev/commit/449f32303177d8de22b73e1ba93e0c38d6c4b40a))
+* data return ([c4dedca](https://github.com/HigorAlves/higoralves.dev/commit/c4dedca80c516d2970ab8ae6844062aff5e68bc6))
+* data return with client side ([9e2b3bc](https://github.com/HigorAlves/higoralves.dev/commit/9e2b3bc0cb8683841fa8d4c58e4834e95c4c21c4))
+* default up down motion ([04a0be0](https://github.com/HigorAlves/higoralves.dev/commit/04a0be0289876ce1160f11a4f8fea369b4718eff))
+* removed console logs ([8b65f2e](https://github.com/HigorAlves/higoralves.dev/commit/8b65f2ef018302dbb7b94e979b8247c61ca042a1))
+* removed css style warning ([0fe3e5b](https://github.com/HigorAlves/higoralves.dev/commit/0fe3e5b8b5d57857e782765b3c5821b1361831f6))
+* test token removed ([775fe6b](https://github.com/HigorAlves/higoralves.dev/commit/775fe6b45a91aac4f364f5312fdb540d54730944))
+* token test ([ecddae7](https://github.com/HigorAlves/higoralves.dev/commit/ecddae7c9ae1e52ad5c00e5139b87ac29df26638))
+
+
+### :sparkles: Features
+
+* about page with new motion style ([887b951](https://github.com/HigorAlves/higoralves.dev/commit/887b95192295dad0cde845d585357699da330794))
+* api to get medium posts ([d5575f3](https://github.com/HigorAlves/higoralves.dev/commit/d5575f3268c2d31299c36bb5d3a5c983172d08e0))
+* app shell to wrap the app layout ([3f37bcb](https://github.com/HigorAlves/higoralves.dev/commit/3f37bcb5bf912a9b884889f4c8b93f83833b921e))
+* basic sitemap feature ([96ce43a](https://github.com/HigorAlves/higoralves.dev/commit/96ce43ad951f0aa6bb6ababa5f41609606570cc3))
+* blog api with medium network ([b4130c1](https://github.com/HigorAlves/higoralves.dev/commit/b4130c128bd70ffe515223fed03fee3771913730))
+* header bar with icon options ([731fac6](https://github.com/HigorAlves/higoralves.dev/commit/731fac64ca7e6838bb0bb5998fec53f090695902))
+* image and new titles for home page ([06ed322](https://github.com/HigorAlves/higoralves.dev/commit/06ed322322592fee87c465106f8d2ad6032e9cea))
+* lessons default page ([e1ed46b](https://github.com/HigorAlves/higoralves.dev/commit/e1ed46ba06acfa339bb9cf06d4607b196ff1489e))
+* robots txt added ([dfe3e26](https://github.com/HigorAlves/higoralves.dev/commit/dfe3e268ddcf6abab08d986a958e04e1b41f4902))
+
 ## 1.2.0 (2022-01-28)
 
 
