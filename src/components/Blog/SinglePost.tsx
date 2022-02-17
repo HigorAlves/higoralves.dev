@@ -18,10 +18,9 @@ type Props = {
 
 export function SingleBlogPost(props: Props): JSX.Element {
 	const { classes } = createStyles()
-	const baseBlogUrl = 'blog'
 
 	return (
-		<LinkWrapper href={`${baseBlogUrl}/${props.slug}`}>
+		<LinkWrapper href={props.slug} target={'_blank'}>
 			<article className={classes.wrapper}>
 				<div className={classes.imageWrapper}>
 					<ContentfulImage

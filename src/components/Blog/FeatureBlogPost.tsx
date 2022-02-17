@@ -1,25 +1,26 @@
 import React from 'react'
 
-import {
-	Card,
-	Group,
-	Text,
-	Badge,
-	Space,
-	Grid,
-	Col,
-	Button
-} from '@mantine/core'
-import Image from 'next/image'
+import { Card, Text, Badge, Space, Grid, Col, Button } from '@mantine/core'
+import { useRouter } from 'next/router'
 
-import { Title } from '~/components'
+import { ContentfulImage, Title } from '~/components'
 
-export function FeatureBlogPost() {
+type Props = {
+	image: string
+	title: string
+	date: string
+	timeToRead: string
+	alt: string
+	slug: string
+}
+
+export function FeatureBlogPost(props: Props) {
+	const router = useRouter()
 	return (
 		<section id={'blog-feature-section'}>
 			<Card shadow={'sm'} padding={60}>
 				<Badge
-					color='grape'
+					color='orange'
 					variant='outline'
 					size={'lg'}
 					style={{ position: 'absolute' }}
@@ -28,27 +29,17 @@ export function FeatureBlogPost() {
 				</Badge>
 				<Grid align={'center'}>
 					<Col span={8}>
-						<Group
-							position='apart'
-							style={{
-								marginBottom: 5
-							}}
-							spacing={'xl'}
-						>
-							<Title order={2} white>
-								How I build a modern website in 2021
-							</Title>
-							<Text>
-								With Fjord Tours you can explore more of the magical fjord
-								landscapes with tours and activities on and around the fjords of
-								Norway
-							</Text>
-							<Text weight={700}>September 29th, 2021 - 10 min read</Text>
-						</Group>
+						<Title order={2} white>
+							{props.title}
+						</Title>
+						<Text weight={700}>{props.date}</Text>
+
 						<Space h={60} />
+
 						<Button
 							variant={'gradient'}
-							gradient={{ from: 'grape', to: 'pink' }}
+							gradient={{ from: 'orange', to: 'pink' }}
+							onClick={() => router.push(props.slug)}
 						>
 							Read full article
 						</Button>
@@ -61,11 +52,9 @@ export function FeatureBlogPost() {
 								overflow: 'hidden'
 							}}
 						>
-							<Image
-								src={
-									'https://res.cloudinary.com/kentcdodds-com/image/upload/w_2100,q_auto,f_auto,b_rgb:e6e9ee/kentcdodds.com/content/blog/how-i-built-a-modern-website-in-2021/banner_iplhop'
-								}
-								alt={'cover image example'}
+							<ContentfulImage
+								alt={props.title}
+								src={props.image}
 								width={410}
 								height={513}
 								layout={'responsive'}

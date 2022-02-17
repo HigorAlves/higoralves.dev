@@ -1,6 +1,7 @@
 import { createStyles } from '@mantine/core'
 
-export default createStyles(() => {
+export default createStyles(theme => {
+	console.log(theme.colors.orange[9])
 	return {
 		wrapper: {
 			cursor: 'pointer'
@@ -12,7 +13,7 @@ export default createStyles(() => {
 			borderRadius: '6px',
 			transition: 'all 0.2s ease-in-out',
 			'&:hover': {
-				border: '3px solid #be4bdb'
+				border: `3px solid ${theme.colors.orange[6]}`
 			}
 		}
 	}

@@ -1,42 +1,27 @@
 import React from 'react'
 
 import { Space, Grid, Col } from '@mantine/core'
-import { GetStaticPropsContext } from 'next'
-import readTime from 'reading-time'
 
-import { BlogHeader, SingleBlogPost, Title, UpDownMotion } from '~/components'
-import Contentful, {
-	BlogPost,
-	BlogPostsCollection,
-	getBlogPosts
-} from '~/services/Contentful'
-import { dateFormatSmall } from '~/utils/dateFormats'
+import {
+	BlogHeader,
+	FeatureBlogPost,
+	SingleBlogPost,
+	Title,
+	UpDownMotion
+} from '~/components'
+import MediumApi from '~/services/Api/medium'
 
-export async function getStaticProps(context: GetStaticPropsContext) {
-	const { locale } = context
-	const data: BlogPostsCollection = await Contentful.request(getBlogPosts, {
-		locale
-	})
-
-	const posts = data.blogpostCollection.items.map(item => {
-		const { text } = readTime(item.content)
-		return {
-			...item,
-			date: dateFormatSmall(item.sys.firstPublishedAt, locale ?? 'en-US'),
-			timeToRead: text
-		}
-	})
-
+export async function getStaticProps() {
+	const posts = await MediumApi()
 	return {
 		props: {
 			posts
 		},
-		revalidate: 60 * 60 * 10 // 10 days
+		revalidate: 60 * 60 * 10
 	}
 }
-
 type Props = {
-	posts: BlogPost[]
+	posts: any[]
 }
 
 export default function Blog({ posts }: Props) {
@@ -44,8 +29,15 @@ export default function Blog({ posts }: Props) {
 		<div>
 			<UpDownMotion>
 				<BlogHeader />
-				{/*<Space h={60} />*/}
-				{/*<FeatureBlogPost />*/}
+				<Space h={60} />
+				<FeatureBlogPost
+					alt={posts[0].title}
+					title={posts[0].title}
+					date={posts[0].date}
+					slug={posts[0].link}
+					image={posts[0].image}
+					timeToRead={posts[0].timeToRead}
+				/>
 				<Space h={60} />
 			</UpDownMotion>
 
@@ -54,15 +46,15 @@ export default function Blog({ posts }: Props) {
 			</UpDownMotion>
 			<Grid justify={'left'} align={'center'}>
 				{posts.map(post => (
-					<Col span={12} md={4} lg={4} key={post.slug}>
+					<Col span={12} md={4} lg={4} key={post.link}>
 						<UpDownMotion>
 							<SingleBlogPost
-								image={post.cover.url}
-								alt={post.cover.title}
+								image={post.image}
 								title={post.title}
 								date={post.date}
-								slug={post.slug}
+								slug={post.link}
 								timeToRead={post.timeToRead}
+								alt={post.title}
 							/>
 						</UpDownMotion>
 					</Col>
