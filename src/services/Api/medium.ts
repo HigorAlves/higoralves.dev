@@ -10,5 +10,5 @@ export default async function () {
 	if (response.status !== 200) {
 		return []
 	}
-	return response
+	return response.data
 }
