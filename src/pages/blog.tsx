@@ -11,7 +11,7 @@ import {
 } from '~/components'
 import MediumApi from '~/services/Api/medium'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const posts = await MediumApi()
 	return {
 		props: {
