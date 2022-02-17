@@ -70,7 +70,7 @@ export default function About() {
 				<Button
 					leftIcon={<CopyIcon />}
 					variant='outline'
-					color={clipboard.copied ? 'orange' : 'yellow'}
+					color={'orange'}
 					onClick={() => clipboard.copy(bio)}
 				>
 					Copy to Clipboard

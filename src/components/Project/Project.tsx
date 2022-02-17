@@ -49,7 +49,7 @@ export function Project({
 						<Group position={'apart'} mt={'sm'}>
 							<Badge
 								variant={'gradient'}
-								gradient={{ from: 'cyan', to: 'teal' }}
+								gradient={{ from: 'orange', to: 'pink' }}
 							>
 								{company}
 							</Badge>
