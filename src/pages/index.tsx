@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Button, Col, Grid, Space, Text } from '@mantine/core'
-import { GetServerSidePropsContext } from 'next'
+import { GetStaticPropsContext } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
@@ -9,9 +9,7 @@ import Image from 'next/image'
 import { SchemaProps, Title, UpDownMotion } from '~/components'
 import { Meta } from '~/layouts'
 
-export const getServerSideProps = async ({
-	locale
-}: GetServerSidePropsContext) => ({
+export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
 	props: {
 		...(await serverSideTranslations(locale as string, ['common']))
 	}
