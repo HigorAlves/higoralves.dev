@@ -47,6 +47,7 @@ export function SEOHead({ meta }: Props) {
 				property='og:title'
 				content={meta?.title ? meta.title : 'Higor Alves'}
 			/>
+			<meta name='description' content={meta?.description} />
 			<meta property='og:description' content={meta?.description} />
 			<meta property='og:type' content={meta?.type} />
 			<meta property='og:url' content={meta?.url} />
