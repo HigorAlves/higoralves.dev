@@ -11,12 +11,12 @@ import { Meta } from '~/layouts'
 
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
 	props: {
-		...(await serverSideTranslations(locale as string, ['common']))
+		...(await serverSideTranslations(locale as string, ['home']))
 	}
 })
 
 export default function Home() {
-	const { t } = useTranslation('common')
+	const { t } = useTranslation('home')
 
 	return (
 		<Grid justify='center' align='center' gutter={40}>
