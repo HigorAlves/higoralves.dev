@@ -11,6 +11,7 @@ import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 
+import { SchemaProps } from '~/components'
 import { FirebaseTrackingProvider } from '~/Context/FirebaseTrackingProvider'
 import { Layout, LayoutTypes, Meta } from '~/layouts'
 import { darkTheme, lightTheme } from '~/Theme'
@@ -20,6 +21,7 @@ import '../../public/static/css/main.css'
 type NextPageWithLayout = NextPage & {
 	layout?: LayoutTypes
 	meta: Meta
+	jsonLd: SchemaProps
 }
 
 type AppPropsWithLayout = AppProps & {
@@ -34,7 +36,7 @@ export default function App(props: AppPropsWithLayout) {
 		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
 
 	const layoutType = Component.layout ?? 'base'
-	const { meta } = Component
+	const { meta, jsonLd } = Component
 
 	return (
 		<ColorSchemeProvider
@@ -47,7 +49,7 @@ export default function App(props: AppPropsWithLayout) {
 				theme={colorScheme === 'dark' ? darkTheme : lightTheme}
 			>
 				<NotificationsProvider>
-					<Layout type={layoutType} meta={meta}>
+					<Layout type={layoutType} meta={meta} jsonLd={jsonLd}>
 						<FirebaseTrackingProvider>
 							<AnimatePresence exitBeforeEnter>
 								<Component key={router.route} {...pageProps} />

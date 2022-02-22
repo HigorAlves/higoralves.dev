@@ -3,6 +3,7 @@ export * from './SEOHead/Head'
 export * from './Title/Title'
 export * from './Motion'
 export * from './Footer/Footer'
+export * from './JsonLd/JsonLd'
 
 export * from './Kbar/KBar'
 export * from './Project/Project'

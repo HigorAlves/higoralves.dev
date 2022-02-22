@@ -5,7 +5,7 @@ type BasicSchema = {
 	'@type': string
 }
 
-type SearchBox = BasicSchema & {
+type SearchBox = {
 	name: string
 	url: string
 	potentialAction: {
@@ -15,7 +15,7 @@ type SearchBox = BasicSchema & {
 	}
 }
 
-type BlogPosting = BasicSchema & {
+type BlogPosting = {
 	mainEntityOfPage: {
 		'@type': string
 		'@id': string
@@ -41,7 +41,7 @@ type BlogPosting = BasicSchema & {
 	dateModified: string
 }
 
-type Breadcrumb = BasicSchema & {
+type Breadcrumb = {
 	itemListElement: [
 		{
 			'@type': string
@@ -52,7 +52,7 @@ type Breadcrumb = BasicSchema & {
 	]
 }
 
-type Video = BasicSchema & {
+type Video = {
 	name: string
 	description: string
 	thumbnailUrl: string
@@ -62,7 +62,7 @@ type Video = BasicSchema & {
 	embedUrl: string
 }
 
-type Product = BasicSchema & {
+type Product = {
 	name: string
 	image: string
 	description: string
@@ -85,7 +85,7 @@ type Product = BasicSchema & {
 	}
 }
 
-type Person = BasicSchema & {
+type Person = {
 	name: string
 	url: string
 	image: string
@@ -97,7 +97,7 @@ type Person = BasicSchema & {
 	}
 }
 
-type Organization = BasicSchema & {
+type Organization = {
 	name: string
 	alternateName: string
 	url: string
@@ -105,7 +105,7 @@ type Organization = BasicSchema & {
 	sameAs: Array<string>
 }
 
-type FAQ = BasicSchema & {
+type FAQ = {
 	mainEntity: [
 		{
 			'@type': string
@@ -118,7 +118,8 @@ type FAQ = BasicSchema & {
 	]
 }
 
-type Props =
+export type SchemaProps =
+	| BasicSchema
 	| SearchBox
 	| BlogPosting
 	| Breadcrumb
@@ -128,7 +129,7 @@ type Props =
 	| Organization
 	| FAQ
 
-export function JsonLD(schema: Props) {
+export function JsonLD(schema: SchemaProps) {
 	return (
 		<script
 			type='application/ld+json'

@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react'
 
+import { SchemaProps } from '~/components'
+
 import BaseLayout from './base.layout'
 import SliderLayout from './slider.layout'
 
@@ -21,16 +23,27 @@ interface Props {
 	children: ReactNode
 	type: LayoutTypes
 	meta: Meta
+	jsonLd: SchemaProps
 }
 
-export function Layout({ children, type, meta }: Props) {
+export function Layout({ children, type, meta, jsonLd }: Props) {
 	function layoutChoice(type: LayoutTypes) {
 		const layoutList = {
-			base: <BaseLayout meta={meta}>{children}</BaseLayout>,
+			base: (
+				<BaseLayout meta={meta} jsonLd={jsonLd}>
+					{children}
+				</BaseLayout>
+			),
 			slider: <SliderLayout>{children}</SliderLayout>
 		}
 
-		return layoutList[type] || <BaseLayout meta={meta}>{children}</BaseLayout>
+		return (
+			layoutList[type] || (
+				<BaseLayout meta={meta} jsonLd={jsonLd}>
+					{children}
+				</BaseLayout>
+			)
+		)
 	}
 
 	return layoutChoice(type)

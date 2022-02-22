@@ -3,7 +3,7 @@ import React from 'react'
 import { Button, Col, Grid, Space, Text } from '@mantine/core'
 import Image from 'next/image'
 
-import { Title, UpDownMotion } from '~/components'
+import { SchemaProps, Title, UpDownMotion } from '~/components'
 import { Meta } from '~/layouts'
 
 export default function Home() {
@@ -70,4 +70,23 @@ const meta: Meta = {
 	name: 'Higor Alves'
 }
 
+const jsonLd: SchemaProps = {
+	'@context': 'https://schema.org/',
+	'@type': 'Person',
+	name: 'Higor Alves',
+	url: 'https://www.higoralves.dev',
+	image: 'https://avatars.githubusercontent.com/u/11262976?v=4',
+	sameAs: [
+		'https://github.com/higoralves/',
+		'https://www.linkedin.com/in/higoralvesdev/',
+		'https://www.instagram.com/higoralves.dev/'
+	],
+	jobTitle: 'Senior Software Engineer',
+	worksFor: {
+		'@type': 'Organization',
+		name: 'X-Team'
+	}
+}
+
 Home.meta = meta
+Home.jsonLd = jsonLd
