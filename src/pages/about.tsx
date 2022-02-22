@@ -11,11 +11,21 @@ import {
 } from '@mantine/core'
 import { useClipboard } from '@mantine/hooks'
 import { CopyIcon, DownloadIcon } from '@primer/octicons-react'
+import { GetStaticPropsContext } from 'next'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { SchemaProps, Title, UpDownMotion } from '~/components'
 import { Meta } from '~/layouts'
 
+export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
+	props: {
+		...(await serverSideTranslations(locale as string, ['about']))
+	}
+})
+
 export default function About() {
+	const { t } = useTranslation('about')
 	const clipboard = useClipboard({ timeout: 500 })
 	const bio =
 		"Higor Alves is a Brazilian programmer. He currently lives in San Francisco, California, where he's the Senior Software engineer at X-Team. His lifelong appreciation for building software and sharing knowledge led him to speak in over 6 conferences in Brazil."
@@ -30,7 +40,7 @@ export default function About() {
 						fontSize: '3rem'
 					})}
 				>
-					Explore. Work. Live.
+					{t('head')}
 				</Title>
 
 				<Space h={'xl'} />
@@ -38,42 +48,30 @@ export default function About() {
 					<Col span={12} md={6} />
 					<Col span={12} md={6}>
 						<Title order={1} white>
-							Hi, I&apos;m Higor Alves, I&apos;m a Software Engineering.
+							{t('title')}
 						</Title>
 
 						<Space h='xs' />
-						<Title order={2}>
-							Building world-class products that make people happy.
-						</Title>
+						<Title order={2}>{t('subtitle')}</Title>
 
 						<Space h='xl' />
-						<Text>
-							I&apos;m currently the Senior Software Engineering at X-Team.
-							Before that, I was the SE at Toro Investimento. I&apos;m
-							originally from Brazil and now living in sunny California.
-						</Text>
+						<Text>{t('aboutText')}</Text>
 
 						<Space h='xl' />
-						<Text>
-							When I&apos;m not working, I like running, and explore other
-							countries.
-						</Text>
+						<Text>{t('secondAboutText')}</Text>
 					</Col>
 				</Grid>
 
 				<Title order={3}>Bio</Title>
-				<Text size={'sm'}>
-					This is made for journalists, podcast hosts, and event organizers to
-					copy-and-paste.
-				</Text>
-				<Blockquote>{bio}</Blockquote>
+				<Text size={'sm'}>{t('bio')}</Text>
+				<Blockquote>{t('bioDescription')}</Blockquote>
 				<Button
 					leftIcon={<CopyIcon />}
 					variant='outline'
 					color={'orange'}
-					onClick={() => clipboard.copy(bio)}
+					onClick={() => clipboard.copy(t('btnCopyClipboard'))}
 				>
-					Copy to Clipboard
+					{t('btnCopyClipboard')}
 				</Button>
 
 				<Button
@@ -87,7 +85,7 @@ export default function About() {
 						href={"'/static/images/ha-profile.jpg'"}
 						style={{ textDecoration: 'inherit', color: 'inherit' }}
 					>
-						Download Headshot
+						{t('btnDownloadHeadshot')}
 					</a>
 				</Button>
 			</UpDownMotion>
