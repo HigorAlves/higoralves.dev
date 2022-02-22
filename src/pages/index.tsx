@@ -1,18 +1,31 @@
 import React from 'react'
 
 import { Button, Col, Grid, Space, Text } from '@mantine/core'
+import { GetServerSidePropsContext } from 'next'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
 
 import { SchemaProps, Title, UpDownMotion } from '~/components'
 import { Meta } from '~/layouts'
 
+export const getServerSideProps = async ({
+	locale
+}: GetServerSidePropsContext) => ({
+	props: {
+		...(await serverSideTranslations(locale as string, ['common']))
+	}
+})
+
 export default function Home() {
+	const { t } = useTranslation('common')
+
 	return (
 		<Grid justify='center' align='center' gutter={40}>
 			<Col span={12} md={5}>
 				<UpDownMotion>
 					<Title white order={1} gradient={'orangeToPink'}>
-						Build and ship your app faster
+						{t('title')}
 					</Title>
 				</UpDownMotion>
 
@@ -20,19 +33,18 @@ export default function Home() {
 
 				<UpDownMotion>
 					<Title order={2} weight={'regular'} white>
-						Helping companies make the world a better place through quality
-						software.
+						{t('subtitle')}
 					</Title>
 
 					<Space h='sm' />
 
 					<UpDownMotion>
-						<Text weight={'thin'}>Senior Software Engineering</Text>
+						<Text weight={'thin'}>{t('jobTitle')}</Text>
 					</UpDownMotion>
 					<Space h='sm' />
 					<UpDownMotion>
 						<Button color={'orange'} variant={'light'} size={'xs'}>
-							Press to start →
+							{t('ctaButton')}
 						</Button>
 					</UpDownMotion>
 				</UpDownMotion>

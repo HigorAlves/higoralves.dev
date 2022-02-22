@@ -8,6 +8,7 @@ import {
 import { NotificationsProvider } from '@mantine/notifications'
 import { AnimatePresence } from 'framer-motion'
 import { NextPage } from 'next'
+import { appWithTranslation } from 'next-i18next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 
@@ -28,7 +29,7 @@ type AppPropsWithLayout = AppProps & {
 	Component: NextPageWithLayout
 }
 
-export default function App(props: AppPropsWithLayout) {
+function App(props: AppPropsWithLayout) {
 	const { Component, pageProps } = props
 	const router = useRouter()
 	const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
@@ -61,3 +62,5 @@ export default function App(props: AppPropsWithLayout) {
 		</ColorSchemeProvider>
 	)
 }
+
+export default appWithTranslation(App)
