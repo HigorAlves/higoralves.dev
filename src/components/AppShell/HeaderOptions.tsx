@@ -7,8 +7,12 @@ import { PAGES } from '~/config/constants'
 
 import useStyles from './styles.appbar'
 
-export function HeaderOptions() {
-	const { classes } = useStyles()
+interface Props {
+	isDrawer?: boolean
+}
+
+export function HeaderOptions({ isDrawer = false }: Props) {
+	const { classes } = useStyles({ isDrawerStyle: isDrawer })
 	const router = useRouter()
 
 	return (

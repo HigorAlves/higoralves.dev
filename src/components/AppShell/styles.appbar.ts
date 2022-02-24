@@ -1,6 +1,10 @@
 import { createStyles } from '@mantine/core'
 
-export default createStyles(theme => ({
+interface Props {
+	isDrawerStyle: boolean
+}
+
+export default createStyles((theme, { isDrawerStyle = false }: Props) => ({
 	container: {
 		paddingTop: 5,
 		display: 'flex',
@@ -16,9 +20,10 @@ export default createStyles(theme => ({
 			margin: 0,
 			padding: 0,
 			listStyle: 'none',
-			display: 'inline-flex',
+			display: 'flex',
 			position: 'relative',
-			textAlign: 'center'
+			textAlign: 'center',
+			flexDirection: isDrawerStyle ? 'column' : 'row'
 		},
 
 		'& a': {

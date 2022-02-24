@@ -27,8 +27,6 @@ export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
 export default function About() {
 	const { t } = useTranslation('about')
 	const clipboard = useClipboard({ timeout: 500 })
-	const bio =
-		"Higor Alves is a Brazilian programmer. He currently lives in San Francisco, California, where he's the Senior Software engineer at X-Team. His lifelong appreciation for building software and sharing knowledge led him to speak in over 6 conferences in Brazil."
 
 	return (
 		<Container>
