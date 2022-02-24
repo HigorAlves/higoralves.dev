@@ -1,4 +1,4 @@
 export * from './AppShell'
-export * from './HeaderButtons'
-export * from './HeaderTitle'
-export * from './HeaderOptions'
+export * from 'src/components/AppShell/Navbar/HeaderButtons'
+export * from 'src/components/AppShell/Navbar/HeaderTitle'
+export * from 'src/components/AppShell/Navbar/HeaderOptions'

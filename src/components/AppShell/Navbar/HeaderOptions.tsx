@@ -3,9 +3,8 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+import useStyles from 'src/components/AppShell/styles.appbar'
 import { PAGES } from '~/config/constants'
-
-import useStyles from './styles.appbar'
 
 interface Props {
 	isDrawer?: boolean
