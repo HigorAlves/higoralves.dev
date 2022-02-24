@@ -1,12 +1,11 @@
 import React from 'react'
 
-import { Button, Col, Grid, Space, Text } from '@mantine/core'
+import { Col, Grid } from '@mantine/core'
 import { GetStaticPropsContext } from 'next'
-import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Image from 'next/image'
 
-import { SchemaProps, Title, UpDownMotion } from '~/components'
+import { SchemaProps } from '~/components'
+import { SideImage, TitleHome } from '~/containers'
 import { Meta } from '~/layouts'
 
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
@@ -16,52 +15,14 @@ export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
 })
 
 export default function Home() {
-	const { t } = useTranslation('home')
-
 	return (
 		<Grid justify='center' align='center' gutter={40}>
 			<Col span={12} md={5}>
-				<UpDownMotion>
-					<Title white order={1} gradient={'orangeToPink'}>
-						{t('title')}
-					</Title>
-				</UpDownMotion>
-
-				<Space h={'xl'} />
-
-				<UpDownMotion>
-					<Title order={2} weight={'regular'} white>
-						{t('subtitle')}
-					</Title>
-
-					<Space h='sm' />
-
-					<UpDownMotion>
-						<Text weight={'thin'}>{t('jobTitle')}</Text>
-					</UpDownMotion>
-					<Space h='sm' />
-					<UpDownMotion>
-						<Button color={'orange'} variant={'light'} size={'xs'}>
-							{t('ctaButton')}
-						</Button>
-					</UpDownMotion>
-				</UpDownMotion>
+				<TitleHome />
 			</Col>
 
 			<Col span={12} md={6}>
-				<UpDownMotion>
-					<div style={{ position: 'relative' }}>
-						<Image
-							src={'/static/images/building.png'}
-							layout={'fixed'}
-							objectFit={'contain'}
-							objectPosition={'center'}
-							width={700}
-							height={600}
-							alt={'Company'}
-						/>
-					</div>
-				</UpDownMotion>
+				<SideImage />
 			</Col>
 		</Grid>
 	)
