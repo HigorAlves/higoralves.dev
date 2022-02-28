@@ -1,21 +1,12 @@
 import React from 'react'
 
-import {
-	Blockquote,
-	Button,
-	Col,
-	Container,
-	Grid,
-	Space,
-	Text
-} from '@mantine/core'
-import { useClipboard } from '@mantine/hooks'
-import { CopyIcon, DownloadIcon } from '@primer/octicons-react'
+import { Col, Container, Grid, Space } from '@mantine/core'
 import { GetStaticPropsContext } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { SchemaProps, Title, UpDownMotion } from '~/components'
+import { Bio, PresentationComponent } from '~/containers'
 import { Meta } from '~/layouts'
 
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
@@ -26,7 +17,6 @@ export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
 
 export default function About() {
 	const { t } = useTranslation('about')
-	const clipboard = useClipboard({ timeout: 500 })
 
 	return (
 		<Container>
@@ -42,50 +32,15 @@ export default function About() {
 				</Title>
 
 				<Space h={'xl'} />
+
 				<Grid align='flex-start'>
 					<Col span={12} md={6} />
 					<Col span={12} md={6}>
-						<Title order={1} white>
-							{t('title')}
-						</Title>
-
-						<Space h='xs' />
-						<Title order={2}>{t('subtitle')}</Title>
-
-						<Space h='xl' />
-						<Text>{t('aboutText')}</Text>
-
-						<Space h='xl' />
-						<Text>{t('secondAboutText')}</Text>
+						<PresentationComponent />
 					</Col>
 				</Grid>
 
-				<Title order={3}>Bio</Title>
-				<Text size={'sm'}>{t('bio')}</Text>
-				<Blockquote>{t('bioDescription')}</Blockquote>
-				<Button
-					leftIcon={<CopyIcon />}
-					variant='outline'
-					color={'orange'}
-					onClick={() => clipboard.copy(t('btnCopyClipboard'))}
-				>
-					{t('btnCopyClipboard')}
-				</Button>
-
-				<Button
-					leftIcon={<DownloadIcon />}
-					variant='outline'
-					color={'grey'}
-					style={{ marginLeft: 20 }}
-				>
-					<a
-						download
-						href={"'/static/images/ha-profile.jpg'"}
-						style={{ textDecoration: 'inherit', color: 'inherit' }}
-					>
-						{t('btnDownloadHeadshot')}
-					</a>
-				</Button>
+				<Bio />
 			</UpDownMotion>
 		</Container>
 	)

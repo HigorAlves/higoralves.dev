@@ -30,7 +30,6 @@ export default createStyles((theme, { isDrawerStyle = false }: Props) => ({
 			textDecoration: 'none',
 			margin: '0 16px',
 			padding: 12,
-			fontWeight: 'bold',
 			transition: 'all 0.3s ease-in-out',
 			display: 'inline-block',
 			position: 'relative',
