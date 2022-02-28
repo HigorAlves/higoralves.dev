@@ -1,10 +1,12 @@
 import React from 'react'
 
-import { Col, Grid, Space, Text } from '@mantine/core'
-import { motion } from 'framer-motion'
+import { Space, Text } from '@mantine/core'
 import { GetStaticPropsContext } from 'next'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-import { Project, Title, UpDownMotion } from '~/components'
+import { Title, UpDownMotion } from '~/components'
+import { ListOfProjects } from '~/containers'
 import { Meta } from '~/layouts'
 import {
 	default as Contentful,
@@ -24,7 +26,8 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 	return {
 		props: {
-			projects: projectCollection.items
+			projects: projectCollection.items,
+			...(await serverSideTranslations(locale as string, ['project']))
 		},
 		revalidate: 60 * 60 * 10 // 10 days
 	}
@@ -35,6 +38,7 @@ type Props = {
 }
 
 export default function Projects({ projects }: Props) {
+	const { t } = useTranslation('project')
 	return (
 		<UpDownMotion>
 			<Title
@@ -44,47 +48,11 @@ export default function Projects({ projects }: Props) {
 					fontSize: '3rem'
 				})}
 			>
-				Work. Hobby. Open Source
+				{t('title')}
 			</Title>
-			<Text>
-				Here you can navigate to all my different projects, apps, and libraries
-				that I helped in some way. Some of them are still active, others have
-				been discontinued.
-			</Text>
+			<Text>{t('description')}</Text>
 			<Space h={60} />
-			<Grid gutter={26}>
-				{projects.map((project, index) => (
-					<Col span={12} md={6} lg={4} key={project.slug}>
-						<motion.div
-							initial={{
-								opacity: 0,
-								y: -30
-							}}
-							animate={{
-								opacity: 1,
-								y: 0,
-								transition: {
-									delay: 0.2 + index / 5
-								}
-							}}
-							exit={{
-								opacity: 0,
-								y: -30
-							}}
-						>
-							<Project
-								title={project.title}
-								company={project.company}
-								slug={project.slug}
-								country={project.country}
-								description={project.description}
-								cover={project.cover}
-								role={project.role}
-							/>
-						</motion.div>
-					</Col>
-				))}
-			</Grid>
+			<ListOfProjects projects={projects} />
 		</UpDownMotion>
 	)
 }
