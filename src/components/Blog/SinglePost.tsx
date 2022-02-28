@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Text } from '@mantine/core'
+import { Box, Group, Paper, Text } from '@mantine/core'
 
 import { ContentfulImage, Title } from '~/components'
 import { LinkWrapper } from '~/components/Link/Link'
@@ -14,33 +14,44 @@ type Props = {
 	timeToRead: string
 	alt: string
 	slug: string
+	content: string
 }
 
 export function SingleBlogPost(props: Props): JSX.Element {
 	const { classes } = createStyles()
 
 	return (
-		<LinkWrapper href={props.slug} target={'_blank'}>
+		<Box component={LinkWrapper} href={props.slug} target={'_blank'}>
 			<article className={classes.wrapper}>
-				<div className={classes.imageWrapper}>
+				<div>
 					<ContentfulImage
 						alt={props.alt}
 						src={props.image}
 						layout={'responsive'}
 						objectFit={'cover'}
 						objectPosition={'center'}
-						height={350}
-						width={250}
+						height={210}
+						width={384}
 					/>
 				</div>
 
-				<Text size={'md'} weight={700} color={'gray'} mt={20}>
-					{props.date} - {props.timeToRead} min read
-				</Text>
-				<Title white order={2}>
-					{props.title}
-				</Title>
+				<Paper padding={'lg'} radius={'xl'} className={classes.paper}>
+					<Group>
+						<Text size={'xs'} weight={700} color={'orange'} mt={20}>
+							{props.date}
+						</Text>
+						<Text size={'xs'} weight={700} color={'gray'} mt={20}>
+							{props.timeToRead}
+						</Text>
+					</Group>
+					<Title white order={2}>
+						Here’s the how and why did I became a full time Gaming Streamer
+					</Title>
+					<Text size={'xs'} color={'gray'} mt={20} lineClamp={5}>
+						{props.content}
+					</Text>
+				</Paper>
 			</article>
-		</LinkWrapper>
+		</Box>
 	)
 }

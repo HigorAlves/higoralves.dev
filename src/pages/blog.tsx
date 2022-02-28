@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-import { Space, Grid, Col } from '@mantine/core'
+import { Col, Grid, Space } from '@mantine/core'
 
-import {
-	BlogHeader,
-	FeatureBlogPost,
-	SingleBlogPost,
-	Title,
-	UpDownMotion
-} from '~/components'
+import { BlogHeader, SingleBlogPost, Title, UpDownMotion } from '~/components'
 import MediumApi from '~/services/Api/medium'
 import { BlogPost } from '~/services/Contentful'
 
@@ -28,19 +22,19 @@ export default function Blog() {
 		<div>
 			<UpDownMotion>
 				<BlogHeader />
-				{posts.length > 0 ? (
-					<>
-						<Space h={60} />
-						<FeatureBlogPost
-							alt={posts[0].title}
-							title={posts[0].title}
-							date={posts[0].date}
-							slug={posts[0].link}
-							image={posts[0].image}
-							timeToRead={posts[0].timeToRead}
-						/>
-					</>
-				) : null}
+				{/*{posts.length > 0 ? (*/}
+				{/*	<>*/}
+				{/*		<Space h={60} />*/}
+				{/*		<FeatureBlogPost*/}
+				{/*			alt={posts[0].title}*/}
+				{/*			title={posts[0].title}*/}
+				{/*			date={posts[0].date}*/}
+				{/*			slug={posts[0].link}*/}
+				{/*			image={posts[0].image}*/}
+				{/*			timeToRead={posts[0].timeToRead}*/}
+				{/*		/>*/}
+				{/*	</>*/}
+				{/*) : null}*/}
 
 				<Space h={60} />
 			</UpDownMotion>
@@ -53,6 +47,7 @@ export default function Blog() {
 					<Col span={12} md={4} lg={4} key={post.link}>
 						<UpDownMotion>
 							<SingleBlogPost
+								content={post.content}
 								image={post.image}
 								title={post.title}
 								date={post.date}
