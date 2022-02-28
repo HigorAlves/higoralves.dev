@@ -11,9 +11,10 @@ import { NextPage } from 'next'
 import { appWithTranslation } from 'next-i18next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 import { SchemaProps } from '~/components'
-import { FirebaseTrackingProvider } from '~/Context/FirebaseTrackingProvider'
+import { FirebaseTrackingProvider } from '~/context/FirebaseTrackingProvider'
 import { Layout, LayoutTypes, Meta } from '~/layouts'
 import { darkTheme, lightTheme } from '~/Theme'
 
@@ -35,31 +36,34 @@ function App(props: AppPropsWithLayout) {
 	const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
 	const toggleColorScheme = (value?: ColorScheme) =>
 		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
+	const queryClient = new QueryClient()
 
 	const layoutType = Component.layout ?? 'base'
 	const { meta, jsonLd } = Component
 
 	return (
-		<ColorSchemeProvider
-			colorScheme={colorScheme}
-			toggleColorScheme={toggleColorScheme}
-		>
-			<MantineProvider
-				withGlobalStyles
-				withNormalizeCSS
-				theme={colorScheme === 'dark' ? darkTheme : lightTheme}
+		<QueryClientProvider client={queryClient}>
+			<ColorSchemeProvider
+				colorScheme={colorScheme}
+				toggleColorScheme={toggleColorScheme}
 			>
-				<NotificationsProvider>
-					<Layout type={layoutType} meta={meta} jsonLd={jsonLd}>
-						<FirebaseTrackingProvider>
-							<AnimatePresence exitBeforeEnter>
-								<Component key={router.route} {...pageProps} />
-							</AnimatePresence>
-						</FirebaseTrackingProvider>
-					</Layout>
-				</NotificationsProvider>
-			</MantineProvider>
-		</ColorSchemeProvider>
+				<MantineProvider
+					withGlobalStyles
+					withNormalizeCSS
+					theme={colorScheme === 'dark' ? darkTheme : lightTheme}
+				>
+					<NotificationsProvider>
+						<Layout type={layoutType} meta={meta} jsonLd={jsonLd}>
+							<FirebaseTrackingProvider>
+								<AnimatePresence exitBeforeEnter>
+									<Component key={router.route} {...pageProps} />
+								</AnimatePresence>
+							</FirebaseTrackingProvider>
+						</Layout>
+					</NotificationsProvider>
+				</MantineProvider>
+			</ColorSchemeProvider>
+		</QueryClientProvider>
 	)
 }
 

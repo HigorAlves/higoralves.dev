@@ -2,6 +2,7 @@
 	"name": "higoralves.dev",
 	"private": false,
 	"version": "1.3.0",
+	"license": "MIT",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -16,7 +17,8 @@
 		"release:patch": "yarn run release --release-as patch --no-verify",
 		"release:alpha": "yarn run release --prerelease alpha --no-verify",
 		"release:beta": "yarn run release --prerelease beta --no-verify",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"graphql:codegen": "graphql-codegen --config codegen.yml"
 	},
 	"lint-staged": {
 		"*.{tsx,ts,json}": [
@@ -40,6 +42,7 @@
 		"next-mdx-remote": "^3.0.8",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
+		"react-query": "^3.34.16",
 		"reading-time": "^1.5.0",
 		"sitemap": "^7.1.1",
 		"swiper": "^8.0.6",
@@ -48,6 +51,11 @@
 	"devDependencies": {
 		"@commitlint/cli": "^16.2.1",
 		"@commitlint/config-conventional": "^16.2.1",
+		"@graphql-codegen/cli": "2.6.2",
+		"@graphql-codegen/import-types-preset": "^2.1.12",
+		"@graphql-codegen/typescript": "2.4.5",
+		"@graphql-codegen/typescript-operations": "2.3.2",
+		"@graphql-codegen/typescript-react-query": "^3.5.5",
 		"@testing-library/dom": "^8.11.3",
 		"@testing-library/jest-dom": "^5.16.2",
 		"@testing-library/react": "^12.1.2",
