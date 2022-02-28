@@ -1,16 +1,5 @@
 import { createStyles } from '@mantine/core'
 
-const colors = {
-	yellow: '#ffff80',
-	pink: '#ff80bf',
-	purple: '#9580ff',
-	red: '#ff9580',
-	orange: '#ffca80',
-	green: '#8aff80',
-	cyan: '#80ffea',
-	grape: '#be4bdb'
-}
-
 const gradientDegree = '135deg'
 
 export const useClasses = createStyles(theme => ({
@@ -35,32 +24,32 @@ export const useClasses = createStyles(theme => ({
 		WebkitTextFillColor: 'transparent'
 	},
 	gradientYellowToPink: {
-		background: `linear-gradient(${gradientDegree}, ${colors.yellow} 0%, ${colors.pink} 100%)`,
+		background: `linear-gradient(${gradientDegree}, ${theme.colors.yellow} 0%, ${theme.colors.pink[5]} 100%)`,
 		WebkitBackgroundClip: 'text',
 		WebkitTextFillColor: 'transparent'
 	},
 	gradientGrapeToPink: {
-		background: `linear-gradient(${gradientDegree}, ${colors.grape} 0%, ${colors.pink} 100%)`,
+		background: `linear-gradient(${gradientDegree}, ${theme.colors.grape} 0%, ${theme.colors.pink[5]} 100%)`,
 		WebkitBackgroundClip: 'text',
 		WebkitTextFillColor: 'transparent'
 	},
 	gradientPurpleCyan: {
-		background: `linear-gradient(${gradientDegree}, ${colors.purple} 0%, ${colors.cyan} 100%)`,
+		background: `linear-gradient(${gradientDegree}, ${theme.colors.purple} 0%, ${theme.colors.cyan[5]} 100%)`,
 		WebkitBackgroundClip: 'text',
 		WebkitTextFillColor: 'transparent'
 	},
 	gradientPinkPurple: {
-		background: `linear-gradient(${gradientDegree}, ${colors.pink} 0%, ${colors.purple} 100%)`,
+		background: `linear-gradient(${gradientDegree}, ${theme.colors.pink} 0%, ${theme.colors.purple} 100%)`,
 		WebkitBackgroundClip: 'text',
 		WebkitTextFillColor: 'transparent'
 	},
 	gradientCyanGreen: {
-		background: `linear-gradient(${gradientDegree}, ${colors.cyan} 0%, ${colors.green} 100%)`,
+		background: `linear-gradient(${gradientDegree}, ${theme.colors.cyan} 0%, ${theme.colors.green[5]} 100%)`,
 		WebkitBackgroundClip: 'text',
 		WebkitTextFillColor: 'transparent'
 	},
 	gradientPurpleGreen: {
-		background: `linear-gradient(${gradientDegree}, ${colors.purple} 0%, ${colors.green} 100%)`,
+		background: `linear-gradient(${gradientDegree}, ${theme.colors.indigo} 0%, ${theme.colors.green[5]} 100%)`,
 		WebkitBackgroundClip: 'text',
 		WebkitTextFillColor: 'transparent'
 	}
