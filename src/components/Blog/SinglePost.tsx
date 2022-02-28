@@ -45,7 +45,7 @@ export function SingleBlogPost(props: Props): JSX.Element {
 						</Text>
 					</Group>
 					<Title white order={2}>
-						Here’s the how and why did I became a full time Gaming Streamer
+						{props.title}
 					</Title>
 					<Text size={'xs'} color={'gray'} mt={20} lineClamp={5}>
 						{props.content}

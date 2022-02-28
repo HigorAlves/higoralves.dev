@@ -22,20 +22,6 @@ export default function Blog() {
 		<div>
 			<UpDownMotion>
 				<BlogHeader />
-				{/*{posts.length > 0 ? (*/}
-				{/*	<>*/}
-				{/*		<Space h={60} />*/}
-				{/*		<FeatureBlogPost*/}
-				{/*			alt={posts[0].title}*/}
-				{/*			title={posts[0].title}*/}
-				{/*			date={posts[0].date}*/}
-				{/*			slug={posts[0].link}*/}
-				{/*			image={posts[0].image}*/}
-				{/*			timeToRead={posts[0].timeToRead}*/}
-				{/*		/>*/}
-				{/*	</>*/}
-				{/*) : null}*/}
-
 				<Space h={60} />
 			</UpDownMotion>
 
