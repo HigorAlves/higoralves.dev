@@ -1,5 +1,27 @@
-query Projects {
-	projects {
+query Projects($locale: Locale!) {
+	projects (locales: [$locale]) {
 		id
+		city
+		company
+		country
+		description
+		industry
+		slug
+		title
+		website
+		role
+		locale
+		seo {
+			description
+			keywords
+			title
+		}
+		technologies {
+			name
+			website
+			icon {
+				url
+			}
+		}
 	}
 }

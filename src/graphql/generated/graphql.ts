@@ -2337,6 +2337,7 @@ export type Project = Node & {
 	slug?: Maybe<Scalars['String']>
 	/** System stage field */
 	stage: Stage
+	technologies: Array<Technology>
 	title: Scalars['String']
 	/** The time the document was updated */
 	updatedAt: Scalars['DateTime']
@@ -2396,6 +2397,17 @@ export type ProjectSeoArgs = {
 	locales?: InputMaybe<Array<Locale>>
 }
 
+export type ProjectTechnologiesArgs = {
+	after?: InputMaybe<Scalars['String']>
+	before?: InputMaybe<Scalars['String']>
+	first?: InputMaybe<Scalars['Int']>
+	last?: InputMaybe<Scalars['Int']>
+	locales?: InputMaybe<Array<Locale>>
+	orderBy?: InputMaybe<TechnologyOrderByInput>
+	skip?: InputMaybe<Scalars['Int']>
+	where?: InputMaybe<TechnologyWhereInput>
+}
+
 export type ProjectUpdatedAtArgs = {
 	variation?: SystemDateTimeFieldVariation
 }
@@ -2439,6 +2451,7 @@ export type ProjectCreateInput = {
 	role?: InputMaybe<Scalars['String']>
 	seo?: InputMaybe<SeoCreateOneInlineInput>
 	slug?: InputMaybe<Scalars['String']>
+	technologies?: InputMaybe<TechnologyCreateManyInlineInput>
 	title: Scalars['String']
 	updatedAt?: InputMaybe<Scalars['DateTime']>
 	website?: InputMaybe<Scalars['String']>
@@ -2592,6 +2605,9 @@ export type ProjectManyWhereInput = {
 	slug_not_starts_with?: InputMaybe<Scalars['String']>
 	/** All values starting with the given string. */
 	slug_starts_with?: InputMaybe<Scalars['String']>
+	technologies_every?: InputMaybe<TechnologyWhereInput>
+	technologies_none?: InputMaybe<TechnologyWhereInput>
+	technologies_some?: InputMaybe<TechnologyWhereInput>
 	title?: InputMaybe<Scalars['String']>
 	/** All values containing the given string. */
 	title_contains?: InputMaybe<Scalars['String']>
@@ -2694,6 +2710,7 @@ export type ProjectUpdateInput = {
 	role?: InputMaybe<Scalars['String']>
 	seo?: InputMaybe<SeoUpdateOneInlineInput>
 	slug?: InputMaybe<Scalars['String']>
+	technologies?: InputMaybe<TechnologyUpdateManyInlineInput>
 	title?: InputMaybe<Scalars['String']>
 	website?: InputMaybe<Scalars['String']>
 }
@@ -3022,6 +3039,9 @@ export type ProjectWhereInput = {
 	slug_not_starts_with?: InputMaybe<Scalars['String']>
 	/** All values starting with the given string. */
 	slug_starts_with?: InputMaybe<Scalars['String']>
+	technologies_every?: InputMaybe<TechnologyWhereInput>
+	technologies_none?: InputMaybe<TechnologyWhereInput>
+	technologies_some?: InputMaybe<TechnologyWhereInput>
 	title?: InputMaybe<Scalars['String']>
 	/** All values containing the given string. */
 	title_contains?: InputMaybe<Scalars['String']>
@@ -5098,6 +5118,7 @@ export type TechnologyConnection = {
 }
 
 export type TechnologyCreateInput = {
+	cl072p48g0zht01z3ex02h8yk?: InputMaybe<ProjectCreateManyInlineInput>
 	createdAt?: InputMaybe<Scalars['DateTime']>
 	icon?: InputMaybe<AssetCreateOneInlineInput>
 	name?: InputMaybe<Scalars['String']>
@@ -5265,6 +5286,7 @@ export enum TechnologyOrderByInput {
 }
 
 export type TechnologyUpdateInput = {
+	cl072p48g0zht01z3ex02h8yk?: InputMaybe<ProjectUpdateManyInlineInput>
 	icon?: InputMaybe<AssetUpdateOneInlineInput>
 	name?: InputMaybe<Scalars['String']>
 	website?: InputMaybe<Scalars['String']>
@@ -5923,26 +5945,75 @@ export enum _SystemDateTimeFieldVariation {
 	Localization = 'localization'
 }
 
-export type ProjectsQueryVariables = Exact<{ [key: string]: never }>
+export type ProjectsQueryVariables = Exact<{
+	locale: Locale
+}>
 
 export type ProjectsQuery = {
 	__typename?: 'Query'
-	projects: Array<{ __typename?: 'Project'; id: string }>
+	projects: Array<{
+		__typename?: 'Project'
+		id: string
+		city?: string | null
+		company?: string | null
+		country?: string | null
+		description?: string | null
+		industry?: string | null
+		slug?: string | null
+		title: string
+		website?: string | null
+		role?: string | null
+		locale: Locale
+		seo?: {
+			__typename?: 'Seo'
+			description?: string | null
+			keywords: Array<string>
+			title?: string | null
+		} | null
+		technologies: Array<{
+			__typename?: 'Technology'
+			name?: string | null
+			website?: string | null
+			icon?: { __typename?: 'Asset'; url: string } | null
+		}>
+	}>
 }
 
 export const ProjectsDocument = `
-    query Projects {
-  projects {
+    query Projects($locale: Locale!) {
+  projects(locales: [$locale]) {
     id
+    city
+    company
+    country
+    description
+    industry
+    slug
+    title
+    website
+    role
+    locale
+    seo {
+      description
+      keywords
+      title
+    }
+    technologies {
+      name
+      website
+      icon {
+        url
+      }
+    }
   }
 }
     `
 export const useProjectsQuery = <TData = ProjectsQuery, TError = unknown>(
-	variables?: ProjectsQueryVariables,
+	variables: ProjectsQueryVariables,
 	options?: UseQueryOptions<ProjectsQuery, TError, TData>
 ) =>
 	useQuery<ProjectsQuery, TError, TData>(
-		variables === undefined ? ['Projects'] : ['Projects', variables],
+		['Projects', variables],
 		fetcher<ProjectsQuery, ProjectsQueryVariables>(ProjectsDocument, variables),
 		options
 	)
