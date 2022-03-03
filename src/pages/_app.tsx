@@ -11,7 +11,7 @@ import { NextPage } from 'next'
 import { appWithTranslation } from 'next-i18next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 
 import { SchemaProps } from '~/components'
 import { FirebaseTrackingProvider } from '~/context/FirebaseTrackingProvider'
@@ -19,6 +19,7 @@ import { Layout, LayoutTypes, Meta } from '~/layouts'
 import { darkTheme, lightTheme } from '~/Theme'
 
 import '../../public/static/css/main.css'
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 type NextPageWithLayout = NextPage & {
 	layout?: LayoutTypes
@@ -33,36 +34,39 @@ type AppPropsWithLayout = AppProps & {
 function App(props: AppPropsWithLayout) {
 	const { Component, pageProps } = props
 	const router = useRouter()
+	const [queryClient] = React.useState(() => new QueryClient())
 	const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
 	const toggleColorScheme = (value?: ColorScheme) =>
 		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
-	const queryClient = new QueryClient()
 
 	const layoutType = Component.layout ?? 'base'
 	const { meta, jsonLd } = Component
 
 	return (
 		<QueryClientProvider client={queryClient}>
-			<ColorSchemeProvider
-				colorScheme={colorScheme}
-				toggleColorScheme={toggleColorScheme}
-			>
-				<MantineProvider
-					withGlobalStyles
-					withNormalizeCSS
-					theme={colorScheme === 'dark' ? darkTheme : lightTheme}
+			<Hydrate state={pageProps.dehydratedState}>
+				<ColorSchemeProvider
+					colorScheme={colorScheme}
+					toggleColorScheme={toggleColorScheme}
 				>
-					<NotificationsProvider>
-						<Layout type={layoutType} meta={meta} jsonLd={jsonLd}>
-							<FirebaseTrackingProvider>
-								<AnimatePresence exitBeforeEnter>
-									<Component key={router.route} {...pageProps} />
-								</AnimatePresence>
-							</FirebaseTrackingProvider>
-						</Layout>
-					</NotificationsProvider>
-				</MantineProvider>
-			</ColorSchemeProvider>
+					<MantineProvider
+						withGlobalStyles
+						withNormalizeCSS
+						theme={colorScheme === 'dark' ? darkTheme : lightTheme}
+					>
+						<NotificationsProvider>
+							<Layout type={layoutType} meta={meta} jsonLd={jsonLd}>
+								<FirebaseTrackingProvider>
+									<AnimatePresence exitBeforeEnter>
+										<Component key={router.route} {...pageProps} />
+									</AnimatePresence>
+								</FirebaseTrackingProvider>
+							</Layout>
+						</NotificationsProvider>
+					</MantineProvider>
+				</ColorSchemeProvider>
+			</Hydrate>
+			<ReactQueryDevtools />
 		</QueryClientProvider>
 	)
 }

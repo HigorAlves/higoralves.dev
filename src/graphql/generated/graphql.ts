@@ -2307,22 +2307,22 @@ export type PostWhereUniqueInput = {
 
 export type Project = Node & {
 	__typename?: 'Project'
-	city?: Maybe<Scalars['String']>
-	company?: Maybe<Scalars['String']>
-	country?: Maybe<Scalars['String']>
-	cover?: Maybe<Asset>
+	body: RichText
+	city: Scalars['String']
+	company: Scalars['String']
+	country: Scalars['String']
+	cover: Asset
 	/** The time the document was created */
 	createdAt: Scalars['DateTime']
 	/** User that created this document */
 	createdBy?: Maybe<User>
-	description?: Maybe<Scalars['String']>
 	/** Get the document in other stages */
 	documentInStages: Array<Project>
 	/** List of Project versions */
 	history: Array<Version>
 	/** The unique identifier */
 	id: Scalars['ID']
-	industry?: Maybe<Scalars['String']>
+	industry: Scalars['String']
 	/** System Locale field */
 	locale: Locale
 	/** Get the other localizations for this document */
@@ -2331,10 +2331,10 @@ export type Project = Node & {
 	publishedAt?: Maybe<Scalars['DateTime']>
 	/** User that last published this document */
 	publishedBy?: Maybe<User>
-	role?: Maybe<Scalars['String']>
+	role: Scalars['String']
 	scheduledIn: Array<ScheduledOperation>
 	seo?: Maybe<Seo>
-	slug?: Maybe<Scalars['String']>
+	slug: Scalars['String']
 	/** System stage field */
 	stage: Stage
 	technologies: Array<Technology>
@@ -2343,7 +2343,7 @@ export type Project = Node & {
 	updatedAt: Scalars['DateTime']
 	/** User that last updated this document */
 	updatedBy?: Maybe<User>
-	website?: Maybe<Scalars['String']>
+	website: Scalars['String']
 }
 
 export type ProjectCoverArgs = {
@@ -2434,36 +2434,36 @@ export type ProjectConnection = {
 }
 
 export type ProjectCreateInput = {
+	/** body input for default locale (en) */
+	body: Scalars['RichTextAST']
 	/** city input for default locale (en) */
-	city?: InputMaybe<Scalars['String']>
-	company?: InputMaybe<Scalars['String']>
+	city: Scalars['String']
+	company: Scalars['String']
 	/** country input for default locale (en) */
-	country?: InputMaybe<Scalars['String']>
-	cover?: InputMaybe<AssetCreateOneInlineInput>
+	country: Scalars['String']
+	cover: AssetCreateOneInlineInput
 	createdAt?: InputMaybe<Scalars['DateTime']>
-	/** description input for default locale (en) */
-	description?: InputMaybe<Scalars['String']>
 	/** industry input for default locale (en) */
-	industry?: InputMaybe<Scalars['String']>
+	industry: Scalars['String']
 	/** Inline mutations for managing document localizations excluding the default locale */
 	localizations?: InputMaybe<ProjectCreateLocalizationsInput>
 	/** role input for default locale (en) */
-	role?: InputMaybe<Scalars['String']>
+	role: Scalars['String']
 	seo?: InputMaybe<SeoCreateOneInlineInput>
-	slug?: InputMaybe<Scalars['String']>
+	slug: Scalars['String']
 	technologies?: InputMaybe<TechnologyCreateManyInlineInput>
 	title: Scalars['String']
 	updatedAt?: InputMaybe<Scalars['DateTime']>
-	website?: InputMaybe<Scalars['String']>
+	website: Scalars['String']
 }
 
 export type ProjectCreateLocalizationDataInput = {
-	city?: InputMaybe<Scalars['String']>
-	country?: InputMaybe<Scalars['String']>
+	body: Scalars['RichTextAST']
+	city: Scalars['String']
+	country: Scalars['String']
 	createdAt?: InputMaybe<Scalars['DateTime']>
-	description?: InputMaybe<Scalars['String']>
-	industry?: InputMaybe<Scalars['String']>
-	role?: InputMaybe<Scalars['String']>
+	industry: Scalars['String']
+	role: Scalars['String']
 	updatedAt?: InputMaybe<Scalars['DateTime']>
 }
 
@@ -2673,8 +2673,6 @@ export enum ProjectOrderByInput {
 	CountryDesc = 'country_DESC',
 	CreatedAtAsc = 'createdAt_ASC',
 	CreatedAtDesc = 'createdAt_DESC',
-	DescriptionAsc = 'description_ASC',
-	DescriptionDesc = 'description_DESC',
 	IdAsc = 'id_ASC',
 	IdDesc = 'id_DESC',
 	IndustryAsc = 'industry_ASC',
@@ -2694,14 +2692,14 @@ export enum ProjectOrderByInput {
 }
 
 export type ProjectUpdateInput = {
+	/** body input for default locale (en) */
+	body?: InputMaybe<Scalars['RichTextAST']>
 	/** city input for default locale (en) */
 	city?: InputMaybe<Scalars['String']>
 	company?: InputMaybe<Scalars['String']>
 	/** country input for default locale (en) */
 	country?: InputMaybe<Scalars['String']>
 	cover?: InputMaybe<AssetUpdateOneInlineInput>
-	/** description input for default locale (en) */
-	description?: InputMaybe<Scalars['String']>
 	/** industry input for default locale (en) */
 	industry?: InputMaybe<Scalars['String']>
 	/** Manage document localizations */
@@ -2716,9 +2714,9 @@ export type ProjectUpdateInput = {
 }
 
 export type ProjectUpdateLocalizationDataInput = {
+	body?: InputMaybe<Scalars['RichTextAST']>
 	city?: InputMaybe<Scalars['String']>
 	country?: InputMaybe<Scalars['String']>
-	description?: InputMaybe<Scalars['String']>
 	industry?: InputMaybe<Scalars['String']>
 	role?: InputMaybe<Scalars['String']>
 }
@@ -2756,13 +2754,13 @@ export type ProjectUpdateManyInlineInput = {
 }
 
 export type ProjectUpdateManyInput = {
+	/** body input for default locale (en) */
+	body?: InputMaybe<Scalars['RichTextAST']>
 	/** city input for default locale (en) */
 	city?: InputMaybe<Scalars['String']>
 	company?: InputMaybe<Scalars['String']>
 	/** country input for default locale (en) */
 	country?: InputMaybe<Scalars['String']>
-	/** description input for default locale (en) */
-	description?: InputMaybe<Scalars['String']>
 	/** industry input for default locale (en) */
 	industry?: InputMaybe<Scalars['String']>
 	/** Optional updates to localizations */
@@ -2774,9 +2772,9 @@ export type ProjectUpdateManyInput = {
 }
 
 export type ProjectUpdateManyLocalizationDataInput = {
+	body?: InputMaybe<Scalars['RichTextAST']>
 	city?: InputMaybe<Scalars['String']>
 	country?: InputMaybe<Scalars['String']>
-	description?: InputMaybe<Scalars['String']>
 	industry?: InputMaybe<Scalars['String']>
 	role?: InputMaybe<Scalars['String']>
 }
@@ -2924,25 +2922,6 @@ export type ProjectWhereInput = {
 	/** All values that are not contained in given list. */
 	createdAt_not_in?: InputMaybe<Array<Scalars['DateTime']>>
 	createdBy?: InputMaybe<UserWhereInput>
-	description?: InputMaybe<Scalars['String']>
-	/** All values containing the given string. */
-	description_contains?: InputMaybe<Scalars['String']>
-	/** All values ending with the given string. */
-	description_ends_with?: InputMaybe<Scalars['String']>
-	/** All values that are contained in given list. */
-	description_in?: InputMaybe<Array<Scalars['String']>>
-	/** All values that are not equal to given value. */
-	description_not?: InputMaybe<Scalars['String']>
-	/** All values not containing the given string. */
-	description_not_contains?: InputMaybe<Scalars['String']>
-	/** All values not ending with the given string */
-	description_not_ends_with?: InputMaybe<Scalars['String']>
-	/** All values that are not contained in given list. */
-	description_not_in?: InputMaybe<Array<Scalars['String']>>
-	/** All values not starting with the given string. */
-	description_not_starts_with?: InputMaybe<Scalars['String']>
-	/** All values starting with the given string. */
-	description_starts_with?: InputMaybe<Scalars['String']>
 	id?: InputMaybe<Scalars['ID']>
 	/** All values containing the given string. */
 	id_contains?: InputMaybe<Scalars['ID']>
@@ -5954,16 +5933,37 @@ export type ProjectsQuery = {
 	projects: Array<{
 		__typename?: 'Project'
 		id: string
-		city?: string | null
-		company?: string | null
-		country?: string | null
-		description?: string | null
-		industry?: string | null
-		slug?: string | null
+		city: string
+		company: string
+		country: string
+		slug: string
 		title: string
-		website?: string | null
-		role?: string | null
+		role: string
+		cover: { __typename?: 'Asset'; id: string; url: string }
+		body: { __typename?: 'RichText'; text: string }
+	}>
+}
+
+export type ProjectQueryVariables = Exact<{
+	locale: Locale
+	slug: Scalars['String']
+}>
+
+export type ProjectQuery = {
+	__typename?: 'Query'
+	projects: Array<{
+		__typename?: 'Project'
+		id: string
+		city: string
+		company: string
+		country: string
+		industry: string
+		slug: string
+		title: string
+		website: string
+		role: string
 		locale: Locale
+		body: { __typename?: 'RichText'; markdown: string }
 		seo?: {
 			__typename?: 'Seo'
 			description?: string | null
@@ -5986,13 +5986,46 @@ export const ProjectsDocument = `
     city
     company
     country
-    description
+    slug
+    title
+    role
+    cover {
+      id
+      url(transformation: {document: {output: {format: webp}}})
+    }
+    body {
+      text
+    }
+  }
+}
+    `
+export const useProjectsQuery = <TData = ProjectsQuery, TError = unknown>(
+	variables: ProjectsQueryVariables,
+	options?: UseQueryOptions<ProjectsQuery, TError, TData>
+) =>
+	useQuery<ProjectsQuery, TError, TData>(
+		['Projects', variables],
+		fetcher<ProjectsQuery, ProjectsQueryVariables>(ProjectsDocument, variables),
+		options
+	)
+useProjectsQuery.fetcher = (variables: ProjectsQueryVariables) =>
+	fetcher<ProjectsQuery, ProjectsQueryVariables>(ProjectsDocument, variables)
+export const ProjectDocument = `
+    query Project($locale: Locale!, $slug: String!) {
+  projects(locales: [$locale], where: {slug: $slug}) {
+    id
+    city
+    company
+    country
     industry
     slug
     title
     website
     role
     locale
+    body {
+      markdown
+    }
     seo {
       description
       keywords
@@ -6008,12 +6041,14 @@ export const ProjectsDocument = `
   }
 }
     `
-export const useProjectsQuery = <TData = ProjectsQuery, TError = unknown>(
-	variables: ProjectsQueryVariables,
-	options?: UseQueryOptions<ProjectsQuery, TError, TData>
+export const useProjectQuery = <TData = ProjectQuery, TError = unknown>(
+	variables: ProjectQueryVariables,
+	options?: UseQueryOptions<ProjectQuery, TError, TData>
 ) =>
-	useQuery<ProjectsQuery, TError, TData>(
-		['Projects', variables],
-		fetcher<ProjectsQuery, ProjectsQueryVariables>(ProjectsDocument, variables),
+	useQuery<ProjectQuery, TError, TData>(
+		['Project', variables],
+		fetcher<ProjectQuery, ProjectQueryVariables>(ProjectDocument, variables),
 		options
 	)
+useProjectQuery.fetcher = (variables: ProjectQueryVariables) =>
+	fetcher<ProjectQuery, ProjectQueryVariables>(ProjectDocument, variables)

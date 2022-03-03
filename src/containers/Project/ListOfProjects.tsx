@@ -4,16 +4,12 @@ import { Col, Grid } from '@mantine/core'
 import { motion } from 'framer-motion'
 
 import { Project } from '~/components'
-import { IProject } from '~/services/Contentful'
+import { ProjectsQuery } from '~/graphql/generated/graphql'
 
-type Props = {
-	projects: IProject[]
-}
-
-export function ListOfProjects({ projects }: Props) {
+export function ListOfProjects(projectsQuery: ProjectsQuery) {
 	return (
 		<Grid gutter={26}>
-			{projects.map((project, index) => (
+			{projectsQuery.projects.map((project, index) => (
 				<Col span={12} md={6} lg={4} key={project.slug}>
 					<motion.div
 						initial={{
@@ -37,8 +33,9 @@ export function ListOfProjects({ projects }: Props) {
 							company={project.company}
 							slug={project.slug}
 							country={project.country}
-							description={project.description}
-							cover={project.cover}
+							city={project.city}
+							description={project.body.text}
+							cover={project.cover.url}
 							role={project.role}
 						/>
 					</motion.div>

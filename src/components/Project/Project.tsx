@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Space, Text, Card, Badge, Group } from '@mantine/core'
+import { Badge, Card, Group, Space, Text } from '@mantine/core'
+import Image from 'next/image'
 
-import { ContentfulImage, Link, Title } from '~/components'
-import { IProject } from '~/services/Contentful'
+import { Link, Title } from '~/components'
 
 export function Project({
 	cover,
@@ -12,8 +12,9 @@ export function Project({
 	slug,
 	company,
 	title,
-	role
-}: IProject) {
+	role,
+	city
+}: any) {
 	return (
 		<article>
 			<Link href={`/projects/${slug}`}>
@@ -25,12 +26,12 @@ export function Project({
 							overflow: 'hidden'
 						}}
 					>
-						<ContentfulImage
-							src={cover.url}
+						<Image
+							src={cover}
 							width={350}
 							height={300}
 							layout={'responsive'}
-							alt={cover.title}
+							alt={'Project cover image'}
 							objectFit={'cover'}
 							objectPosition={'center'}
 						/>
@@ -54,7 +55,7 @@ export function Project({
 								{company}
 							</Badge>
 							<Text align={'right'} size={'xs'}>
-								{country}
+								{country} - {city}
 							</Text>
 						</Group>
 					</div>

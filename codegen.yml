@@ -10,6 +10,7 @@ generates:
       - "typescript-react-query"
     config:
       withHooks: true
+      exposeFetcher: true
       fetcher:
         endpoint: 'https://api-us-west-2.graphcms.com/v2/ckzvruldv2zgj01za831374p6/master'
 

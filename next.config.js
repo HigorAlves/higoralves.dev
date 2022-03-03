@@ -11,7 +11,8 @@ module.exports = {
 		domains: [
 			'res.cloudinary.com',
 			'images.ctfassets.net',
-			'cdn-images-1.medium.com'
+			'cdn-images-1.medium.com',
+			'media.graphcms.com'
 		]
 	}
 }

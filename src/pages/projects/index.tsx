@@ -4,29 +4,26 @@ import { Space, Text } from '@mantine/core'
 import { GetStaticPropsContext } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { dehydrate, DehydratedState, QueryClient } from 'react-query'
 
 import { Title, UpDownMotion } from '~/components'
 import { ListOfProjects } from '~/containers'
+import { Locale, useProjectsQuery } from '~/graphql/generated/graphql'
 import { Meta } from '~/layouts'
-import {
-	default as Contentful,
-	getProjects,
-	IProject,
-	ProjectsCollection
-} from '~/services/Contentful'
 
 export async function getStaticProps(context: GetStaticPropsContext) {
+	const queryClient = new QueryClient()
 	const { locale } = context
-	const { projectCollection }: ProjectsCollection = await Contentful.request(
-		getProjects,
-		{
-			locale
-		}
+	const language = locale === 'en' ? Locale.En : Locale.Br
+	await queryClient.prefetchQuery(
+		['Projects'],
+		useProjectsQuery.fetcher({ locale: language })
 	)
 
 	return {
 		props: {
-			projects: projectCollection.items,
+			locale: language,
+			dehydratedState: dehydrate(queryClient),
 			...(await serverSideTranslations(locale as string, ['project']))
 		},
 		revalidate: 60 * 60 * 10 // 10 days
@@ -34,11 +31,14 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 }
 
 type Props = {
-	projects: IProject[]
+	dehydratedState: DehydratedState
+	locale: Locale
 }
 
-export default function Projects({ projects }: Props) {
+export default function Projects({ locale }: Props) {
 	const { t } = useTranslation('project')
+	const { data } = useProjectsQuery({ locale })
+
 	return (
 		<UpDownMotion>
 			<Title
@@ -48,11 +48,11 @@ export default function Projects({ projects }: Props) {
 					fontSize: '3rem'
 				})}
 			>
-				{t('title')}
+				{t('header')}
 			</Title>
-			<Text>{t('description')}</Text>
+			<Text>{t('subtitle')}</Text>
 			<Space h={60} />
-			<ListOfProjects projects={projects} />
+			{data && data.projects && <ListOfProjects projects={data.projects} />}
 		</UpDownMotion>
 	)
 }
