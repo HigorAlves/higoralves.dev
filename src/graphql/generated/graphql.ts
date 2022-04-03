@@ -1,4 +1,5 @@
 import { useQuery, UseQueryOptions } from 'react-query'
+
 export type Maybe<T> = T | null
 export type InputMaybe<T> = Maybe<T>
 export type Exact<T extends { [key: string]: unknown }> = {
@@ -32,6 +33,7 @@ function fetcher<TData, TVariables>(query: string, variables?: TVariables) {
 		return json.data
 	}
 }
+
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
 	ID: string
@@ -5891,6 +5893,8 @@ export enum _MutationKind {
 	DeleteMany = 'deleteMany',
 	Publish = 'publish',
 	PublishMany = 'publishMany',
+	SchedulePublish = 'schedulePublish',
+	ScheduleUnpublish = 'scheduleUnpublish',
 	Unpublish = 'unpublish',
 	UnpublishMany = 'unpublishMany',
 	Update = 'update',
@@ -5964,6 +5968,7 @@ export type ProjectQuery = {
 		role: string
 		locale: Locale
 		body: { __typename?: 'RichText'; markdown: string }
+		cover: { __typename?: 'Asset'; id: string; url: string }
 		seo?: {
 			__typename?: 'Seo'
 			description?: string | null
@@ -6025,6 +6030,10 @@ export const ProjectDocument = `
     locale
     body {
       markdown
+    }
+    cover {
+      id
+      url(transformation: {document: {output: {format: webp}}})
     }
     seo {
       description

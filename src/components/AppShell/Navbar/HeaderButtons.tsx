@@ -1,13 +1,7 @@
 import React from 'react'
 
 import { ActionIcon, Tooltip, useMantineColorScheme } from '@mantine/core'
-import {
-	RocketIcon,
-	MoonIcon,
-	SunIcon,
-	HubotIcon,
-	SearchIcon
-} from '@primer/octicons-react'
+import { MoonIcon, SunIcon } from '@primer/octicons-react'
 
 type WrapperProps = {
 	label: string
@@ -44,21 +38,21 @@ export function HeaderButtons() {
 
 	return (
 		<section style={{ display: 'flex' }}>
-			<ToolTipAction label={'Commands'}>
-				<SearchIcon size={'medium'} />
-			</ToolTipAction>
+			{/*<ToolTipAction label={'Commands'}>*/}
+			{/*	<SearchIcon size={'medium'} />*/}
+			{/*</ToolTipAction>*/}
 
 			<ToolTipAction label={'Theme'} space onClick={() => toggleColorScheme()}>
 				{dark ? <SunIcon size={'medium'} /> : <MoonIcon size={'medium'} />}
 			</ToolTipAction>
 
-			<ToolTipAction label={'Pro'} space>
-				<RocketIcon size={'medium'} />
-			</ToolTipAction>
+			{/*<ToolTipAction label={'Pro'} space>*/}
+			{/*	<RocketIcon size={'medium'} />*/}
+			{/*</ToolTipAction>*/}
 
-			<ToolTipAction label={'Login'} space>
-				<HubotIcon size={'medium'} />
-			</ToolTipAction>
+			{/*<ToolTipAction label={'Login'} space>*/}
+			{/*	<HubotIcon size={'medium'} />*/}
+			{/*</ToolTipAction>*/}
 		</section>
 	)
 }

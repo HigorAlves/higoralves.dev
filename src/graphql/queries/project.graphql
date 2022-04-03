@@ -32,6 +32,10 @@ query Project($locale: Locale!, $slug: String!) {
 		body{
 			markdown
 		}
+		cover {
+			id
+			url(transformation: {document: {output: {format: webp}}})
+		}
 		seo {
 			description
 			keywords

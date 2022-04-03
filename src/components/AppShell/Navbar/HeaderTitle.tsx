@@ -9,9 +9,7 @@ export function HeaderTitle() {
 	return (
 		<Link href={'/'} passHref>
 			<section>
-				<Title order={2} white>
-					Higor Alves
-				</Title>
+				<Title order={2}>Higor Alves</Title>
 				<Text size={'xs'} align={'right'} color={'gray'}>
 					Keep Moving Foward
 				</Text>

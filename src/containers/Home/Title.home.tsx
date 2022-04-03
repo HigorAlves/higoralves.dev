@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, Space, Text } from '@mantine/core'
+import { Button, Group, Space, Text } from '@mantine/core'
 import { useTranslation } from 'next-i18next'
 
 import { Title, UpDownMotion } from '~/components'
@@ -30,9 +30,15 @@ export function TitleHome() {
 				</UpDownMotion>
 				<Space h='sm' />
 				<UpDownMotion>
-					<Button color={'orange'} variant={'light'} size={'xs'}>
-						{t('ctaButton')}
-					</Button>
+					<Group>
+						<Button color={'orange'} variant={'light'} size={'xs'}>
+							{t('ctaButtonHireMe')}
+						</Button>
+
+						<Button color={'dark'} variant={'light'} size={'xs'}>
+							{t('ctaButtonProjects')}
+						</Button>
+					</Group>
 				</UpDownMotion>
 			</UpDownMotion>
 		</>

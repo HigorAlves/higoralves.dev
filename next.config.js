@@ -8,11 +8,6 @@ module.exports = {
 	productionBrowserSourceMaps: true,
 	i18n,
 	images: {
-		domains: [
-			'res.cloudinary.com',
-			'images.ctfassets.net',
-			'cdn-images-1.medium.com',
-			'media.graphcms.com'
-		]
+		domains: ['media.graphassets.com']
 	}
 }

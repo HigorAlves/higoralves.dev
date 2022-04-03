@@ -4,10 +4,7 @@ import { Text } from '@mantine/core'
 import Image from 'next/image'
 
 interface Props {
-	icon: {
-		url: string
-		title: string
-	}
+	icon: string
 	name: string
 }
 
@@ -15,11 +12,11 @@ export function Technology({ name, icon }: Props) {
 	return (
 		<>
 			<Image
-				src={icon.url}
+				src={icon}
 				width={30}
 				height={20}
 				layout={'responsive'}
-				alt={icon.title}
+				alt={icon}
 				objectFit={'contain'}
 				objectPosition={'center'}
 			/>
