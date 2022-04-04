@@ -36,7 +36,7 @@ export function SingleBlogPost(props: Props): JSX.Element {
 					/>
 				</div>
 
-				<Paper padding={'lg'} radius={'xl'} className={classes.paper}>
+				<Paper radius={'xl'} className={classes.paper}>
 					<Group>
 						<Text size={'xs'} weight={700} color={'orange'} mt={20}>
 							{props.date}

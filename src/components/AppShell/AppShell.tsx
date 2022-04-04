@@ -22,7 +22,7 @@ export function AppShell({ children }: Props) {
 		<Shell
 			padding='md'
 			header={
-				<Header height={80} padding='xs'>
+				<Header height={80}>
 					<Drawer opened={opened} setOpened={setOpened} />
 					<Container size={'xl'} className={classes.container}>
 						<HeaderTitle />

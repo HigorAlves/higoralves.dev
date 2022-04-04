@@ -19,7 +19,7 @@ export function FeatureBlogPost(props: Props) {
 	const router = useRouter()
 	return (
 		<section id={'blog-feature-section'}>
-			<Card shadow={'sm'} padding={60}>
+			<Card shadow={'sm'}>
 				<Badge
 					color='orange'
 					variant='outline'

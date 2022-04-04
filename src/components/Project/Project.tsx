@@ -18,7 +18,7 @@ export function Project({
 	return (
 		<article>
 			<Link href={`/projects/${slug}`}>
-				<Card shadow={'xs'} padding={'lg'}>
+				<Card shadow={'xs'}>
 					<Card.Section
 						style={{
 							borderTopRightRadius: '6px',
