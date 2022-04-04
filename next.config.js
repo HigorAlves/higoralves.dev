@@ -8,6 +8,7 @@ module.exports = {
 	productionBrowserSourceMaps: true,
 	i18n,
 	images: {
+		dangerouslyAllowSVG: true,
 		domains: ['media.graphassets.com']
 	}
 }

@@ -5,7 +5,6 @@ export * from './Motion'
 export * from './Footer/Footer'
 export * from './JsonLd/JsonLd'
 
-export * from './Kbar/KBar'
 export * from './Project/Project'
 export { LinkWrapper as Link } from './Link/Link'
 export * from './Technology/Technology'
