@@ -1,8 +1,9 @@
 import React from 'react'
 
 import { Box, Group, Paper, Text } from '@mantine/core'
+import Image from 'next/image'
 
-import { ContentfulImage, Title } from '~/components'
+import { Title } from '~/components'
 import { LinkWrapper } from '~/components/Link/Link'
 
 import createStyles from './blog.styles'
@@ -24,7 +25,7 @@ export function SingleBlogPost(props: Props): JSX.Element {
 		<Box component={LinkWrapper} href={props.slug} target={'_blank'}>
 			<article className={classes.wrapper}>
 				<div>
-					<ContentfulImage
+					<Image
 						alt={props.alt}
 						src={props.image}
 						layout={'responsive'}

@@ -12,6 +12,7 @@ import { appWithTranslation } from 'next-i18next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 import { SchemaProps } from '~/components'
 import { FirebaseTrackingProvider } from '~/context/FirebaseTrackingProvider'
@@ -19,7 +20,6 @@ import { Layout, LayoutTypes, Meta } from '~/layouts'
 import { darkTheme, lightTheme } from '~/Theme'
 
 import '../../public/static/css/main.css'
-import { ReactQueryDevtools } from 'react-query/devtools'
 
 type NextPageWithLayout = NextPage & {
 	layout?: LayoutTypes

@@ -23,9 +23,24 @@ import { serialize } from 'next-mdx-remote/serialize'
 import Image from 'next/image'
 
 import { Link, Technology, Title } from '~/components'
-import componentsMap from '~/components/Contentful/componentsMap'
 import { Locale, ProjectQuery } from '~/graphql/generated/graphql'
 import { projectQuery, projectsQuery } from '~/services/queries'
+
+const componentsMap = {
+	p: (props: { children: React.ReactChild }) => (
+		<Text mt={'xl'}>{props.children}</Text>
+	),
+	h2: (props: { children: string }) => (
+		<Title order={2} mt={'md'}>
+			{props.children}
+		</Title>
+	),
+	h3: (props: { children: string }) => (
+		<Title order={3} mt={'md'}>
+			{props.children}
+		</Title>
+	)
+}
 
 export async function getStaticPaths() {
 	const graphcmsURL = process.env.NEXT_PUBLIC_GRAPHCMS_URL as string

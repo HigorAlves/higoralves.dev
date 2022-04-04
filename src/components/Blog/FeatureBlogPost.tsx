@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { Card, Text, Badge, Space, Grid, Col, Button } from '@mantine/core'
+import { Badge, Button, Card, Col, Grid, Space, Text } from '@mantine/core'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-import { ContentfulImage, Title } from '~/components'
+import { Title } from '~/components'
 
 type Props = {
 	image: string
@@ -52,7 +53,7 @@ export function FeatureBlogPost(props: Props) {
 								overflow: 'hidden'
 							}}
 						>
-							<ContentfulImage
+							<Image
 								alt={props.title}
 								src={props.image}
 								width={410}
