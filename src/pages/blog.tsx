@@ -1,22 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import { Col, Grid, Space } from '@mantine/core'
 
 import { BlogHeader, SingleBlogPost, Title, UpDownMotion } from '~/components'
-import MediumApi from '~/services/Api/medium'
-import { BlogPost } from '~/services/Contentful'
 
 export default function Blog() {
-	const [posts, setPosts] = useState<BlogPost[]>([])
-
-	async function getPosts() {
-		const { posts } = await MediumApi()
-		setPosts(posts)
-	}
-
-	useEffect(() => {
-		getPosts()
-	}, [])
+	const posts: any[] = []
 
 	return (
 		<div>
