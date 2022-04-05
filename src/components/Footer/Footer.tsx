@@ -38,6 +38,8 @@ export function Footer() {
 							</li>
 						</Link>
 					))}
+
+					<li>Made with ❤️</li>
 				</ul>
 			</Container>
 		</footer>

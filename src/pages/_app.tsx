@@ -17,7 +17,7 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import { SchemaProps } from '~/components'
 import { FirebaseTrackingProvider } from '~/context/FirebaseTrackingProvider'
 import { Layout, LayoutTypes, Meta } from '~/layouts'
-import { darkTheme, lightTheme } from '~/Theme'
+import { darkTheme, lightTheme } from '~/theme'
 
 import '../../public/static/css/main.css'
 
