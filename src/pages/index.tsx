@@ -6,6 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { SchemaProps } from '~/components'
 import { SideImage, TitleHome } from '~/containers'
+import useClass from '~/containers/Home/styles.home'
 import { Meta } from '~/layouts'
 
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
@@ -15,9 +16,11 @@ export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
 })
 
 export default function Home() {
+	const { classes } = useClass()
+
 	return (
-		<Grid justify='center' align='center' gutter={40}>
-			<Col span={12} md={5}>
+		<Grid justify='center' align='center' className={classes.wrapper}>
+			<Col span={12} md={6}>
 				<TitleHome />
 			</Col>
 
