@@ -5,7 +5,7 @@ import { useMediaQuery } from '@mantine/hooks'
 
 import { Drawer } from '~/components/AppShell/Navbar/Drawer'
 
-import { HeaderButtons, HeaderTitle, HeaderOptions } from './index'
+import { HeaderButtons, HeaderOptions, HeaderTitle } from './index'
 import useStyles from './styles.appbar'
 
 type Props = {

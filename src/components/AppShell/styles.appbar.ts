@@ -6,11 +6,10 @@ interface Props {
 
 export default createStyles((theme, { isDrawerStyle = false }: Props) => ({
 	container: {
-		paddingTop: 5,
+		paddingTop: 12,
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'space-between',
-		flexWrap: 'wrap'
+		justifyContent: 'space-between'
 	},
 	nav: {
 		textAlign: 'center',
