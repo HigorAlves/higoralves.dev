@@ -1,23 +1,12 @@
 import React from 'react'
 
 import { Col, Container, Grid, Space } from '@mantine/core'
-import { GetStaticPropsContext } from 'next'
-import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { SchemaProps, Title, UpDownMotion } from '~/components'
 import { AboutImage, Bio, PresentationComponent } from '~/containers'
 import { Meta } from '~/layouts'
 
-export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
-	props: {
-		...(await serverSideTranslations(locale as string, ['about']))
-	}
-})
-
 export default function About() {
-	const { t } = useTranslation('about')
-
 	return (
 		<Container>
 			<UpDownMotion>
@@ -28,7 +17,7 @@ export default function About() {
 						fontSize: '3rem'
 					})}
 				>
-					{t('head')}
+					Explore. Work. Live.
 				</Title>
 
 				<Space h={'xl'} />

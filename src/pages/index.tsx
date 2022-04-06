@@ -1,19 +1,11 @@
 import React from 'react'
 
 import { Col, Grid } from '@mantine/core'
-import { GetStaticPropsContext } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { SchemaProps } from '~/components'
 import { SideImage, TitleHome } from '~/containers'
 import useClass from '~/containers/Home/styles.home'
 import { Meta } from '~/layouts'
-
-export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
-	props: {
-		...(await serverSideTranslations(locale as string, ['home']))
-	}
-})
 
 export default function Home() {
 	const { classes } = useClass()
