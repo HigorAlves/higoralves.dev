@@ -6,7 +6,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { SchemaProps, Title, UpDownMotion } from '~/components'
-import { Bio, PresentationComponent } from '~/containers'
+import { AboutImage, Bio, PresentationComponent } from '~/containers'
 import { Meta } from '~/layouts'
 
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
@@ -34,7 +34,9 @@ export default function About() {
 				<Space h={'xl'} />
 
 				<Grid align='flex-start'>
-					<Col span={12} md={6} />
+					<Col span={12} md={6}>
+						<AboutImage />
+					</Col>
 					<Col span={12} md={6}>
 						<PresentationComponent />
 					</Col>

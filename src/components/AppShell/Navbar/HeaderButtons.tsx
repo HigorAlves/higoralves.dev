@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { ActionIcon, Tooltip, useMantineColorScheme } from '@mantine/core'
-import { MoonIcon, SunIcon } from '@primer/octicons-react'
+import { CgMoon, CgSun } from 'react-icons/cg'
 
 type WrapperProps = {
 	label: string
@@ -38,21 +38,9 @@ export function HeaderButtons() {
 
 	return (
 		<section style={{ display: 'flex' }}>
-			{/*<ToolTipAction label={'Commands'}>*/}
-			{/*	<SearchIcon size={'medium'} />*/}
-			{/*</ToolTipAction>*/}
-
 			<ToolTipAction label={'Theme'} space onClick={() => toggleColorScheme()}>
-				{dark ? <SunIcon size={'medium'} /> : <MoonIcon size={'medium'} />}
+				{dark ? <CgSun size={'medium'} /> : <CgMoon size={'medium'} />}
 			</ToolTipAction>
-
-			{/*<ToolTipAction label={'Pro'} space>*/}
-			{/*	<RocketIcon size={'medium'} />*/}
-			{/*</ToolTipAction>*/}
-
-			{/*<ToolTipAction label={'Login'} space>*/}
-			{/*	<HubotIcon size={'medium'} />*/}
-			{/*</ToolTipAction>*/}
 		</section>
 	)
 }

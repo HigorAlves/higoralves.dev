@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/HigorAlves/higoralves.dev/compare/v1.3.0...v2.0.0) (2022-04-04)
+
+
+### :art: Styling
+
+* post component ([e6d8459](https://github.com/HigorAlves/higoralves.dev/commit/e6d8459475f380d233cc68378162011006b1d3ad))
+
+
+### :bug: Bug Fixes
+
+* default theme colors ([1405861](https://github.com/HigorAlves/higoralves.dev/commit/140586180ad3753f8431ff575cf8162ce69652f1))
+* removing develop feats ([e9f845a](https://github.com/HigorAlves/higoralves.dev/commit/e9f845a4fb90c8b53f44da3ada2c8df9c9e5b0cd))
+* render for translation ([969ab6a](https://github.com/HigorAlves/higoralves.dev/commit/969ab6aaa66404ff4823a0a92f5d4d143f1ac08e))
+
+
+### :triangular_flag_on_post: Others
+
+* about page with containers ([f6c9ea8](https://github.com/HigorAlves/higoralves.dev/commit/f6c9ea8bb5e702af281061c8cea95647ab9654f4))
+* home page in divided on containers ([faf2723](https://github.com/HigorAlves/higoralves.dev/commit/faf27236e2a46a64b4a9b05d95263f9049b6b867))
+* portuguese translation ([56210f5](https://github.com/HigorAlves/higoralves.dev/commit/56210f5fd64a19faa4ba69e9b88ea9e6bd20fdbf))
+* project api details ([8e193d1](https://github.com/HigorAlves/higoralves.dev/commit/8e193d131b690f2b862df2dd52045f0161c93bef))
+* project page with modular components and i18n ([44ac047](https://github.com/HigorAlves/higoralves.dev/commit/44ac04746f30bce8ee5e23af85ce12e1ceb0fd22))
+
+
+### :sparkles: Features
+
+* about page translation file ([393ee06](https://github.com/HigorAlves/higoralves.dev/commit/393ee06814662afc88ff95601a06b9ccc5ffe416))
+* home translation ([3df34ee](https://github.com/HigorAlves/higoralves.dev/commit/3df34eebd82a1bd4e7c751c17be0500fa89b3f97))
+* i18n implementation for static texts ([28d0360](https://github.com/HigorAlves/higoralves.dev/commit/28d0360213f0908920d2f60b60908f794ecd8f0f))
+* introduce for graphcms requests ([ad88534](https://github.com/HigorAlves/higoralves.dev/commit/ad88534ff1f8ebd1307218090fb0ae18035721cb))
+* jsonld basic schema ([e9b4673](https://github.com/HigorAlves/higoralves.dev/commit/e9b46731c8414f3f06b650acb7f1c987b97a66fa))
+* jsonld for about page ([603d9c6](https://github.com/HigorAlves/higoralves.dev/commit/603d9c6a8e929b2aa589c3ee583391aa61017201))
+* jsonld implementation on pages ([727c596](https://github.com/HigorAlves/higoralves.dev/commit/727c5969b9b2071faa8a14ab28b7dbcb41787fb0))
+* projects page data from graphcms ([dafc5f5](https://github.com/HigorAlves/higoralves.dev/commit/dafc5f50379aaeb1e664e57e8b898bf5d20820c6))
+* removed contentful1 ([03f6fe7](https://github.com/HigorAlves/higoralves.dev/commit/03f6fe753cad7d272cf6abea4305d1e331175b5d))
+* removed contentful1 ([47333d0](https://github.com/HigorAlves/higoralves.dev/commit/47333d0515917d9bcdc7db18015b99141efd2b4d))
+* responsive navbar ([be008e9](https://github.com/HigorAlves/higoralves.dev/commit/be008e9b026494700a2d70efb01c66420b195153))
+
 ## [1.3.0](https://github.com/HigorAlves/higoralves.dev/compare/v1.2.0...v1.3.0) (2022-02-17)
 
 

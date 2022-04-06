@@ -5,7 +5,7 @@ import { useMediaQuery } from '@mantine/hooks'
 
 import { Drawer } from '~/components/AppShell/Navbar/Drawer'
 
-import { HeaderButtons, HeaderTitle, HeaderOptions } from './index'
+import { HeaderButtons, HeaderOptions, HeaderTitle } from './index'
 import useStyles from './styles.appbar'
 
 type Props = {
@@ -22,7 +22,7 @@ export function AppShell({ children }: Props) {
 		<Shell
 			padding='md'
 			header={
-				<Header height={80} padding='xs'>
+				<Header height={80}>
 					<Drawer opened={opened} setOpened={setOpened} />
 					<Container size={'xl'} className={classes.container}>
 						<HeaderTitle />

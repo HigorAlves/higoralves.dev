@@ -4,16 +4,12 @@ import Image from 'next/image'
 
 import { UpDownMotion } from '~/components'
 
-import useClass from './styles.home'
-
-export function SideImage() {
-	const { classes } = useClass()
-
+export function AboutImage() {
 	return (
 		<UpDownMotion>
-			<div className={classes.image}>
+			<div style={{ position: 'relative' }}>
 				<Image
-					src={'/static/images/rocket.png'}
+					src={'/static/images/boy.png'}
 					layout={'fixed'}
 					objectFit={'contain'}
 					objectPosition={'center'}

@@ -14,16 +14,18 @@ export default createStyles(theme => {
 				li: {
 					display: 'inline',
 					margin: '0 14px',
-					color:
-						theme.colorScheme === 'dark'
-							? theme.colors.gray[5]
-							: theme.colors.dark[5],
-
-					'&:hover': {
+					'& a': {
 						color:
 							theme.colorScheme === 'dark'
-								? theme.colors.gray[1]
-								: theme.colors.dark[1]
+								? theme.colors.gray[5]
+								: theme.colors.dark[5],
+
+						'&:hover': {
+							color:
+								theme.colorScheme === 'dark'
+									? theme.colors.gray[1]
+									: theme.colors.dark[1]
+						}
 					}
 				}
 			}

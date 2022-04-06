@@ -2,8 +2,9 @@ import React from 'react'
 
 import { Blockquote, Button, Text } from '@mantine/core'
 import { useClipboard } from '@mantine/hooks'
-import { CopyIcon, DownloadIcon } from '@primer/octicons-react'
 import { useTranslation } from 'next-i18next'
+import { HiOutlineDownload } from 'react-icons/hi'
+import { IoCopyOutline } from 'react-icons/io5'
 
 import { Title } from '~/components'
 
@@ -17,7 +18,7 @@ export function Bio() {
 			<Text size={'sm'}>{t('bio')}</Text>
 			<Blockquote>{t('bioDescription')}</Blockquote>
 			<Button
-				leftIcon={<CopyIcon />}
+				leftIcon={<IoCopyOutline />}
 				variant='outline'
 				color={'orange'}
 				onClick={() => clipboard.copy(t('btnCopyClipboard'))}
@@ -26,7 +27,7 @@ export function Bio() {
 			</Button>
 
 			<Button
-				leftIcon={<DownloadIcon />}
+				leftIcon={<HiOutlineDownload />}
 				variant='outline'
 				color={'grey'}
 				style={{ marginLeft: 20 }}

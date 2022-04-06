@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Container } from '@mantine/core'
-import { LogoGithubIcon } from '@primer/octicons-react'
 import Link from 'next/link'
+import { FaGithubAlt, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import useStyles from './footer.styles'
 
@@ -13,32 +13,35 @@ export function Footer() {
 		{
 			name: 'Github',
 			link: 'https://github.com/higoralves',
-			icon: LogoGithubIcon
+			icon: <FaGithubAlt />
 		},
 		{
 			name: 'Linkedin',
-			link: 'https://github.com/higoralves'
+			link: 'https://www.linkedin.com/in/higoralvesdev/',
+			icon: <FaLinkedin />
 		},
 		{
 			name: 'Instagram',
-			link: 'https://github.com/higoralves'
+			link: 'https://www.instagram.com/higoralves.dev/',
+			icon: <FaInstagram />
 		}
 	]
 
 	return (
 		<footer data-testid={'footer'}>
-			<Container className={classes.wrapper}>
+			<Container fluid className={classes.wrapper}>
 				<ul>
 					{socials.map(social => (
-						<Link key={social.name} href={social.link} passHref>
-							<li>
-								<a target='_blank' rel='noreferrer'>
-									{social.name}
+						<li key={social.name}>
+							<Link href={social.link} passHref>
+								<a target='_blank' rel='noopener noreferrer'>
+									{social.icon}
 								</a>
-							</li>
-						</Link>
+							</Link>
+						</li>
 					))}
 				</ul>
+				<text>Made with ❤️ by me</text>
 			</Container>
 		</footer>
 	)
