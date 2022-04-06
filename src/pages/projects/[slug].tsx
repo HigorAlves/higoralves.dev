@@ -9,20 +9,19 @@ import {
 	Text,
 	ThemeIcon
 } from '@mantine/core'
-import {
-	BriefcaseIcon,
-	GlobeIcon,
-	LocationIcon,
-	OrganizationIcon,
-	RubyIcon
-} from '@primer/octicons-react'
 import { GraphQLClient } from 'graphql-request'
 import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import Image from 'next/image'
+import { BsBriefcase } from 'react-icons/bs'
+import { FiGlobe } from 'react-icons/fi'
+import { GoLocation } from 'react-icons/go'
+import { RiVipDiamondLine } from 'react-icons/ri'
+import { VscOrganization } from 'react-icons/vsc'
 
 import { Link, Technology, Title } from '~/components'
+import { GRAPH_CMS } from '~/config/constants'
 import { Locale, ProjectQuery } from '~/graphql/generated/graphql'
 import { projectQuery, projectsQuery } from '~/services/queries'
 
@@ -59,8 +58,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 	const { locale, params } = context
 	const slug = params?.slug as string
 	const language = locale === 'en' ? Locale.En : Locale.Br
-	const graphcmsURL = process.env.NEXT_PUBLIC_GRAPHCMS_URL as string
-	const client = new GraphQLClient(graphcmsURL)
+	const client = new GraphQLClient(GRAPH_CMS.URL)
 	const data: ProjectQuery = await client.request(projectQuery, {
 		locale: language,
 		slug
@@ -114,7 +112,7 @@ export default function Project({ project, source }: Props) {
 							<Col span={12} md={3} lg={3}>
 								<Group>
 									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<RubyIcon size={12} />
+										<RiVipDiamondLine size={14} />
 									</ThemeIcon>
 									<Text>{data.company}</Text>
 								</Group>
@@ -122,7 +120,7 @@ export default function Project({ project, source }: Props) {
 							<Col span={12} md={4} lg={3}>
 								<Group>
 									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<OrganizationIcon size={12} />
+										<VscOrganization size={14} />
 									</ThemeIcon>
 									<Text>{data.industry}</Text>
 								</Group>
@@ -130,26 +128,26 @@ export default function Project({ project, source }: Props) {
 							<Col span={12} md={4} lg={3}>
 								<Group>
 									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<BriefcaseIcon size={12} />
+										<BsBriefcase size={14} />
 									</ThemeIcon>
 									<Text>{data.role}</Text>
 								</Group>
 							</Col>
-							<Col span={12} md={4} lg={3}>
+							<Col span={12} md={2} lg={2}>
 								<Group>
 									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<LocationIcon size={12} />
+										<GoLocation size={14} />
 									</ThemeIcon>
 									<Text>{data.country}</Text>
 								</Group>
 							</Col>
-							<Col span={12} md={4} lg={3}>
+							<Col span={12} md={2} lg={2}>
 								<Group>
 									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<GlobeIcon size={12} />
+										<FiGlobe size={14} />
 									</ThemeIcon>
 									<Link href={data.website as string} target={'_blank'}>
-										<Text color={'yellow'}>Official Website</Text>
+										<Text color={'yellow'}>Website</Text>
 									</Link>
 								</Group>
 							</Col>
