@@ -8,7 +8,6 @@ import {
 import { NotificationsProvider } from '@mantine/notifications'
 import { AnimatePresence } from 'framer-motion'
 import { NextPage } from 'next'
-import { appWithTranslation } from 'next-i18next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
@@ -71,4 +70,4 @@ function App(props: AppPropsWithLayout) {
 	)
 }
 
-export default appWithTranslation(App)
+export default App
