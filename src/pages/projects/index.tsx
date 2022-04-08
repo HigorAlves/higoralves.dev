@@ -7,7 +7,6 @@ import { dehydrate, DehydratedState, QueryClient } from 'react-query'
 import { Title, UpDownMotion } from '~/components'
 import { ListOfProjects } from '~/containers'
 import { Locale, useProjectsQuery } from '~/graphql/generated/graphql'
-import { Meta } from '~/layouts'
 
 export async function getStaticProps(context: GetStaticPropsContext) {
 	const queryClient = new QueryClient()
@@ -56,18 +55,3 @@ export default function Projects({ locale }: Props) {
 		</UpDownMotion>
 	)
 }
-
-const meta: Meta = {
-	image: {
-		title: '',
-		url: ''
-	},
-	title: 'Projects // Higor Alves',
-	type: 'website',
-	description: 'Work. Hobby. Open Source',
-	twitter: '@higorhaalves',
-	url: 'https://higoralves.dev',
-	name: 'Higor Alves'
-}
-
-Projects.meta = meta

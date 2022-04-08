@@ -13,17 +13,14 @@ import { useRouter } from 'next/router'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
-import { SchemaProps } from '~/components'
 import { FirebaseTrackingProvider } from '~/context/FirebaseTrackingProvider'
-import { Layout, LayoutTypes, Meta } from '~/layouts'
+import { Layout, LayoutTypes } from '~/layouts'
 import { darkTheme, lightTheme } from '~/theme'
 
 import '../../public/static/css/main.css'
 
 type NextPageWithLayout = NextPage & {
 	layout?: LayoutTypes
-	meta: Meta
-	jsonLd: SchemaProps
 }
 
 type AppPropsWithLayout = AppProps & {
@@ -39,7 +36,6 @@ function App(props: AppPropsWithLayout) {
 		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
 
 	const layoutType = Component.layout ?? 'base'
-	const { meta, jsonLd } = Component
 
 	return (
 		<QueryClientProvider client={queryClient}>
@@ -54,7 +50,7 @@ function App(props: AppPropsWithLayout) {
 						theme={colorScheme === 'dark' ? darkTheme : lightTheme}
 					>
 						<NotificationsProvider>
-							<Layout type={layoutType} meta={meta} jsonLd={jsonLd}>
+							<Layout type={layoutType}>
 								<FirebaseTrackingProvider>
 									<AnimatePresence exitBeforeEnter>
 										<Component key={router.route} {...pageProps} />
