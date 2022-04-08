@@ -1,45 +1,20 @@
 import React from 'react'
 
-import {
-	Col,
-	Container,
-	Grid,
-	Group,
-	Space,
-	Text,
-	ThemeIcon
-} from '@mantine/core'
+import { Container, Space } from '@mantine/core'
 import { GraphQLClient } from 'graphql-request'
 import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import Image from 'next/image'
-import { BsBriefcase } from 'react-icons/bs'
-import { FiGlobe } from 'react-icons/fi'
-import { GoLocation } from 'react-icons/go'
-import { RiVipDiamondLine } from 'react-icons/ri'
-import { VscOrganization } from 'react-icons/vsc'
 
-import { Link, Technology, Title } from '~/components'
+import { componentsMap } from '~/components'
 import { GRAPH_CMS } from '~/config/constants'
+import {
+	ProjectDetails,
+	ProjectHeader,
+	ProjectTechnologies
+} from '~/containers'
 import { Locale, ProjectQuery } from '~/graphql/generated/graphql'
 import { projectQuery, projectsQuery } from '~/services/queries'
-
-const componentsMap = {
-	p: (props: { children: React.ReactChild }) => (
-		<Text mt={'xl'}>{props.children}</Text>
-	),
-	h2: (props: { children: string }) => (
-		<Title order={2} mt={'md'}>
-			{props.children}
-		</Title>
-	),
-	h3: (props: { children: string }) => (
-		<Title order={3} mt={'md'}>
-			{props.children}
-		</Title>
-	)
-}
 
 export async function getStaticPaths() {
 	const graphcmsURL = process.env.NEXT_PUBLIC_GRAPHCMS_URL as string
@@ -83,94 +58,20 @@ export default function Project({ project, source }: Props) {
 	const data = project.projects[0]
 
 	return (
-		<>
-			{data && (
-				<Container>
-					<div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-						<Image
-							src={data.cover.url}
-							width={1920}
-							height={1080}
-							layout={'responsive'}
-							alt={data.cover.id}
-							objectFit={'cover'}
-							objectPosition={'center'}
-						/>
-					</div>
-					<Title mt={'xl'} align={'center'} white>
-						{data.title as string}
-					</Title>
+		data && (
+			<Container>
+				<ProjectHeader title={data.title} cover={data.cover} />
+				<MDXRemote {...(source as any)} components={componentsMap} />
 
-					<MDXRemote {...(source as any)} components={componentsMap} />
-
-					<section>
-						<Space h={30} />
-						<Title order={2} mb={'sm'}>
-							Details
-						</Title>
-						<Grid>
-							<Col span={12} md={3} lg={3}>
-								<Group>
-									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<RiVipDiamondLine size={14} />
-									</ThemeIcon>
-									<Text>{data.company}</Text>
-								</Group>
-							</Col>
-							<Col span={12} md={4} lg={3}>
-								<Group>
-									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<VscOrganization size={14} />
-									</ThemeIcon>
-									<Text>{data.industry}</Text>
-								</Group>
-							</Col>
-							<Col span={12} md={4} lg={3}>
-								<Group>
-									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<BsBriefcase size={14} />
-									</ThemeIcon>
-									<Text>{data.role}</Text>
-								</Group>
-							</Col>
-							<Col span={12} md={2} lg={2}>
-								<Group>
-									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<GoLocation size={14} />
-									</ThemeIcon>
-									<Text>{data.country}</Text>
-								</Group>
-							</Col>
-							<Col span={12} md={2} lg={2}>
-								<Group>
-									<ThemeIcon color='yellow' size={24} radius='xl'>
-										<FiGlobe size={14} />
-									</ThemeIcon>
-									<Link href={data.website as string} target={'_blank'}>
-										<Text color={'yellow'}>Website</Text>
-									</Link>
-								</Group>
-							</Col>
-						</Grid>
-					</section>
-
+				<section>
 					<Space h={30} />
-					<Title order={3} mb={'xl'}>
-						Technologies used
-					</Title>
-
-					<Grid gutter={20}>
-						{data.technologies.map(tech => (
-							<Col span={12} md={1} lg={2} key={tech.name}>
-								<Technology
-									icon={tech.icon?.url as string}
-									name={tech.name as string}
-								/>
-							</Col>
-						))}
-					</Grid>
-				</Container>
-			)}
-		</>
+					<ProjectDetails {...data} />
+				</section>
+				<section>
+					<Space h={30} />
+					<ProjectTechnologies technologies={data.technologies} />
+				</section>
+			</Container>
+		)
 	)
 }

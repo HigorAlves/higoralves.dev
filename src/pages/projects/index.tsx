@@ -5,6 +5,7 @@ import { GetStaticPropsContext } from 'next'
 import { dehydrate, DehydratedState, QueryClient } from 'react-query'
 
 import { Title, UpDownMotion } from '~/components'
+import { REVALIDATE_TIME } from '~/config/constants'
 import { ListOfProjects } from '~/containers'
 import { Locale, useProjectsQuery } from '~/graphql/generated/graphql'
 
@@ -22,7 +23,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 			locale: language,
 			dehydratedState: dehydrate(queryClient)
 		},
-		revalidate: 60 * 60 * 10 // 10 days
+		revalidate: REVALIDATE_TIME
 	}
 }
 
