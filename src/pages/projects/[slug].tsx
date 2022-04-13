@@ -17,8 +17,7 @@ import { Locale, ProjectQuery } from '~/graphql/generated/graphql'
 import { projectQuery, projectsQuery } from '~/services/queries'
 
 export async function getStaticPaths() {
-	const graphcmsURL = process.env.NEXT_PUBLIC_GRAPHCMS_URL as string
-	const client = new GraphQLClient(graphcmsURL)
+	const client = new GraphQLClient(GRAPH_CMS.URL)
 	const data = await client.request(projectsQuery)
 
 	return {
