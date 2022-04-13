@@ -6000,9 +6000,7 @@ export const ArticlesDocument = `
     }
     cover {
       id
-      url(
-        transformation: {document: {output: {format: webp}}, image: {resize: {width: 300, height: 150}}}
-      )
+      url(transformation: {document: {output: {format: webp}}})
     }
     slug
     subject
