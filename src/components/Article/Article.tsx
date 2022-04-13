@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Button, Group, Paper, Space, Text } from '@mantine/core'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import { Locale } from '~/graphql/generated/graphql'
 
@@ -17,6 +18,7 @@ interface Props {
 	timeToRead: number
 	title: string
 	description: string
+	route: string
 }
 
 export function Article({
@@ -25,9 +27,11 @@ export function Article({
 	techLabel,
 	timeToRead,
 	title,
-	locale
+	locale,
+	route
 }: Props) {
 	const { classes } = useClasses()
+	const router = useRouter()
 	const languageColor = locale === Locale.En ? 'red' : 'green'
 
 	return (
@@ -58,7 +62,7 @@ export function Article({
 					</Text>
 				</Group>
 				<Space h={'md'} />
-				<Text size={'xl'} weight={700}>
+				<Text size={'xl'} weight={700} lineClamp={2}>
 					{title}
 				</Text>
 				<Space h={'sm'} />
@@ -72,6 +76,7 @@ export function Article({
 					size={'xs'}
 					variant='gradient'
 					gradient={{ from: 'orange', to: 'red' }}
+					onClick={() => router.push(route)}
 				>
 					Read more
 				</Button>
