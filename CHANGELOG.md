@@ -2,6 +2,58 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/HigorAlves/higoralves.dev/compare/v2.0.0...v3.0.0) (2022-04-13)
+
+
+### :zap: Performance Improvements
+
+* removed unused files ([52b726c](https://github.com/HigorAlves/higoralves.dev/commit/52b726c8f5031ec62590e5c5b816c1fd34075156))
+* removed unused files ([7a3acbc](https://github.com/HigorAlves/higoralves.dev/commit/7a3acbcb360cfcc01c90b8f610b1996567a5b7d3))
+
+
+### :art: Styling
+
+* new images ([d2cb5c9](https://github.com/HigorAlves/higoralves.dev/commit/d2cb5c9c43511f02d0083afabacf9453607c9828))
+
+
+### :sparkles: Features
+
+* article component with image ([730a1b2](https://github.com/HigorAlves/higoralves.dev/commit/730a1b2d75b3434c9d80c52bfbed7afbcd2601a2))
+* article graphcms calls ([a974a3d](https://github.com/HigorAlves/higoralves.dev/commit/a974a3d5ff9bb16102c4b063c880d9f1341dce9d))
+* basics for article component ([0b34129](https://github.com/HigorAlves/higoralves.dev/commit/0b3412960772b5f71593308b7bf78306bfd7fb15))
+* blog page with a single article ([eaa8eb5](https://github.com/HigorAlves/higoralves.dev/commit/eaa8eb50f020661cad3f1ceee9c142aff4e04e3a))
+* bug template ([1af5af7](https://github.com/HigorAlves/higoralves.dev/commit/1af5af78781d536dfb3c3faa23d8e2d32de8847e))
+* componentization for project page ([4a53ac1](https://github.com/HigorAlves/higoralves.dev/commit/4a53ac1aa6acae587bcd09882c1341095ca9b2cc))
+* images for categories ([8b05f34](https://github.com/HigorAlves/higoralves.dev/commit/8b05f344f413f82d90af4c717f307961a88d0663))
+* list of articles ([b72d72b](https://github.com/HigorAlves/higoralves.dev/commit/b72d72bccff59809e31dd0d6c10eb940917830a7))
+* new i18n configs ([e7c9bac](https://github.com/HigorAlves/higoralves.dev/commit/e7c9bac44b44c4fadc22e3983f4e5ed5efa7c7cd))
+* pr template ([67789fd](https://github.com/HigorAlves/higoralves.dev/commit/67789fd1342b877177d25846e8bbbe2fc41e7d60))
+* props for the component ([af5d624](https://github.com/HigorAlves/higoralves.dev/commit/af5d624fd461405aa4d851c42cf0b12e17302faf))
+* removing old seo ([97c9256](https://github.com/HigorAlves/higoralves.dev/commit/97c925629bd850fc7d590cfb6d56eea861b12fd7))
+* workflow system ([6051198](https://github.com/HigorAlves/higoralves.dev/commit/6051198b39f608611e8c5e4dd359217aad181482))
+
+
+### :bug: Bug Fixes
+
+* appshell padding spaces ([a423ba9](https://github.com/HigorAlves/higoralves.dev/commit/a423ba9b9edb3e6858e4dc2213d79a003adf2cdb))
+* better names for the integration ([486959e](https://github.com/HigorAlves/higoralves.dev/commit/486959e19de976c00efd2419a27120a71874d0a2))
+* broken dependencies ([0ffb04d](https://github.com/HigorAlves/higoralves.dev/commit/0ffb04dd607ac8d914ecb5c58c75e3a74454da25))
+* contentful images and components ([0e73865](https://github.com/HigorAlves/higoralves.dev/commit/0e7386586ff91431c259d70cfb1549917029367f))
+* footer links and icons ([9394ece](https://github.com/HigorAlves/higoralves.dev/commit/9394ece739b2df5076991e4a0cd755aa52ffad9a))
+* headshot image ([f165816](https://github.com/HigorAlves/higoralves.dev/commit/f165816e8659a40a1d1ac19a3dfef8be06677c70))
+* moved issue template ([632cc03](https://github.com/HigorAlves/higoralves.dev/commit/632cc03d7a9c71acd24ecce78079ca724a216186))
+* new dependencies updates ([fe89832](https://github.com/HigorAlves/higoralves.dev/commit/fe89832bc50472f4bb44e63880dd0b417ecd30ed))
+* removed article component from the three ([1dfeb3e](https://github.com/HigorAlves/higoralves.dev/commit/1dfeb3e41546b4216c3f2f13f11d54cf214c723c))
+* removed contentful components ([ce58c01](https://github.com/HigorAlves/higoralves.dev/commit/ce58c0130b51e49eec4182cd625c70a28f041c7a))
+* removed old icon library ([fb37acc](https://github.com/HigorAlves/higoralves.dev/commit/fb37accd2dd8eaa8d3c69cf57d4105125a6e9b93))
+* removed old icon library ([04b07cf](https://github.com/HigorAlves/higoralves.dev/commit/04b07cfba6af788a11af513b713e94d4e7439e63))
+* removed sized image from api ([c5ea1f6](https://github.com/HigorAlves/higoralves.dev/commit/c5ea1f69acaa40f25273c158bde7d48bb0c1d7fd))
+* removed unused files ([b128bad](https://github.com/HigorAlves/higoralves.dev/commit/b128baddc31590a69cda906ac10f6fc841630d7b))
+* removed unused files ([b9ff04b](https://github.com/HigorAlves/higoralves.dev/commit/b9ff04b80e87b3b27c145a6ae89eecc5a0c06e8e))
+* unused lib ([5698875](https://github.com/HigorAlves/higoralves.dev/commit/56988757f6c9636b61b5fec25d8e06d826b2b289))
+* unused lib ([7d32f2b](https://github.com/HigorAlves/higoralves.dev/commit/7d32f2bb83eb132191bbff4d5aaa0cd3a205ee01))
+* using global constant variable ([d0495a5](https://github.com/HigorAlves/higoralves.dev/commit/d0495a5b0a5dbd36d3b91d31613311a07bb37e13))
+
 ## [2.0.0](https://github.com/HigorAlves/higoralves.dev/compare/v1.3.0...v2.0.0) (2022-04-04)
 
 

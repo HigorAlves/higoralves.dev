@@ -2,13 +2,10 @@ import React, { ReactNode } from 'react'
 
 import { Container, createStyles } from '@mantine/core'
 
-import { AppShell, Footer, JsonLD, SchemaProps, SEOHead } from '~/components'
-import { Meta } from '~/layouts/index'
+import { AppShell, Footer } from '~/components'
 
 interface Props {
 	children: ReactNode
-	meta: Meta
-	jsonLd: SchemaProps
 }
 
 const useClass = createStyles(() => ({
@@ -17,13 +14,11 @@ const useClass = createStyles(() => ({
 	}
 }))
 
-function BaseLayout({ children, meta, jsonLd }: Props): JSX.Element {
+function BaseLayout({ children }: Props): JSX.Element {
 	const { classes } = useClass()
 
 	return (
 		<>
-			<SEOHead meta={meta} />
-			<JsonLD {...jsonLd} />
 			<AppShell>
 				<Container size={'lg'} className={classes.wrapper}>
 					{children}

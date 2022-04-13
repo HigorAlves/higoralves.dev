@@ -1,18 +1,18 @@
 import React from 'react'
 
 import { Button, Group, Space, Text } from '@mantine/core'
-import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
 import { Title, UpDownMotion } from '~/components'
 
 export function TitleHome() {
-	const { t } = useTranslation('home')
+	const router = useRouter()
 
 	return (
 		<>
 			<UpDownMotion>
 				<Title white order={1} gradient={'orangeToPink'}>
-					{t('title')}
+					Build and ship your app faster
 				</Title>
 			</UpDownMotion>
 
@@ -20,23 +20,29 @@ export function TitleHome() {
 
 			<UpDownMotion>
 				<Title order={2} weight={'regular'} white>
-					{t('subtitle')}
+					Helping companies make the world a better place through quality
+					software.
 				</Title>
 
 				<Space h='sm' />
 
 				<UpDownMotion>
-					<Text weight={'thin'}>{t('jobTitle')}</Text>
+					<Text weight={'thin'}>NodeJS | React | Blockchain</Text>
 				</UpDownMotion>
 				<Space h='sm' />
 				<UpDownMotion>
 					<Group>
 						<Button color={'orange'} variant={'light'} size={'xs'}>
-							{t('ctaButtonHireMe')}
+							Hire me
 						</Button>
 
-						<Button color={'dark'} variant={'light'} size={'xs'}>
-							{t('ctaButtonProjects')}
+						<Button
+							color={'dark'}
+							variant={'light'}
+							size={'xs'}
+							onClick={() => router.push('projects')}
+						>
+							Check my projects
 						</Button>
 					</Group>
 				</UpDownMotion>

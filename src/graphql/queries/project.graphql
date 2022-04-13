@@ -50,3 +50,34 @@ query Project($locale: Locale!, $slug: String!) {
 		}
 	}
 }
+
+query Articles {
+	articles {
+		body {
+			markdown
+		}
+		cover {
+			id
+			url(transformation: {document: {output: {format: webp}}})
+		}
+		slug
+		subject
+		title
+		language
+		description
+	}
+}
+
+query Article($slug: String!) {
+	article(where: {slug: $slug}) {
+		cover {
+			id
+			url(transformation: {document: {output: {format: webp}}})
+		}
+		description
+		language
+		slug
+		subject
+		title
+	}
+}
