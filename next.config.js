@@ -11,6 +11,6 @@ module.exports = {
 	},
 	images: {
 		dangerouslyAllowSVG: true,
-		domains: ['media.graphassets.com']
+		domains: ['media.graphassets.com', 'odindesignthemes.com']
 	}
 }

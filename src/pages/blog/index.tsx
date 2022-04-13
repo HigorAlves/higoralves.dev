@@ -10,17 +10,17 @@ export default function Blog() {
 			<section>
 				<Title
 					order={1}
-					gradient={'yellowToPink'}
+					gradient={'purpleToGreen'}
 					sx={() => ({
 						fontSize: '3rem'
 					})}
 				>
-					Blog
+					Articles. Updates. Guides
 				</Title>
 				<Text>Learn development with great articles.</Text>
-				<Space h={'xl'} />
+				<Space h={60} />
 			</section>
-			<Grid justify={'center'} align={'center'}>
+			<Grid>
 				<Col md={4}>
 					<Article />
 				</Col>
