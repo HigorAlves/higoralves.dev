@@ -87,7 +87,7 @@ export type Article = Node & {
 	slug: Scalars['String']
 	/** System stage field */
 	stage: Stage
-	technology: Scalars['String']
+	subject: Subjects
 	title: Scalars['String']
 	/** The time the document was updated */
 	updatedAt: Scalars['DateTime']
@@ -164,7 +164,7 @@ export type ArticleCreateInput = {
 	description: Scalars['String']
 	language: Language
 	slug: Scalars['String']
-	technology: Scalars['String']
+	subject: Subjects
 	title: Scalars['String']
 	updatedAt?: InputMaybe<Scalars['DateTime']>
 }
@@ -302,25 +302,13 @@ export type ArticleManyWhereInput = {
 	slug_not_starts_with?: InputMaybe<Scalars['String']>
 	/** All values starting with the given string. */
 	slug_starts_with?: InputMaybe<Scalars['String']>
-	technology?: InputMaybe<Scalars['String']>
-	/** All values containing the given string. */
-	technology_contains?: InputMaybe<Scalars['String']>
-	/** All values ending with the given string. */
-	technology_ends_with?: InputMaybe<Scalars['String']>
+	subject?: InputMaybe<Subjects>
 	/** All values that are contained in given list. */
-	technology_in?: InputMaybe<Array<Scalars['String']>>
+	subject_in?: InputMaybe<Array<Subjects>>
 	/** All values that are not equal to given value. */
-	technology_not?: InputMaybe<Scalars['String']>
-	/** All values not containing the given string. */
-	technology_not_contains?: InputMaybe<Scalars['String']>
-	/** All values not ending with the given string */
-	technology_not_ends_with?: InputMaybe<Scalars['String']>
+	subject_not?: InputMaybe<Subjects>
 	/** All values that are not contained in given list. */
-	technology_not_in?: InputMaybe<Array<Scalars['String']>>
-	/** All values not starting with the given string. */
-	technology_not_starts_with?: InputMaybe<Scalars['String']>
-	/** All values starting with the given string. */
-	technology_starts_with?: InputMaybe<Scalars['String']>
+	subject_not_in?: InputMaybe<Array<Subjects>>
 	title?: InputMaybe<Scalars['String']>
 	/** All values containing the given string. */
 	title_contains?: InputMaybe<Scalars['String']>
@@ -371,8 +359,8 @@ export enum ArticleOrderByInput {
 	PublishedAtDesc = 'publishedAt_DESC',
 	SlugAsc = 'slug_ASC',
 	SlugDesc = 'slug_DESC',
-	TechnologyAsc = 'technology_ASC',
-	TechnologyDesc = 'technology_DESC',
+	SubjectAsc = 'subject_ASC',
+	SubjectDesc = 'subject_DESC',
 	TitleAsc = 'title_ASC',
 	TitleDesc = 'title_DESC',
 	UpdatedAtAsc = 'updatedAt_ASC',
@@ -385,7 +373,7 @@ export type ArticleUpdateInput = {
 	description?: InputMaybe<Scalars['String']>
 	language?: InputMaybe<Language>
 	slug?: InputMaybe<Scalars['String']>
-	technology?: InputMaybe<Scalars['String']>
+	subject?: InputMaybe<Subjects>
 	title?: InputMaybe<Scalars['String']>
 }
 
@@ -410,7 +398,7 @@ export type ArticleUpdateManyInput = {
 	body?: InputMaybe<Scalars['RichTextAST']>
 	description?: InputMaybe<Scalars['String']>
 	language?: InputMaybe<Language>
-	technology?: InputMaybe<Scalars['String']>
+	subject?: InputMaybe<Subjects>
 	title?: InputMaybe<Scalars['String']>
 }
 
@@ -567,25 +555,13 @@ export type ArticleWhereInput = {
 	slug_not_starts_with?: InputMaybe<Scalars['String']>
 	/** All values starting with the given string. */
 	slug_starts_with?: InputMaybe<Scalars['String']>
-	technology?: InputMaybe<Scalars['String']>
-	/** All values containing the given string. */
-	technology_contains?: InputMaybe<Scalars['String']>
-	/** All values ending with the given string. */
-	technology_ends_with?: InputMaybe<Scalars['String']>
+	subject?: InputMaybe<Subjects>
 	/** All values that are contained in given list. */
-	technology_in?: InputMaybe<Array<Scalars['String']>>
+	subject_in?: InputMaybe<Array<Subjects>>
 	/** All values that are not equal to given value. */
-	technology_not?: InputMaybe<Scalars['String']>
-	/** All values not containing the given string. */
-	technology_not_contains?: InputMaybe<Scalars['String']>
-	/** All values not ending with the given string */
-	technology_not_ends_with?: InputMaybe<Scalars['String']>
+	subject_not?: InputMaybe<Subjects>
 	/** All values that are not contained in given list. */
-	technology_not_in?: InputMaybe<Array<Scalars['String']>>
-	/** All values not starting with the given string. */
-	technology_not_starts_with?: InputMaybe<Scalars['String']>
-	/** All values starting with the given string. */
-	technology_starts_with?: InputMaybe<Scalars['String']>
+	subject_not_in?: InputMaybe<Array<Subjects>>
 	title?: InputMaybe<Scalars['String']>
 	/** All values containing the given string. */
 	title_contains?: InputMaybe<Scalars['String']>
@@ -4920,6 +4896,17 @@ export enum Stage {
 	Published = 'PUBLISHED'
 }
 
+/** All the subject’s that I talk about */
+export enum Subjects {
+	Html = 'HTML',
+	HomeOffice = 'Home_Office',
+	Javascript = 'Javascript',
+	Programming = 'Programming',
+	React = 'React',
+	ReactNative = 'ReactNative',
+	Typescript = 'Typescript'
+}
+
 export enum SystemDateTimeFieldVariation {
 	Base = 'BASE',
 	Combined = 'COMBINED',
@@ -5902,7 +5889,7 @@ export type ArticlesQuery = {
 	articles: Array<{
 		__typename?: 'Article'
 		slug: string
-		technology: string
+		subject: Subjects
 		title: string
 		language: Language
 		description: string
@@ -5922,7 +5909,7 @@ export type ArticleQuery = {
 		description: string
 		language: Language
 		slug: string
-		technology: string
+		subject: Subjects
 		title: string
 		cover: { __typename?: 'Asset'; id: string; url: string }
 	} | null
@@ -6013,10 +6000,12 @@ export const ArticlesDocument = `
     }
     cover {
       id
-      url(transformation: {document: {output: {format: webp}}})
+      url(
+        transformation: {document: {output: {format: webp}}, image: {resize: {width: 300, height: 150}}}
+      )
     }
     slug
-    technology
+    subject
     title
     language
     description
@@ -6044,7 +6033,7 @@ export const ArticleDocument = `
     description
     language
     slug
-    technology
+    subject
     title
   }
 }

@@ -12,7 +12,7 @@ interface Props {
 	title: string
 	route: string
 	locale: Language
-	techLabel: string
+	subject: string
 	timeToRead: string
 	description: string
 	image: {
@@ -24,7 +24,7 @@ interface Props {
 export function Article({
 	image,
 	description,
-	techLabel,
+	subject,
 	timeToRead,
 	title,
 	locale,
@@ -51,7 +51,7 @@ export function Article({
 				<Group position={'apart'}>
 					<Group>
 						<Text size={'xs'} color={'yellow'}>
-							{techLabel.toUpperCase()}
+							{subject.toUpperCase()}
 						</Text>
 						<Text size={'xs'} weight={700} color={'gray'}>
 							{timeToRead.toUpperCase()}

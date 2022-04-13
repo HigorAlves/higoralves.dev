@@ -61,7 +61,7 @@ query Articles {
 			url(transformation: {document: {output: {format: webp}}, image: {resize: {width: 300, height: 150}}})
 		}
 		slug
-		technology
+		subject
 		title
 		language
 		description
@@ -77,7 +77,7 @@ query Article($slug: String!) {
 		description
 		language
 		slug
-		technology
+		subject
 		title
 	}
 }

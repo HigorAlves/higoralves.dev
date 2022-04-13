@@ -22,7 +22,7 @@ export function ArticlesList({ data }: Props) {
 								title={article.title}
 								route={article.slug}
 								locale={article.language}
-								techLabel={article.technology}
+								subject={article.subject}
 								timeToRead={text}
 								description={article.description}
 								image={{
