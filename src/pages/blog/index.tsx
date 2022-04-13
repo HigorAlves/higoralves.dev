@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { Col, Grid, Space, Text } from '@mantine/core'
+import { Space, Text } from '@mantine/core'
 
-import { Article, Title } from '~/components'
+import { Title } from '~/components'
 
 export default function Blog() {
 	return (
 		<>
-			<section>
+			<section id={'blog-title'}>
 				<Title
 					order={1}
 					gradient={'purpleToGreen'}
@@ -20,11 +20,6 @@ export default function Blog() {
 				<Text>Learn development with great articles.</Text>
 				<Space h={60} />
 			</section>
-			<Grid>
-				<Col md={4}>
-					<Article />
-				</Col>
-			</Grid>
 		</>
 	)
 }
