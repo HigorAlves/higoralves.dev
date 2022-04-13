@@ -9,16 +9,16 @@ import { Locale } from '~/graphql/generated/graphql'
 import useClasses from './article.styles'
 
 interface Props {
+	title: string
+	route: string
+	locale: Locale
+	techLabel: string
+	timeToRead: number
+	description: string
 	image: {
 		url: string
 		alt: string
 	}
-	locale: Locale
-	techLabel: string
-	timeToRead: number
-	title: string
-	description: string
-	route: string
 }
 
 export function Article({
