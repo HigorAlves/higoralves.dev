@@ -58,7 +58,7 @@ query Articles {
 		}
 		cover {
 			id
-			url(transformation: {document: {output: {format: webp}}})
+			url(transformation: {document: {output: {format: webp}}, image: {resize: {width: 300, height: 150}}})
 		}
 		slug
 		technology

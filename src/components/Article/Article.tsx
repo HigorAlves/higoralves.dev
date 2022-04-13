@@ -4,16 +4,16 @@ import { Button, Group, Paper, Space, Text } from '@mantine/core'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-import { Locale } from '~/graphql/generated/graphql'
+import { Language } from '~/graphql/generated/graphql'
 
 import useClasses from './article.styles'
 
 interface Props {
 	title: string
 	route: string
-	locale: Locale
+	locale: Language
 	techLabel: string
-	timeToRead: number
+	timeToRead: string
 	description: string
 	image: {
 		url: string
@@ -32,7 +32,7 @@ export function Article({
 }: Props) {
 	const { classes } = useClasses()
 	const router = useRouter()
-	const languageColor = locale === Locale.En ? 'red' : 'green'
+	const languageColor = locale === Language.En ? 'red' : 'green'
 
 	return (
 		<article className={classes.article}>
@@ -53,8 +53,8 @@ export function Article({
 						<Text size={'xs'} color={'yellow'}>
 							{techLabel.toUpperCase()}
 						</Text>
-						<Text size={'xs'} weight={700}>
-							{timeToRead} MIN READING
+						<Text size={'xs'} weight={700} color={'gray'}>
+							{timeToRead.toUpperCase()}
 						</Text>
 					</Group>
 					<Text size={'xs'} weight={700} color={languageColor}>
@@ -76,7 +76,7 @@ export function Article({
 					size={'xs'}
 					variant='gradient'
 					gradient={{ from: 'orange', to: 'red' }}
-					onClick={() => router.push(route)}
+					onClick={() => router.push(`/blog/${route}`)}
 				>
 					Read more
 				</Button>
