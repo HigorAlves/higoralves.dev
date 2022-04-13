@@ -7,18 +7,35 @@ import { Locale } from '~/graphql/generated/graphql'
 
 import useClasses from './article.styles'
 
-export function Article() {
+interface Props {
+	image: {
+		url: string
+		alt: string
+	}
+	locale: Locale
+	techLabel: string
+	timeToRead: number
+	title: string
+	description: string
+}
+
+export function Article({
+	image,
+	description,
+	techLabel,
+	timeToRead,
+	title,
+	locale
+}: Props) {
 	const { classes } = useClasses()
-	const languageColor = 'en' === Locale.En ? 'red' : 'green'
-	const image =
-		'https://odindesignthemes.com/vikinger-theme/wp-content/uploads/2020/09/lukas-eggers-_rKl0w9BdiM-unsplash.jpg'
+	const languageColor = locale === Locale.En ? 'red' : 'green'
 
 	return (
 		<article className={classes.article}>
 			<div className={classes.imageWrapper}>
 				<Image
-					src={image}
-					alt={'test'}
+					src={image.url}
+					alt={image.alt}
 					layout={'responsive'}
 					width={300}
 					height={150}
@@ -30,26 +47,23 @@ export function Article() {
 				<Group position={'apart'}>
 					<Group>
 						<Text size={'xs'} color={'yellow'}>
-							JAVASCRIPT
+							{techLabel.toUpperCase()}
 						</Text>
 						<Text size={'xs'} weight={700}>
-							10 MIN READING
+							{timeToRead} MIN READING
 						</Text>
 					</Group>
 					<Text size={'xs'} weight={700} color={languageColor}>
-						EN
+						{locale.toUpperCase()}
 					</Text>
 				</Group>
 				<Space h={'md'} />
 				<Text size={'xl'} weight={700}>
-					Check out the new mansion we got for our eSports team!
+					{title}
 				</Text>
 				<Space h={'sm'} />
-				<Text size={'sm'}>
-					Cosplay (コスプレ, kosupure), a portmanteau of the words costume play,
-					is a performance art in which participants called cosplayers wear
-					costumes and fashion accessories to represent a specific character.
-					Cosplayers often in...
+				<Text size={'sm'} lineClamp={6}>
+					{description}
 				</Text>
 
 				<Space h={'md'} />
