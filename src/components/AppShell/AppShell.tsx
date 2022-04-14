@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { AppShell as Shell, Burger, Container, Header } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 
+import { Footer } from '~/components'
 import { Drawer } from '~/components/AppShell/Navbar/Drawer'
 
 import { HeaderButtons, HeaderOptions, HeaderTitle } from './index'
@@ -34,6 +35,7 @@ export function AppShell({ children }: Props) {
 					</Container>
 				</Header>
 			}
+			footer={<Footer />}
 		>
 			{children}
 		</Shell>

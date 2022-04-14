@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Container } from '@mantine/core'
 import Link from 'next/link'
-import { FaGithubAlt, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaCode, FaGithubAlt, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 import useStyles from './footer.styles'
 
@@ -10,6 +10,11 @@ export function Footer() {
 	const { classes } = useStyles()
 
 	const socials = [
+		{
+			name: 'Source Code',
+			link: 'https://github.com/higoralves/higoralves.dev',
+			icon: <FaCode />
+		},
 		{
 			name: 'Github',
 			link: 'https://github.com/higoralves',
