@@ -3,7 +3,7 @@ import React from 'react'
 import { Col, Grid } from '@mantine/core'
 import readingTime from 'reading-time'
 
-import { Article } from '~/components'
+import { ArticleCard } from '~/components'
 import { ArticlesQuery } from '~/graphql/generated/graphql'
 
 interface Props {
@@ -18,7 +18,7 @@ export function ArticlesList({ data }: Props) {
 					const { text } = readingTime(article.body.markdown)
 					return (
 						<Col key={article.slug} sm={12} md={4} lg={4}>
-							<Article
+							<ArticleCard
 								title={article.title}
 								route={article.slug}
 								locale={article.language}

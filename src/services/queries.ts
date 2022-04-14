@@ -9,7 +9,7 @@ export const projectsQuery = gql`
 
 export const projectQuery = gql`
 	query Project($locale: Locale!, $slug: String!) {
-		projects (locales: [$locale], where: {slug: $slug}) {
+		projects(locales: [$locale], where: { slug: $slug }) {
 			id
 			city
 			company
@@ -20,12 +20,12 @@ export const projectQuery = gql`
 			website
 			role
 			locale
-			body{
+			body {
 				markdown
 			}
 			cover {
 				id
-				url(transformation: {document: {output: {format: webp}}})
+				url(transformation: { document: { output: { format: webp } } })
 			}
 			seo {
 				description
@@ -39,6 +39,44 @@ export const projectQuery = gql`
 					url
 				}
 			}
+		}
+	}
+`
+
+export const articleQuery = gql`
+	query Article($slug: String!) {
+		article(where: { slug: $slug }) {
+			cover {
+				id
+				url(transformation: { document: { output: { format: webp } } })
+			}
+			body {
+				markdown
+			}
+			description
+			language
+			slug
+			subject
+			title
+		}
+	}
+`
+
+export const articlesQuery = gql`
+	query Articles {
+		articles {
+			body {
+				markdown
+			}
+			cover {
+				id
+				url(transformation: { document: { output: { format: webp } } })
+			}
+			slug
+			subject
+			title
+			language
+			description
 		}
 	}
 `

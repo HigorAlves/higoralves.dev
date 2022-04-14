@@ -21,7 +21,7 @@ interface Props {
 	}
 }
 
-export function Article({
+export function ArticleCard({
 	image,
 	description,
 	subject,
@@ -45,6 +45,7 @@ export function Article({
 					height={150}
 					objectFit={'cover'}
 					objectPosition={'center'}
+					priority
 				/>
 			</div>
 			<Paper shadow='sm' p='xl' withBorder className={classes.paper}>

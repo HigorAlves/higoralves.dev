@@ -4898,6 +4898,7 @@ export enum Stage {
 
 /** All the subject’s that I talk about */
 export enum Subjects {
+	Coding = 'Coding',
 	Html = 'HTML',
 	HomeOffice = 'Home_Office',
 	Javascript = 'Javascript',
@@ -5912,6 +5913,7 @@ export type ArticleQuery = {
 		subject: Subjects
 		title: string
 		cover: { __typename?: 'Asset'; id: string; url: string }
+		body: { __typename?: 'RichText'; markdown: string }
 	} | null
 }
 
@@ -6027,6 +6029,9 @@ export const ArticleDocument = `
     cover {
       id
       url(transformation: {document: {output: {format: webp}}})
+    }
+    body {
+      markdown
     }
     description
     language

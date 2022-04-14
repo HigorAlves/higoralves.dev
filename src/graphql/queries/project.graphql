@@ -74,6 +74,9 @@ query Article($slug: String!) {
 			id
 			url(transformation: {document: {output: {format: webp}}})
 		}
+		body {
+			markdown
+		}
 		description
 		language
 		slug
