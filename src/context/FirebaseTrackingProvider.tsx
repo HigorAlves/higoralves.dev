@@ -1,6 +1,6 @@
-import React, { createContext, useState, useEffect, ReactNode } from 'react'
+import React, { createContext, ReactNode, useEffect, useState } from 'react'
 
-import { getAnalytics, Analytics, logEvent } from 'firebase/analytics'
+import { Analytics, getAnalytics, logEvent } from 'firebase/analytics'
 import { getApps, initializeApp } from 'firebase/app'
 import { useRouter } from 'next/router'
 
@@ -33,7 +33,7 @@ export const FirebaseTrackingProvider = (props: { children: ReactNode }) => {
 		return () => {
 			router.events.off('routeChangeStart', handleRouteChange)
 		}
-	}, [tracking])
+	}, [router.events, tracking])
 
 	return (
 		<FirebaseContext.Provider value={tracking}>
