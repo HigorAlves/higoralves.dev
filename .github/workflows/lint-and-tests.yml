@@ -14,8 +14,16 @@ on:
       - '*.md'
 
 jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v4
   lint:
     name: Lint
+    needs: commitlint
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

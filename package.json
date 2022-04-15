@@ -17,12 +17,14 @@
 		"release:patch": "yarn run release --release-as patch --no-verify",
 		"release:alpha": "yarn run release --prerelease alpha --no-verify",
 		"release:beta": "yarn run release --prerelease beta --no-verify",
-		"prepare:husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
-		"prepare:graphcms": "graphql-codegen --config codegen.yml"
+		"prepare:husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\" && npx husky add .husky/commit-msg \"npx commitlint --edit $1\"",
+		"prepare:graphcms": "graphql-codegen --config codegen.yml",
+		"postinstall": "yarn prepare:husky"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged"
+			"pre-commit": "lint-staged",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	},
 	"lint-staged": {
