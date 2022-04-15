@@ -1,5 +1,5 @@
 query Projects($locale: Locale!) {
-	projects (locales: [$locale]) {
+	projects(locales: [$locale]) {
 		id
 		city
 		company
@@ -9,16 +9,16 @@ query Projects($locale: Locale!) {
 		role
 		cover {
 			id
-			url(transformation: {document: {output: {format: webp}}})
+			url(transformation: { document: { output: { format: webp } } })
 		}
-		body{
+		body {
 			text
 		}
 	}
 }
 
 query Project($locale: Locale!, $slug: String!) {
-	projects (locales: [$locale], where: {slug: $slug}) {
+	projects(locales: [$locale], where: { slug: $slug }) {
 		id
 		city
 		company
@@ -29,12 +29,12 @@ query Project($locale: Locale!, $slug: String!) {
 		website
 		role
 		locale
-		body{
+		body {
 			markdown
 		}
 		cover {
 			id
-			url(transformation: {document: {output: {format: webp}}})
+			url(transformation: { document: { output: { format: webp } } })
 		}
 		seo {
 			description
@@ -58,7 +58,7 @@ query Articles {
 		}
 		cover {
 			id
-			url(transformation: {document: {output: {format: webp}}})
+			url(transformation: { document: { output: { format: webp } } })
 		}
 		slug
 		subject
@@ -69,10 +69,10 @@ query Articles {
 }
 
 query Article($slug: String!) {
-	article(where: {slug: $slug}) {
+	article(where: { slug: $slug }) {
 		cover {
 			id
-			url(transformation: {document: {output: {format: webp}}})
+			url(transformation: { document: { output: { format: webp } } })
 		}
 		body {
 			markdown
