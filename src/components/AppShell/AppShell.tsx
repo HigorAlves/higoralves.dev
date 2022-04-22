@@ -36,6 +36,7 @@ export function AppShell({ children }: Props) {
 				</Header>
 			}
 			footer={<Footer />}
+			styles={() => ({ main: { minHeight: '83vh' } })}
 		>
 			{children}
 		</Shell>
