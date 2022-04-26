@@ -39,22 +39,30 @@ export function Project({
 
 					<Space h={'md'} />
 					<div>
-						<Title order={2} white>
+						<Text<typeof Title>
+							component={Title}
+							weight={'bold'}
+							color={'white'}
+							size={'xl'}
+							lineClamp={1}
+						>
 							{title}
-						</Title>
-						<Text weight={'bold'} mb={'sm'} size={'sm'}>
+						</Text>
+						<Text component={'p'} weight={'bold'} mb={'sm'} size={'sm'}>
 							{role}
 						</Text>
-						<Text lineClamp={2}>{description}</Text>
+						<Text component={'p'} lineClamp={2}>
+							{description}
+						</Text>
 
-						<Group position={'apart'} mt={'sm'}>
+						<Group position={'apart'} mt={'xl'}>
 							<Badge
 								variant={'gradient'}
 								gradient={{ from: 'orange', to: 'pink' }}
 							>
 								{company}
 							</Badge>
-							<Text align={'right'} size={'xs'}>
+							<Text component={'p'} align={'right'} size={'xs'}>
 								{country} - {city}
 							</Text>
 						</Group>
