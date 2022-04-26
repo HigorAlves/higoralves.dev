@@ -21,11 +21,10 @@ export function AppShell({ children }: Props) {
 
 	return (
 		<Shell
-			padding='md'
 			header={
-				<Header height={80}>
+				<Header height={70}>
 					<Drawer opened={opened} setOpened={setOpened} />
-					<Container size={'xl'} className={classes.container}>
+					<Container fluid className={classes.container}>
 						<HeaderTitle />
 						{laptop && <HeaderOptions isDrawer={false} />}
 						{tablet && <HeaderButtons />}

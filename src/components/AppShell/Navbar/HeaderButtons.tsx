@@ -1,16 +1,15 @@
 import React from 'react'
 
-import { ActionIcon, Tooltip, useMantineColorScheme } from '@mantine/core'
+import { ActionIcon, Box, Tooltip, useMantineColorScheme } from '@mantine/core'
 import { CgMoon, CgSun } from 'react-icons/cg'
 
 type WrapperProps = {
 	label: string
 	children: React.ReactNode
-	space?: boolean
 	onClick?: () => void
 }
 
-function ToolTipAction({ label, children, space, onClick }: WrapperProps) {
+function TooltipButton({ label, children, onClick }: WrapperProps) {
 	return (
 		<Tooltip
 			label={label}
@@ -21,12 +20,28 @@ function ToolTipAction({ label, children, space, onClick }: WrapperProps) {
 			transition='skew-up'
 			transitionDuration={300}
 		>
-			<ActionIcon
-				onClick={onClick}
-				title={label}
-				style={{ marginLeft: space ? 30 : 0 }}
-			>
-				{children}
+			<ActionIcon onClick={onClick} title={label}>
+				<Box
+					sx={theme => ({
+						backgroundColor:
+							theme.colorScheme === 'dark'
+								? theme.colors.dark[4]
+								: theme.colors.gray[0],
+						textAlign: 'center',
+						padding: theme.spacing.xs,
+						borderRadius: theme.radius.md,
+						cursor: 'pointer',
+
+						'&:hover': {
+							backgroundColor:
+								theme.colorScheme === 'dark'
+									? theme.colors.dark[5]
+									: theme.colors.gray[1]
+						}
+					})}
+				>
+					{children}
+				</Box>
 			</ActionIcon>
 		</Tooltip>
 	)
@@ -38,9 +53,12 @@ export function HeaderButtons() {
 
 	return (
 		<section style={{ display: 'flex' }}>
-			<ToolTipAction label={'Theme'} space onClick={() => toggleColorScheme()}>
-				{dark ? <CgSun size={'medium'} /> : <CgMoon size={'medium'} />}
-			</ToolTipAction>
+			<TooltipButton
+				label={dark ? 'Light' : 'Dark'}
+				onClick={() => toggleColorScheme()}
+			>
+				{dark ? <CgSun size={20} /> : <CgMoon size={20} />}
+			</TooltipButton>
 		</section>
 	)
 }
