@@ -6,6 +6,7 @@ export default createStyles(theme => {
 			display: 'flex',
 			justifyContent: 'space-around',
 			alignItems: 'center',
+			height: 30,
 
 			ul: {
 				listStyle: 'none',

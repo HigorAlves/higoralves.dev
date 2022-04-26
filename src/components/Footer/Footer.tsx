@@ -46,7 +46,7 @@ export function Footer() {
 						</li>
 					))}
 				</ul>
-				<text>Made with ❤️ by me</text>
+				<text>Made with ❤️</text>
 			</Container>
 		</footer>
 	)
