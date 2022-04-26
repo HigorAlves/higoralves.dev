@@ -1,7 +1,9 @@
 import React from 'react'
 
 import { Button, Group, Space, Text } from '@mantine/core'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { VscFlame, VscGithubAlt } from 'react-icons/vsc'
 
 import { Title, UpDownMotion } from '~/components'
 
@@ -32,17 +34,25 @@ export function TitleHome() {
 				<Space h='sm' />
 				<UpDownMotion>
 					<Group>
-						<Button color={'orange'} variant={'light'} size={'xs'}>
-							Hire me
-						</Button>
+						<Link href={'https://github.com/higoralves'} passHref>
+							<a target={'_blank'}>
+								<Button color={'orange'} variant={'light'} size={'sm'}>
+									<VscGithubAlt />
+									<Space w={10} />
+									Github
+								</Button>
+							</a>
+						</Link>
 
 						<Button
-							color={'dark'}
+							color={'violet'}
 							variant={'light'}
-							size={'xs'}
+							size={'sm'}
 							onClick={() => router.push('projects')}
 						>
-							Check my projects
+							<VscFlame />
+							<Space w={10} />
+							Projects
 						</Button>
 					</Group>
 				</UpDownMotion>
