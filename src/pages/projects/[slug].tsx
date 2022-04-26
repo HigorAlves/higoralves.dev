@@ -68,7 +68,9 @@ export default function Project({ project, source }: Props) {
 				</section>
 				<section>
 					<Space h={30} />
-					<ProjectTechnologies technologies={data.technologies} />
+					{data.technologies.length > 0 && (
+						<ProjectTechnologies technologies={data.technologies} />
+					)}
 				</section>
 			</Container>
 		)
