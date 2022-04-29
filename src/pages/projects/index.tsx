@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Space, Text } from '@mantine/core'
 import { GetStaticPropsContext } from 'next'
+import { NextSeo } from 'next-seo'
 import { dehydrate, DehydratedState, QueryClient } from 'react-query'
 
 import { Title, UpDownMotion } from '~/components'
@@ -37,6 +38,12 @@ export default function Projects({ locale }: Props) {
 
 	return (
 		<UpDownMotion>
+			<NextSeo
+				title={`Higor Alves | Projects`}
+				description={
+					'Here you can navigate to all my different projects, apps, and libraries that I helped in some way. Some of them are still active, others have been discontinued'
+				}
+			/>
 			<Title
 				gradient={'cyanToGreen'}
 				order={1}

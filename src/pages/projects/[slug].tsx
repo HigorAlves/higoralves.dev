@@ -5,6 +5,7 @@ import { GraphQLClient } from 'graphql-request'
 import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
+import { NextSeo } from 'next-seo'
 
 import { componentsMap } from '~/components'
 import { GRAPH_CMS } from '~/config/constants'
@@ -59,6 +60,10 @@ export default function Project({ project, source }: Props) {
 	return (
 		data && (
 			<Container>
+				<NextSeo
+					title={`Higor Alves | ${data.title}`}
+					description={data.seo?.description as string}
+				/>
 				<ProjectHeader title={data.title} cover={data.cover} />
 				<MDXRemote {...(source as any)} components={componentsMap} />
 

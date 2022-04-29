@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Col, Container, Grid, Space } from '@mantine/core'
+import { NextSeo } from 'next-seo'
 
 import { Title, UpDownMotion } from '~/components'
 import { AboutImage, Bio, PresentationComponent } from '~/containers'
@@ -8,6 +9,10 @@ import { AboutImage, Bio, PresentationComponent } from '~/containers'
 export default function About() {
 	return (
 		<Container>
+			<NextSeo
+				title={`Higor Alves | Blog`}
+				description={'Explore. Work. Live.'}
+			/>
 			<UpDownMotion>
 				<Title
 					order={1}
