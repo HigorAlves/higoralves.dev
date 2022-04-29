@@ -2,7 +2,13 @@ import React from 'react'
 
 import { Container } from '@mantine/core'
 import Link from 'next/link'
-import { FaCode, FaGithubAlt, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import {
+	FaCode,
+	FaDiscord,
+	FaGithubAlt,
+	FaInstagram,
+	FaLinkedin
+} from 'react-icons/fa'
 
 import useStyles from './footer.styles'
 
@@ -24,6 +30,11 @@ export function Footer() {
 			name: 'Linkedin',
 			link: 'https://www.linkedin.com/in/higoralvesdev/',
 			icon: <FaLinkedin />
+		},
+		{
+			name: 'Discord',
+			link: 'https://discord.gg/UCcSrWZyPT',
+			icon: <FaDiscord />
 		},
 		{
 			name: 'Instagram',
