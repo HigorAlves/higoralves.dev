@@ -10,7 +10,7 @@ export default function About() {
 	return (
 		<Container>
 			<NextSeo
-				title={`Higor Alves | Blog`}
+				title={`Higor Alves | About`}
 				description={'Explore. Work. Live.'}
 			/>
 			<UpDownMotion>

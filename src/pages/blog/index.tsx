@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Space, Text } from '@mantine/core'
+import { NextSeo } from 'next-seo'
 import { dehydrate, QueryClient } from 'react-query'
 
 import { Title } from '~/components'
@@ -25,6 +26,10 @@ export default function Blog() {
 
 	return (
 		<>
+			<NextSeo
+				title={`Higor Alves | Blog`}
+				description={'Articles. Updates. Guides'}
+			/>
 			<section id={'blog-title'}>
 				<Title
 					order={1}

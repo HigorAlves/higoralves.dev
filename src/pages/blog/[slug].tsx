@@ -5,6 +5,7 @@ import { GraphQLClient } from 'graphql-request'
 import { GetStaticPropsContext } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
+import { NextSeo } from 'next-seo'
 import readingTime from 'reading-time'
 
 import { ArticleTitle, componentsMap } from '~/components'
@@ -61,6 +62,10 @@ export default function Project({ article, source, timeToRead }: Props) {
 	return (
 		data && (
 			<Container fluid>
+				<NextSeo
+					title={`${data.description}`}
+					description={'Articles. Updates. Guides'}
+				/>
 				<ArticleTitle
 					timeToRead={timeToRead}
 					languageColor={languageColor}
