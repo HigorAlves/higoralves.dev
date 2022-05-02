@@ -7,7 +7,8 @@ import {
 	FaDiscord,
 	FaGithubAlt,
 	FaInstagram,
-	FaLinkedin
+	FaLinkedin,
+	FaRegCalendarCheck
 } from 'react-icons/fa'
 
 import useStyles from './footer.styles'
@@ -40,6 +41,11 @@ export function Footer() {
 			name: 'Instagram',
 			link: 'https://www.instagram.com/higoralves.dev/',
 			icon: <FaInstagram />
+		},
+		{
+			name: 'Calendly',
+			link: 'https://calendly.com/higoralvesdev',
+			icon: <FaRegCalendarCheck />
 		}
 	]
 
