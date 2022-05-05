@@ -37,7 +37,7 @@ export function Bio() {
 			>
 				<a
 					download
-					href={'/static/images/ha-profile.jpg'}
+					href={'/static/images/ha-profile.jpeg'}
 					style={{ textDecoration: 'inherit', color: 'inherit' }}
 				>
 					Download headshot
