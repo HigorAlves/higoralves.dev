@@ -3,6 +3,8 @@ import React from 'react'
 import { ActionIcon, Box, Tooltip, useMantineColorScheme } from '@mantine/core'
 import { CgMoon, CgSun } from 'react-icons/cg'
 
+import { LOCAL_STORAGE } from '~/config/constants'
+
 type WrapperProps = {
 	label: string
 	children: React.ReactNode
@@ -49,15 +51,23 @@ function TooltipButton({ label, children, onClick }: WrapperProps) {
 
 export function HeaderButtons() {
 	const { colorScheme, toggleColorScheme } = useMantineColorScheme()
-	const dark = colorScheme === 'dark'
+	const isDarkTheme = colorScheme === 'dark'
+
+	async function toggleColor() {
+		toggleColorScheme()
+		localStorage.setItem(
+			LOCAL_STORAGE.COLOR_SCHEMA,
+			isDarkTheme ? 'light' : 'dark'
+		)
+	}
 
 	return (
 		<section style={{ display: 'flex' }}>
 			<TooltipButton
-				label={dark ? 'Light' : 'Dark'}
-				onClick={() => toggleColorScheme()}
+				label={isDarkTheme ? 'Light' : 'Dark'}
+				onClick={toggleColor}
 			>
-				{dark ? <CgSun size={20} /> : <CgMoon size={20} />}
+				{isDarkTheme ? <CgSun size={20} /> : <CgMoon size={20} />}
 			</TooltipButton>
 		</section>
 	)

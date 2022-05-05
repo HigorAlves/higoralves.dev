@@ -5,3 +5,7 @@ export const GRAPH_CMS = {
 }
 
 export const REVALIDATE_TIME = 60 * 60 * 10 // 10 days
+
+export const LOCAL_STORAGE = {
+	COLOR_SCHEMA: 'colorSchema'
+}

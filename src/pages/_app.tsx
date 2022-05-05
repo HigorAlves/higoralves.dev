@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {
 	ColorScheme,
@@ -13,6 +13,7 @@ import { useRouter } from 'next/router'
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
+import { LOCAL_STORAGE } from '~/config/constants'
 import { FirebaseTrackingProvider } from '~/context/FirebaseTrackingProvider'
 import { Layout, LayoutTypes } from '~/layouts'
 import { darkTheme, lightTheme } from '~/theme'
@@ -21,6 +22,7 @@ import '../../public/static/css/main.css'
 
 type NextPageWithLayout = NextPage & {
 	layout?: LayoutTypes
+	key?: string
 }
 
 type AppPropsWithLayout = AppProps & {
@@ -36,6 +38,11 @@ function App(props: AppPropsWithLayout) {
 		setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
 
 	const layoutType = Component.layout ?? 'base'
+
+	useEffect(() => {
+		const colorSchema = localStorage.getItem(LOCAL_STORAGE.COLOR_SCHEMA)
+		setColorScheme(colorSchema as ColorScheme)
+	}, [])
 
 	return (
 		<QueryClientProvider client={queryClient}>
