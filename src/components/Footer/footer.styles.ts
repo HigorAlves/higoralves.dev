@@ -4,9 +4,10 @@ export default createStyles(theme => {
 	return {
 		wrapper: {
 			display: 'flex',
-			justifyContent: 'space-around',
+			justifyContent: 'space-between',
 			alignItems: 'center',
 			height: 30,
+			margin: '0 30px',
 
 			ul: {
 				listStyle: 'none',

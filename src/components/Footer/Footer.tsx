@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { Container } from '@mantine/core'
 import Link from 'next/link'
 import {
 	FaCode,
@@ -51,7 +50,7 @@ export function Footer() {
 
 	return (
 		<footer data-testid={'footer'}>
-			<Container fluid className={classes.wrapper}>
+			<div className={classes.wrapper}>
 				<ul>
 					{socials.map(social => (
 						<li key={social.name}>
@@ -64,7 +63,7 @@ export function Footer() {
 					))}
 				</ul>
 				<text>Made with ❤️</text>
-			</Container>
+			</div>
 		</footer>
 	)
 }
