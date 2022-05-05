@@ -14,5 +14,4 @@ export * from './Slider/Slider'
 export * from './GraphCMS/Components'
 
 // ARTICLE COMPONENTS
-export * from './ArticleCard/ArticleCard'
-export * from './ArticleTitle/ArticleTitle'
+export * from './Article'
