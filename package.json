@@ -50,7 +50,7 @@
 		"@graphql-codegen/cli": "2.6.2",
 		"@graphql-codegen/import-types-preset": "^2.1.12",
 		"@graphql-codegen/typescript": "2.4.5",
-		"@graphql-codegen/typescript-operations": "2.3.2",
+		"@graphql-codegen/typescript-operations": "2.3.7",
 		"@graphql-codegen/typescript-react-query": "^3.5.5",
 		"@testing-library/dom": "^8.11.3",
 		"@testing-library/jest-dom": "^5.16.2",
