@@ -9,7 +9,7 @@ import { ProjectsQuery } from '~/graphql/generated/graphql'
 export function ListOfProjects(projectsQuery: ProjectsQuery) {
 	return (
 		<Grid gutter={26}>
-			{projectsQuery.projects.map((project, index) => (
+			{projectsQuery.projects.reverse().map((project, index) => (
 				<Col span={12} md={6} lg={4} key={project.slug}>
 					<motion.div
 						initial={{
