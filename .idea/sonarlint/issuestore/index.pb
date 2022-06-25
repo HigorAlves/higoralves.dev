@@ -42,8 +42,6 @@ J
 .eslintrc.json,7/1/71c20a341bfe32aa5cd5b4384e94f942bab6a7d3
 <
 CHANGELOG.md,a/b/ab09011fa121d0a2bb9fa4ca76094f2482b902b7
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 K
 src/layouts/base.layout.tsx,d/a/da59e5b8384c7efe725e4e01eb983c452878e835
 B

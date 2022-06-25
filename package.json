@@ -18,8 +18,7 @@
 		"release:alpha": "yarn run release --prerelease alpha --no-verify",
 		"release:beta": "yarn run release --prerelease beta --no-verify",
 		"prepare:husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\" && npx husky add .husky/commit-msg \"npx commitlint --edit $1\"",
-		"prepare:graphcms": "graphql-codegen --config codegen.yml",
-		"postinstall": "yarn prepare:husky"
+		"prepare:graphcms": "graphql-codegen --config codegen.yml"
 	},
 	"husky": {
 		"hooks": {
