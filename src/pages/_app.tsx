@@ -26,11 +26,10 @@ type NextPageWithLayout = NextPage & {
 }
 
 type AppPropsWithLayout = AppProps & {
-	Component: NextPageWithLayout
+	Component: NextPageWithLayout | any
 }
 
-function App(props: AppPropsWithLayout) {
-	const { Component, pageProps } = props
+function App({ Component, pageProps }: AppPropsWithLayout) {
 	const router = useRouter()
 	const [queryClient] = React.useState(() => new QueryClient())
 	const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
