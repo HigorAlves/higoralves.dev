@@ -8,6 +8,7 @@ import { ProjectsQuery } from '~/graphql/generated/graphql'
 
 export function ListOfProjects(projectsQuery: ProjectsQuery) {
 	const projects = projectsQuery.projects.reverse()
+
 	return (
 		<Grid gutter={26}>
 			{projects.map((project, index) => (

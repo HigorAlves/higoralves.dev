@@ -68,5 +68,9 @@ C
 src/pages/about.tsx,0/0/00f529562c859ca33a4a6ef004ea5b949fd46cc7
 R
 "src/components/Project/Project.tsx,a/1/a150209f31113717df1065cf0bb600b6a48ed994
-Z
-*node_modules/eslint-config-novac/eslint.js,0/1/017829eb7c0baf5466382ce9105b2a941150665d
+P
+ src/graphql/generated/graphql.ts,7/7/77b60a1064ba1c24be18f64e9a0ff8a31cd7ac5a
+9
+	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
