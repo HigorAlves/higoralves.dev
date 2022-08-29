@@ -1,48 +1,18 @@
 {
 	"extends": [
 		"next/core-web-vitals",
-		"plugin:import/errors",
-		"plugin:import/warnings",
+		"plugin:import/recommended",
 		"plugin:import/typescript",
-		"plugin:@typescript-eslint/recommended",
-		"prettier",
-		"plugin:prettier/recommended",
-		"plugin:react/recommended"
+		"plugin:react-hooks/recommended",
+		"plugin:storybook/recommended"
 	],
-	"plugins": [
-		"@typescript-eslint",
-		"@typescript-eslint/eslint-plugin",
-		"react",
-		"prettier"
-	],
+	"plugins": ["promise", "prettier", "import", "testing-library"],
 	"rules": {
-		"complexity": [
-			"error",
-			{
-				"max": 8
-			}
-		],
-		"@typescript-eslint/ban-ts-comment": "warn",
-		"react/react-in-jsx-scope": "off",
 		"prettier/prettier": "error",
-		"import/no-unresolved": "off",
-		"no-useless-constructor": "off",
-		"eqeqeq": "off",
-		"@typescript-eslint/interface-name-prefix": "off",
-		"@typescript-eslint/explicit-function-return-type": "off",
-		"@typescript-eslint/explicit-module-boundary-types": "off",
-		"@typescript-eslint/no-explicit-any": "off",
-		"space-before-function-paren": "off",
-		"no-use-before-define": "off",
-		"multiline-ternary": "off",
 		"import/order": [
 			"error",
 			{
-				"groups": [
-					"builtin",
-					"external",
-					"internal"
-				],
+				"groups": ["builtin", "external", "internal"],
 				"pathGroups": [
 					{
 						"pattern": "react",
@@ -50,9 +20,7 @@
 						"position": "before"
 					}
 				],
-				"pathGroupsExcludedImportTypes": [
-					"react"
-				],
+				"pathGroupsExcludedImportTypes": ["react"],
 				"newlines-between": "always",
 				"alphabetize": {
 					"order": "asc",
