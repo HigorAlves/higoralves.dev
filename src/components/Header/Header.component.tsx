@@ -1,19 +1,31 @@
-import { ActionIcon, Burger, Container, Drawer, Group, Header as BaseHeader, Stack } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import {
+	ActionIcon,
+	Burger,
+	Container,
+	Drawer,
+	Group,
+	Header as BaseHeader,
+	Stack
+} from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
+import {
+	IconBrandGithub,
+	IconBrandInstagram,
+	IconBrandLinkedin
+} from '@tabler/icons'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-import { useStyles } from "./Header.styles";
+import { useStyles } from './Header.styles'
 
 interface HeaderMiddleProps {
-	links: { link: string; label: string }[];
+	links: { link: string; label: string }[]
 }
 
 export function Header({ links }: HeaderMiddleProps) {
-	const router = useRouter();
-	const [opened, { toggle }] = useDisclosure(false);
-	const { classes, cx } = useStyles();
+	const router = useRouter()
+	const [opened, { toggle }] = useDisclosure(false)
+	const { classes, cx } = useStyles()
 
 	const items = links.map(link => (
 		<Link
@@ -25,7 +37,7 @@ export function Header({ links }: HeaderMiddleProps) {
 		>
 			{link.label}
 		</Link>
-	));
+	))
 
 	return (
 		<BaseHeader height={56} mb={120}>
@@ -33,7 +45,7 @@ export function Header({ links }: HeaderMiddleProps) {
 				<Burger
 					opened={opened}
 					onClick={toggle}
-					size="sm"
+					size='sm'
 					className={classes.burger}
 				/>
 
@@ -43,14 +55,14 @@ export function Header({ links }: HeaderMiddleProps) {
 
 				<div>Logo</div>
 
-				<Group spacing={0} className={classes.social} position="right" noWrap>
-					<ActionIcon size="lg">
+				<Group spacing={0} className={classes.social} position='right' noWrap>
+					<ActionIcon size='lg'>
 						<IconBrandLinkedin size={18} stroke={1.5} />
 					</ActionIcon>
-					<ActionIcon size="lg">
+					<ActionIcon size='lg'>
 						<IconBrandGithub size={18} stroke={1.5} />
 					</ActionIcon>
-					<ActionIcon size="lg">
+					<ActionIcon size='lg'>
 						<IconBrandInstagram size={18} stroke={1.5} />
 					</ActionIcon>
 				</Group>
@@ -59,9 +71,9 @@ export function Header({ links }: HeaderMiddleProps) {
 			<Drawer
 				opened={opened}
 				onClose={toggle}
-				title="Higor Alves"
-				padding="xl"
-				size="xl"
+				title='Higor Alves'
+				padding='xl'
+				size='xl'
 			>
 				<Stack>{items}</Stack>
 			</Drawer>

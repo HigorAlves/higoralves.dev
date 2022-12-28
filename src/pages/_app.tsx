@@ -1,9 +1,9 @@
-import { MantineProvider } from "@mantine/core";
-import type { NextPage } from "next";
-import { AppProps } from "next/app";
-import Head from "next/head";
+import { MantineProvider } from '@mantine/core'
+import type { NextPage } from 'next'
+import { AppProps } from 'next/app'
+import Head from 'next/head'
 
-import { Layout, LayoutTypes } from "~/layout";
+import { Layout, LayoutTypes } from '~/layout'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 	getLayout?: LayoutTypes
@@ -14,16 +14,16 @@ type AppPropsWithLayout = AppProps & {
 }
 
 export default function App(props: AppPropsWithLayout) {
-	const { Component, pageProps } = props;
-	const { getLayout = "base" } = Component;
+	const { Component, pageProps } = props
+	const { getLayout = 'base' } = Component
 
 	return (
 		<>
 			<Head>
 				<title>Higor Alves</title>
 				<meta
-					name="viewport"
-					content="minimum-scale=1, initial-scale=1, width=device-width"
+					name='viewport'
+					content='minimum-scale=1, initial-scale=1, width=device-width'
 				/>
 			</Head>
 
@@ -31,8 +31,8 @@ export default function App(props: AppPropsWithLayout) {
 				withGlobalStyles
 				withNormalizeCSS
 				theme={{
-					colorScheme: "dark",
-					primaryColor: "violet"
+					colorScheme: 'dark',
+					primaryColor: 'violet'
 				}}
 			>
 				<Layout layout={getLayout}>

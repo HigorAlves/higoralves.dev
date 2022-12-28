@@ -1,12 +1,12 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement } from 'react'
 
-import { BaseLayout } from "~/layout/base.layout";
+import { BaseLayout } from '~/layout/base.layout'
 
-export type LayoutTypes = "base" | "dashboard"
+export type LayoutTypes = 'base' | 'dashboard'
 
 interface LayoutProps {
-	layout: LayoutTypes;
-	children: ReactElement;
+	layout: LayoutTypes
+	children: ReactElement
 }
 
 export function Layout({ layout, children }: LayoutProps) {
@@ -16,8 +16,8 @@ export function Layout({ layout, children }: LayoutProps) {
 			dashboard: <BaseLayout>{children}</BaseLayout>
 		}
 
-		return list[layout] || <BaseLayout>{children}</BaseLayout>;
+		return list[layout] || <BaseLayout>{children}</BaseLayout>
 	}
 
-	return getLayout(layout);
+	return getLayout(layout)
 }
