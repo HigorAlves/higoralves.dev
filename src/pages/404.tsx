@@ -40,7 +40,7 @@ const useStyles = createStyles(theme => ({
 		marginTop: theme.spacing.xl,
 		marginBottom: theme.spacing.xl * 1.5
 	}
-}));
+}))
 
 export default function NotFoundTitle() {
 	const { classes } = useStyles();
@@ -65,5 +65,5 @@ export default function NotFoundTitle() {
 				</Button>
 			</Group>
 		</Container>
-	);
+	)
 }

@@ -1,4 +1,4 @@
-import { ActionIcon, Burger, Container, Group, Header as BaseHeader } from "@mantine/core";
+import { ActionIcon, Burger, Container, Drawer, Group, Header as BaseHeader, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons";
 import Link from "next/link";
@@ -11,8 +11,8 @@ interface HeaderMiddleProps {
 }
 
 export function Header({ links }: HeaderMiddleProps) {
-	const [opened, { toggle }] = useDisclosure(false);
 	const router = useRouter();
+	const [opened, { toggle }] = useDisclosure(false);
 	const { classes, cx } = useStyles();
 
 	const items = links.map(link => (
@@ -36,6 +36,7 @@ export function Header({ links }: HeaderMiddleProps) {
 					size="sm"
 					className={classes.burger}
 				/>
+
 				<Group className={classes.links} spacing={5}>
 					{items}
 				</Group>
@@ -54,6 +55,16 @@ export function Header({ links }: HeaderMiddleProps) {
 					</ActionIcon>
 				</Group>
 			</Container>
+
+			<Drawer
+				opened={opened}
+				onClose={toggle}
+				title="Higor Alves"
+				padding="xl"
+				size="xl"
+			>
+				<Stack>{items}</Stack>
+			</Drawer>
 		</BaseHeader>
 	)
 }

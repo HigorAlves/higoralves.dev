@@ -42,7 +42,7 @@ const useStyles = createStyles(theme => ({
 		marginBottom: theme.spacing.xl * 1.5,
 		color: theme.colors[theme.primaryColor][1]
 	}
-}));
+}))
 
 export default function ServerError() {
 	const { classes } = useStyles();
@@ -63,5 +63,5 @@ export default function ServerError() {
 				</Group>
 			</Container>
 		</div>
-	);
+	)
 }
