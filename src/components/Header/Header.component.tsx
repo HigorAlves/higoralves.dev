@@ -55,5 +55,5 @@ export function Header({ links }: HeaderMiddleProps) {
 				</Group>
 			</Container>
 		</BaseHeader>
-	);
+	)
 }

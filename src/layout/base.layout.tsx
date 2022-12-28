@@ -11,12 +11,12 @@ export function BaseLayout({ children }: BaseLayoutProps) {
 		{ label: "Projects", link: "/projects" },
 		{ label: "Articles", link: "/articles" },
 		{ label: "Uses", link: "/uses" }
-	];
+	]
 
 	return (
 		<>
 			<Header links={headerLinks} />
 			{children}
 		</>
-	);
+	)
 }

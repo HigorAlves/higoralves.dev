@@ -68,4 +68,4 @@ export const useStyles = createStyles(theme => ({
 				.color
 		}
 	}
-}));
+}))
