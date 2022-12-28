@@ -31,7 +31,8 @@ export default function App(props: AppPropsWithLayout) {
 				withGlobalStyles
 				withNormalizeCSS
 				theme={{
-					colorScheme: "dark"
+					colorScheme: "dark",
+					primaryColor: "violet"
 				}}
 			>
 				<Layout layout={getLayout}>
@@ -39,5 +40,5 @@ export default function App(props: AppPropsWithLayout) {
 				</Layout>
 			</MantineProvider>
 		</>
-	);
+	)
 }

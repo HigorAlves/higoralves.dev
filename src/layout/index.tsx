@@ -14,7 +14,7 @@ export function Layout({ layout, children }: LayoutProps) {
 		const list = {
 			base: <BaseLayout>{children}</BaseLayout>,
 			dashboard: <BaseLayout>{children}</BaseLayout>
-		};
+		}
 
 		return list[layout] || <BaseLayout>{children}</BaseLayout>;
 	}
