@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from "react";
 
-import { Header } from '~/components'
+import { Header } from "~/components";
 
 interface BaseLayoutProps {
 	children: ReactElement
@@ -16,7 +16,7 @@ export function BaseLayout({ children }: BaseLayoutProps) {
 	return (
 		<>
 			<Header links={headerLinks} />
-			{children}
+			<main>{children}</main>
 		</>
 	)
 }
