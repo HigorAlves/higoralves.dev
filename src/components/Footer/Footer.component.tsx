@@ -36,7 +36,7 @@ interface FooterCenteredProps {
 	links: { link: string; label: string }[]
 }
 
-export function FooterCentered({ links }: FooterCenteredProps) {
+export function Footer({ links }: FooterCenteredProps) {
 	const { classes } = useStyles()
 	const items = links.map(link => (
 		<Anchor<'a'>

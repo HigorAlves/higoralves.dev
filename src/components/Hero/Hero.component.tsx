@@ -1,11 +1,11 @@
-import { Container, Text, Title } from "@mantine/core";
+import { Container, Text, Title } from '@mantine/core'
 
-import { Dots } from "~/assets/svgs";
+import { Dots } from '~/assets/svgs'
 
-import { useStyles } from "./Hero.styles";
+import { useStyles } from './Hero.styles'
 
 export function HeroText() {
-	const { classes } = useStyles();
+	const { classes } = useStyles()
 
 	return (
 		<Container className={classes.wrapper}>
@@ -16,22 +16,22 @@ export function HeroText() {
 
 			<div className={classes.inner}>
 				<Title
-					variant="gradient"
-					gradient={{ from: "violet", to: "red", deg: 10 }}
-					ta="left"
+					variant='gradient'
+					gradient={{ from: 'violet', to: 'red', deg: 10 }}
+					ta='left'
 					order={1}
 					size={48}
 				>
 					Higor Alves
 				</Title>
-				<Text ta={"left"} size="lg" color="white" weight={300} mt={10}>
+				<Text ta={'left'} size='lg' color='white' weight={300} mt={10}>
 					Software Engineer
 				</Text>
-				<Text ta={"left"} size="lg" color="dimmed" weight={300}>
+				<Text ta={'left'} size='lg' color='dimmed' weight={300}>
 					Helping companies make the world a better place through quality
 					software.
 				</Text>
 			</div>
 		</Container>
-	);
+	)
 }
