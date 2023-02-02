@@ -1,15 +1,14 @@
-import { createStyles, Anchor, Group, ActionIcon } from '@mantine/core'
-import {
-	IconBrandTwitter,
-	IconBrandYoutube,
-	IconBrandInstagram
-} from '@tabler/icons'
+import { ActionIcon, Anchor, createStyles, Group, Text } from "@mantine/core";
+import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from "@tabler/icons";
+
+import { Logo } from "~/components/Icons";
 
 const useStyles = createStyles(theme => ({
 	footer: {
+		gridArea: "footer",
 		marginTop: 120,
 		borderTop: `1px solid ${
-			theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
+			theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
 		}`
 	},
 
@@ -54,15 +53,18 @@ export function Footer({ links }: FooterCenteredProps) {
 	return (
 		<div className={classes.footer}>
 			<div className={classes.inner}>
-				<div>Higor Alves</div>
+				<Group>
+					<Logo color={"#fff"} />
+					<Text color={"#fff"}>Higor Alves</Text>
+				</Group>
 
 				<Group className={classes.links}>{items}</Group>
 
-				<Group spacing='xs' position='right' noWrap>
-					<ActionIcon size='lg' variant='default' radius='xl'>
+				<Group spacing="xs" position="right" noWrap>
+					<ActionIcon size="lg" variant="default" radius="xl">
 						<IconBrandTwitter size={18} stroke={1.5} />
 					</ActionIcon>
-					<ActionIcon size='lg' variant='default' radius='xl'>
+					<ActionIcon size="lg" variant="default" radius="xl">
 						<IconBrandYoutube size={18} stroke={1.5} />
 					</ActionIcon>
 					<ActionIcon size='lg' variant='default' radius='xl'>

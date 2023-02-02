@@ -1,30 +1,20 @@
-import {
-	ActionIcon,
-	Burger,
-	Container,
-	Drawer,
-	Group,
-	Header as BaseHeader,
-	Stack
-} from '@mantine/core'
-import { useDisclosure } from '@mantine/hooks'
-import {
-	IconBrandGithub,
-	IconBrandInstagram,
-	IconBrandLinkedin
-} from '@tabler/icons'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { ActionIcon, Burger, Container, Drawer, Group, Header as BaseHeader, Stack } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-import { useStyles } from './Header.styles'
+import { Logo } from "~/components/Icons";
+
+import { useStyles } from "./Header.styles";
 
 interface HeaderMiddleProps {
-	links: { link: string; label: string }[]
+	links: { link: string; label: string }[];
 }
 
 export function Header({ links }: HeaderMiddleProps) {
-	const router = useRouter()
-	const [opened, { toggle }] = useDisclosure(false)
+	const router = useRouter();
+	const [opened, { toggle }] = useDisclosure(false);
 	const { classes, cx } = useStyles()
 
 	const items = links.map(link => (
@@ -53,7 +43,7 @@ export function Header({ links }: HeaderMiddleProps) {
 					{items}
 				</Group>
 
-				<div>Logo</div>
+				<Logo />
 
 				<Group spacing={0} className={classes.social} position='right' noWrap>
 					<ActionIcon size='lg'>

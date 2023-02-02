@@ -1,8 +1,8 @@
-import { Container, Text, Title } from '@mantine/core'
+import { Container, Text, Title } from "@mantine/core";
 
-import { Dots } from '~/assets/svgs'
+import { Dots } from "~/components/Icons";
 
-import { useStyles } from './Hero.styles'
+import { useStyles } from "./Hero.styles";
 
 export function HeroText() {
 	const { classes } = useStyles()
@@ -16,9 +16,9 @@ export function HeroText() {
 
 			<div className={classes.inner}>
 				<Title
-					variant='gradient'
-					gradient={{ from: 'violet', to: 'red', deg: 10 }}
-					ta='left'
+					variant="gradient"
+					gradient={{ from: "indigo", to: "grape", deg: 150 }}
+					ta="left"
 					order={1}
 					size={48}
 				>
