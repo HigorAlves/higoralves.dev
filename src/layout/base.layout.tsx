@@ -12,7 +12,7 @@ export const LINKS = [
 	{ label: "Projects", link: "/projects" },
 	{ label: "Articles", link: "/articles" },
 	{ label: "Uses", link: "/uses" }
-];
+]
 
 export function BaseLayout({ children }: BaseLayoutProps) {
 	const { classes } = useStyles();

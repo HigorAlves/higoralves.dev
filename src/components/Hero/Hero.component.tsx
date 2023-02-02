@@ -27,7 +27,7 @@ export function HeroText() {
 				<Text ta={"left"} size="lg" color="white" weight={300} mt={10}>
 					Software Engineer
 				</Text>
-				<Text ta={'left'} size='lg' color='dimmed' weight={300}>
+				<Text ta={"left"} size="lg" color="dimmed" weight={300}>
 					Helping companies make the world a better place through quality
 					software.
 				</Text>
