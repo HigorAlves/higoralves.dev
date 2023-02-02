@@ -16,18 +16,18 @@ export function HeroText() {
 
 			<div className={classes.inner}>
 				<Title
-					variant="gradient"
-					gradient={{ from: "indigo", to: "grape", deg: 150 }}
-					ta="left"
+					variant='gradient'
+					gradient={{ from: 'indigo', to: 'grape', deg: 150 }}
+					ta='left'
 					order={1}
 					size={48}
 				>
 					Higor Alves
 				</Title>
-				<Text ta={"left"} size="lg" color="white" weight={300} mt={10}>
+				<Text ta={'left'} size='lg' color='white' weight={300} mt={10}>
 					Software Engineer
 				</Text>
-				<Text ta={"left"} size="lg" color="dimmed" weight={300}>
+				<Text ta={'left'} size='lg' color='dimmed' weight={300}>
 					Helping companies make the world a better place through quality
 					software.
 				</Text>

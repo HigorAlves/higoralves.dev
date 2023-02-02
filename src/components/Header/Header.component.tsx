@@ -9,13 +9,13 @@ import { Logo } from "~/components/Icons";
 import { useStyles } from "./Header.styles";
 
 interface HeaderMiddleProps {
-	links: { link: string; label: string }[];
+	links: { link: string; label: string }[]
 }
 
 export function Header({ links }: HeaderMiddleProps) {
-	const router = useRouter();
-	const [opened, { toggle }] = useDisclosure(false);
-	const { classes, cx } = useStyles();
+	const router = useRouter()
+	const [opened, { toggle }] = useDisclosure(false)
+	const { classes, cx } = useStyles()
 
 	const items = links.map(link => (
 		<Link

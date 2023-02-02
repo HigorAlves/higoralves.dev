@@ -11,10 +11,10 @@ import { Logo } from "~/components/Icons";
 
 const useStyles = createStyles(theme => ({
 	footer: {
-		gridArea: "footer",
+		gridArea: 'footer',
 		marginTop: 120,
 		borderTop: `1px solid ${
-			theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
+			theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
 		}`,
 		background: theme.colors.dark[7]
 	},
@@ -61,26 +61,26 @@ export function Footer({ links }: FooterCenteredProps) {
 		<div className={classes.footer}>
 			<div className={classes.inner}>
 				<Group>
-					<Logo color={"#fff"} />
-					<Text color={"#fff"}>Higor Alves</Text>
+					<Logo color={'#fff'} />
+					<Text color={'#fff'}>Higor Alves</Text>
 				</Group>
 
 				<Group className={classes.links}>{items}</Group>
 
-				<Group spacing="xs" position="right" noWrap>
-					<ActionIcon size="lg">
+				<Group spacing='xs' position='right' noWrap>
+					<ActionIcon size='lg'>
 						<IconBrandLinkedin size={18} stroke={1.5} />
 					</ActionIcon>
-					<ActionIcon size="lg">
+					<ActionIcon size='lg'>
 						<IconBrandGithub size={18} stroke={1.5} />
 					</ActionIcon>
-					<ActionIcon size="lg">
+					<ActionIcon size='lg'>
 						<IconBrandInstagram size={18} stroke={1.5} />
 					</ActionIcon>
-					<ActionIcon size="lg">
+					<ActionIcon size='lg'>
 						<IconBrandTwitter size={18} stroke={1.5} />
 					</ActionIcon>
-					<ActionIcon size="lg">
+					<ActionIcon size='lg'>
 						<IconBrandYoutube size={18} stroke={1.5} />
 					</ActionIcon>
 				</Group>

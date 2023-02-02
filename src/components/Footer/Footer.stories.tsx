@@ -6,12 +6,12 @@ import { Footer } from "~/components";
 import { LINKS } from "~/layout/base.layout";
 
 export default {
-	title: "Design Library/Components/Footer",
+	title: 'Design Library/Components/Footer',
 	component: Footer
-} as ComponentMeta<typeof Footer>;
+} as ComponentMeta<typeof Footer>
 
-const Template: ComponentStory<typeof Footer> = args => <Footer links={LINKS} />;
+const Template: ComponentStory<typeof Footer> = args => <Footer links={LINKS} />
 
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 
-Primary.args = {};
+Primary.args = {}
