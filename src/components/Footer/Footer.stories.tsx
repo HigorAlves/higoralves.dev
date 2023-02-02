@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { Footer } from "~/components";
-import { LINKS } from "~/layout/base.layout";
+import { Footer } from '~/components'
+import { LINKS } from '~/layout/base.layout'
 
 export default {
 	title: 'Design Library/Components/Footer',

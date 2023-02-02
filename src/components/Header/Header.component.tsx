@@ -1,12 +1,24 @@
-import { ActionIcon, Burger, Container, Drawer, Group, Header as BaseHeader, Stack } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import {
+	ActionIcon,
+	Burger,
+	Container,
+	Drawer,
+	Group,
+	Header as BaseHeader,
+	Stack
+} from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
+import {
+	IconBrandGithub,
+	IconBrandInstagram,
+	IconBrandLinkedin
+} from '@tabler/icons'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-import { Logo } from "~/components/Icons";
+import { Logo } from '~/components/Icons'
 
-import { useStyles } from "./Header.styles";
+import { useStyles } from './Header.styles'
 
 interface HeaderMiddleProps {
 	links: { link: string; label: string }[]

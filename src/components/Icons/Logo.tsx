@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const DEFAULT_DIMENSION_PX = 35
 const DEFAULT_DIMENSION_PY = 50

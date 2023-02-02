@@ -1,8 +1,8 @@
-import { Container, Text, Title } from "@mantine/core";
+import { Container, Text, Title } from '@mantine/core'
 
-import { Dots } from "~/components/Icons";
+import { Dots } from '~/components/Icons'
 
-import { useStyles } from "./Hero.styles";
+import { useStyles } from './Hero.styles'
 
 export function HeroText() {
 	const { classes } = useStyles()

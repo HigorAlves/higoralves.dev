@@ -1,8 +1,8 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement } from 'react'
 
-import { Footer, Header } from "~/components";
+import { Footer, Header } from '~/components'
 
-import { useStyles } from "./base.style";
+import { useStyles } from './base.style'
 
 interface BaseLayoutProps {
 	children: ReactElement

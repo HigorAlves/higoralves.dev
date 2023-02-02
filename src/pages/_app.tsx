@@ -1,10 +1,10 @@
-import { MantineProvider } from "@mantine/core";
-import type { NextPage } from "next";
-import { AppProps } from "next/app";
-import Head from "next/head";
+import { MantineProvider } from '@mantine/core'
+import type { NextPage } from 'next'
+import { AppProps } from 'next/app'
+import Head from 'next/head'
 
-import { Layout, LayoutTypes } from "~/layout";
-import { theme } from "~/theme/theme";
+import { Layout, LayoutTypes } from '~/layout'
+import { theme } from '~/theme/theme'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 	getLayout?: LayoutTypes
