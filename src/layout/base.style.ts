@@ -21,4 +21,4 @@ export const useStyles = createStyles(() => ({
 		gridArea: "main",
 		justifyItems: "center"
 	}
-}));
+}))

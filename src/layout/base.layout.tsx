@@ -8,22 +8,22 @@ interface BaseLayoutProps {
 	children: ReactElement;
 }
 
+export const LINKS = [
+	{ label: "Projects", link: "/projects" },
+	{ label: "Articles", link: "/articles" },
+	{ label: "Uses", link: "/uses" }
+];
+
 export function BaseLayout({ children }: BaseLayoutProps) {
 	const { classes } = useStyles();
-
-	const links = [
-		{ label: "Projects", link: "/projects" },
-		{ label: "Articles", link: "/articles" },
-		{ label: "Uses", link: "/uses" }
-	];
 
 	return (
 		<div className={classes.baseLayout}>
 			<div className={classes.header}>
-				<Header links={links} />
+				<Header links={LINKS} />
 			</div>
 			<main className={classes.main}>{children}</main>
-			<Footer links={links} />
+			<Footer links={LINKS} />
 		</div>
-	);
+	)
 }

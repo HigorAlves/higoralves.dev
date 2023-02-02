@@ -24,7 +24,7 @@ export function HeroText() {
 				>
 					Higor Alves
 				</Title>
-				<Text ta={'left'} size='lg' color='white' weight={300} mt={10}>
+				<Text ta={"left"} size="lg" color="white" weight={300} mt={10}>
 					Software Engineer
 				</Text>
 				<Text ta={'left'} size='lg' color='dimmed' weight={300}>

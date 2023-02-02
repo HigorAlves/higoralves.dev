@@ -1,5 +1,11 @@
 import { ActionIcon, Anchor, createStyles, Group, Text } from "@mantine/core";
-import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from "@tabler/icons";
+import {
+	IconBrandGithub,
+	IconBrandInstagram,
+	IconBrandLinkedin,
+	IconBrandTwitter,
+	IconBrandYoutube
+} from "@tabler/icons";
 
 import { Logo } from "~/components/Icons";
 
@@ -61,14 +67,20 @@ export function Footer({ links }: FooterCenteredProps) {
 				<Group className={classes.links}>{items}</Group>
 
 				<Group spacing="xs" position="right" noWrap>
-					<ActionIcon size="lg" variant="default" radius="xl">
+					<ActionIcon size="lg">
+						<IconBrandLinkedin size={18} stroke={1.5} />
+					</ActionIcon>
+					<ActionIcon size="lg">
+						<IconBrandGithub size={18} stroke={1.5} />
+					</ActionIcon>
+					<ActionIcon size="lg">
+						<IconBrandInstagram size={18} stroke={1.5} />
+					</ActionIcon>
+					<ActionIcon size="lg">
 						<IconBrandTwitter size={18} stroke={1.5} />
 					</ActionIcon>
-					<ActionIcon size="lg" variant="default" radius="xl">
+					<ActionIcon size="lg">
 						<IconBrandYoutube size={18} stroke={1.5} />
-					</ActionIcon>
-					<ActionIcon size='lg' variant='default' radius='xl'>
-						<IconBrandInstagram size={18} stroke={1.5} />
 					</ActionIcon>
 				</Group>
 			</div>

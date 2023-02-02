@@ -15,7 +15,7 @@ interface HeaderMiddleProps {
 export function Header({ links }: HeaderMiddleProps) {
 	const router = useRouter();
 	const [opened, { toggle }] = useDisclosure(false);
-	const { classes, cx } = useStyles()
+	const { classes, cx } = useStyles();
 
 	const items = links.map(link => (
 		<Link
