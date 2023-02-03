@@ -10,7 +10,10 @@ export const useStyles = createStyles(theme => ({
 
 	inner: {
 		position: 'relative',
-		zIndex: 1
+		zIndex: 1,
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center'
 	},
 
 	dots: {
