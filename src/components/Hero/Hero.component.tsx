@@ -17,7 +17,7 @@ export function HeroText() {
 			<Dots className={classes.dots} style={{ right: 0, top: 260 }} />
 
 			<Grid justify='center' align='center'>
-				<Grid.Col span={8} className={classes.inner}>
+				<Grid.Col sm={12} md={8} className={classes.inner}>
 					<Title
 						variant='gradient'
 						gradient={{ from: 'indigo', to: 'grape', deg: 150 }}
@@ -36,7 +36,7 @@ export function HeroText() {
 					</Text>
 				</Grid.Col>
 
-				<Grid.Col span={2} style={{ zIndex: 1 }}>
+				<Grid.Col md={2} className={classes.innerImage}>
 					<Image
 						src={ME_PHOTO}
 						alt={'My photo around some technologies I work with'}

@@ -9,11 +9,14 @@ export const useStyles = createStyles(theme => ({
 	},
 
 	inner: {
-		position: 'relative',
+		zIndex: 1
+	},
+
+	innerImage: {
 		zIndex: 1,
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center'
+		[`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+			display: 'none'
+		}
 	},
 
 	dots: {
@@ -23,7 +26,7 @@ export const useStyles = createStyles(theme => ({
 				? theme.colors.dark[5]
 				: theme.colors.gray[1],
 
-		'@media (max-width: 755px)': {
+		[`@media (max-width: ${theme.breakpoints.md}px)`]: {
 			display: 'none'
 		}
 	}
