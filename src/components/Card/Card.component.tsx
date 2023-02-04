@@ -1,9 +1,10 @@
-import { Badge, Card, Group, Image, Text } from '@mantine/core'
+import { Badge, Card, Group, Space, Text } from '@mantine/core'
+import Image, { StaticImageData } from 'next/image'
 
 import { useStyles } from './Card.styles'
 
 export interface IBadgeCardProps {
-	image: string
+	image?: StaticImageData
 	title: string
 	jobTitle: string
 	company: string
@@ -22,11 +23,14 @@ export function BadgeCard({
 
 	return (
 		<Card withBorder radius='md' p='md' className={classes.card}>
-			<Card.Section>
-				<Image src={image} alt={title} height={180} />
-			</Card.Section>
+			{image && (
+				<Card.Section style={{ position: 'relative', height: 300 }}>
+					<Image src={image} alt={title} fill />
+				</Card.Section>
+			)}
 
 			<Card.Section className={classes.section} mt='md'>
+				{!image && <Space h={'xs'} />}
 				<Group position='apart'>
 					<Text size='lg' weight={500} m={0}>
 						{title}
@@ -37,7 +41,7 @@ export function BadgeCard({
 					{jobTitle}
 				</Text>
 
-				<Text size='sm' mt='xs' lineClamp={3}>
+				<Text size='sm' mt='xs' lineClamp={4}>
 					{description}
 				</Text>
 			</Card.Section>
