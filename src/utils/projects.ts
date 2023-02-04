@@ -1,4 +1,5 @@
 import BUBBLES_IMG from '~/assets/images/projects/bubbles/bubbles.png'
+import TILED_IMG from '~/assets/images/projects/tiled/tiled.png'
 import TUMBLE_IMG from '~/assets/images/projects/tumble/Tumble.png'
 import { IBadgeCardProps } from '~/components/Card/Card.component'
 
@@ -25,7 +26,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 		title: 'Tiled',
 		company: 'Zipdev',
 		jobTitle: 'Senior Software Engineer',
-		image: TUMBLE_IMG,
+		image: TILED_IMG,
 		isFeature: true,
 		description:
 			'Tiled is a product that offers a customizable, collaborative workspace for teams to organize, prioritize, and track their work.'
