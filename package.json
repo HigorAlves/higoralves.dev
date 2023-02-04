@@ -30,9 +30,13 @@
 	"dependencies": {
 		"@emotion/react": "^11.10.5",
 		"@emotion/server": "^11.10.0",
+		"@emotion/styled": "^11.10.5",
 		"@mantine/core": "^5.9.5",
 		"@mantine/hooks": "^5.9.5",
 		"@mantine/next": "^5.9.5",
+		"@mdx-js/loader": "^2.2.1",
+		"@mdx-js/react": "^2.2.1",
+		"@next/mdx": "^13.1.6",
 		"@tabler/icons": "^1.118.0",
 		"next": "13.0.7",
 		"react": "18.2.0",

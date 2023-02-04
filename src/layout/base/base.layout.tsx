@@ -1,5 +1,7 @@
 import React, { ReactElement } from 'react'
 
+import { Container } from '@mantine/core'
+
 import { Footer, Header } from '~/components'
 
 import { useStyles } from './base.style'
@@ -22,7 +24,9 @@ export function BaseLayout({ children }: BaseLayoutProps) {
 			<div className={classes.header}>
 				<Header links={LINKS} />
 			</div>
-			<main className={classes.main}>{children}</main>
+			<main className={classes.main}>
+				<Container>{children}</Container>
+			</main>
 			<Footer links={LINKS} />
 		</div>
 	)

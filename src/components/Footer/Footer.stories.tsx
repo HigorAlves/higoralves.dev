@@ -3,7 +3,7 @@ import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { Footer } from '~/components'
-import { LINKS } from '~/layout/base.layout'
+import { LINKS } from '~/layout/base/base.layout'
 
 export default {
 	title: 'Design Library/Components/Footer',
