@@ -4,7 +4,7 @@ import { Container } from '@mantine/core'
 
 import { Footer, Header } from '~/components'
 
-import { useStyles } from './post.style'
+import { useStyles } from './project.style'
 
 interface BaseLayoutProps {
 	children: ReactElement
@@ -16,7 +16,7 @@ export const LINKS = [
 	{ label: 'Uses', link: '/uses' }
 ]
 
-export function PostLayout({ children }: BaseLayoutProps) {
+export function ProjectLayout({ children }: BaseLayoutProps) {
 	const { classes } = useStyles()
 
 	return (

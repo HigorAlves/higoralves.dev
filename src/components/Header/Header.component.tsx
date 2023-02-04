@@ -17,11 +17,12 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import { Logo } from '~/components/Icons'
+import { ILinks } from '~/layout/base/base.layout'
 
 import { useStyles } from './Header.styles'
 
 interface HeaderMiddleProps {
-	links: { link: string; label: string }[]
+	links: Array<ILinks> | []
 }
 
 export function Header({ links }: HeaderMiddleProps) {
@@ -29,7 +30,7 @@ export function Header({ links }: HeaderMiddleProps) {
 	const [opened, { toggle }] = useDisclosure(false)
 	const { classes, cx } = useStyles()
 
-	const items = links.map(link => (
+	const items = links.map((link: ILinks) => (
 		<Link
 			key={link.label}
 			href={link.link}

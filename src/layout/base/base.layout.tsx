@@ -10,11 +10,12 @@ interface BaseLayoutProps {
 	children: ReactElement
 }
 
-export const LINKS = [
-	{ label: 'Projects', link: '/projects' },
-	{ label: 'Articles', link: '/articles' },
-	{ label: 'Uses', link: '/uses' }
-]
+export interface ILinks {
+	label: string
+	link: string
+}
+
+export const LINKS = []
 
 export function BaseLayout({ children }: BaseLayoutProps) {
 	const { classes } = useStyles()
