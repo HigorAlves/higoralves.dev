@@ -15,7 +15,7 @@ export interface ILinks {
 	link: string
 }
 
-export const LINKS = []
+export const LINKS = [{ label: 'Projects', link: '/projects' }]
 
 export function BaseLayout({ children }: BaseLayoutProps) {
 	const { classes } = useStyles()
