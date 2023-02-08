@@ -4,6 +4,18 @@ import { BadgeCard, IBadgeCardProps } from '~/components/Card/Card.component'
 import { PROJECTS } from '~/utils/projects'
 
 export default function ProjectsPage() {
+	function renderProjects(isFeature: boolean) {
+		return PROJECTS.map((project: IBadgeCardProps) => {
+			if (project.isFeature === isFeature) {
+				return (
+					<Grid.Col key={project.title} sm={12} md={4} lg={4}>
+						<BadgeCard {...project} />
+					</Grid.Col>
+				)
+			}
+		})
+	}
+
 	return (
 		<>
 			<div>
@@ -29,17 +41,7 @@ export default function ProjectsPage() {
 			</Title>
 			<Space h={'xl'} />
 
-			<Grid>
-				{PROJECTS.map((project: IBadgeCardProps) => {
-					if (project.isFeature) {
-						return (
-							<Grid.Col key={project.title} sm={12} md={4} lg={4}>
-								<BadgeCard {...project} />
-							</Grid.Col>
-						)
-					}
-				})}
-			</Grid>
+			<Grid>{renderProjects(true)}</Grid>
 
 			<Space h={60} />
 			<Title order={3} ta='left'>
@@ -49,17 +51,7 @@ export default function ProjectsPage() {
 				Some projects are under NDA so they cannot be listed.
 			</Text>
 			<Space h={'xl'} />
-			<Grid>
-				{PROJECTS.map((project: IBadgeCardProps) => {
-					if (!project.isFeature) {
-						return (
-							<Grid.Col key={project.title} sm={12} md={4} lg={4}>
-								<BadgeCard {...project} />
-							</Grid.Col>
-						)
-					}
-				})}
-			</Grid>
+			<Grid>{renderProjects(false)}</Grid>
 		</>
 	)
 }
