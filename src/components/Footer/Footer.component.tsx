@@ -11,7 +11,6 @@ interface FooterCenteredProps {
 
 export function Footer({ links }: FooterCenteredProps) {
 	const { classes } = useStyles()
-	const ICON_SIZE = { size: 18, stroke: 1.5 }
 	const items = links.map(link => (
 		<Anchor<'a'>
 			color='dimmed'
