@@ -1,5 +1,4 @@
 import {
-	ActionIcon,
 	Burger,
 	Container,
 	Drawer,
@@ -11,12 +10,13 @@ import { useDisclosure } from '@mantine/hooks'
 import {
 	IconBrandGithub,
 	IconBrandInstagram,
-	IconBrandLinkedin
+	IconBrandLinkedin,
+	IconBrandYoutube
 } from '@tabler/icons'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Logo } from '~/components/Icons'
+import { Icon, Logo } from '~/components/Icons'
 import { ILinks } from '~/layout/base/base.layout'
 
 import { useStyles } from './Header.styles'
@@ -29,6 +29,7 @@ export function Header({ links }: HeaderMiddleProps) {
 	const router = useRouter()
 	const [opened, { toggle }] = useDisclosure(false)
 	const { classes, cx } = useStyles()
+	const ICON_SIZE = { size: 18, stroke: 1.5 }
 
 	const items = links.map((link: ILinks) => (
 		<Link
@@ -56,18 +57,34 @@ export function Header({ links }: HeaderMiddleProps) {
 					{items}
 				</Group>
 
-				<Logo />
-
+				<Link href={'/'}>
+					<Logo />
+				</Link>
 				<Group spacing={0} className={classes.social} position='right' noWrap>
-					<ActionIcon size='lg'>
-						<IconBrandLinkedin size={18} stroke={1.5} />
-					</ActionIcon>
-					<ActionIcon size='lg'>
-						<IconBrandGithub size={18} stroke={1.5} />
-					</ActionIcon>
-					<ActionIcon size='lg'>
-						<IconBrandInstagram size={18} stroke={1.5} />
-					</ActionIcon>
+					<Icon
+						Icon={IconBrandLinkedin}
+						size={'lg'}
+						icon={ICON_SIZE}
+						href={'https://www.linkedin.com/in/higoralvesdev/'}
+					/>
+					<Icon
+						Icon={IconBrandGithub}
+						size={'lg'}
+						icon={ICON_SIZE}
+						href={'http://github.com/higoralves/'}
+					/>
+					<Icon
+						Icon={IconBrandInstagram}
+						size={'lg'}
+						icon={ICON_SIZE}
+						href={'https://www.instagram.com/higoralves.dev/'}
+					/>
+					<Icon
+						Icon={IconBrandYoutube}
+						size={'lg'}
+						icon={ICON_SIZE}
+						href={'https://www.youtube.com/channel/UCr72p5NdD2RPimdhi56q0qQ'}
+					/>
 				</Group>
 			</Container>
 
