@@ -1,4 +1,4 @@
-import { Anchor, createStyles, Group, Text } from '@mantine/core'
+import { Anchor, createStyles, Group } from '@mantine/core'
 import Link from 'next/link'
 
 import { Logo, SocialMediaLinks } from '~/components/Icons'
@@ -56,10 +56,7 @@ export function Footer({ links }: FooterCenteredProps) {
 		<div className={classes.footer}>
 			<div className={classes.inner}>
 				<Link href={'/'}>
-					<Group>
-						<Logo color={'#fff'} />
-						<Text color={'#fff'}>Higor Alves</Text>
-					</Group>
+					<Logo color={'#fff'} variant={'iconWithName'} />
 				</Link>
 
 				<Group className={classes.links}>{items}</Group>
