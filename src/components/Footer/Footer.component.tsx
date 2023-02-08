@@ -1,13 +1,7 @@
 import { Anchor, createStyles, Group, Text } from '@mantine/core'
-import {
-	IconBrandGithub,
-	IconBrandInstagram,
-	IconBrandLinkedin,
-	IconBrandYoutube
-} from '@tabler/icons'
 import Link from 'next/link'
 
-import { Icon, Logo } from '~/components/Icons'
+import { Logo, SocialMediaLinks } from '~/components/Icons'
 
 const useStyles = createStyles(theme => ({
 	footer: {
@@ -70,32 +64,7 @@ export function Footer({ links }: FooterCenteredProps) {
 
 				<Group className={classes.links}>{items}</Group>
 
-				<Group spacing='xs' position='right' noWrap>
-					<Icon
-						Icon={IconBrandLinkedin}
-						size={'lg'}
-						icon={ICON_SIZE}
-						href={'https://www.linkedin.com/in/higoralvesdev/'}
-					/>
-					<Icon
-						Icon={IconBrandGithub}
-						size={'lg'}
-						icon={ICON_SIZE}
-						href={'http://github.com/higoralves/'}
-					/>
-					<Icon
-						Icon={IconBrandInstagram}
-						size={'lg'}
-						icon={ICON_SIZE}
-						href={'https://www.instagram.com/higoralves.dev/'}
-					/>
-					<Icon
-						Icon={IconBrandYoutube}
-						size={'lg'}
-						icon={ICON_SIZE}
-						href={'https://www.youtube.com/channel/UCr72p5NdD2RPimdhi56q0qQ'}
-					/>
-				</Group>
+				<SocialMediaLinks spacing='xs' position='right' noWrap />
 			</div>
 		</div>
 	)

@@ -7,16 +7,10 @@ import {
 	Stack
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import {
-	IconBrandGithub,
-	IconBrandInstagram,
-	IconBrandLinkedin,
-	IconBrandYoutube
-} from '@tabler/icons'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Icon, Logo } from '~/components/Icons'
+import { Logo, SocialMediaLinks } from '~/components/Icons'
 import { ILinks } from '~/layout/base/base.layout'
 
 import { useStyles } from './Header.styles'
@@ -60,32 +54,13 @@ export function Header({ links }: HeaderMiddleProps) {
 				<Link href={'/'}>
 					<Logo />
 				</Link>
-				<Group spacing={0} className={classes.social} position='right' noWrap>
-					<Icon
-						Icon={IconBrandLinkedin}
-						size={'lg'}
-						icon={ICON_SIZE}
-						href={'https://www.linkedin.com/in/higoralvesdev/'}
-					/>
-					<Icon
-						Icon={IconBrandGithub}
-						size={'lg'}
-						icon={ICON_SIZE}
-						href={'http://github.com/higoralves/'}
-					/>
-					<Icon
-						Icon={IconBrandInstagram}
-						size={'lg'}
-						icon={ICON_SIZE}
-						href={'https://www.instagram.com/higoralves.dev/'}
-					/>
-					<Icon
-						Icon={IconBrandYoutube}
-						size={'lg'}
-						icon={ICON_SIZE}
-						href={'https://www.youtube.com/channel/UCr72p5NdD2RPimdhi56q0qQ'}
-					/>
-				</Group>
+
+				<SocialMediaLinks
+					spacing={0}
+					className={classes.social}
+					position='right'
+					noWrap
+				/>
 			</Container>
 
 			<Drawer
