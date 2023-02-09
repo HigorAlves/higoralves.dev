@@ -1,6 +1,6 @@
 import { Grid, Space, Text, Title } from '@mantine/core'
 
-import { BadgeCard, IBadgeCardProps } from '~/components/Card/Card.component'
+import { Card, IBadgeCardProps } from '~/components/Card/Card.component'
 import { PROJECTS } from '~/utils/projects'
 
 export default function ProjectsPage() {
@@ -9,7 +9,7 @@ export default function ProjectsPage() {
 			if (project.isFeature === isFeature) {
 				return (
 					<Grid.Col key={project.title} sm={12} md={4} lg={4}>
-						<BadgeCard {...project} />
+						<Card {...project} />
 					</Grid.Col>
 				)
 			}
