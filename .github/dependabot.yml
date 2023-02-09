@@ -1,11 +1,11 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "sunday"
+      interval: 'weekly'
+      day: 'sunday'
     commit-message:
-      prefix: "dependabot"
-      include: "scope"
-    target-branch: "main"
+      prefix: 'dependabot'
+      include: 'scope'
+    target-branch: 'main'

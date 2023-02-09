@@ -1,58 +1,57 @@
-import React from 'react'
+import { Grid, Space, Text, Title } from '@mantine/core'
 
-import { Space, Text } from '@mantine/core'
-import { GetStaticPropsContext } from 'next'
-import { dehydrate, DehydratedState, QueryClient } from 'react-query'
+import { Card, IBadgeCardProps } from '~/components/Card/Card.component'
+import { PROJECTS } from '~/utils/projects'
 
-import { Title, UpDownMotion } from '~/components'
-import { REVALIDATE_TIME } from '~/config/constants'
-import { ListOfProjects } from '~/containers'
-import { Locale, useProjectsQuery } from '~/graphql/generated/graphql'
-
-export async function getStaticProps(context: GetStaticPropsContext) {
-	const queryClient = new QueryClient()
-	const { locale } = context
-	const language = locale === 'en' ? Locale.En : Locale.Br
-	await queryClient.prefetchQuery(
-		['Projects'],
-		useProjectsQuery.fetcher({ locale: language })
-	)
-
-	return {
-		props: {
-			locale: language,
-			dehydratedState: dehydrate(queryClient)
-		},
-		revalidate: REVALIDATE_TIME
+export default function ProjectsPage() {
+	function renderProjects(isFeature: boolean) {
+		return PROJECTS.map((project: IBadgeCardProps) => {
+			if (project.isFeature === isFeature) {
+				return (
+					<Grid.Col key={project.title} sm={12} md={4} lg={4}>
+						<Card {...project} />
+					</Grid.Col>
+				)
+			}
+		})
 	}
-}
-
-type Props = {
-	dehydratedState: DehydratedState
-	locale: Locale
-}
-
-export default function Projects({ locale }: Props) {
-	const { data } = useProjectsQuery({ locale })
 
 	return (
-		<UpDownMotion>
-			<Title
-				gradient={'cyanToGreen'}
-				order={1}
-				sx={() => ({
-					fontSize: '3rem'
-				})}
-			>
-				Work. Hobby. Open Source
+		<>
+			<div>
+				<Title
+					order={1}
+					variant='gradient'
+					gradient={{ from: 'teal', to: 'green', deg: 150 }}
+					ta='left'
+				>
+					Work. Hobby. Open Source
+				</Title>
+				<Text ta={'left'} size='lg' color='dimmed' weight={300}>
+					Here you can navigate to all my different projects, apps, and
+					libraries that I helped in some way. Some of them are still active,
+					others have been discontinued
+				</Text>
+			</div>
+
+			<Space h={'xl'} />
+
+			<Title order={3} ta='left'>
+				Feature Projects
 			</Title>
-			<Text>
-				Here you can navigate to all my different projects, apps, and libraries
-				that I helped in some way. Some of them are still active, others have
-				been discontinued
-			</Text>
+			<Space h={'xl'} />
+
+			<Grid>{renderProjects(true)}</Grid>
+
 			<Space h={60} />
-			{data && data.projects && <ListOfProjects projects={data.projects} />}
-		</UpDownMotion>
+			<Title order={3} ta='left'>
+				All Projects
+			</Title>
+			<Text ta={'left'} size='xs' color='dimmed' weight={300}>
+				Some projects are under NDA so they cannot be listed.
+			</Text>
+			<Space h={'xl'} />
+			<Grid>{renderProjects(false)}</Grid>
+		</>
 	)
 }

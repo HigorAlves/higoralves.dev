@@ -1,22 +1,11 @@
-import React from 'react'
+import { Container } from '@mantine/core'
 
-import { Col, Grid } from '@mantine/core'
-
-import { SideImage, TitleHome } from '~/containers'
-import useClass from '~/containers/Home/styles.home'
+import { HeroText } from '~/components/Hero/Hero.component'
 
 export default function Home() {
-	const { classes } = useClass()
-
 	return (
-		<Grid justify='center' align='center' className={classes.wrapper}>
-			<Col span={12} md={6}>
-				<TitleHome />
-			</Col>
-
-			<Col span={12} md={6}>
-				<SideImage />
-			</Col>
-		</Grid>
+		<Container>
+			<HeroText />
+		</Container>
 	)
 }
