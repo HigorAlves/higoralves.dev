@@ -1,5 +1,4 @@
 import {
-	ActionIcon,
 	Burger,
 	Container,
 	Drawer,
@@ -8,15 +7,10 @@ import {
 	Stack
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import {
-	IconBrandGithub,
-	IconBrandInstagram,
-	IconBrandLinkedin
-} from '@tabler/icons'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Logo } from '~/components/Icons'
+import { Logo, SocialMediaLinks } from '~/components/Icons'
 import { ILinks } from '~/layout/base/base.layout'
 
 import { useStyles } from './Header.styles'
@@ -56,19 +50,16 @@ export function Header({ links }: HeaderMiddleProps) {
 					{items}
 				</Group>
 
-				<Logo />
+				<Link href={'/'}>
+					<Logo />
+				</Link>
 
-				<Group spacing={0} className={classes.social} position='right' noWrap>
-					<ActionIcon size='lg'>
-						<IconBrandLinkedin size={18} stroke={1.5} />
-					</ActionIcon>
-					<ActionIcon size='lg'>
-						<IconBrandGithub size={18} stroke={1.5} />
-					</ActionIcon>
-					<ActionIcon size='lg'>
-						<IconBrandInstagram size={18} stroke={1.5} />
-					</ActionIcon>
-				</Group>
+				<SocialMediaLinks
+					spacing={0}
+					className={classes.social}
+					position='right'
+					noWrap
+				/>
 			</Container>
 
 			<Drawer
