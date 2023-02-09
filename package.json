@@ -82,6 +82,6 @@
 		"standard-version": "^9.5.0",
 		"start-server-and-test": "^1.15.2",
 		"storybook-dark-mode": "^2.0.5",
-		"typescript": "4.9.4"
+		"typescript": "4.9.5"
 	}
 }
