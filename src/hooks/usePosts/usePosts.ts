@@ -21,28 +21,35 @@ type IDataPosts = {
 
 interface IProduct {
 	order: 'RANKING' | 'NEWEST'
+	page: number
 }
 
-export function useProducts({ order }: IProduct) {
-	return useQuery('products', async (): Promise<IDataPosts> => {
-		return await graphQLClient.request(
-			gql`
-				query {
-					posts(first: 5, order: ${order}) {
-						edges {
-							node {
-								id
-								name
-								description
-								votesCount
-								thumbnail {
-									url
-								}
-							}
+function fetchProjects(variables: IProduct) {
+	const query = gql`
+		query ($page: Int!, $order: PostsOrder!) {
+			posts(first: $page, order: $order) {
+				edges {
+					node {
+						id
+						name
+						description
+						votesCount
+						thumbnail {
+							url
 						}
 					}
 				}
-			`
-		)
+			}
+		}
+	`
+
+	return graphQLClient.request(query, variables)
+}
+
+export function useProducts(order: 'RANKING' | 'NEWEST', page: number) {
+	return useQuery({
+		queryKey: ['projects', page],
+		queryFn: () => fetchProjects({ order, page }),
+		keepPreviousData: true
 	})
 }
