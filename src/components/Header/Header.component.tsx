@@ -23,7 +23,6 @@ export function Header({ links }: HeaderMiddleProps) {
 	const router = useRouter()
 	const [opened, { toggle }] = useDisclosure(false)
 	const { classes, cx } = useStyles()
-	const ICON_SIZE = { size: 18, stroke: 1.5 }
 
 	const items = links.map((link: ILinks) => (
 		<Link
