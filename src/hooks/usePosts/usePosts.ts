@@ -19,8 +19,13 @@ type IDataPosts = {
 	}
 }
 
+export enum ORDER {
+	RANKING = 'RANKING',
+	NEWEST = 'NEWEST'
+}
+
 interface IProduct {
-	order: 'RANKING' | 'NEWEST'
+	order: ORDER
 	page: number
 }
 
@@ -46,9 +51,9 @@ function fetchProjects(variables: IProduct) {
 	return graphQLClient.request(query, variables)
 }
 
-export function useProducts(order: 'RANKING' | 'NEWEST', page: number) {
-	return useQuery({
-		queryKey: ['projects', page],
+export function useProducts(order: ORDER, page: number) {
+	return useQuery<IDataPosts, Error>({
+		queryKey: ['projects', page, order],
 		queryFn: () => fetchProjects({ order, page }),
 		keepPreviousData: true
 	})
