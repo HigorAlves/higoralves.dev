@@ -1,5 +1,5 @@
 import { gql } from 'graphql-request'
-import { useQuery } from 'react-query'
+import { useInfiniteQuery } from 'react-query'
 
 import { graphQLClient } from '~/utils/graphQlClient'
 
@@ -16,6 +16,12 @@ interface INode {
 type IDataPosts = {
 	posts: {
 		edges: Array<{ node: INode }>
+		pageInfo: {
+			endCursor: string
+			hasNextPage: boolean
+			hasPreviousPage: boolean
+			startCursor: string
+		}
 	}
 }
 
@@ -27,12 +33,19 @@ export enum ORDER {
 interface IProduct {
 	order: ORDER
 	page: number
+	after?: string
 }
 
-function fetchProjects(variables: IProduct) {
+async function fetchProjects(variables: IProduct) {
 	const query = gql`
-		query ($page: Int!, $order: PostsOrder!) {
-			posts(first: $page, order: $order) {
+		query ($page: Int!, $order: PostsOrder!, $after: String!) {
+			posts(first: $page, order: $order, after: $after) {
+				pageInfo {
+					endCursor
+					hasNextPage
+					hasPreviousPage
+					startCursor
+				}
 				edges {
 					node {
 						id
@@ -48,13 +61,22 @@ function fetchProjects(variables: IProduct) {
 		}
 	`
 
-	return graphQLClient.request(query, variables)
+	return await graphQLClient.request(query, variables)
 }
 
-export function useProducts(order: ORDER, page: number) {
-	return useQuery<IDataPosts, Error>({
-		queryKey: ['projects', page, order],
-		queryFn: () => fetchProjects({ order, page }),
-		keepPreviousData: true
+export function useProducts(order: ORDER, page: number, after = '') {
+	return useInfiniteQuery<IDataPosts, Error>({
+		queryKey: ['projects', order],
+		queryFn: data =>
+			fetchProjects({ order, page, after: data.pageParam || after }),
+		getPreviousPageParam: firstPage =>
+			firstPage.posts.pageInfo.hasPreviousPage
+				? firstPage.posts.pageInfo.startCursor
+				: undefined,
+		getNextPageParam: lastPage => {
+			return lastPage.posts.pageInfo?.hasNextPage
+				? lastPage.posts.pageInfo.endCursor
+				: undefined
+		}
 	})
 }

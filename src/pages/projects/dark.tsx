@@ -1,30 +1,40 @@
-import { useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 
 import { Grid, LoadingOverlay, Tabs } from '@mantine/core'
 import { IconFlame, IconNews } from '@tabler/icons'
+import { useInView } from 'react-intersection-observer'
 
 import { ProductCard } from '~/components/ProductCard/ProductCard.component'
 import { ORDER, useProducts } from '~/hooks'
 
 export default function DarkTest() {
-	const [page, setPage] = useState(20)
 	const [activeTab, setActiveTab] = useState<ORDER>(ORDER.RANKING)
-	const { data, isError, isLoading } = useProducts(activeTab, page)
+	const { data, isError, isLoading, fetchNextPage } = useProducts(activeTab, 20)
+	const { ref, inView } = useInView()
+
+	useEffect(() => {
+		if (inView) {
+			fetchNextPage()
+		}
+	}, [inView])
 
 	function generateProductCards() {
 		return (
 			<Grid>
-				{data &&
-					data.posts.edges.map(({ node }) => (
-						<Grid.Col sm={12} md={3} key={node.id}>
-							<ProductCard
-								name={node.name}
-								avatar={node.thumbnail.url}
-								votes={node.votesCount}
-								description={node.description}
-							/>
-						</Grid.Col>
-					))}
+				{data?.pages.map(page => (
+					<Fragment key={page.posts.pageInfo.startCursor}>
+						{page.posts.edges.map(({ node }) => (
+							<Grid.Col sm={12} md={3} key={node.id}>
+								<ProductCard
+									name={node.name}
+									avatar={node.thumbnail.url}
+									votes={node.votesCount}
+									description={node.description}
+								/>
+							</Grid.Col>
+						))}
+					</Fragment>
+				))}
 			</Grid>
 		)
 	}
