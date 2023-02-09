@@ -21,7 +21,7 @@ const SOCIAL_LINKS = [
 		Icon: IconBrandGithub,
 		size: 'lg',
 		icon: ICON_SIZE,
-		href: 'http://github.com/higoralves/'
+		href: 'https://github.com/higoralves/'
 	},
 	{
 		Icon: IconBrandInstagram,
