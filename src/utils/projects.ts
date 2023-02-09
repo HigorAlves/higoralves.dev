@@ -113,9 +113,17 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			"The company's suite of cloud-based software applications is designed to help organizations streamline and automate key business processes."
 	},
 	{
+		title: 'Take',
+		company: 'Take Blip',
+		jobTitle: 'Software Engineer',
+		isFeature: false,
+		description:
+			'A single platform with the best solutions to create conversations between companies and customers in the message channels.'
+	},
+	{
 		title: 'Sherlock',
 		company: 'Nata House',
-		jobTitle: 'Senior Software Engineer',
+		jobTitle: 'Software Engineer',
 		isFeature: false,
 		description:
 			'A platform to go beyond the time in app & total logins, get clear understanding of the true engagement of your user base, lifeblood at your SaaS.'
@@ -123,7 +131,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 	{
 		title: 'VideoPeel',
 		company: 'Nata House',
-		jobTitle: 'Senior Software Engineer',
+		jobTitle: 'Software Engineer',
 		isFeature: false,
 		description:
 			'Company that provides video marketing solutions for businesses, designed to help organizations create and manage video campaigns.'
@@ -131,7 +139,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 	{
 		title: 'Resale',
 		company: 'Nata House',
-		jobTitle: 'Senior Software Engineer',
+		jobTitle: 'Software Engineer',
 		isFeature: false,
 		description:
 			'Real estate outlet based in Brazil, with solutions to facilitate access to properties repossessed with financing operations.'
@@ -156,7 +164,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 	{
 		title: 'Educação Livre',
 		company: 'UNESCO',
-		jobTitle: 'Senior Software Engineer',
+		jobTitle: 'Software Engineer',
 		isFeature: false,
 		description:
 			'A platform that offers free, fun and applied education to the real world, especially for young people looking for a work and study opportunities.'
@@ -164,7 +172,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 	{
 		title: 'Hacker Rangers',
 		company: 'Hacker Rangers',
-		jobTitle: 'Senior Software Engineer',
+		jobTitle: 'Software Engineer',
 		isFeature: false,
 		description:
 			'A platform that promotes corporate cyber security culture through gamification, to meet the requirements of the LGPD.'
@@ -172,7 +180,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 	{
 		title: 'Ita Fest',
 		company: 'Personal',
-		jobTitle: 'Senior Software Engineer',
+		jobTitle: 'Developer',
 		isFeature: false,
 		description:
 			'A personal project develop to help people from my city to find the best areas and more secure for the Carnival Festival in Brazil.'
@@ -180,7 +188,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 	{
 		title: 'Gol a Gol',
 		company: 'Gol a Gol',
-		jobTitle: 'Senior Software Engineer',
+		jobTitle: 'Developer',
 		isFeature: false,
 		description:
 			'A platform that helps soccer fields owners to administrate to rent and create subscriptions for local teams and matchs.'
