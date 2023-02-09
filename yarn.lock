@@ -3938,17 +3938,12 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*":
-  version "18.0.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.3.tgz#463fc47f13ec0688a33aec75d078a0541a447199"
-  integrity sha512-HzNRZtp4eepNitP+BD6k2L6DROIDG4Q0fm4x+dwfsr6LGmROENnok75VGw40628xf+iR24WeMFcHuuBDUAzzsQ==
-
-"@types/node@18.11.15":
+"@types/node@*", "@types/node@18.11.15":
   version "18.11.15"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.15.tgz#de0e1fbd2b22b962d45971431e2ae696643d3f5d"
   integrity sha512-VkhBbVo2+2oozlkdHXLrb3zjsRkpdnaU2bXmX8Wgle3PUi569eLRaHGlgETQHR7lLL1w7GiG3h9SnePhxNDecw==
 
-"@types/node@^14.0.0":
+"@types/node@^14.0.0", "@types/node@^14.14.31":
   version "14.18.34"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.34.tgz#cd2e6fa0dbfb08a62582a7b967558e73c32061ec"
   integrity sha512-hcU9AIQVHmPnmjRK+XUUYlILlr9pQrsqSrwov/JK1pnf3GTQowVBhx54FbvM0AU/VXGH4i3+vgXS5EguR7fysA==
@@ -3957,11 +3952,6 @@
   version "16.11.43"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.43.tgz#555e5a743f76b6b897d47f945305b618525ddbe6"
   integrity sha512-GqWykok+3uocgfAJM8imbozrqLnPyTrpFlrryURQlw1EesPUCx5XxTiucWDSFF9/NUEXDuD4bnvHm8xfVGWTpQ==
-
-"@types/node@^14.14.31":
-  version "14.18.21"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.21.tgz#0155ee46f6be28b2ff0342ca1a9b9fd4468bef41"
-  integrity sha512-x5W9s+8P4XteaxT/jKF0PSb7XEvo5VmqEWgsMlyeY4ZlLK8I6aH6g5TPPyDlLAep+GYf4kefb7HFyc7PAO3m+Q==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -6744,10 +6734,10 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha512-NJGVKPS81XejHcLhaLJS7plab0fK3slPh11mESeeDq2W4ZI5kUKK/LRRdVDvjJseojbPB7ZwjnyOybg3Igea/A==
 
-cypress@^12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/cypress/-/cypress-12.1.0.tgz#1fdaa631bc30df466dc9505154616f4cf69dbd4b"
-  integrity sha512-7fz8N84uhN1+ePNDsfQvoWEl4P3/VGKKmAg+bJQFY4onhA37Ys+6oBkGbNdwGeC7n2QqibNVPhk8x3YuQLwzfw==
+cypress@^12.5.1:
+  version "12.5.1"
+  resolved "https://registry.yarnpkg.com/cypress/-/cypress-12.5.1.tgz#effdcccdd5a6187d61d497300903d4f3b5b21b6e"
+  integrity sha512-ZmCmJ3lsyeOpBfh410m5+AO2CO1AxAzFBt7k6/uVbNcrNZje1vdiwYTpj2ksPKg9mjr9lR6V8tmlDNMvr4H/YQ==
   dependencies:
     "@cypress/request" "^2.88.10"
     "@cypress/xvfb" "^1.2.4"
@@ -11679,12 +11669,7 @@ minimist-options@4.1.0:
     is-plain-obj "^1.1.0"
     kind-of "^6.0.3"
 
-minimist@^1.1.1, minimist@^1.1.3, minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
-  integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
-
-minimist@~1.2.5:
+minimist@^1.1.1, minimist@^1.1.3, minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6, minimist@~1.2.5:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
