@@ -42,30 +42,34 @@ export default function About() {
 			</div>
 
 			<Grid mt={40}>
-				<Grid.Col sm={0} md={6} lg={6}>
+				<Grid.Col md={5} lg={5}>
 					<Image
 						src={ABOUT_ME}
 						alt={'Higor Alves profile picture'}
-						height={400}
+						height={330}
 						className={classes.image}
 					/>
 				</Grid.Col>
 
-				<Grid.Col sm={12} md={4} lg={6}>
+				<Grid.Col sm={12} md={6} lg={6}>
 					<Title order={2} mb={'sm'}>
 						🍀 Hey Folks
 					</Title>
 
 					<Text>
-						I have a diverse background in software development and have worked
-						on a variety of projects. My experience includes leading technical
-						debt reduction efforts, creating design systems, developing APIs and
-						cross-platform applications, and implementing automated tests and
-						regression versions. I also worked on front-end development, user
-						experience design, and improving performance and fixing bugs.
-						Additionally, I have experience in migrating legacy codebases to
-						more efficient microservices structures, which can improve system
-						performance and maintainability.
+						Hey, I&apos;m Higor Alves, I started as a Developer back in 2015,
+						working with C.
+						<br />
+						<br />
+						Early on in my career I decided I wanted to be an expert. So I set
+						my mind on mastering the world&apos;s most popular programming
+						language. I spent countless hours writing JavaScript for the
+						companies I worked for as well as in the evenings for open source
+						and other side projects.
+						<br />
+						<br />
+						When I&apos;m not working, I like playing, doing some barbecue, and
+						drinking beers.
 					</Text>
 				</Grid.Col>
 			</Grid>

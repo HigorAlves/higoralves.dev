@@ -15,7 +15,10 @@ export interface ILinks {
 	link: string
 }
 
-export const LINKS = [{ label: 'Projects', link: '/projects' }]
+export const LINKS = [
+	{ label: 'Projects', link: '/projects' },
+	{ label: 'About', link: '/about' }
+]
 
 export function BaseLayout({ children }: BaseLayoutProps) {
 	const { classes } = useStyles()
@@ -26,7 +29,7 @@ export function BaseLayout({ children }: BaseLayoutProps) {
 				<Header links={LINKS} />
 			</div>
 			<main className={classes.main}>
-				<Container>{children}</Container>
+				<Container style={{ height: '100%' }}>{children}</Container>
 			</main>
 			<Footer links={LINKS} />
 		</div>
