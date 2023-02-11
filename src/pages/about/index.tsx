@@ -105,7 +105,7 @@ export default function About() {
 							<Timeline.Item
 								key={company.name}
 								bullet={<company.icon size={12} />}
-								title='Software Engineer'
+								title={company.job}
 							>
 								<Text color='dimmed' size='sm'>
 									<Link href={company.website} target={'_blank'}>
