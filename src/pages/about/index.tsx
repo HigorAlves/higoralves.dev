@@ -7,14 +7,17 @@ import {
 	Text
 } from '@mantine/core'
 import {
-	IconGitBranch,
+	IconBallon,
 	IconGitPullRequest,
 	IconGitCommit,
-	IconMessageDots
+	IconMessageDots,
+	IconStars
 } from '@tabler/icons'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import ABOUT_ME from '~/assets/images/me/about-me.jpeg'
+import { COMPANIES } from '~/utils/companies'
 
 const useStyles = createStyles(() => ({
 	image: {
@@ -34,10 +37,11 @@ export default function About() {
 					gradient={{ from: 'pink', to: 'purple', deg: 150 }}
 					ta='left'
 				>
-					Explore. Create. Repeat
+					Explore. Create. Share.
 				</Title>
 				<Text ta={'left'} size='lg' color='dimmed' weight={300}>
-					Learn a little bit about me.
+					I make the world a better place by teaching people like you how to
+					make quality software.
 				</Text>
 			</div>
 
@@ -68,8 +72,8 @@ export default function About() {
 						and other side projects.
 						<br />
 						<br />
-						When I&apos;m not working, I like playing, doing some barbecue, and
-						drinking beers.
+						When I&apos;m not programming, you can find me playing PS5,
+						traveling and doing bbqs!
 					</Text>
 				</Grid.Col>
 			</Grid>
@@ -94,64 +98,28 @@ export default function About() {
 			</Blockquote>
 
 			<Title order={3}>Career</Title>
-			<Timeline active={1} bulletSize={24} lineWidth={2} mt={'lg'}>
-				<Timeline.Item
-					bullet={<IconGitBranch size={12} />}
-					title='Software Engineer'
-				>
-					<Text color='dimmed' size='sm'>
-						<Text variant='link' component='span' inherit>
-							Edu Livre
-						</Text>{' '}
-						- Brasilia, Brazil
-					</Text>
-					<Text size='xs' mt={4}>
-						Jan 2023 - Present
-					</Text>
-				</Timeline.Item>
-
-				<Timeline.Item bullet={<IconGitCommit size={12} />} title='Commits'>
-					<Text color='dimmed' size='sm'>
-						You&apos;ve pushed 23 commits to
-						<Text variant='link' component='span' inherit>
-							fix-notifications branch
+			<Timeline active={0} bulletSize={24} lineWidth={2} mt={'lg'}>
+				{COMPANIES.map(company => (
+					<Timeline.Item
+						key={company.name}
+						bullet={<company.icon size={12} />}
+						title='Software Engineer'
+					>
+						<Text color='dimmed' size='sm'>
+							<Link href={company.website} target={'_blank'}>
+								<Text variant='link' component='span' inherit>
+									{company.name}
+								</Text>
+							</Link>{' '}
+							- {company.city}, {company.country}
 						</Text>
-					</Text>
-					<Text size='xs' mt={4}>
-						52 minutes ago
-					</Text>
-				</Timeline.Item>
-
-				<Timeline.Item
-					title='Pull request'
-					bullet={<IconGitPullRequest size={12} />}
-					lineVariant='dashed'
-				>
-					<Text color='dimmed' size='sm'>
-						You&apos;ve submitted a pull request
-						<Text variant='link' component='span' inherit>
-							Fix incorrect notification message (#187)
+						<Text size='xs' mt={4}>
+							<>
+								{company.startDate} - {company.endDate}
+							</>
 						</Text>
-					</Text>
-					<Text size='xs' mt={4}>
-						34 minutes ago
-					</Text>
-				</Timeline.Item>
-
-				<Timeline.Item
-					title='Code review'
-					bullet={<IconMessageDots size={12} />}
-				>
-					<Text color='dimmed' size='sm'>
-						<Text variant='link' component='span' inherit>
-							Robert Gluesticker
-						</Text>{' '}
-						left a code review on your pull request
-					</Text>
-					<Text size='xs' mt={4}>
-						12 minutes ago
-					</Text>
-				</Timeline.Item>
+					</Timeline.Item>
+				))}
 			</Timeline>
 		</>
 	)
