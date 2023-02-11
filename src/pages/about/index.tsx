@@ -99,27 +99,30 @@ export default function About() {
 
 			<Title order={3}>Career</Title>
 			<Timeline active={0} bulletSize={24} lineWidth={2} mt={'lg'}>
-				{COMPANIES.map(company => (
-					<Timeline.Item
-						key={company.name}
-						bullet={<company.icon size={12} />}
-						title='Software Engineer'
-					>
-						<Text color='dimmed' size='sm'>
-							<Link href={company.website} target={'_blank'}>
-								<Text variant='link' component='span' inherit>
-									{company.name}
+				{COMPANIES.map(
+					company =>
+						company.show && (
+							<Timeline.Item
+								key={company.name}
+								bullet={<company.icon size={12} />}
+								title='Software Engineer'
+							>
+								<Text color='dimmed' size='sm'>
+									<Link href={company.website} target={'_blank'}>
+										<Text variant='link' component='span' inherit>
+											{company.name}
+										</Text>
+									</Link>{' '}
+									- {company.city}, {company.country}
 								</Text>
-							</Link>{' '}
-							- {company.city}, {company.country}
-						</Text>
-						<Text size='xs' mt={4}>
-							<>
-								{company.startDate} - {company.endDate}
-							</>
-						</Text>
-					</Timeline.Item>
-				))}
+								<Text size='xs' mt={4}>
+									<>
+										{company.startDate} - {company.endDate}
+									</>
+								</Text>
+							</Timeline.Item>
+						)
+				)}
 			</Timeline>
 		</>
 	)

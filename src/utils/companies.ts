@@ -9,6 +9,7 @@ interface ICompany {
 	startDate: string
 	endDate: string
 	icon: TablerIcon
+	show: boolean
 }
 
 export const COMPANIES: Array<ICompany> = [
@@ -20,7 +21,8 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'United States',
 		startDate: new Date('August 01, 2021').toDateString(),
 		endDate: new Date('December 01, 2022').toDateString(),
-		icon: IconStar
+		icon: IconStar,
+		show: true
 	},
 	{
 		job: 'Senior Software Engineer',
@@ -30,7 +32,8 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('April 01, 2021').toDateString(),
 		endDate: new Date('July 01, 2021').toDateString(),
-		icon: IconBallon
+		icon: IconBallon,
+		show: true
 	},
 	{
 		job: 'Software Engineer',
@@ -40,7 +43,8 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('February 01, 2021').toDateString(),
 		endDate: new Date('April 01, 2021').toDateString(),
-		icon: IconFlag
+		icon: IconFlag,
+		show: true
 	},
 	{
 		job: 'Software Engineer',
@@ -50,7 +54,8 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('November 01, 2020').toDateString(),
 		endDate: new Date('April 01, 2021').toDateString(),
-		icon: IconBallon
+		icon: IconBallon,
+		show: true
 	},
 	{
 		job: 'Software Engineer',
@@ -60,7 +65,8 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('June 01, 2020').toDateString(),
 		endDate: new Date('February 01, 2021').toDateString(),
-		icon: IconBallon
+		icon: IconBallon,
+		show: true
 	},
 	{
 		job: 'Software Engineer',
@@ -70,7 +76,8 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('March 01, 2018').toDateString(),
 		endDate: new Date('June 01, 2020').toDateString(),
-		icon: IconBallon
+		icon: IconBallon,
+		show: true
 	},
 	{
 		job: 'Software Engineer',
@@ -80,7 +87,8 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('April 01, 2019').toDateString(),
 		endDate: new Date('September 01, 2019').toDateString(),
-		icon: IconBallon
+		icon: IconBallon,
+		show: true
 	},
 	{
 		job: 'Mobile Engineer',
@@ -91,7 +99,8 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('March 01, 2018').toDateString(),
 		endDate: new Date('August 01, 2019').toDateString(),
-		icon: IconBallon
+		icon: IconBallon,
+		show: true
 	},
 	{
 		job: 'Software Engineer',
@@ -101,6 +110,7 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('January 01, 2017').toDateString(),
 		endDate: new Date('April 01, 2019').toDateString(),
-		icon: IconBallon
+		icon: IconBallon,
+		show: true
 	}
 ]
