@@ -15,6 +15,39 @@ interface ICompany {
 export const COMPANIES: Array<ICompany> = [
 	{
 		job: 'Senior Software Engineer',
+		name: 'Notch Team',
+		website: 'https://notchteam.com',
+		city: 'San Francisco',
+		country: 'United States',
+		startDate: new Date('December 01, 2022').toDateString(),
+		endDate: 'Present',
+		icon: IconBallon,
+		show: false
+	},
+	{
+		job: 'Senior Software Engineer',
+		name: 'Right Balance',
+		website: 'https://rightbalance.io',
+		city: 'San Francisco',
+		country: 'United States',
+		startDate: new Date('September 01, 2022').toDateString(),
+		endDate: 'Present',
+		icon: IconBallon,
+		show: false
+	},
+	{
+		job: 'Senior Software Engineer',
+		name: 'Zipdev',
+		website: 'https://zipdev.com',
+		city: 'San Francisco',
+		country: 'United States',
+		startDate: new Date('July 01, 2022').toDateString(),
+		endDate: 'Present',
+		icon: IconBallon,
+		show: false
+	},
+	{
+		job: 'Senior Software Engineer',
 		name: 'X-Team',
 		website: 'https://x-team.com',
 		city: 'San Francisco',
