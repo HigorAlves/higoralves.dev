@@ -73,7 +73,7 @@ export default function About() {
 						<br />
 						<br />
 						When I&apos;m not programming, you can find me playing PS5,
-						traveling and doing bbqs!
+						traveling and doing bbq!
 					</Text>
 				</Grid.Col>
 			</Grid>
