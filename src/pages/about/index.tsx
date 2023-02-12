@@ -6,22 +6,23 @@ import {
 	Timeline,
 	Text
 } from '@mantine/core'
-import {
-	IconBallon,
-	IconGitPullRequest,
-	IconGitCommit,
-	IconMessageDots,
-	IconStars
-} from '@tabler/icons'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import ABOUT_ME from '~/assets/images/me/about-me.jpeg'
 import { COMPANIES } from '~/utils/companies'
 
-const useStyles = createStyles(() => ({
+const useStyles = createStyles(theme => ({
 	image: {
 		borderRadius: '10px'
+	},
+	imageWrapper: {
+		[`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+			display: 'none'
+		},
+		[`@media (max-width: ${theme.breakpoints.md}px)`]: {
+			display: 'none'
+		}
 	}
 }))
 
@@ -46,7 +47,7 @@ export default function About() {
 			</div>
 
 			<Grid mt={40}>
-				<Grid.Col md={5} lg={5}>
+				<Grid.Col lg={5} className={classes.imageWrapper}>
 					<Image
 						src={ABOUT_ME}
 						alt={'Higor Alves profile picture'}
@@ -55,7 +56,7 @@ export default function About() {
 					/>
 				</Grid.Col>
 
-				<Grid.Col sm={12} md={6} lg={6}>
+				<Grid.Col sm={12} lg={6}>
 					<Title order={2} mb={'sm'}>
 						🍀 Hey Folks
 					</Title>
