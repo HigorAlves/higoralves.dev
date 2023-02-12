@@ -4,7 +4,7 @@ export const useStyles = createStyles(theme => ({
 	wrapper: {
 		display: 'flex',
 		position: 'relative',
-		height: 'calc(100vh - 600px)',
+		height: '100%',
 		alignItems: 'center'
 	},
 
