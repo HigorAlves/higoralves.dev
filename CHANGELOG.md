@@ -4,18 +4,16 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.0](https://github.com/HigorAlves/higoralves.dev/compare/v3.0.0...v1.0.0) (2023-02-11)
 
-
 ### :triangular_flag_on_post: Others
 
-* code quality tools ([#106](https://github.com/HigorAlves/higoralves.dev/issues/106)) ([909de3f](https://github.com/HigorAlves/higoralves.dev/commit/909de3f1ba863dfab799a88dd95598b90299a721))
-* new files for new version ([cd56282](https://github.com/HigorAlves/higoralves.dev/commit/cd562825da08404e235178194be3c1d817df1539))
-* updating dependencies ([034406c](https://github.com/HigorAlves/higoralves.dev/commit/034406cd354c2b6c011377019a1e6ef1aa9e8bea))
-
+- code quality tools ([#106](https://github.com/HigorAlves/higoralves.dev/issues/106)) ([909de3f](https://github.com/HigorAlves/higoralves.dev/commit/909de3f1ba863dfab799a88dd95598b90299a721))
+- new files for new version ([cd56282](https://github.com/HigorAlves/higoralves.dev/commit/cd562825da08404e235178194be3c1d817df1539))
+- updating dependencies ([034406c](https://github.com/HigorAlves/higoralves.dev/commit/034406cd354c2b6c011377019a1e6ef1aa9e8bea))
 
 ### :bug: Bug Fixes
 
-* lang for cypress bug ([62524a1](https://github.com/HigorAlves/higoralves.dev/commit/62524a109385876c6288c85df0b874dc72a76829))
-* workflow templates ([d73d0d3](https://github.com/HigorAlves/higoralves.dev/commit/d73d0d316184fb32b5dec0d2e34acc6e68c66641))
+- lang for cypress bug ([62524a1](https://github.com/HigorAlves/higoralves.dev/commit/62524a109385876c6288c85df0b874dc72a76829))
+- workflow templates ([d73d0d3](https://github.com/HigorAlves/higoralves.dev/commit/d73d0d316184fb32b5dec0d2e34acc6e68c66641))
 
 ### 0.1.1 (2022-07-07)
 
