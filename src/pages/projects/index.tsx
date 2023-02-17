@@ -39,6 +39,12 @@ export default function ProjectsPage() {
 			<Title order={3} ta='left'>
 				Feature Projects
 			</Title>
+			<Text ta={'left'} size='xs' color='dimmed' weight={300}>
+				I pride myself on my ability to adapt to the unique needs of any
+				project. Whether it’s reducing costs through process automation,
+				improving efficiency through the development of productivity tools or
+				even creating new digital experiences for your brand.
+			</Text>
 			<Space h={'xl'} />
 
 			<Grid>{renderProjects(true)}</Grid>
