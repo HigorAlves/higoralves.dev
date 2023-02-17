@@ -31,7 +31,7 @@ export const COMPANIES: Array<ICompany> = [
 		city: 'San Francisco',
 		country: 'United States',
 		startDate: new Date('September 01, 2022').toDateString(),
-		endDate: 'Present',
+		endDate: new Date('March 03, 2023').toDateString(),
 		icon: IconBallon,
 		show: false
 	},
