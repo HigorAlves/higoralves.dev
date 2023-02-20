@@ -2,14 +2,16 @@ import {
 	Blockquote,
 	createStyles,
 	Grid,
-	Title,
+	Space,
+	Text,
 	Timeline,
-	Text
+	Title as BaseTitle
 } from '@mantine/core'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import ABOUT_ME from '~/assets/images/me/about-me.jpeg'
+import { Title } from '~/components'
 import { COMPANIES } from '~/utils/companies'
 
 const useStyles = createStyles(theme => ({
@@ -31,20 +33,14 @@ export default function About() {
 
 	return (
 		<>
-			<div>
-				<Title
-					order={1}
-					variant='gradient'
-					gradient={{ from: 'pink', to: 'purple', deg: 150 }}
-					ta='left'
-				>
-					Explore. Create. Share.
-				</Title>
-				<Text ta={'left'} size='lg' color='dimmed' weight={300}>
-					I make the world a better place by teaching people like you how to
-					make quality software.
-				</Text>
-			</div>
+			<Title
+				gradient={{ from: 'pink', to: 'purple', deg: 150 }}
+				title={'Explore. Create. Share.'}
+				order={1}
+				subtitle={
+					'I make the world a better place by teaching people like you how to make quality software.'
+				}
+			/>
 
 			<Grid mt={40}>
 				<Grid.Col lg={5} className={classes.imageWrapper}>
@@ -57,9 +53,9 @@ export default function About() {
 				</Grid.Col>
 
 				<Grid.Col sm={12} lg={6}>
-					<Title order={2} mb={'sm'}>
+					<BaseTitle order={2} mb={'sm'}>
 						🍀 Hey Folks
-					</Title>
+					</BaseTitle>
 
 					<Text>
 						Hey, I&apos;m Higor Alves, I started as a Developer back in 2015,
@@ -79,13 +75,15 @@ export default function About() {
 				</Grid.Col>
 			</Grid>
 
-			<Title order={2} mt={'xl'}>
-				Bio
-			</Title>
-			<Text color={'dimmed'} mb={'md'}>
-				This is made for journalists, podcast hosts, and event organizers to
-				copy-and-paste.
-			</Text>
+			<Space h={40} />
+			<Title
+				title={'Bio'}
+				order={2}
+				subtitle={
+					'This is made for journalists, podcast hosts, and event organizers to copy-and-paste.'
+				}
+			/>
+
 			<Blockquote>
 				Higor Alves have a diverse background in software development and have
 				worked on a variety of projects. His experience includes leading
@@ -98,7 +96,7 @@ export default function About() {
 				and maintainability.
 			</Blockquote>
 
-			<Title order={3}>Career</Title>
+			<BaseTitle order={3}>Career</BaseTitle>
 			<Timeline active={0} bulletSize={24} lineWidth={2} mt={'lg'}>
 				{COMPANIES.map(
 					company =>
