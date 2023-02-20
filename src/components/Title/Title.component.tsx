@@ -1,5 +1,6 @@
 import {
 	MantineGradient,
+	MantineNumberSize,
 	Text,
 	Title as BaseTitle,
 	TitleOrder
@@ -10,13 +11,15 @@ interface Props {
 	subtitle?: string
 	gradient?: MantineGradient
 	order: TitleOrder
+	size?: MantineNumberSize
 }
 
 export function Title({
 	title,
 	subtitle,
 	order,
-	gradient
+	gradient,
+	size
 }: Props): JSX.Element {
 	return (
 		<>
@@ -28,7 +31,7 @@ export function Title({
 			>
 				{title}
 			</BaseTitle>
-			<Text ta={'left'} size='lg' color='dimmed' weight={300}>
+			<Text ta={'left'} size={size ?? 'lg'} color='dimmed' weight={300}>
 				{subtitle}
 			</Text>
 		</>

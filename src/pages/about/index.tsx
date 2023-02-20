@@ -82,6 +82,7 @@ export default function About() {
 				subtitle={
 					'This is made for journalists, podcast hosts, and event organizers to copy-and-paste.'
 				}
+				size={'sm'}
 			/>
 
 			<Blockquote>
