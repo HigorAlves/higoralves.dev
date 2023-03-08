@@ -1,5 +1,6 @@
-import { Grid, Space, Text, Title } from '@mantine/core'
+import { Grid, Space } from '@mantine/core'
 
+import { Title } from '~/components'
 import { Card, IBadgeCardProps } from '~/components/Card/Card.component'
 import { PROJECTS } from '~/utils/projects'
 
@@ -18,38 +19,38 @@ export default function ProjectsPage() {
 
 	return (
 		<>
-			<div>
-				<Title
-					order={1}
-					variant='gradient'
-					gradient={{ from: 'teal', to: 'green', deg: 150 }}
-					ta='left'
-				>
-					Work. Hobby. Open Source
-				</Title>
-				<Text ta={'left'} size='lg' color='dimmed' weight={300}>
-					Here you can navigate to all my different projects, apps, and
-					libraries that I helped in some way. Some of them are still active,
-					others have been discontinued
-				</Text>
-			</div>
+			<Title
+				title={'Work. Hobby. Open Source'}
+				gradient={{ from: 'teal', to: 'green', deg: 150 }}
+				order={1}
+				size={'md'}
+				subtitle={
+					'Here you can navigate to all my different projects, apps, and libraries that I helped in some way. Some of them are still active, others have been discontinued'
+				}
+			/>
 
 			<Space h={'xl'} />
+			<Title
+				title={'Feature Projects'}
+				order={3}
+				size={'sm'}
+				subtitle={
+					'I pride myself on my ability to adapt to the unique needs of any project. Whether it’s reducing costs through process automation, improving efficiency through the development of productivity tools or even creating new digital experiences for your brand.'
+				}
+			/>
 
-			<Title order={3} ta='left'>
-				Feature Projects
-			</Title>
 			<Space h={'xl'} />
 
 			<Grid>{renderProjects(true)}</Grid>
 
 			<Space h={60} />
-			<Title order={3} ta='left'>
-				All Projects
-			</Title>
-			<Text ta={'left'} size='xs' color='dimmed' weight={300}>
-				Some projects are under NDA so they cannot be listed.
-			</Text>
+			<Title
+				title={'All Projects'}
+				order={3}
+				subtitle={'Some projects are under NDA so they cannot be listed.'}
+				size={'xs'}
+			/>
+
 			<Space h={'xl'} />
 			<Grid>{renderProjects(false)}</Grid>
 		</>

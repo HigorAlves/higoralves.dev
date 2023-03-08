@@ -1,9 +1,18 @@
 import BUBBLES_IMG from '~/assets/images/projects/bubbles/bubbles.png'
+import SNAPSTRAT_IMG from '~/assets/images/projects/snapstrat/snapStrat.png'
 import TILED_IMG from '~/assets/images/projects/tiled/tiled.png'
-import TUMBLE_IMG from '~/assets/images/projects/tumble/Tumble.png'
 import { IBadgeCardProps } from '~/components/Card/Card.component'
 
 export const PROJECTS: Array<IBadgeCardProps> = [
+	{
+		title: 'SnapStrat',
+		company: 'Zipdev',
+		jobTitle: 'Senior Software Engineer',
+		image: SNAPSTRAT_IMG,
+		isFeature: true,
+		description:
+			'Empowers enterprises to improve the outcomes of their recurring strategic decisions through intelligent predictive, data-driven decision model.'
+	},
 	{
 		title: 'Bubbles',
 		company: 'Notch Team',
@@ -17,8 +26,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 		title: 'Tumble',
 		company: 'Right Balance',
 		jobTitle: 'Senior Software Engineer',
-		image: TUMBLE_IMG,
-		isFeature: true,
+		isFeature: false,
 		description:
 			'Tumble is a smart laundry system and delivery platform, predictive maintenance and IoT technology with the lowest downtime in the business.'
 	},
