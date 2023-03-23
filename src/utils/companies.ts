@@ -1,4 +1,10 @@
-import { IconBallon, IconFlag, IconStar, TablerIcon } from '@tabler/icons'
+import {
+	IconBalloon,
+	IconFlag,
+	IconStar,
+	IconHandRock,
+	TablerIconsProps
+} from '@tabler/icons-react'
 
 interface ICompany {
 	job: string
@@ -8,11 +14,22 @@ interface ICompany {
 	country: string
 	startDate: string
 	endDate: string
-	icon: TablerIcon
+	icon: (props: TablerIconsProps) => JSX.Element
 	show: boolean
 }
 
 export const COMPANIES: Array<ICompany> = [
+	{
+		job: 'Senior Software Engineer',
+		name: 'Zipdev',
+		website: 'https://zipdev.com',
+		city: 'San Francisco',
+		country: 'United States',
+		startDate: new Date('July 01, 2022').toDateString(),
+		endDate: 'Present',
+		icon: IconBalloon,
+		show: true
+	},
 	{
 		job: 'Senior Software Engineer',
 		name: 'Notch Team',
@@ -20,9 +37,9 @@ export const COMPANIES: Array<ICompany> = [
 		city: 'San Francisco',
 		country: 'United States',
 		startDate: new Date('December 01, 2022').toDateString(),
-		endDate: 'Present',
-		icon: IconBallon,
-		show: false
+		endDate: new Date('March 24, 2023').toDateString(),
+		icon: IconHandRock,
+		show: true
 	},
 	{
 		job: 'Senior Software Engineer',
@@ -32,19 +49,8 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'United States',
 		startDate: new Date('September 01, 2022').toDateString(),
 		endDate: new Date('March 03, 2023').toDateString(),
-		icon: IconBallon,
-		show: false
-	},
-	{
-		job: 'Senior Software Engineer',
-		name: 'Zipdev',
-		website: 'https://zipdev.com',
-		city: 'San Francisco',
-		country: 'United States',
-		startDate: new Date('July 01, 2022').toDateString(),
-		endDate: 'Present',
-		icon: IconBallon,
-		show: false
+		icon: IconBalloon,
+		show: true
 	},
 	{
 		job: 'Senior Software Engineer',
@@ -65,7 +71,7 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('April 01, 2021').toDateString(),
 		endDate: new Date('July 01, 2021').toDateString(),
-		icon: IconBallon,
+		icon: IconBalloon,
 		show: true
 	},
 	{
@@ -87,7 +93,7 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('November 01, 2020').toDateString(),
 		endDate: new Date('April 01, 2021').toDateString(),
-		icon: IconBallon,
+		icon: IconBalloon,
 		show: true
 	},
 	{
@@ -98,7 +104,7 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('June 01, 2020').toDateString(),
 		endDate: new Date('February 01, 2021').toDateString(),
-		icon: IconBallon,
+		icon: IconBalloon,
 		show: true
 	},
 	{
@@ -109,7 +115,7 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('March 01, 2018').toDateString(),
 		endDate: new Date('June 01, 2020').toDateString(),
-		icon: IconBallon,
+		icon: IconBalloon,
 		show: true
 	},
 	{
@@ -120,7 +126,7 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('April 01, 2019').toDateString(),
 		endDate: new Date('September 01, 2019').toDateString(),
-		icon: IconBallon,
+		icon: IconBalloon,
 		show: true
 	},
 	{
@@ -132,7 +138,7 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('March 01, 2018').toDateString(),
 		endDate: new Date('August 01, 2019').toDateString(),
-		icon: IconBallon,
+		icon: IconBalloon,
 		show: true
 	},
 	{
@@ -143,7 +149,7 @@ export const COMPANIES: Array<ICompany> = [
 		country: 'Brazil',
 		startDate: new Date('January 01, 2017').toDateString(),
 		endDate: new Date('April 01, 2019').toDateString(),
-		icon: IconBallon,
+		icon: IconBalloon,
 		show: true
 	}
 ]

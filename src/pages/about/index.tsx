@@ -104,7 +104,8 @@ export default function About() {
 						company.show && (
 							<Timeline.Item
 								key={company.name}
-								bullet={<company.icon size={12} />}
+								bulletSize={28}
+								bullet={<company.icon size={16} />}
 								title={company.job}
 							>
 								<Text color='dimmed' size='sm'>
