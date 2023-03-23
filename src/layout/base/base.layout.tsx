@@ -17,8 +17,8 @@ export interface ILinks {
 
 export const LINKS = [
 	{ label: 'Projects', link: '/projects' },
-	{ label: 'About', link: '/about' },
-	{ label: 'Uses', link: '/uses' }
+	{ label: 'About', link: '/about' }
+	// { label: 'Uses', link: '/uses' }
 ]
 
 export function BaseLayout({ children }: BaseLayoutProps) {

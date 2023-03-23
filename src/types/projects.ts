@@ -17,6 +17,7 @@ export type Skill = {
 }
 
 export type ProjectType = {
+	id: string
 	title: string
 	jobTitle: string
 	image: string

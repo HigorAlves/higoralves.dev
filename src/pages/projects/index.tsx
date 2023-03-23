@@ -1,22 +1,9 @@
-import { Grid, Space } from '@mantine/core'
+import { Space } from '@mantine/core'
 
 import { Title } from '~/components'
-import { Card, IBadgeCardProps } from '~/components/Card/Card.component'
-import { PROJECTS } from '~/utils/projects'
+import { ProjectList } from '~/components/ProjectList/ProjectList.component'
 
 export default function ProjectsPage() {
-	function renderProjects(isFeature: boolean) {
-		return PROJECTS.map((project: IBadgeCardProps) => {
-			if (project.isFeature === isFeature) {
-				return (
-					<Grid.Col key={project.title} sm={12} md={4} lg={4}>
-						<Card {...project} />
-					</Grid.Col>
-				)
-			}
-		})
-	}
-
 	return (
 		<>
 			<Title
@@ -41,7 +28,7 @@ export default function ProjectsPage() {
 
 			<Space h={'xl'} />
 
-			<Grid>{renderProjects(true)}</Grid>
+			<ProjectList isFeature={true} />
 
 			<Space h={60} />
 			<Title
@@ -52,7 +39,7 @@ export default function ProjectsPage() {
 			/>
 
 			<Space h={'xl'} />
-			<Grid>{renderProjects(false)}</Grid>
+			<ProjectList isFeature={false} />
 		</>
 	)
 }

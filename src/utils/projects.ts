@@ -1,10 +1,11 @@
 import BUBBLES_IMG from '~/assets/images/projects/bubbles/bubbles.png'
 import SNAPSTRAT_IMG from '~/assets/images/projects/snapstrat/snapStrat.png'
 import TILED_IMG from '~/assets/images/projects/tiled/tiled.png'
-import { IBadgeCardProps } from '~/components/Card/Card.component'
+import { ProjectType } from '~/types/projects'
 
-export const PROJECTS: Array<IBadgeCardProps> = [
+export const PROJECTS: Array<ProjectType> = [
 	{
+		id: '/projects/snapstrat',
 		title: 'SnapStrat',
 		company: 'Zipdev',
 		jobTitle: 'Senior Software Engineer',
@@ -14,6 +15,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'Empowers enterprises to improve the outcomes of their recurring strategic decisions through intelligent predictive, data-driven decision model.'
 	},
 	{
+		id: '/projects/bubbles',
 		title: 'Bubbles',
 		company: 'Notch Team',
 		jobTitle: 'Senior Software Engineer',
@@ -23,6 +25,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'It is a customer feedback and support platform designed to help businesses interact with their customers in a more personal and effective manner.'
 	},
 	{
+		id: '/projects/tumble',
 		title: 'Tumble',
 		company: 'Right Balance',
 		jobTitle: 'Senior Software Engineer',
@@ -31,6 +34,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'Tumble is a smart laundry system and delivery platform, predictive maintenance and IoT technology with the lowest downtime in the business.'
 	},
 	{
+		id: '/projects/tiled',
 		title: 'Tiled',
 		company: 'Zipdev',
 		jobTitle: 'Senior Software Engineer',
@@ -40,6 +44,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'Tiled is a product that offers a customizable, collaborative workspace for teams to organize, prioritize, and track their work.'
 	},
 	{
+		id: '/projects/hoag',
 		title: 'Hoag',
 		company: 'X-Team',
 		jobTitle: 'Senior Software Engineer',
@@ -48,6 +53,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'Hoag is a non-profit healthcare organization that operates hospitals and other healthcare facilities in Orange County, California.'
 	},
 	{
+		id: '/projects/cie-digital',
 		title: 'CIE Digital',
 		company: 'X-Team',
 		jobTitle: 'Senior Software Engineer',
@@ -56,6 +62,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'Venture studio that serves as an innovation lab and accelerator for bold entrepreneurs who want to transform disruptive ideas into thriving ventures.'
 	},
 	{
+		id: '/projects/ivy-cash',
 		title: 'Ivy Cash',
 		company: 'X-Team',
 		jobTitle: 'Senior Software Engineer',
@@ -64,6 +71,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'IVY allows anyone with a smart phone and web browser to accept NFTs, and a basket of other tokens, just by scanning a QR code.'
 	},
 	{
+		id: '/projects/xhq-platform',
 		title: 'XHQ Platform',
 		company: 'X-Team',
 		jobTitle: 'Senior Software Engineer',
@@ -73,6 +81,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 	},
 
 	{
+		id: '/projects/telus',
 		title: 'Telus',
 		company: 'X-Team',
 		jobTitle: 'Senior Software Engineer',
@@ -81,6 +90,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'Telecommunications company that provides a wide range of communication and entertainment services to both residential and business customers. '
 	},
 	{
+		id: '/projects/good-food-market',
 		title: 'Good food Market',
 		company: 'X-Team',
 		jobTitle: 'Senior Software Engineer',
@@ -89,6 +99,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'Is a platform that offers meal kit delivery service based in Canada, a convenient way to eat well without sacrificing taste or quality.'
 	},
 	{
+		id: '/projects/toro-investimentos',
 		title: 'Toro Investimentos',
 		company: 'Toro',
 		jobTitle: 'Senior Software Engineer',
@@ -97,6 +108,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'An investment platform based in Brazil that provides a comprehensive suite of investment services and tools for individuals and businesses.'
 	},
 	{
+		id: '/projects/monetus',
 		title: 'Monetus',
 		company: 'Monetus',
 		jobTitle: 'Senior Software Engineer',
@@ -105,6 +117,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'An investment platform based in Brazil that do all the job for their clients, auto investing based on AI that follows the user dreams.'
 	},
 	{
+		id: '/projects/traders-club',
 		title: 'Traders Club',
 		company: 'Traders Club',
 		jobTitle: 'Senior Software Engineer',
@@ -113,6 +126,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'A community platform (Mobile & Web) for investor based in Brazil, you can follow the market, benchmark your investments.'
 	},
 	{
+		id: '/projects/altoqi',
 		title: 'AltoQI',
 		company: 'NKey',
 		jobTitle: 'Senior Software Engineer',
@@ -121,6 +135,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			"The company's suite of cloud-based software applications is designed to help organizations streamline and automate key business processes."
 	},
 	{
+		id: '/projects/take',
 		title: 'Take',
 		company: 'Take Blip',
 		jobTitle: 'Software Engineer',
@@ -129,6 +144,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'A single platform with the best solutions to create conversations between companies and customers in the message channels.'
 	},
 	{
+		id: '/projects/sherlock',
 		title: 'Sherlock',
 		company: 'Nata House',
 		jobTitle: 'Software Engineer',
@@ -137,6 +153,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'A platform to go beyond the time in app & total logins, get clear understanding of the true engagement of your user base, lifeblood at your SaaS.'
 	},
 	{
+		id: '/projects/videopeel',
 		title: 'VideoPeel',
 		company: 'Nata House',
 		jobTitle: 'Software Engineer',
@@ -145,6 +162,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'Company that provides video marketing solutions for businesses, designed to help organizations create and manage video campaigns.'
 	},
 	{
+		id: '/projects/resale',
 		title: 'Resale',
 		company: 'Nata House',
 		jobTitle: 'Software Engineer',
@@ -152,8 +170,8 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 		description:
 			'Real estate outlet based in Brazil, with solutions to facilitate access to properties repossessed with financing operations.'
 	},
-
 	{
+		id: '/projects/elderly-health-care',
 		title: 'Elderly Health Care',
 		company: 'FioCruz',
 		jobTitle: 'Senior Software Engineer',
@@ -162,6 +180,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'A program from the Brazilian Government, it`s a part of the Modular Training Program in Health care for the elderly.'
 	},
 	{
+		id: '/projects/unesco',
 		title: 'Consultant',
 		company: 'UNESCO',
 		jobTitle: 'Technology Consultant',
@@ -170,6 +189,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'Member of the technical committee for the creation of courses and digital educational resources and struct for the inside platform.'
 	},
 	{
+		id: '/projects/educacao-livre',
 		title: 'Educação Livre',
 		company: 'UNESCO',
 		jobTitle: 'Software Engineer',
@@ -178,6 +198,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'A platform that offers free, fun and applied education to the real world, especially for young people looking for a work and study opportunities.'
 	},
 	{
+		id: '/projects/hacker-rangers',
 		title: 'Hacker Rangers',
 		company: 'Hacker Rangers',
 		jobTitle: 'Software Engineer',
@@ -186,6 +207,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'A platform that promotes corporate cyber security culture through gamification, to meet the requirements of the LGPD.'
 	},
 	{
+		id: '/projects/ita-fest',
 		title: 'Ita Fest',
 		company: 'Personal',
 		jobTitle: 'Developer',
@@ -194,6 +216,7 @@ export const PROJECTS: Array<IBadgeCardProps> = [
 			'A personal project develop to help people from my city to find the best areas and more secure for the Carnival Festival in Brazil.'
 	},
 	{
+		id: '/projects/gol-a-gol',
 		title: 'Gol a Gol',
 		company: 'Gol a Gol',
 		jobTitle: 'Developer',
