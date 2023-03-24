@@ -25,15 +25,11 @@ export function Footer({ links }: FooterCenteredProps) {
 
 	return (
 		<div className={classes.footer}>
-			<div className={classes.inner}>
-				<Link href={'/'}>
-					<Logo color={'#fff'} variant={'iconWithName'} />
-				</Link>
-
-				<Group className={classes.links}>{items}</Group>
-
-				<SocialMediaLinks spacing='xs' position='right' noWrap />
-			</div>
+			<Link href={'/'}>
+				<Logo color={'#fff'} variant={'iconWithName'} />
+			</Link>
+			<Group className={classes.links}>{items}</Group>
+			<SocialMediaLinks spacing='xs' position='right' noWrap />
 		</div>
 	)
 }
