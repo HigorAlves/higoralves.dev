@@ -1,8 +1,8 @@
 import { Carousel } from '@mantine/carousel'
+import { Space } from '@mantine/core'
 import Image from 'next/image'
 
-import { Title } from '~/components'
-import { HtmlIcon } from '~/components/TechCard/HtmlIcon'
+import { SkillList, Title } from '~/components'
 import { PROJECTS } from '~/utils/projects'
 
 export default function ProjectPage() {
@@ -36,7 +36,9 @@ export default function ProjectPage() {
 				gradient={{ from: 'green', to: 'orange', deg: 150 }}
 			/>
 
-			<HtmlIcon />
+			<Space h='xl' />
+			<Title title={'Technologies'} order={3} />
+			<SkillList skills={['aws', 'awsec2', 'auth0']} />
 		</>
 	)
 }

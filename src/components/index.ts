@@ -7,6 +7,8 @@ export * from './ProjectCard/ProjectCard.component'
 export * from './AboutMe/AboutMe.component'
 export * from './Bio/Bio.component'
 export * from './Career/Career.component'
+export * from './SkillList/SkillList.component'
+export * from './TechCard/TechIcon.component'
 
 // ICONS
 export * from './Icons'

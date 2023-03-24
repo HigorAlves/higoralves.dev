@@ -1,3 +1,5 @@
+import { TECH_ICONS } from '~/components/TechCard/Icons'
+
 enum EmploymentType {
 	FULLTIME = 'Full-time'
 }
@@ -7,13 +9,11 @@ enum LocationType {
 }
 
 export type Skill = {
+	id: keyof typeof TECH_ICONS
 	name: string
 	website: string
 	worksWithSince: Date
-	logo: {
-		light: string
-		dark: string
-	}
+	logo: string
 }
 
 export type ProjectType = {

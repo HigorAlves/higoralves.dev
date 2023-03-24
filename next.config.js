@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const withImages = require('next-images')
 
 const nextConfig = {
 	// Configure pageExtensions to include md and mdx
@@ -7,7 +6,8 @@ const nextConfig = {
 	// Optionally, add any other Next.js config below
 	reactStrictMode: true,
 	trailingSlash: true,
-	productionBrowserSourceMaps: true
+	productionBrowserSourceMaps: true,
+	fileExtensions: ['jpg', 'jpeg', 'png', 'svg']
 }
 
-module.exports = withImages(nextConfig)
+module.exports = nextConfig

@@ -1,5 +1,4 @@
 import { Grid, Text, Title } from '@mantine/core'
-import { Title as BaseTitle } from '@mantine/core/lib/Title/Title'
 import Image from 'next/image'
 
 import ABOUT_ME from '~/assets/images/me/about-me.jpeg'
