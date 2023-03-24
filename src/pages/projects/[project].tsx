@@ -2,6 +2,7 @@ import { Carousel } from '@mantine/carousel'
 import Image from 'next/image'
 
 import { Title } from '~/components'
+import { HtmlIcon } from '~/components/TechCard/HtmlIcon'
 import { PROJECTS } from '~/utils/projects'
 
 export default function ProjectPage() {
@@ -34,6 +35,8 @@ export default function ProjectPage() {
 				order={1}
 				gradient={{ from: 'green', to: 'orange', deg: 150 }}
 			/>
+
+			<HtmlIcon />
 		</>
 	)
 }
