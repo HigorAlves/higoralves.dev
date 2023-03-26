@@ -17,16 +17,16 @@ export default function ProjectPage() {
 				mb={'xl'}
 			>
 				<Carousel.Slide ml={10}>
-					<Image src={PROJECTS[0].image} alt={'test'} fill />
+					<Image src={PROJECTS[0].thumbnail} alt={'test'} fill />
 				</Carousel.Slide>
 				<Carousel.Slide ml={10}>
-					<Image src={PROJECTS[1].image} alt={'test'} fill />
+					<Image src={PROJECTS[1].thumbnail} alt={'test'} fill />
 				</Carousel.Slide>
 				<Carousel.Slide ml={10}>
-					<Image src={PROJECTS[1].image} alt={'test'} fill />
+					<Image src={PROJECTS[1].thumbnail} alt={'test'} fill />
 				</Carousel.Slide>
 				<Carousel.Slide ml={10}>
-					<Image src={PROJECTS[1].image} alt={'test'} fill />
+					<Image src={PROJECTS[1].thumbnail} alt={'test'} fill />
 				</Carousel.Slide>
 			</Carousel>
 

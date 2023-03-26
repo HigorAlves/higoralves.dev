@@ -1,38 +1,25 @@
 import { TECH_ICONS } from '~/components/TechCard/Icons'
-
-enum EmploymentType {
-	FULLTIME = 'Full-time'
-}
-
-enum LocationType {
-	REMOTE = 'Remote'
-}
+import { ICompany } from '~/utils/companies'
 
 export type Skill = {
 	id: keyof typeof TECH_ICONS
 	name: string
 	website: string
 	worksWithSince: Date
-	logo: string
+	logo: JSX.Element
 }
 
 export type ProjectType = {
 	id: string
 	title: string
-	jobTitle: string
-	image: string
+	thumbnail: string | any
 	description: string
 	isFeature: boolean
-	employmentType: EmploymentType
 	skills: Array<Skill>
 	carousel: Array<string>
-	company: {
-		name: string
-		location: string
-		locationType: LocationType
-	}
+	company: ICompany
 	duration: {
-		startDate: Date
-		endDate: Date
+		startDate: Date | string
+		endDate: Date | string
 	}
 }
