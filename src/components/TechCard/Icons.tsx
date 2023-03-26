@@ -30,7 +30,7 @@ import Netlify from '~/assets/svgs/techs/netlify.svg'
 import Nextjs from '~/assets/svgs/techs/nextjs.svg'
 import Nodejs from '~/assets/svgs/techs/nodejs.svg'
 import Npm from '~/assets/svgs/techs/npm.svg'
-import Postgress from '~/assets/svgs/techs/postgress.svg'
+import Postgre from '~/assets/svgs/techs/postgress.svg'
 import Postman from '~/assets/svgs/techs/postman.svg'
 import Prettier from '~/assets/svgs/techs/prettier.svg'
 import Pwa from '~/assets/svgs/techs/pwa.svg'
@@ -86,7 +86,7 @@ export const TECH_ICONS = {
 	nextjs: Nextjs,
 	nodejs: Nodejs,
 	npm: Npm,
-	postgress: Postgress,
+	postgress: Postgre,
 	postman: Postman,
 	prettier: Prettier,
 	pwa: Pwa,
@@ -109,4 +109,9 @@ export const TECH_ICONS = {
 	webassembly: Webassembly,
 	webpack: Webpack
 	// reduxsaga: ReduxSaga,
+	// circleci: CircleCi,
+	// cypress: Cypress,
+	// elasticsearch: Elasticsearch,
+	// githubactions: GithubActions,
+	// reacttestinglibrary: ReactTestingLibrary,
 }
