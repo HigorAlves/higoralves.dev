@@ -3,14 +3,14 @@ import { memo } from 'react'
 import { Paper } from '@mantine/core'
 import Image from 'next/image'
 
-import { TECH_ICONS } from './Icons'
+import { SkillIcons } from '../Icons/SkillIcons'
 
 type KeyOf<T> = keyof T
 type Props = {
-	icon: KeyOf<typeof TECH_ICONS>
+	icon: KeyOf<typeof SkillIcons>
 }
 
-function TechIconComponent({ icon }: Props) {
+function SkillIconComponent({ icon }: Props) {
 	return (
 		<Paper
 			p={'xl'}
@@ -19,9 +19,14 @@ function TechIconComponent({ icon }: Props) {
 			h={100}
 			style={{ display: 'flex', alignItems: 'center' }}
 		>
-			<Image src={TECH_ICONS[icon]} alt={'Skill Icon'} width={50} height={90} />
+			<Image
+				src={SkillIcons[icon].logo}
+				alt={'Skill Icon'}
+				width={50}
+				height={90}
+			/>
 		</Paper>
 	)
 }
 
-export const TechIcon = memo(TechIconComponent)
+export const SkillIcon = memo(SkillIconComponent)

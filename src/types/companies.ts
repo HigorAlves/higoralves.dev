@@ -30,7 +30,7 @@ export type CompanyName =
 export interface ICompany {
 	name: string
 	job: string
-	website: string
+	website: string | null
 	icon: (props: TablerIconsProps) => JSX.Element
 	show: boolean
 	address: {

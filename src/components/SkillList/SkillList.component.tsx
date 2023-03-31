@@ -2,8 +2,9 @@ import { memo } from 'react'
 
 import { Grid } from '@mantine/core'
 
+import { TechIcon } from '~/components/SkillList/TechIcon.component'
+
 import { TECH_ICONS } from '~/components/TechCard/Icons'
-import { TechIcon } from '~/components/TechCard/TechIcon.component'
 
 type Props = {
 	skills: Array<keyof typeof TECH_ICONS>

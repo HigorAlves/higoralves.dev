@@ -107,7 +107,7 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 	},
 	toroinvestimentos: {
 		job: 'Senior Software Engineer',
-		name: 'Toro',
+		name: 'Toro Investimentos',
 		website: 'https://toroinvestimentos.com.br',
 		address: {
 			city: 'Belo Horizonte',
@@ -202,92 +202,161 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 		job: 'Software Engineer',
 		name: 'Take Blip',
 		website: 'https://www.take.net/en/home/',
-		city: 'Belo Horizonte',
-		country: 'Brazil',
-		startDate: new Date('February 01, 2021').toDateString(),
-		endDate: new Date('April 01, 2021').toDateString(),
+		address: {
+			city: 'Belo Horizonte',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('February 01, 2021').toDateString(),
+			endDate: new Date('April 01, 2021').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('February 01, 2021'),
+				new Date('April 01, 2021')
+			)
+		},
 		icon: IconFlag,
 		show: true,
-		employmentType: EmploymentType.FULLTIME,
-		locationType: LocationType.HYBRID
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.HYBRID
+		}
 	},
 	monetus: {
 		job: 'Software Engineer',
 		name: 'Monetus',
 		website: 'https://mobillsinvestimentos.com.br',
-		city: 'Belo Horizonte',
-		country: 'Brazil',
-		startDate: new Date('November 01, 2020').toDateString(),
-		endDate: new Date('April 01, 2021').toDateString(),
+		address: {
+			city: 'Belo Horizonte',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('November 01, 2020').toDateString(),
+			endDate: new Date('April 01, 2021').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('November 01, 2020'),
+				new Date('April 01, 2021')
+			)
+		},
 		icon: IconBalloon,
 		show: true,
-		employmentType: EmploymentType.FULLTIME,
-		locationType: LocationType.REMOTE
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.REMOTE
+		}
 	},
 	natahouse: {
 		job: 'Software Engineer',
 		name: 'Nata.House',
 		website: 'https://natahouse.com',
-		city: 'Belo Horizonte',
-		country: 'Brazil',
-		startDate: new Date('June 01, 2020').toDateString(),
-		endDate: new Date('February 01, 2021').toDateString(),
+		address: {
+			city: 'Belo Horizonte',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('June 01, 2020').toDateString(),
+			endDate: new Date('February 01, 2021').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('June 01, 2020'),
+				new Date('February 01, 2021')
+			)
+		},
 		icon: IconBalloon,
 		show: true,
-		employmentType: EmploymentType.FULLTIME,
-		locationType: LocationType.HYBRID
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.HYBRID
+		}
 	},
 	fabricademvp: {
 		job: 'Software Engineer',
 		name: 'Fabrica de MVP',
-		website: '',
-		city: 'Campinas',
-		country: 'Brazil',
-		startDate: new Date('March 01, 2018').toDateString(),
-		endDate: new Date('June 01, 2020').toDateString(),
+		website: null,
+		address: {
+			city: 'Campinas',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('March 01, 2018').toDateString(),
+			endDate: new Date('June 01, 2020').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('March 01, 2018'),
+				new Date('June 01, 2020')
+			)
+		},
 		icon: IconBalloon,
 		show: true,
-		employmentType: EmploymentType.FULLTIME,
-		locationType: LocationType.HYBRID
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.HYBRID
+		}
 	},
 	perallis: {
 		job: 'Software Engineer',
 		name: 'Perallis Security',
 		website: 'https://hackerrangers.com',
-		city: 'Campinas',
-		country: 'Brazil',
-		startDate: new Date('April 01, 2019').toDateString(),
-		endDate: new Date('September 01, 2019').toDateString(),
+		address: {
+			city: 'Campinas',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('April 01, 2019').toDateString(),
+			endDate: new Date('September 01, 2019').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('April 01, 2019'),
+				new Date('September 01, 2019')
+			)
+		},
 		icon: IconBalloon,
 		show: true,
-		employmentType: EmploymentType.FULLTIME,
-		locationType: LocationType.HYBRID
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.REMOTE
+		}
 	},
 	fiocruz: {
 		job: 'Mobile Engineer',
 		name: 'UNA/SUS',
-		website:
-			'https://www.unasus.gov.br/noticia/una-sus-e-ministerio-da-saude-lancam-nova-versao-do-aplicativo-saude-da-pessoa-idosa',
-		city: 'Brasília',
-		country: 'Brazil',
-		startDate: new Date('March 01, 2018').toDateString(),
-		endDate: new Date('August 01, 2019').toDateString(),
+		website: 'https://www.unasus.gov.br',
+		address: {
+			city: 'Brasília',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('March 01, 2018').toDateString(),
+			endDate: new Date('August 01, 2019').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('March 01, 2018'),
+				new Date('August 01, 2019')
+			)
+		},
 		icon: IconBalloon,
 		show: true,
-		employmentType: EmploymentType.FULLTIME,
-		locationType: LocationType.HYBRID
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.HYBRID
+		}
 	},
 	edulivre: {
 		job: 'Software Engineer',
 		name: 'Educação Livre',
 		website: 'https://www.edulivre.org.br',
-		city: 'Brasília',
-		country: 'Brazil',
-		startDate: new Date('January 01, 2017').toDateString(),
-		endDate: new Date('April 01, 2019').toDateString(),
+		address: {
+			city: 'Brasília',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('January 01, 2017').toDateString(),
+			endDate: new Date('April 01, 2019').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('January 01, 2017'),
+				new Date('April 01, 2019')
+			)
+		},
 		icon: IconBalloon,
 		show: true,
-		employmentType: EmploymentType.FULLTIME,
-		locationType: LocationType.HYBRID
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.HYBRID
+		}
 	}
 }

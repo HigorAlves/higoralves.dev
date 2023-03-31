@@ -61,7 +61,7 @@ import Webassembly from '~/assets/svgs/techs/webassembly.svg'
 import Webpack from '~/assets/svgs/techs/webpack.svg'
 import { Skill } from '~/types/projects'
 
-export const TECH_ICONS: Record<string, Skill> = {
+export const SkillIcons: Record<string, Skill> = {
 	auth0: {
 		id: 'auth0',
 		name: 'Auth 0',

@@ -1,12 +1,12 @@
-import { TECH_ICONS } from '~/components/TechCard/Icons'
-import { ICompany } from '~/utils/companies'
+import { SkillIcons } from '~/components/Icons/SkillIcons'
+import { ICompany } from '~/types/companies'
 
 export type Skill = {
-	id: keyof typeof TECH_ICONS
+	id: keyof typeof SkillIcons
 	name: string
 	website: string
 	worksWithSince: Date
-	logo: JSX.Element
+	logo: JSX.Element | any
 }
 
 export type ProjectType = {
