@@ -158,7 +158,7 @@ export const PROJECTS: Array<ProjectType> = [
 	},
 	{
 		id: '/projects/toro-investimentos',
-		title: 'Toro Investimentos',
+		title: 'Toro',
 		company: COMPANIES.toroinvestimentos,
 		isFeature: false,
 		carousel: [],
@@ -329,7 +329,7 @@ export const PROJECTS: Array<ProjectType> = [
 	},
 	{
 		id: '/projects/hacker-rangers',
-		title: 'Hacker Rangers',
+		title: 'Hacker',
 		company: COMPANIES.perallis,
 		isFeature: false,
 		carousel: [],
