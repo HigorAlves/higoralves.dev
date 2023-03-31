@@ -1,10 +1,10 @@
-import { Space } from '@mantine/core'
+import { Container, Space } from '@mantine/core'
 
 import { Title, AboutMe, Bio, Career } from '~/components'
 
 export default function About() {
 	return (
-		<>
+		<Container mt={'xl'}>
 			<Title
 				gradient={{ from: 'pink', to: 'purple', deg: 150 }}
 				title={'Explore. Create. Share.'}
@@ -19,6 +19,6 @@ export default function About() {
 			<Bio />
 			<Space h={40} />
 			<Career />
-		</>
+		</Container>
 	)
 }

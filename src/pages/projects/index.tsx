@@ -1,11 +1,11 @@
-import { Space } from '@mantine/core'
+import { Container, Space } from '@mantine/core'
 
 import { Title } from '~/components'
 import { ProjectList } from '~/components/ProjectList/ProjectList.component'
 
 export default function ProjectsPage() {
 	return (
-		<>
+		<Container mt={'xl'}>
 			<Title
 				title={'Work. Hobby. Open Source'}
 				gradient={{ from: 'teal', to: 'green', deg: 150 }}
@@ -40,6 +40,6 @@ export default function ProjectsPage() {
 
 			<Space h={'xl'} />
 			<ProjectList isFeature={false} />
-		</>
+		</Container>
 	)
 }

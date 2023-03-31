@@ -1,5 +1,5 @@
 import { Carousel } from '@mantine/carousel'
-import { Space } from '@mantine/core'
+import { Container, Space } from '@mantine/core'
 import Image from 'next/image'
 
 import { SkillList, Title } from '~/components'
@@ -7,7 +7,7 @@ import { PROJECTS } from '~/utils/projects'
 
 export default function ProjectPage() {
 	return (
-		<>
+		<Container fluid mt={'xl'}>
 			<Carousel
 				height={400}
 				slideSize='33%'
@@ -30,15 +30,16 @@ export default function ProjectPage() {
 				</Carousel.Slide>
 			</Carousel>
 
-			<Title
-				title={'SnapStrat'}
-				order={1}
-				gradient={{ from: 'green', to: 'orange', deg: 150 }}
-			/>
+			<Container>
+				<Title
+					title={'SnapStrat'}
+					order={1}
+					gradient={{ from: 'green', to: 'orange', deg: 150 }}
+				/>
 
-			<Space h='xl' />
-			<Title title={'Technologies'} order={3} />
-			<SkillList skills={['aws', 'awsec2', 'auth0']} />
-		</>
+				<Space h='xl' />
+				<Title title={'Technologies'} order={3} />
+			</Container>
+		</Container>
 	)
 }

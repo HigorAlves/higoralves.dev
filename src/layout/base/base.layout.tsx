@@ -1,10 +1,8 @@
 import React, { ReactElement } from 'react'
 
-import { Container } from '@mantine/core'
+import { AppShell } from '@mantine/core'
 
 import { Footer, Header } from '~/components'
-
-import { useStyles } from './base.style'
 
 interface BaseLayoutProps {
 	children: ReactElement
@@ -18,21 +16,15 @@ export interface ILinks {
 export const LINKS = [
 	{ label: 'Projects', link: '/projects' },
 	{ label: 'About', link: '/about' }
-	// { label: 'Uses', link: '/uses' }
 ]
 
 export function BaseLayout({ children }: BaseLayoutProps) {
-	const { classes } = useStyles()
-
 	return (
-		<div className={classes.baseLayout}>
-			<div className={classes.header}>
-				<Header links={LINKS} />
-			</div>
-			<main className={classes.main}>
-				<Container style={{ height: '100%' }}>{children}</Container>
-			</main>
-			<Footer links={LINKS} />
-		</div>
+		<AppShell
+			header={<Header links={LINKS} />}
+			footer={<Footer links={LINKS} />}
+		>
+			{children}
+		</AppShell>
 	)
 }
