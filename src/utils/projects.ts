@@ -1,10 +1,10 @@
 import BUBBLES_IMG from '~/assets/images/projects/bubbles/bubbles.png'
 import SNAPSTRAT_IMG from '~/assets/images/projects/snapstrat/snapStrat.png'
 import TILED_IMG from '~/assets/images/projects/tiled/tiled.png'
+import { SkillIcons } from '~/components/Icons/SkillIcons'
 import { ProjectType } from '~/types/projects'
 import { COMPANIES } from '~/utils/companies'
 
-// TODO double check the data and skills
 export const PROJECTS: Array<ProjectType> = [
 	{
 		id: '/projects/snapstrat',
@@ -13,7 +13,7 @@ export const PROJECTS: Array<ProjectType> = [
 		description:
 			'Empowers enterprises to improve the outcomes of their recurring strategic decisions through intelligent predictive, data-driven decision model.',
 		isFeature: true,
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		carousel: [''],
 		company: COMPANIES.zipdev,
 		duration: {
@@ -27,7 +27,7 @@ export const PROJECTS: Array<ProjectType> = [
 		description:
 			'It is a customer feedback and support platform designed to help businesses interact with their customers in a more personal and effective manner.',
 		isFeature: true,
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		carousel: [''],
 		company: COMPANIES.notchteam,
 		thumbnail: BUBBLES_IMG,
@@ -42,7 +42,7 @@ export const PROJECTS: Array<ProjectType> = [
 		description:
 			'Tumble is a smart laundry system and delivery platform, predictive maintenance and IoT technology with the lowest downtime in the business.',
 		isFeature: false,
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		carousel: [],
 		company: COMPANIES.righbalance,
 		thumbnail: '',
@@ -60,7 +60,7 @@ export const PROJECTS: Array<ProjectType> = [
 		description:
 			'Tiled is a product that offers a customizable, collaborative workspace for teams to organize, prioritize, and track their work.',
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		duration: {
 			startDate: new Date('July 01, 2022').toDateString(),
 			endDate: new Date('January 10, 2023').toDateString()
@@ -74,7 +74,7 @@ export const PROJECTS: Array<ProjectType> = [
 		description:
 			'Hoag is a non-profit healthcare organization that operates hospitals and other healthcare facilities in Orange County, California.',
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('August 01, 2021').toDateString(),
@@ -87,7 +87,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.xteam,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		duration: {
 			startDate: new Date('August 01, 2021').toDateString(),
 			endDate: new Date('December 01, 2022').toDateString()
@@ -102,7 +102,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.xteam,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		duration: {
 			startDate: new Date('August 01, 2021').toDateString(),
 			endDate: new Date('December 01, 2022').toDateString()
@@ -116,7 +116,7 @@ export const PROJECTS: Array<ProjectType> = [
 		title: 'XHQ Platform',
 		company: COMPANIES.xteam,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		isFeature: false,
 		duration: {
 			startDate: new Date('August 01, 2021').toDateString(),
@@ -132,7 +132,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.xteam,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		duration: {
 			startDate: new Date('August 01, 2021').toDateString(),
 			endDate: new Date('December 01, 2022').toDateString()
@@ -147,7 +147,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.xteam,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		duration: {
 			startDate: new Date('August 01, 2021').toDateString(),
 			endDate: new Date('December 01, 2022').toDateString()
@@ -162,7 +162,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.toroinvestimentos,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		duration: {
 			startDate: new Date('April 01, 2021').toDateString(),
 			endDate: new Date('July 01, 2021').toDateString()
@@ -177,7 +177,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.monetus,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('November 01, 2020').toDateString(),
@@ -192,7 +192,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.tradersclub,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('November 01, 2020').toDateString(),
@@ -207,7 +207,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.nkey,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('November 01, 2020').toDateString(),
@@ -222,7 +222,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.takeblip,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('February 01, 2021').toDateString(),
@@ -237,7 +237,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.natahouse,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('June 01, 2020').toDateString(),
@@ -252,7 +252,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.natahouse,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('June 01, 2020').toDateString(),
@@ -267,7 +267,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.natahouse,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('June 01, 2020').toDateString(),
@@ -282,7 +282,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.fiocruz,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('March 01, 2018').toDateString(),
@@ -297,7 +297,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.unesco,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('March 01, 2018').toDateString(),
@@ -312,7 +312,13 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.unesco,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [
+			SkillIcons.react,
+			SkillIcons.redux,
+			SkillIcons.aws,
+			SkillIcons.typescript,
+			SkillIcons.javascript
+		],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('January 01, 2017').toDateString(),
@@ -327,7 +333,13 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.perallis,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [
+			SkillIcons.react,
+			SkillIcons.redux,
+			SkillIcons.aws,
+			SkillIcons.typescript,
+			SkillIcons.javascript
+		],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('April 01, 2019').toDateString(),
@@ -342,7 +354,13 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.fabricademvp,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [
+			SkillIcons.react,
+			SkillIcons.reactNative,
+			SkillIcons.firebase,
+			SkillIcons.typescript,
+			SkillIcons.javascript
+		],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('March 01, 2018').toDateString(),
@@ -357,7 +375,16 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.fabricademvp,
 		isFeature: false,
 		carousel: [],
-		skills: [],
+		skills: [
+			SkillIcons.react,
+			SkillIcons.nodejs,
+			SkillIcons.mongodb,
+			SkillIcons.firebase,
+			SkillIcons.reactNative,
+			SkillIcons.eslint,
+			SkillIcons.typescript,
+			SkillIcons.javascript
+		],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('March 01, 2018').toDateString(),
