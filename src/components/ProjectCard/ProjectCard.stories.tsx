@@ -2,7 +2,7 @@ import React from 'react'
 
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { Card } from '~/components'
+import { ProjectCard as Card } from '~/components/ProjectCard/ProjectCard.component'
 
 export default {
 	title: 'Design Library/Components/Card',
@@ -15,8 +15,6 @@ export const Primary = Template.bind({})
 
 Primary.args = {
 	title: 'Bubbles',
-	company: 'Notch Team',
-	jobTitle: 'Senior Software Engineer',
 	isFeature: true,
 	description:
 		'It is a customer feedback and support platform designed to help businesses interact with their customers in a more personal and effective manner.'

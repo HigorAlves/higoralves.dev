@@ -335,13 +335,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.unesco,
 		isFeature: false,
 		carousel: [],
-		skills: [
-			SkillIcons.react,
-			SkillIcons.redux,
-			SkillIcons.aws,
-			SkillIcons.typescript,
-			SkillIcons.javascript
-		],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('January 01, 2017').toDateString(),
@@ -357,13 +351,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.perallis,
 		isFeature: false,
 		carousel: [],
-		skills: [
-			SkillIcons.react,
-			SkillIcons.redux,
-			SkillIcons.aws,
-			SkillIcons.typescript,
-			SkillIcons.javascript
-		],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('April 01, 2019').toDateString(),
@@ -379,13 +367,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.fabricademvp,
 		isFeature: false,
 		carousel: [],
-		skills: [
-			SkillIcons.react,
-			SkillIcons.reactNative,
-			SkillIcons.firebase,
-			SkillIcons.typescript,
-			SkillIcons.javascript
-		],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('March 01, 2018').toDateString(),
@@ -401,16 +383,7 @@ export const PROJECTS: Array<ProjectType> = [
 		company: COMPANIES.fabricademvp,
 		isFeature: false,
 		carousel: [],
-		skills: [
-			SkillIcons.react,
-			SkillIcons.nodejs,
-			SkillIcons.mongodb,
-			SkillIcons.firebase,
-			SkillIcons.reactNative,
-			SkillIcons.eslint,
-			SkillIcons.typescript,
-			SkillIcons.javascript
-		],
+		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('March 01, 2018').toDateString(),
