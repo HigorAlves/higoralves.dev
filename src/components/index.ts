@@ -8,7 +8,6 @@ export * from './AboutMe/AboutMe.component'
 export * from './Bio/Bio.component'
 export * from './Career/Career.component'
 export * from './SkillList/SkillList.component'
-export * from './SkillList/TechIcon.component'
 
 // ICONS
 export * from './Icons'

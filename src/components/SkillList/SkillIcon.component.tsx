@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { Paper } from '@mantine/core'
+import { Paper, Tooltip } from '@mantine/core'
 import Image from 'next/image'
 
 import { SkillIcons } from '../Icons/SkillIcons'
@@ -8,9 +8,10 @@ import { SkillIcons } from '../Icons/SkillIcons'
 type KeyOf<T> = keyof T
 type Props = {
 	icon: KeyOf<typeof SkillIcons>
+	name: string
 }
 
-function SkillIconComponent({ icon }: Props) {
+function SkillIconComponent({ icon, name }: Props) {
 	return (
 		<Paper
 			p={'xl'}
@@ -19,12 +20,9 @@ function SkillIconComponent({ icon }: Props) {
 			h={100}
 			style={{ display: 'flex', alignItems: 'center' }}
 		>
-			<Image
-				src={SkillIcons[icon].logo}
-				alt={'Skill Icon'}
-				width={50}
-				height={90}
-			/>
+			<Tooltip label={name} offset={-10} withArrow>
+				<Image src={icon} alt={'Skill Icon'} width={50} height={90} />
+			</Tooltip>
 		</Paper>
 	)
 }

@@ -66,322 +66,322 @@ export const SkillIcons: Record<string, Skill> = {
 		id: 'auth0',
 		name: 'Auth 0',
 		website: 'https://auth0.com/',
-		worksWithSince: new Date(2019, 0, 1),
+		worksWithSince: new Date(2019, 0, 1).toDateString(),
 		logo: Auth0
 	},
 	aws: {
 		id: 'aws',
 		name: 'AWS',
 		website: 'https://aws.amazon.com/',
-		worksWithSince: new Date(2019, 0, 1),
+		worksWithSince: new Date(2019, 0, 1).toDateString(),
 		logo: AWS
 	},
 	awsservices: {
 		id: 'awsservices',
 		name: 'Amazon Web Services',
 		website: 'https://aws.amazon.com/',
-		worksWithSince: new Date(2019, 0, 1),
+		worksWithSince: new Date(2019, 0, 1).toDateString(),
 		logo: AwsServices
 	},
 	awsec2: {
 		id: 'awsec2',
 		name: 'Amazon EC2',
 		website: 'https://aws.amazon.com/ec2/',
-		worksWithSince: new Date(2019, 0, 1),
+		worksWithSince: new Date(2019, 0, 1).toDateString(),
 		logo: AwsEc2
 	},
 	css: {
 		id: 'css',
 		name: 'CSS',
 		website: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-		worksWithSince: new Date(2014, 0, 1),
+		worksWithSince: new Date(2014, 0, 1).toDateString(),
 		logo: Css
 	},
 	docker: {
 		id: 'docker',
 		name: 'Docker',
 		website: 'https://www.docker.com/',
-		worksWithSince: new Date(2017, 0, 1),
+		worksWithSince: new Date(2017, 0, 1).toDateString(),
 		logo: Docker
 	},
 	electron: {
 		id: 'electron',
 		name: 'Electron',
 		website: 'https://www.electronjs.org/',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: Electron
 	},
 	eslint: {
 		id: 'eslint',
 		name: 'Eslint',
 		website: 'https://eslint.org/',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: ESLint
 	},
 	figma: {
 		id: 'figma',
 		name: 'Figma',
 		website: 'https://www.figma.com/',
-		worksWithSince: new Date(2019, 0, 1),
+		worksWithSince: new Date(2019, 0, 1).toDateString(),
 		logo: Figma
 	},
 	firebase: {
 		id: 'firebase',
 		name: 'Firebase',
 		website: 'https://firebase.google.com/',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: Firebase
 	},
 	flutter: {
 		id: 'flutter',
 		name: 'Flutter',
 		website: 'https://flutter.dev/',
-		worksWithSince: new Date(2020, 0, 1),
+		worksWithSince: new Date(2020, 0, 1).toDateString(),
 		logo: Flutter
 	},
 	git: {
 		id: 'git',
 		name: 'Git',
 		website: '',
-		worksWithSince: new Date(2015, 0, 1),
+		worksWithSince: new Date(2015, 0, 1).toDateString(),
 		logo: Git
 	},
 	github: {
 		id: 'github',
 		name: 'GitHub',
 		website: '',
-		worksWithSince: new Date(2015, 0, 1),
+		worksWithSince: new Date(2015, 0, 1).toDateString(),
 		logo: Github
 	},
 	golang: {
 		id: 'golang',
 		name: 'Go lang',
 		website: '',
-		worksWithSince: new Date(2022, 0, 1),
+		worksWithSince: new Date(2022, 0, 1).toDateString(),
 		logo: Golang
 	},
 	googleanalytics: {
 		id: 'googleanalytics',
 		name: 'Google Analytics',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: GoogleAnalytics
 	},
 	googlecloud: {
 		id: 'googlecloud',
 		name: 'Google Cloud',
 		website: '',
-		worksWithSince: new Date(2017, 0, 1),
+		worksWithSince: new Date(2017, 0, 1).toDateString(),
 		logo: GoogleCloud
 	},
 	graphql: {
 		id: 'graphql',
 		name: 'GraphQL',
 		website: '',
-		worksWithSince: new Date(2019, 0, 1),
+		worksWithSince: new Date(2019, 0, 1).toDateString(),
 		logo: Graphql
 	},
 	html: {
 		id: 'html',
 		name: 'HTML 5',
 		website: '',
-		worksWithSince: new Date(2015, 0, 1),
+		worksWithSince: new Date(2015, 0, 1).toDateString(),
 		logo: Html
 	},
 	jamstack: {
 		id: 'jamstack',
 		name: 'JamStack',
 		website: '',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: JamStack
 	},
 	javascript: {
 		id: 'javascript',
 		name: 'Javascript',
 		website: '',
-		worksWithSince: new Date(2015, 0, 1),
+		worksWithSince: new Date(2015, 0, 1).toDateString(),
 		logo: Javascript
 	},
 	jest: {
 		id: 'jest',
 		name: 'Jest',
 		website: '',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: Jest
 	},
 	jira: {
 		id: 'jira',
 		name: 'Jira',
 		website: '',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: Jira
 	},
 	k8s: {
 		id: 'k8s',
 		name: 'Kubernets',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: K8s
 	},
 	mocha: {
 		id: 'mocha',
 		name: 'Mocha',
 		website: '',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: Mocha
 	},
 	mongodb: {
 		id: 'mongodb',
 		name: 'MongoDB',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: MongoDb
 	},
 	mui: {
 		id: 'mui',
 		name: 'Material UI',
 		website: '',
-		worksWithSince: new Date(2015, 0, 1),
+		worksWithSince: new Date(2015, 0, 1).toDateString(),
 		logo: Mui
 	},
 	mysql: {
 		id: 'mysql',
 		name: 'MySQL',
 		website: '',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: Mysql
 	},
 	nestjs: {
 		id: 'nestjs',
 		name: 'NestJS',
 		website: '',
-		worksWithSince: new Date(2019, 0, 1),
+		worksWithSince: new Date(2019, 0, 1).toDateString(),
 		logo: NestJs
 	},
 	netlify: {
 		id: 'netlify',
 		name: 'Netlify',
 		website: '',
-		worksWithSince: new Date(2020, 0, 1),
+		worksWithSince: new Date(2020, 0, 1).toDateString(),
 		logo: Netlify
 	},
 	nextjs: {
 		id: 'nextjs',
 		name: 'NextJS',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: Nextjs
 	},
 	nodejs: {
 		id: 'nodejs',
 		name: 'NodeJS',
 		website: '',
-		worksWithSince: new Date(2015, 0, 1),
+		worksWithSince: new Date(2015, 0, 1).toDateString(),
 		logo: Nodejs
 	},
 	npm: {
 		id: 'npm',
 		name: 'NPM',
 		website: '',
-		worksWithSince: new Date(2015, 0, 1),
+		worksWithSince: new Date(2015, 0, 1).toDateString(),
 		logo: Npm
 	},
 	postgres: {
 		id: 'postgres',
 		name: 'Postgres SQL',
 		website: '',
-		worksWithSince: new Date(2017, 0, 1),
+		worksWithSince: new Date(2017, 0, 1).toDateString(),
 		logo: Postgre
 	},
 	postman: {
 		id: 'postman',
 		name: 'Postman',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: Postman
 	},
 	prettier: {
 		id: 'prettier',
 		name: 'Prettier',
 		website: '',
-		worksWithSince: new Date(2017, 0, 1),
+		worksWithSince: new Date(2017, 0, 1).toDateString(),
 		logo: Prettier
 	},
 	pwa: {
 		id: 'pwa',
 		name: 'PWA',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: Pwa
 	},
 	python: {
 		id: 'python',
 		name: 'Python',
 		website: '',
-		worksWithSince: new Date(2020, 0, 1),
+		worksWithSince: new Date(2020, 0, 1).toDateString(),
 		logo: Python
 	},
 	react: {
 		id: 'react',
 		name: 'ReactJS',
 		website: '',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: ReactLogo
 	},
 	reactquery: {
 		id: 'reactquery',
 		name: 'React Query',
 		website: '',
-		worksWithSince: new Date(2020, 0, 1),
+		worksWithSince: new Date(2020, 0, 1).toDateString(),
 		logo: ReactQuery
 	},
 	reactrouter: {
 		id: 'reactrouter',
 		name: 'React Router',
 		website: '',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: ReactRouter
 	},
 	redis: {
 		id: 'redis',
 		name: 'Redis',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: Redis
 	},
 	redux: {
 		id: 'redux',
 		name: 'Redux',
 		website: '',
-		worksWithSince: new Date(2017, 0, 1),
+		worksWithSince: new Date(2017, 0, 1).toDateString(),
 		logo: Redux
 	},
 	sass: {
 		id: 'sass',
 		name: 'Sass',
 		website: '',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: Sass
 	},
 	serverless: {
 		id: 'serverless',
 		name: 'Serverless',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: Serverless
 	},
 	storybook: {
 		id: 'storybook',
 		name: 'Storybook',
 		website: '',
-		worksWithSince: new Date(2019, 0, 1),
+		worksWithSince: new Date(2019, 0, 1).toDateString(),
 		logo: Storybook
 	},
 	svelte: {
 		id: 'Svelte',
 		name: 'Svelte',
 		website: '',
-		worksWithSince: new Date(2023, 0, 1),
+		worksWithSince: new Date(2023, 0, 1).toDateString(),
 		// @ts-ignore
 		logo: Svelte
 	},
@@ -389,105 +389,105 @@ export const SkillIcons: Record<string, Skill> = {
 		id: 'swift',
 		name: 'Swift',
 		website: '',
-		worksWithSince: new Date(2023, 0, 1),
+		worksWithSince: new Date(2023, 0, 1).toDateString(),
 		logo: Swift
 	},
 	tailwind: {
 		id: 'tailwind',
 		name: 'Tailwind',
 		website: '',
-		worksWithSince: new Date(2020, 0, 1),
+		worksWithSince: new Date(2020, 0, 1).toDateString(),
 		logo: Tailwind
 	},
 	trpc: {
 		id: 'trpc',
 		name: 'TRPC',
 		website: '',
-		worksWithSince: new Date(2022, 0, 1),
+		worksWithSince: new Date(2022, 0, 1).toDateString(),
 		logo: Trpc
 	},
 	typescript: {
 		id: 'typescript',
 		name: 'Typescript',
 		website: '',
-		worksWithSince: new Date(2016, 0, 1),
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: Typescript
 	},
 	vite: {
 		id: 'vite',
 		name: 'Vite JS',
 		website: '',
-		worksWithSince: new Date(2022, 0, 1),
+		worksWithSince: new Date(2022, 0, 1).toDateString(),
 		logo: Vite
 	},
 	vue: {
 		id: 'vue',
 		name: 'VueJS',
 		website: '',
-		worksWithSince: new Date(2022, 0, 1),
+		worksWithSince: new Date(2022, 0, 1).toDateString(),
 		logo: Vue
 	},
 	webassembly: {
 		id: 'webassembly',
 		name: 'Web Assembly',
 		website: '',
-		worksWithSince: new Date(2023, 0, 1),
+		worksWithSince: new Date(2023, 0, 1).toDateString(),
 		logo: Webassembly
 	},
 	webpack: {
 		id: 'webpack',
 		name: 'Webpack',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: Webpack
 	},
 	vercel: {
 		id: 'vercel',
 		name: 'Vercel',
 		website: '',
-		worksWithSince: new Date(2020, 0, 1),
+		worksWithSince: new Date(2020, 0, 1).toDateString(),
 		logo: Vercel
 	},
 	cypress: {
 		id: 'cypress',
 		name: 'Cypress',
 		website: '',
-		worksWithSince: new Date(2019, 0, 1),
+		worksWithSince: new Date(2019, 0, 1).toDateString(),
 		logo: Cypress
 	},
 	reduxsaga: {
 		id: 'reduxsaga',
 		name: 'Redux Saga',
 		website: '',
-		worksWithSince: new Date(2017, 0, 1),
+		worksWithSince: new Date(2017, 0, 1).toDateString(),
 		logo: ReduxSaga
 	},
 	circleci: {
 		id: 'circleci',
 		name: 'Circle CI',
 		website: '',
-		worksWithSince: new Date(2020, 0, 1),
+		worksWithSince: new Date(2020, 0, 1).toDateString(),
 		logo: CircleCi
 	},
 	elasticsearch: {
 		id: 'elasticsearch',
 		name: 'Elasticsearch',
 		website: '',
-		worksWithSince: new Date(2021, 0, 1),
+		worksWithSince: new Date(2021, 0, 1).toDateString(),
 		logo: Elasticsearch
 	},
 	githubactions: {
 		id: 'githubactions',
 		name: 'Github Actions',
 		website: '',
-		worksWithSince: new Date(2021, 0, 1),
+		worksWithSince: new Date(2021, 0, 1).toDateString(),
 		logo: Githubactions
 	},
 	reacttestlibrary: {
 		id: 'reacttestlibrary',
 		name: 'React Test Library',
 		website: '',
-		worksWithSince: new Date(2018, 0, 1),
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		// @ts-ignore
 		logo: Reacttestlibrary
 	}

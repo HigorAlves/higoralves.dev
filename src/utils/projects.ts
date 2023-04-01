@@ -7,11 +7,14 @@ import { COMPANIES } from '~/utils/companies'
 
 export const PROJECTS: Array<ProjectType> = [
 	{
-		id: '/projects/snapstrat',
+		id: 'snapstrat',
+		slug: '/projects/snapstrat',
 		title: 'SnapStrat',
 		thumbnail: SNAPSTRAT_IMG,
 		description:
 			'Empowers enterprises to improve the outcomes of their recurring strategic decisions through intelligent predictive, data-driven decision model.',
+		introduction:
+			'SnapStrat is a six-year-old enterprise software startup focused on helping organizations optimize their most important decision processes. While their business is software, they measure their success by the outcomes their customers achieve from using their product on an ongoing basis.\n They are fully remote; Their leadership team is based in Oakland CA, and Las Cruces NM. Financially stable company growing our team based on revenue, not VC funding. Expanding responsibly, adding new customers when we can do so without impacting the very high service levels their customer base expects. The launch customer, a well-known global retailer, has used our platform for years for one of their most important marketing decision-making and operational processes.\n Their technical strategy is to have a “fast code” platform, built in Typescript to enable very rapid development and maintenance of custom applications for each of our customers.',
 		isFeature: true,
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		carousel: [''],
@@ -22,7 +25,8 @@ export const PROJECTS: Array<ProjectType> = [
 		}
 	},
 	{
-		id: '/projects/bubbles',
+		id: 'bubbles',
+		slug: '/projects/bubbles',
 		title: 'Bubbles',
 		description:
 			'It is a customer feedback and support platform designed to help businesses interact with their customers in a more personal and effective manner.',
@@ -37,7 +41,8 @@ export const PROJECTS: Array<ProjectType> = [
 		}
 	},
 	{
-		id: '/projects/tumble',
+		id: 'tumble',
+		slug: '/projects/tumble',
 		title: 'Tumble',
 		description:
 			'Tumble is a smart laundry system and delivery platform, predictive maintenance and IoT technology with the lowest downtime in the business.',
@@ -52,7 +57,8 @@ export const PROJECTS: Array<ProjectType> = [
 		}
 	},
 	{
-		id: '/projects/tiled',
+		id: 'tiled',
+		slug: '/projects/tiled',
 		title: 'Tiled',
 		company: COMPANIES.zipdev,
 		thumbnail: TILED_IMG,
@@ -67,7 +73,8 @@ export const PROJECTS: Array<ProjectType> = [
 		}
 	},
 	{
-		id: '/projects/hoag',
+		id: 'hoag',
+		slug: '/projects/hoag',
 		title: 'Hoag',
 		company: COMPANIES.xteam,
 		isFeature: false,
@@ -82,7 +89,8 @@ export const PROJECTS: Array<ProjectType> = [
 		}
 	},
 	{
-		id: '/projects/cie-digital',
+		id: 'cie-digital',
+		slug: '/projects/cie-digital',
 		title: 'CIE Digital',
 		company: COMPANIES.xteam,
 		isFeature: false,
@@ -97,7 +105,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'Venture studio that serves as an innovation lab and accelerator for bold entrepreneurs who want to transform disruptive ideas into thriving ventures.'
 	},
 	{
-		id: '/projects/ivy-cash',
+		id: 'ivy-cash',
+		slug: '/projects/ivy-cash',
 		title: 'Ivy Cash',
 		company: COMPANIES.xteam,
 		isFeature: false,
@@ -112,7 +121,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'IVY allows anyone with a smart phone and web browser to accept NFTs, and a basket of other tokens, just by scanning a QR code.'
 	},
 	{
-		id: '/projects/xhq-platform',
+		id: 'xhq-platform',
+		slug: '/projects/xhq-platform',
 		title: 'XHQ Platform',
 		company: COMPANIES.xteam,
 		carousel: [],
@@ -127,7 +137,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'XHQ Platform is a internal platform to manage teams, financial and cultural part of X-Team, you can generate insides and challenges.'
 	},
 	{
-		id: '/projects/telus',
+		id: 'telus',
+		slug: '/projects/telus',
 		title: 'Telus',
 		company: COMPANIES.xteam,
 		isFeature: false,
@@ -142,7 +153,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'Telecommunications company that provides a wide range of communication and entertainment services to both residential and business customers. '
 	},
 	{
-		id: '/projects/good-food-market',
+		id: 'good-food-market',
+		slug: '/projects/good-food-market',
 		title: 'Good food Market',
 		company: COMPANIES.xteam,
 		isFeature: false,
@@ -157,7 +169,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'Is a platform that offers meal kit delivery service based in Canada, a convenient way to eat well without sacrificing taste or quality.'
 	},
 	{
-		id: '/projects/toro-investimentos',
+		id: 'toro-investimentos',
+		slug: '/projects/toro-investimentos',
 		title: 'Toro',
 		company: COMPANIES.toroinvestimentos,
 		isFeature: false,
@@ -172,7 +185,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'An investment platform based in Brazil that provides a comprehensive suite of investment services and tools for individuals and businesses.'
 	},
 	{
-		id: '/projects/monetus',
+		id: 'monetus',
+		slug: '/projects/monetus',
 		title: 'Monetus',
 		company: COMPANIES.monetus,
 		isFeature: false,
@@ -187,7 +201,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'An investment platform based in Brazil that do all the job for their clients, auto investing based on AI that follows the user dreams.'
 	},
 	{
-		id: '/projects/traders-club',
+		id: 'traders-club',
+		slug: '/projects/traders-club',
 		title: 'Traders Club',
 		company: COMPANIES.tradersclub,
 		isFeature: false,
@@ -202,7 +217,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'A community platform (Mobile & Web) for investor based in Brazil, you can follow the market, benchmark your investments.'
 	},
 	{
-		id: '/projects/altoqi',
+		id: 'altoqi',
+		slug: '/projects/altoqi',
 		title: 'AltoQI',
 		company: COMPANIES.nkey,
 		isFeature: false,
@@ -217,7 +233,8 @@ export const PROJECTS: Array<ProjectType> = [
 			"The company's suite of cloud-based software applications is designed to help organizations streamline and automate key business processes."
 	},
 	{
-		id: '/projects/take',
+		id: 'take',
+		slug: '/projects/take',
 		title: 'Take',
 		company: COMPANIES.takeblip,
 		isFeature: false,
@@ -232,7 +249,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'A single platform with the best solutions to create conversations between companies and customers in the message channels.'
 	},
 	{
-		id: '/projects/sherlock',
+		id: 'sherlock',
+		slug: '/projects/sherlock',
 		title: 'Sherlock',
 		company: COMPANIES.natahouse,
 		isFeature: false,
@@ -247,7 +265,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'A platform to go beyond the time in app & total logins, get clear understanding of the true engagement of your user base, lifeblood at your SaaS.'
 	},
 	{
-		id: '/projects/videopeel',
+		id: 'videopeel',
+		slug: '/projects/videopeel',
 		title: 'VideoPeel',
 		company: COMPANIES.natahouse,
 		isFeature: false,
@@ -262,7 +281,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'Company that provides video marketing solutions for businesses, designed to help organizations create and manage video campaigns.'
 	},
 	{
-		id: '/projects/resale',
+		id: 'resale',
+		slug: '/projects/resale',
 		title: 'Resale',
 		company: COMPANIES.natahouse,
 		isFeature: false,
@@ -277,7 +297,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'Real estate outlet based in Brazil, with solutions to facilitate access to properties repossessed with financing operations.'
 	},
 	{
-		id: '/projects/elderly-health-care',
+		id: 'elderly-health-care',
+		slug: '/projects/elderly-health-care',
 		title: 'Elderly Health Care',
 		company: COMPANIES.fiocruz,
 		isFeature: false,
@@ -292,7 +313,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'A program from the Brazilian Government, it`s a part of the Modular Training Program in Health care for the elderly.'
 	},
 	{
-		id: '/projects/unesco',
+		id: 'unesco',
+		slug: '/projects/unesco',
 		title: 'Consultant',
 		company: COMPANIES.unesco,
 		isFeature: false,
@@ -307,7 +329,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'Member of the technical committee for the creation of courses and digital educational resources and struct for the inside platform.'
 	},
 	{
-		id: '/projects/educacao-livre',
+		id: 'educacao-livre',
+		slug: '/projects/educacao-livre',
 		title: 'Educação Livre',
 		company: COMPANIES.unesco,
 		isFeature: false,
@@ -328,7 +351,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'A platform that offers free, fun and applied education to the real world, especially for young people looking for a work and study opportunities.'
 	},
 	{
-		id: '/projects/hacker-rangers',
+		id: 'hacker-rangers',
+		slug: '/projects/hacker-rangers',
 		title: 'Hacker',
 		company: COMPANIES.perallis,
 		isFeature: false,
@@ -349,7 +373,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'A platform that promotes corporate cyber security culture through gamification, to meet the requirements of the LGPD.'
 	},
 	{
-		id: '/projects/ita-fest',
+		id: 'ita-fest',
+		slug: '/projects/ita-fest',
 		title: 'Ita Fest',
 		company: COMPANIES.fabricademvp,
 		isFeature: false,
@@ -370,7 +395,8 @@ export const PROJECTS: Array<ProjectType> = [
 			'A personal project develop to help people from my city to find the best areas and more secure for the Carnival Festival in Brazil.'
 	},
 	{
-		id: '/projects/gol-a-gol',
+		id: 'gol-a-gol',
+		slug: '/projects/gol-a-gol',
 		title: 'Gol a Gol',
 		company: COMPANIES.fabricademvp,
 		isFeature: false,

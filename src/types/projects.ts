@@ -5,15 +5,19 @@ export type Skill = {
 	id: keyof typeof SkillIcons
 	name: string
 	website: string
-	worksWithSince: Date
+	worksWithSince: string
 	logo: JSX.Element | any
 }
 
 export type ProjectType = {
 	id: string
+	slug: string
 	title: string
 	thumbnail: string | any
 	description: string
+	introduction?: string
+	aboutDevelopment?: string
+	summary?: string
 	isFeature: boolean
 	skills: Array<Skill>
 	carousel: Array<string>
