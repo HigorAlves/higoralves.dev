@@ -23,7 +23,7 @@ export function Career() {
 					>
 						<Text color='dimmed' size='sm'>
 							<Link href={company.website || '/projects'} target={'_blank'}>
-								<Text variant='link' component='span' inherit>
+								<Text variant='link' component='span' color={'indigo'} inherit>
 									{company.name}
 								</Text>
 							</Link>{' '}
