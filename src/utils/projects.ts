@@ -17,7 +17,7 @@ export const PROJECTS: Array<ProjectType> = [
 			'SnapStrat is a six-year-old enterprise software startup focused on helping organizations optimize their most important decision processes. While their business is software, they measure their success by the outcomes their customers achieve from using their product on an ongoing basis.\n They are fully remote; Their leadership team is based in Oakland CA, and Las Cruces NM. Financially stable company growing our team based on revenue, not VC funding. Expanding responsibly, adding new customers when we can do so without impacting the very high service levels their customer base expects. The launch customer, a well-known global retailer, has used our platform for years for one of their most important marketing decision-making and operational processes.\n Their technical strategy is to have a “fast code” platform, built in Typescript to enable very rapid development and maintenance of custom applications for each of our customers.',
 		isFeature: true,
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
-		carousel: [''],
+		carousel: [SNAPSTRAT_IMG],
 		company: COMPANIES.zipdev,
 		duration: {
 			startDate: new Date('July 01, 2022').toDateString(),
@@ -32,7 +32,7 @@ export const PROJECTS: Array<ProjectType> = [
 			'It is a customer feedback and support platform designed to help businesses interact with their customers in a more personal and effective manner.',
 		isFeature: true,
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
-		carousel: [''],
+		carousel: [],
 		company: COMPANIES.notchteam,
 		thumbnail: BUBBLES_IMG,
 		duration: {

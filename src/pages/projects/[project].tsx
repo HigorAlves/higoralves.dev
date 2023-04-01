@@ -21,18 +21,11 @@ export default function ProjectPage({ project }: IProps) {
 				align='center'
 				mb={'xl'}
 			>
-				<Carousel.Slide ml={10}>
-					<Image src={project.thumbnail} alt={'test'} fill />
-				</Carousel.Slide>
-				<Carousel.Slide ml={10}>
-					<Image src={project.thumbnail} alt={'test'} fill />
-				</Carousel.Slide>
-				<Carousel.Slide ml={10}>
-					<Image src={project.thumbnail} alt={'test'} fill />
-				</Carousel.Slide>
-				<Carousel.Slide ml={10}>
-					<Image src={project.thumbnail} alt={'test'} fill />
-				</Carousel.Slide>
+				{project.carousel.map((image, index) => (
+					<Carousel.Slide ml={10} key={index}>
+						<Image src={image} alt={'Carousel image'} fill />
+					</Carousel.Slide>
+				))}
 			</Carousel>
 
 			<Container>

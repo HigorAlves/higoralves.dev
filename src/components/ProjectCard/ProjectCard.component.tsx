@@ -7,16 +7,16 @@ import { ProjectType } from '~/types/projects'
 import { useStyles } from './ProjectCard.styles'
 
 export function ProjectCard({
-	id,
 	title,
 	description,
 	company,
-	thumbnail
+	thumbnail,
+	slug
 }: ProjectType) {
 	const { classes } = useStyles()
 
 	return (
-		<Link href={id}>
+		<Link href={slug}>
 			<Base withBorder radius='md' p='md' className={classes.card}>
 				{!!thumbnail && (
 					<Base.Section style={{ position: 'relative', height: 300 }}>

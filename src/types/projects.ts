@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image'
+
 import { SkillIcons } from '~/components/Icons/SkillIcons'
 import { ICompany } from '~/types/companies'
 
@@ -20,7 +22,7 @@ export type ProjectType = {
 	summary?: string
 	isFeature: boolean
 	skills: Array<Skill>
-	carousel: Array<string>
+	carousel: Array<StaticImageData>
 	company: ICompany
 	duration: {
 		startDate: Date | string
