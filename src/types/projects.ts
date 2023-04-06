@@ -17,9 +17,8 @@ export type ProjectType = {
 	title: string
 	thumbnail: string | any
 	description: string
-	introduction?: string
-	aboutDevelopment?: string
-	summary?: string
+	about: string
+	challenges?: string
 	isFeature: boolean
 	skills: Array<Skill>
 	carousel: Array<StaticImageData>

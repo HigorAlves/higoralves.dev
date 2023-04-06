@@ -488,7 +488,6 @@ export const SkillIcons: Record<string, Skill> = {
 		name: 'React Test Library',
 		website: '',
 		worksWithSince: new Date(2018, 0, 1).toDateString(),
-		// @ts-ignore
 		logo: Reacttestlibrary
 	}
 }

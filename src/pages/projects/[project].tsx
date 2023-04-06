@@ -30,7 +30,7 @@ export default function ProjectPage({ project }: IProps) {
 
 			<Container>
 				<Title
-					title={'SnapStrat'}
+					title={project.title}
 					order={1}
 					gradient={{ from: 'orange', to: 'blue', deg: 150 }}
 				/>
@@ -41,7 +41,9 @@ export default function ProjectPage({ project }: IProps) {
 				<Text fz={'sm'}>{project.description}</Text>
 
 				<Space h='xl' />
-				<Text>{project.introduction}</Text>
+				{project.about.split('\n').map((text, index) => (
+					<Text key={index}>{text}</Text>
+				))}
 				<Space h='xl' />
 				<Title title={'Technologies'} order={3} />
 				<SkillList skills={project.skills} />
