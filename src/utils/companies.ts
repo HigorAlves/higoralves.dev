@@ -2,7 +2,8 @@ import {
 	IconBalloon,
 	IconFlag,
 	IconStar,
-	IconHandRock
+	IconHandRock,
+	IconTrack
 } from '@tabler/icons-react'
 
 import {
@@ -105,29 +106,6 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 			locationType: LocationType.REMOTE
 		}
 	},
-	toroinvestimentos: {
-		job: 'Senior Software Engineer',
-		name: 'Toro Investimentos',
-		website: 'https://toroinvestimentos.com.br',
-		address: {
-			city: 'Belo Horizonte',
-			country: 'Brazil'
-		},
-		duration: {
-			startDate: new Date('April 01, 2021').toDateString(),
-			endDate: new Date('July 01, 2021').toDateString(),
-			total: totalTime.calculateTimeBetweenDates(
-				new Date('April 01, 2021'),
-				new Date('July 01, 2021')
-			)
-		},
-		icon: IconBalloon,
-		show: true,
-		contract: {
-			employmentType: EmploymentType.FULLTIME,
-			locationType: LocationType.REMOTE
-		}
-	},
 	tradersclub: {
 		job: 'Software Engineer',
 		name: 'Traders Club',
@@ -146,30 +124,6 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 		},
 		icon: IconBalloon,
 		show: true,
-		contract: {
-			employmentType: EmploymentType.FULLTIME,
-			locationType: LocationType.REMOTE
-		}
-	},
-	unesco: {
-		name: 'UNESCO',
-		job: 'Technology Consultant',
-		website: 'https://www.unesco.org/en',
-
-		icon: IconBalloon,
-		show: true,
-		address: {
-			city: 'Brasília',
-			country: 'Brazil'
-		},
-		duration: {
-			startDate: new Date('Jan 01, 2017').toDateString(),
-			endDate: new Date('Apr 01, 2019').toDateString(),
-			total: totalTime.calculateTimeBetweenDates(
-				new Date('Jan 01, 2017'),
-				new Date('Apr 01, 2019')
-			)
-		},
 		contract: {
 			employmentType: EmploymentType.FULLTIME,
 			locationType: LocationType.REMOTE
@@ -197,6 +151,29 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 		},
 		icon: IconBalloon,
 		show: true
+	},
+	toroinvestimentos: {
+		job: 'Senior Software Engineer',
+		name: 'Toro Investimentos',
+		website: 'https://toroinvestimentos.com.br',
+		address: {
+			city: 'Belo Horizonte',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('April 01, 2021').toDateString(),
+			endDate: new Date('July 01, 2021').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('April 01, 2021'),
+				new Date('July 01, 2021')
+			)
+		},
+		icon: IconBalloon,
+		show: true,
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.REMOTE
+		}
 	},
 	takeblip: {
 		job: 'Software Engineer',
@@ -336,6 +313,30 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 			locationType: LocationType.HYBRID
 		}
 	},
+	unesco: {
+		name: 'UNESCO',
+		job: 'Technology Consultant',
+		website: 'https://www.unesco.org/en',
+
+		icon: IconBalloon,
+		show: true,
+		address: {
+			city: 'Brasília',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('Jan 01, 2017').toDateString(),
+			endDate: new Date('Apr 01, 2019').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('Jan 01, 2017'),
+				new Date('Apr 01, 2019')
+			)
+		},
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.REMOTE
+		}
+	},
 	edulivre: {
 		job: 'Software Engineer',
 		name: 'Educação Livre',
@@ -353,6 +354,29 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 			)
 		},
 		icon: IconBalloon,
+		show: true,
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.HYBRID
+		}
+	},
+	ufsj: {
+		job: 'Intern',
+		name: 'UFSJ',
+		website: 'https://ufsj.edu.br',
+		address: {
+			city: 'São João del-Rei',
+			country: 'Brazil'
+		},
+		duration: {
+			startDate: new Date('January 01, 2016').toDateString(),
+			endDate: new Date('January 01, 2017').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('January 01, 2016'),
+				new Date('January 01, 2017')
+			)
+		},
+		icon: IconTrack,
 		show: true,
 		contract: {
 			employmentType: EmploymentType.FULLTIME,

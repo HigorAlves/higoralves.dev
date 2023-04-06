@@ -26,6 +26,7 @@ export type CompanyName =
 	| 'tradersclub'
 	| 'nkey'
 	| 'unesco'
+	| 'ufsj'
 
 export interface ICompany {
 	name: string
