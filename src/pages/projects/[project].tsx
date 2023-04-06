@@ -45,6 +45,10 @@ export default function ProjectPage({ project }: IProps) {
 					<Text key={index}>{text}</Text>
 				))}
 				<Space h='xl' />
+				<Title title={'Development Details'} order={2} />
+				<Space h='md' />
+				<Title title={'Project Development'} order={3} />
+				<Space h='md' />
 				<Title title={'Technologies'} order={3} />
 				<SkillList skills={project.skills} />
 			</Container>
