@@ -11,17 +11,29 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/snapstrat',
 		title: 'SnapStrat',
 		thumbnail: SNAPSTRAT_IMG,
+		isFeature: true,
+		carousel: [],
+		company: COMPANIES.zipdev,
+		duration: {
+			startDate: new Date('January 01, 2022').toDateString(),
+			endDate: new Date('May 01, 2022').toDateString()
+		},
 		description:
 			'Empowers enterprises to improve the outcomes of their recurring strategic decisions through intelligent predictive, data-driven decision model.',
 		about:
-			'SnapStrat is a cutting-edge technology company that specializes in providing businesses with advanced analytics and decision-making tools. Founded in 2015, the company has quickly become a leader in the field of predictive analytics, helping companies to make better decisions, optimize their operations, and achieve their goals.\n' +
-			'\n' +
-			"SnapStrat's platform is designed to provide businesses with a comprehensive suite of tools that help them to better understand their customers, their operations, and the broader market. Using advanced machine learning algorithms and predictive models, the platform is able to analyze vast amounts of data, identify patterns and trends, and generate insights that can be used to drive better decision-making.\n" +
-			'\n' +
-			"One of the key advantages of SnapStrat's platform is its ability to be customized to meet the unique needs of each client. Whether a business is looking to optimize its pricing strategy, improve its supply chain operations, or better understand its customer base, SnapStrat's platform can be tailored to provide the insights and tools needed to achieve success.\n" +
-			'\n' +
-			'Overall, SnapStrat is a company that is at the forefront of the rapidly-evolving field of predictive analytics. With its cutting-edge technology, commitment to innovation, and focus on client success, it is a company that is well-positioned to help businesses of all sizes and industries achieve their goals.',
-		isFeature: true,
+			"SnapStrat is a cutting-edge technology company that specializes in providing businesses with advanced analytics and decision-making tools. Founded in 2015, the company has quickly become a leader in the field of predictive analytics, helping companies to make better decisions, optimize their operations, and achieve their goals.\n\nSnapStrat's platform is designed to provide businesses with a comprehensive suite of tools that help them to better understand their customers, their operations, and the broader market. Using advanced machine learning algorithms and predictive models, the platform is able to analyze vast amounts of data, identify patterns and trends, and generate insights that can be used to drive better decision-making.\n\nOne of the key advantages of SnapStrat's platform is its ability to be customized to meet the unique needs of each client. Whether a business is looking to optimize its pricing strategy, improve its supply chain operations, or better understand its customer base, SnapStrat's platform can be tailored to provide the insights and tools needed to achieve success.\n\nOverall, SnapStrat is a company that is at the forefront of the rapidly-evolving field of predictive analytics. With its cutting-edge technology, commitment to innovation, and focus on client success, it is a company that is well-positioned to help businesses of all sizes and industries achieve their goals.",
+		challenges:
+			'Responsible for developing and maintaining key features in the platform, fixing performance issues, dealing with real-time data, large database processing and security, and I also ensured that the code standards were kept at a high level and that the development process was highly productive.',
+		challengesPoints: [
+			'Work closely with the development team to implement new features into our platform',
+			'Identify and fix performance issues in the application',
+			'Utilize JAM Stack and Serverless to build scalable and maintainable applications',
+			'Deal with real-time data and video processing',
+			'Ensure that the code standards for the project are followed',
+			'Collaborate with designers and product owners to create seamless user experiences',
+			'Continuously monitor and improve the performance of our platform',
+			'Identify areas for improvement in the development process and provide recommendations for enhancements.'
+		],
 		skills: [
 			SkillIcons.auth0,
 			SkillIcons.aws,
@@ -48,13 +60,7 @@ export const PROJECTS: Array<ProjectType> = [
 			SkillIcons.circleci,
 			SkillIcons.reacttestlibrary,
 			SkillIcons.dynamo
-		],
-		carousel: [SNAPSTRAT_IMG],
-		company: COMPANIES.zipdev,
-		duration: {
-			startDate: new Date('January 01, 2022').toDateString(),
-			endDate: new Date('May 01, 2022').toDateString()
-		}
+		]
 	},
 	{
 		id: 'bubbles',
@@ -63,16 +69,27 @@ export const PROJECTS: Array<ProjectType> = [
 		description:
 			'It is a customer feedback and support platform designed to help businesses interact with their customers in a more personal and effective manner.',
 		isFeature: true,
+		company: COMPANIES.notchteam,
+		thumbnail: BUBBLES_IMG,
+		duration: {
+			startDate: new Date('December 01, 2022').toDateString(),
+			endDate: new Date('March 24, 2023').toDateString()
+		},
+		challenges:
+			'Responsible for developing and maintaining key features in the platform, fixing performance issues, dealing with real-time data, video processing and security, and I also ensured that the code standards were kept at a high level and that the development process was highly productive.',
+		challengesPoints: [
+			'Work closely with the development team to implement new features into our platform',
+			'Identify and fix performance issues in the application',
+			'Utilize JAM Stack and Serverless to build scalable and maintainable applications',
+			'Deal with real-time data and video processing',
+			'Ensure that the code standards for the project are followed',
+			'Collaborate with designers and product owners to create seamless user experiences',
+			'Continuously monitor and improve the performance of our platform',
+			'Identify areas for improvement in the development process and provide recommendations for enhancements.'
+		],
 		about:
-			'Bubbles is a revolutionary platform that enables businesses to communicate with their customers in a whole new way. Founded in 2019, the company has quickly established itself as a leader in the field of conversational commerce, helping businesses to connect with their customers and drive sales through interactive conversations.\n' +
-			'\n' +
-			'At its core, Bubbles is a messaging platform that allows businesses to engage with their customers in real-time, using a range of messaging channels including SMS, WhatsApp, and Facebook Messenger. The platform is designed to be easy to use, with intuitive drag-and-drop tools that allow businesses to create interactive conversations that are engaging, personalized, and effective.\n' +
-			'\n' +
-			'One of the key advantages of Bubbles is its ability to help businesses build stronger relationships with their customers. By engaging in personalized conversations with their customers, businesses are able to understand their needs, preferences, and pain points, and tailor their offerings accordingly. This leads to increased customer loyalty, higher customer satisfaction, and ultimately, increased revenue.\n' +
-			'\n' +
-			'Another advantage of Bubbles is its ability to help businesses automate their sales and marketing processes. By using intelligent chatbots, businesses are able to handle routine customer interactions, freeing up their staff to focus on higher-level tasks. This leads to increased efficiency, reduced costs, and improved customer experiences.\n' +
-			'\n' +
-			"Overall, Bubbles is a platform that is transforming the way businesses communicate with their customers. With its innovative approach to conversational commerce, intuitive tools, and focus on customer engagement, it is a platform that is well-positioned to help businesses of all sizes and industries achieve success in today's competitive market.",
+			"Bubbles is a revolutionary platform that enables businesses to communicate with their customers in a whole new way. Founded in 2019, the company has quickly established itself as a leader in the field of conversational commerce, helping businesses to connect with their customers and drive sales through interactive conversations.\nAt its core, Bubbles is a messaging platform that allows businesses to engage with their customers in real-time, using a range of messaging channels including SMS, WhatsApp, and Facebook Messenger. The platform is designed to be easy to use, with intuitive drag-and-drop tools that allow businesses to create interactive conversations that are engaging, personalized, and effective.\n\nOne of the key advantages of Bubbles is its ability to help businesses build stronger relationships with their customers. By engaging in personalized conversations with their customers, businesses are able to understand their needs, preferences, and pain points, and tailor their offerings accordingly. This leads to increased customer loyalty, higher customer satisfaction, and ultimately, increased revenue.\n\nAnother advantage of Bubbles is its ability to help businesses automate their sales and marketing processes. By using intelligent chatbots, businesses are able to handle routine customer interactions, freeing up their staff to focus on higher-level tasks. This leads to increased efficiency, reduced costs, and improved customer experiences.\n\nOverall, Bubbles is a platform that is transforming the way businesses communicate with their customers. With its innovative approach to conversational commerce, intuitive tools, and focus on customer engagement, it is a platform that is well-positioned to help businesses of all sizes and industries achieve success in today's competitive market.",
+		carousel: [],
 		skills: [
 			SkillIcons.aws,
 			SkillIcons.serverless,
@@ -94,14 +111,7 @@ export const PROJECTS: Array<ProjectType> = [
 			SkillIcons.redux,
 			SkillIcons.reduxsaga,
 			SkillIcons.cognito
-		],
-		carousel: [],
-		company: COMPANIES.notchteam,
-		thumbnail: BUBBLES_IMG,
-		duration: {
-			startDate: new Date('December 01, 2022').toDateString(),
-			endDate: new Date('March 24, 2023').toDateString()
-		}
+		]
 	},
 	{
 		id: 'tumble',
@@ -110,16 +120,26 @@ export const PROJECTS: Array<ProjectType> = [
 		description:
 			'Tumble is a smart laundry system and delivery platform, predictive maintenance and IoT technology with the lowest downtime in the business.',
 		isFeature: false,
+		company: COMPANIES.righbalance,
+		thumbnail: '',
+		duration: {
+			startDate: new Date('September 01, 2022').toDateString(),
+			endDate: new Date('March 03, 2023').toDateString()
+		},
 		about:
-			'Tumble is a revolutionary smart laundry system that enables businesses to streamline their laundry operations and automate their processes. Founded in 2020, the company has quickly established itself as a leader in the field of laundry automation, helping businesses to reduce costs, increase efficiency, and improve customer satisfaction.\n' +
-			'\n' +
-			'At its core, Tumble is a laundry automation platform that allows businesses to automate their laundry operations and reduce manual effort. The platform is designed to be user-friendly, with intuitive tools that allow businesses to automate their laundry processes without the need for specialized technical skills.\n' +
-			'\n' +
-			'One of the key advantages of Tumble is its ability to help businesses reduce costs by eliminating manual effort. By automating routine tasks such as sorting, washing, and folding, businesses are able to free up their staff to focus on higher-level tasks, reducing the need for additional staff and increasing overall efficiency.\n' +
-			'\n' +
-			'Another advantage of Tumble is its ability to help businesses improve the quality of their laundry services. By providing a centralized platform for laundry management, businesses are able to ensure that all laundry items are washed according to their specific needs, resulting in cleaner and fresher laundry.\n' +
-			'\n' +
-			"Overall, Tumble is a platform that is transforming the way businesses manage their laundry operations. With its innovative approach to laundry automation, user-friendly tools, and focus on efficiency and quality, it is a platform that is well-positioned to help businesses of all sizes and industries achieve success in today's competitive market.",
+			"Tumble is a revolutionary smart laundry system that enables businesses to streamline their laundry operations and automate their processes. Founded in 2020, the company has quickly established itself as a leader in the field of laundry automation, helping businesses to reduce costs, increase efficiency, and improve customer satisfaction.\nAt its core, Tumble is a laundry automation platform that allows businesses to automate their laundry operations and reduce manual effort. The platform is designed to be user-friendly, with intuitive tools that allow businesses to automate their laundry processes without the need for specialized technical skills.\nOne of the key advantages of Tumble is its ability to help businesses reduce costs by eliminating manual effort. By automating routine tasks such as sorting, washing, and folding, businesses are able to free up their staff to focus on higher-level tasks, reducing the need for additional staff and increasing overall efficiency.\nAnother advantage of Tumble is its ability to help businesses improve the quality of their laundry services. By providing a centralized platform for laundry management, businesses are able to ensure that all laundry items are washed according to their specific needs, resulting in cleaner and fresher laundry.\nOverall, Tumble is a platform that is transforming the way businesses manage their laundry operations. With its innovative approach to laundry automation, user-friendly tools, and focus on efficiency and quality, it is a platform that is well-positioned to help businesses of all sizes and industries achieve success in today's competitive market.",
+		challenges:
+			'I was responsible for developing and maintaining IoT, frontend, and backend applications using the JamStack and serverless architecture. I also ensured that the code standards were kept at a high level and that the development process was highly productive. Additionally, I worked with real-time databases and data using tools to maintain performance and security within the platform and IoT devices',
+		challengesPoints: [
+			'Develop and maintain IoT, frontend, and backend applications using the JamStack and serverless architecture.',
+			'Collaborate with the team to ensure that the code standards are high and that the development process is highly productive.',
+			'Work with real-time databases and data using tools to maintain performance and security within the platform and IoT devices.',
+			'Ensure that the development process adheres to best practices, including Agile methodologies, code reviews, and automated testing.',
+			'Identify areas for improvement in the development process and provide recommendations for enhancements.',
+			'Collaborate with cross-functional teams to ensure the platform and IoT devices meet the requirements and provide an exceptional user experience.',
+			'Stay up-to-date with the latest industry trends, technologies, and best practices in software engineering, IoT, and serverless architecture.'
+		],
+		carousel: [],
 		skills: [
 			SkillIcons.typescript,
 			SkillIcons.javascript,
@@ -127,15 +147,11 @@ export const PROJECTS: Array<ProjectType> = [
 			SkillIcons.aws,
 			SkillIcons.serverless,
 			SkillIcons.git,
-			SkillIcons.github
-		],
-		carousel: [],
-		company: COMPANIES.righbalance,
-		thumbnail: '',
-		duration: {
-			startDate: new Date('September 01, 2022').toDateString(),
-			endDate: new Date('March 03, 2023').toDateString()
-		}
+			SkillIcons.github,
+			SkillIcons.vue,
+			SkillIcons.pm2,
+			SkillIcons.circleci
+		]
 	},
 	{
 		id: 'tiled',
@@ -145,18 +161,21 @@ export const PROJECTS: Array<ProjectType> = [
 		thumbnail: TILED_IMG,
 		isFeature: true,
 		about:
-			'Tiled is a leading platform that enables businesses to create interactive, multimedia content that engages and informs their audience. Founded in 2016, the company has quickly established itself as a leader in the field of content marketing, helping businesses to create more effective and engaging content that drives results.\n' +
-			'\n' +
-			'At its core, Tiled is a content creation platform that allows businesses to easily create interactive, multimedia content such as presentations, infographics, and microsites. The platform is designed to be easy to use, with intuitive drag-and-drop tools that allow businesses to create content without the need for specialized technical skills.\n' +
-			'\n' +
-			'One of the key advantages of Tiled is its ability to help businesses create more engaging content that resonates with their audience. By creating interactive content that includes multimedia elements such as video, audio, and animations, businesses are able to capture the attention of their audience and keep them engaged for longer periods of time. This leads to increased brand awareness, higher engagement rates, and ultimately, increased revenue.\n' +
-			'\n' +
-			"Another advantage of Tiled is its ability to help businesses track and measure the effectiveness of their content. By providing detailed analytics on how their audience interacts with their content, businesses are able to gain valuable insights into what works and what doesn't, and adjust their strategy accordingly.\n" +
-			'\n' +
-			"Overall, Tiled is a platform that is transforming the way businesses create and deliver content. With its innovative approach to content marketing, intuitive tools, and focus on audience engagement, it is a platform that is well-positioned to help businesses of all sizes and industries achieve success in today's competitive market.",
+			"Tiled is a leading platform that enables businesses to create interactive, multimedia content that engages and informs their audience. Founded in 2016, the company has quickly established itself as a leader in the field of content marketing, helping businesses to create more effective and engaging content that drives results.\nAt its core, Tiled is a content creation platform that allows businesses to easily create interactive, multimedia content such as presentations, infographics, and microsites. The platform is designed to be easy to use, with intuitive drag-and-drop tools that allow businesses to create content without the need for specialized technical skills.\nOne of the key advantages of Tiled is its ability to help businesses create more engaging content that resonates with their audience. By creating interactive content that includes multimedia elements such as video, audio, and animations, businesses are able to capture the attention of their audience and keep them engaged for longer periods of time. This leads to increased brand awareness, higher engagement rates, and ultimately, increased revenue.\nAnother advantage of Tiled is its ability to help businesses track and measure the effectiveness of their content. By providing detailed analytics on how their audience interacts with their content, businesses are able to gain valuable insights into what works and what doesn't, and adjust their strategy accordingly.\nOverall, Tiled is a platform that is transforming the way businesses create and deliver content. With its innovative approach to content marketing, intuitive tools, and focus on audience engagement, it is a platform that is well-positioned to help businesses of all sizes and industries achieve success in today's competitive market.",
 		description:
 			'Tiled is a product that offers a customizable, collaborative workspace for teams to organize, prioritize, and track their work.',
 		carousel: [],
+		challenges:
+			"I worked to increase the application's performance, implementing a range of optimizations and enhancements to ensure that it ran smoothly and efficiently. This involved fine-tuning the application's code, identifying and resolving performance bottlenecks, and implementing performance benchmarks to track progress and identify areas for further improvement.",
+		challengesPoints: [
+			'Successfully improved the accessibility features, making the platform more user-friendly and accessible to a wider range of users',
+			"Implemented a range of optimizations and enhancements to increase the application's performance, including fine-tuning the code, identifying and resolving performance bottlenecks, and implementing performance benchmarks",
+			'Played a key role in improving the security of the application, reducing the risk of security failures and enhancing its stack security',
+			'Created engaging and effective mobile animations that helped to bring the application to life and enhance its overall appeal',
+			'Strong problem-solving and analytical skills, with a focus on identifying and resolving complex technical issues',
+			'Collaborative team player with excellent communication and interpersonal skills',
+			'Committed to staying up-to-date with the latest industry trends and best practices to ensure that projects are completed to the highest standards.'
+		],
 		skills: [
 			SkillIcons.typescript,
 			SkillIcons.javascript,
@@ -183,11 +202,32 @@ export const PROJECTS: Array<ProjectType> = [
 		title: 'Hoag',
 		company: COMPANIES.xteam,
 		isFeature: false,
-		about: '',
+		about:
+			"Hoag is a non-profit health care organization based in Newport Beach, California, with facilities throughout Orange County. The organization is dedicated to providing high-quality, patient-centered care across a range of specialties, from cancer and heart health to women's health and orthopedics.\nWith a history dating back more than 70 years, Hoag has built a reputation for excellence in patient care, research, and education. The organization's team of physicians, nurses, and other health care professionals are committed to providing the best possible care to patients, using the latest techniques and technologies to deliver optimal outcomes.\nHoag is also dedicated to advancing the field of health care through cutting-edge research and education initiatives. The organization collaborates with academic institutions and other health care providers to develop and share best practices, and is recognized as a leader in clinical research and innovation.\nAbove all, Hoag is driven by its mission to provide the highest-quality care to patients, and to improve the health and well-being of the communities it serves. The organization is committed to meeting the evolving needs of patients and families, and to delivering compassionate, personalized care that puts patients first.",
+		challenges:
+			"One of my primary responsibilities was to create a responsive and user-friendly platform that showcased the organization's services and expertise. I collaborated with designers and other developers to create a cohesive and visually appealing that was optimized for mobile devices.Led the development of the Hoag mobile app, working closely with stakeholders to identify key goals and requirements",
+		challengesPoints: [
+			'Led the development of the Hoag mobile app, working closely with stakeholders to identify key goals and requirements',
+			'Utilized a range of programming languages and frameworks, including [list relevant technologies here], to create a robust and scalable mobile app architecture',
+			'Worked closely with designers and other developers to create a cohesive and visually appealing mobile app design that was optimized for both iOS and Android platforms',
+			'Implemented a range of performance optimizations and enhancements to ensure that the mobile app loaded quickly and ran smoothly',
+			'Enhanced the security of the mobile app, implementing measures to protect against threats and vulnerabilities and reduce the risk of security failures',
+			'Collaborated with cross-functional teams to ensure that the mobile app integrated seamlessly with other Hoag systems and services',
+			'Conducted extensive testing and quality assurance checks to ensure that the mobile app met high standards of reliability and usability',
+			'Developed new features and functionality for the mobile app, based on user feedback and evolving business needs',
+			'Provided technical leadership and mentorship to other developers, helping to build a strong and collaborative team culture',
+			'Committed to staying up-to-date with the latest industry trends and best practices to ensure that the mobile app was completed to the highest standards.'
+		],
 		description:
 			'Hoag is a non-profit healthcare organization that operates hospitals and other healthcare facilities in Orange County, California.',
 		carousel: [],
-		skills: [SkillIcons.typescript, SkillIcons.javascript],
+		skills: [
+			SkillIcons.typescript,
+			SkillIcons.javascript,
+			SkillIcons.react,
+			SkillIcons.nodejs,
+			SkillIcons.styledcomponents
+		],
 		thumbnail: '',
 		duration: {
 			startDate: new Date('August 01, 2021').toDateString(),

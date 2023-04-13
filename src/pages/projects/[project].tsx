@@ -1,5 +1,5 @@
 import { Carousel } from '@mantine/carousel'
-import { Container, Space, Text } from '@mantine/core'
+import { Container, List, Space, Text } from '@mantine/core'
 import Image from 'next/image'
 
 import { SkillList, Title } from '~/components'
@@ -13,20 +13,22 @@ interface IProps {
 export default function ProjectPage({ project }: IProps) {
 	return (
 		<Container fluid mt={'xl'}>
-			<Carousel
-				height={400}
-				slideSize='33%'
-				slideGap={'xl'}
-				loop
-				align='center'
-				mb={'xl'}
-			>
-				{project.carousel.map((image, index) => (
-					<Carousel.Slide ml={10} key={index}>
-						<Image src={image} alt={'Carousel image'} fill />
-					</Carousel.Slide>
-				))}
-			</Carousel>
+			{project.carousel.length > 0 && (
+				<Carousel
+					height={400}
+					slideSize='33%'
+					slideGap={'xl'}
+					loop
+					align='center'
+					mb={'xl'}
+				>
+					{project.carousel.map((image, index) => (
+						<Carousel.Slide ml={10} key={index}>
+							<Image src={image} alt={'Carousel image'} fill />
+						</Carousel.Slide>
+					))}
+				</Carousel>
+			)}
 
 			<Container>
 				<Title
@@ -45,9 +47,13 @@ export default function ProjectPage({ project }: IProps) {
 					<Text key={index}>{text}</Text>
 				))}
 				<Space h='xl' />
-				<Title title={'Development Details'} order={2} />
-				<Space h='md' />
 				<Title title={'Project Development'} order={3} />
+				<Text mt={'lg'}>{project.challenges}</Text>
+				<List mt={'md'} ml={'sm'}>
+					{project.challengesPoints.map((point, index) => (
+						<List.Item key={index}>{point}</List.Item>
+					))}
+				</List>
 				<Space h='md' />
 				<Title title={'Technologies'} order={3} />
 				<SkillList skills={project.skills} />

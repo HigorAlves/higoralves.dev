@@ -35,6 +35,7 @@ import Netlify from '~/assets/svgs/techs/netlify.svg'
 import Nextjs from '~/assets/svgs/techs/nextjs.svg'
 import Nodejs from '~/assets/svgs/techs/nodejs.svg'
 import Npm from '~/assets/svgs/techs/npm.svg'
+import PM2 from '~/assets/svgs/techs/pm2.svg'
 import Postgre from '~/assets/svgs/techs/postgress.svg'
 import Postman from '~/assets/svgs/techs/postman.svg'
 import Prettier from '~/assets/svgs/techs/prettier.svg'
@@ -505,5 +506,12 @@ export const SkillIcons: Record<string, Skill> = {
 		website: '',
 		worksWithSince: new Date(2016, 0, 1).toDateString(),
 		logo: StyledComponents
+	},
+	pm2: {
+		id: 'pm2',
+		name: 'PM2',
+		website: '',
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
+		logo: PM2
 	}
 }
