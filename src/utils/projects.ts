@@ -311,8 +311,20 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/xhq-platform',
 		title: 'XHQ Platform',
 		company: COMPANIES.xteam,
-		about: '',
+		about:
+			"Since 2006, X-Team has provided high-performing, on-demand teams of software developers for the world's leading brands.\nWe are leaders in the remote work movement, and believe in building a world where developers can have access to an environment of growth and incredible opportunities regardless of where they live.\nWe're a community of developers from 75+ countries around the world. We’ve fostered a unique, active lifestyle and culture around learning, growing and exploring that continues to attract thousands of developers to apply every day.\nWe proactively support our developers, fund their learning and growth, connect them in roaming hacker houses around the world, and give them a remote environment that motivates and inspires them on a daily basis. While other companies merely place and drop their talent, we provide unified teams of developers centered around the same beliefs, values, and lifestyle. \nWe're uniquely situated to help shape how companies grow their businesses in the digital age and aid them in being able to do so properly with the right people. We work with big, innovative brands like Riot Games, Fox Broadcasting, Kaplan Inc., Coinbase, Google, Sony, Twitter, Beachbody and more…",
 		carousel: [],
+		challenges:
+			"I worked on various projects to help big companies like Riot Games, Adidas, Twitter, Google, etc. I was responsible for ensuring web and mobile applications' performance, security, and scalability by implementing best coding practices and using performance and security tools to check the engineering process.",
+		challengesPoints: [
+			'Develop UI and UX experiences with the design and product team to create high-quality, user-friendly web and mobile applications.',
+			'Work on various projects and help big companies like Riot Games, Adidas, Twitter, Google, etc. to build high-performance web and mobile applications using the Jam Stack.',
+			"Ensure web and mobile applications' performance, security, and scalability by implementing best coding practices and using performance and security tools to check the engineering process.",
+			'Work with the engineering team to resolve front-end, back-end, and mobile performance issues.',
+			'Collaborate with the design and product team to ensure the applications meet the requirements and provide an exceptional user experience.',
+			'Stay up-to-date with the latest industry trends, technologies, and best practices in Jam Stack development.',
+			'Participate in code reviews to ensure the codebase is high quality and follows the best practices.'
+		],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		isFeature: false,
 		duration: {
