@@ -278,9 +278,25 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/ivy-cash',
 		title: 'Ivy Cash',
 		company: COMPANIES.xteam,
-		about: '',
+		about:
+			'Ivy.cash is a fintech startup that is revolutionizing the way people manage their finances. With a focus on simplicity, accessibility, and transparency, the organization offers a range of financial services through its mobile app, including banking, investing, and budgeting tools.\nAt Ivy.cash, the team is dedicated to empowering users to take control of their finances and achieve their financial goals. With a user-centric approach to product development, Ivy.cash is committed to delivering innovative solutions that meet the evolving needs of its customers, and help them to build a stronger financial future.\nFounded in 2018, Ivy.cash has quickly grown to become a leading player in the fintech space, with a team of experienced professionals located around the globe. The organization has a proven track record of delivering high-quality financial products and services to users, and is committed to leveraging the latest technologies to drive innovation and growth.\nWith a focus on simplicity, accessibility, and transparency, Ivy.cash is committed to making finance more approachable and less intimidating for users, and helping them to achieve their financial goals with confidence and ease.',
 		isFeature: false,
 		carousel: [],
+		challenges:
+			"I was responsible for designing and implementing new features for the organization's mobile app and backend systems. This included collaborating with cross-functional teams to understand business requirements, and developing innovative solutions that met the needs of both users and the organization.\nMy primary responsibilities included developing and maintaining high-quality code for the mobile app and backend systems, as well as identifying and resolving performance issues and bugs. I was also responsible for mentoring other developers on the team, helping to build a strong and collaborative engineering culture.",
+		challengesPoints: [
+			"Spearheaded the development of Ethereum smart contracts to support the organization's blockchain-based financial services offerings.",
+			'Developed and maintained the Ivy.cash mobile app and backend systems, including implementing new features and functionality using Ethereum blockchain technology.',
+			"Collaborated with cross-functional teams to design and develop innovative solutions that leveraged Ethereum blockchain technology to enhance the organization's financial services offerings.",
+			"Conducted research and analysis to identify emerging trends in Ethereum blockchain development, and leveraged this knowledge to drive innovation and improve the organization's products and services.",
+			'Mentored and trained junior developers on Ethereum blockchain development best practices, helping to build a strong and collaborative engineering culture.',
+			'Designed and implemented automated testing processes to ensure the quality and reliability of Ethereum smart contracts and other blockchain-based applications.',
+			"Played a key role in the development of the organization's overall blockchain strategy, including identifying opportunities to leverage Ethereum technology to drive growth and innovation.",
+			'The implementation of a new feature for the mobile app that allowed users to easily track their financial transactions and manage their accounts.',
+			'The development of a new API for the backend system, which helped to improve performance and scalability.',
+			'The implementation of new security measures, including enhanced encryption and authentication protocols, to protect user data and reduce the risk of security failures.',
+			'The development of new automated testing processes, which helped to improve the efficiency and accuracy of the testing process and reduce the risk of bugs and performance issues.'
+		],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
 		duration: {
 			startDate: new Date('August 01, 2021').toDateString(),
