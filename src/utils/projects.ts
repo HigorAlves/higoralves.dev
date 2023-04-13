@@ -226,7 +226,15 @@ export const PROJECTS: Array<ProjectType> = [
 			SkillIcons.javascript,
 			SkillIcons.react,
 			SkillIcons.nodejs,
-			SkillIcons.styledcomponents
+			SkillIcons.styledcomponents,
+			SkillIcons.redux,
+			SkillIcons.reduxsaga,
+			SkillIcons.figma,
+			SkillIcons.firebase,
+			SkillIcons.github,
+			SkillIcons.googleanalytics,
+			SkillIcons.jest,
+			SkillIcons.mongodb
 		],
 		thumbnail: '',
 		duration: {
@@ -239,7 +247,8 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/cie-digital',
 		title: 'CIE Digital',
 		company: COMPANIES.xteam,
-		about: '',
+		about:
+			'Cie Digital Labs is a global innovation accelerator that helps businesses across a range of industries to transform and grow through the power of technology. With a focus on delivering cutting-edge digital solutions, the organization offers a range of services, including strategic consulting, software development, and digital marketing.\nAt Cie Digital Labs, the team is dedicated to creating impactful and innovative solutions that help their clients stay ahead of the curve in an ever-evolving digital landscape. With a commitment to building long-term partnerships with their clients, Cie Digital Labs offers a collaborative and consultative approach to solving complex business challenges.',
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
@@ -248,6 +257,19 @@ export const PROJECTS: Array<ProjectType> = [
 			endDate: new Date('December 01, 2022').toDateString()
 		},
 		thumbnail: '',
+		challenges:
+			"Overall, my contributions to the development of ciedigital.com were instrumental in creating a website that effectively showcased the organization's services and expertise, while also delivering a responsive and user-friendly experience to visitors. In addition to my work on the website's design and functionality, I implemented a range of performance optimizations and enhancements to ensure that the website loaded quickly and ran smoothly. This included fine-tuning the website's code, identifying and resolving performance bottlenecks, and implementing performance benchmarks to track progress and identify areas for further improvement.",
+		challengesPoints: [
+			'Led the development of the ciedigital.com website, working closely with stakeholders to identify key goals and requirements',
+			"Created a responsive and user-friendly website design that effectively showcased the organization's services and expertise",
+			'Implemented a range of performance optimizations and enhancements to ensure that the website loaded quickly and ran smoothly',
+			'Enhanced the security of the website, implementing measures to protect against threats and vulnerabilities and reduce the risk of security failures',
+			'Collaborated with cross-functional teams to ensure that the website integrated seamlessly with other Cie Digital Labs systems and services',
+			'Conducted extensive testing and quality assurance checks to ensure that the website met high standards of reliability and usability',
+			'Developed new features and functionality for the website, based on user feedback and evolving business needs',
+			'Provided technical leadership and mentorship to other developers, helping to build a strong and collaborative team culture',
+			'Committed to staying up-to-date with the latest industry trends and best practices to ensure that the website was completed to the highest standards.'
+		],
 		description:
 			'Venture studio that serves as an innovation lab and accelerator for bold entrepreneurs who want to transform disruptive ideas into thriving ventures.'
 	},
