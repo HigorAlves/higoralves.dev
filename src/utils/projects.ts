@@ -25,7 +25,6 @@ export const PROJECTS: Array<ProjectType> = [
 		skills: [
 			SkillIcons.auth0,
 			SkillIcons.aws,
-			SkillIcons.awsservices,
 			SkillIcons.eslint,
 			SkillIcons.git,
 			SkillIcons.github,
@@ -47,13 +46,14 @@ export const PROJECTS: Array<ProjectType> = [
 			SkillIcons.vite,
 			SkillIcons.cypress,
 			SkillIcons.circleci,
-			SkillIcons.reacttestlibrary
+			SkillIcons.reacttestlibrary,
+			SkillIcons.dynamo
 		],
 		carousel: [SNAPSTRAT_IMG],
 		company: COMPANIES.zipdev,
 		duration: {
-			startDate: new Date('July 01, 2022').toDateString(),
-			endDate: 'Present'
+			startDate: new Date('January 01, 2022').toDateString(),
+			endDate: new Date('May 01, 2022').toDateString()
 		}
 	},
 	{
@@ -73,7 +73,28 @@ export const PROJECTS: Array<ProjectType> = [
 			'Another advantage of Bubbles is its ability to help businesses automate their sales and marketing processes. By using intelligent chatbots, businesses are able to handle routine customer interactions, freeing up their staff to focus on higher-level tasks. This leads to increased efficiency, reduced costs, and improved customer experiences.\n' +
 			'\n' +
 			"Overall, Bubbles is a platform that is transforming the way businesses communicate with their customers. With its innovative approach to conversational commerce, intuitive tools, and focus on customer engagement, it is a platform that is well-positioned to help businesses of all sizes and industries achieve success in today's competitive market.",
-		skills: [],
+		skills: [
+			SkillIcons.aws,
+			SkillIcons.serverless,
+			SkillIcons.react,
+			SkillIcons.nodejs,
+			SkillIcons.typescript,
+			SkillIcons.javascript,
+			SkillIcons.git,
+			SkillIcons.github,
+			SkillIcons.jest,
+			SkillIcons.reacttestlibrary,
+			SkillIcons.cypress,
+			SkillIcons.prettier,
+			SkillIcons.eslint,
+			SkillIcons.css,
+			SkillIcons.npm,
+			SkillIcons.dynamo,
+			SkillIcons.netlify,
+			SkillIcons.redux,
+			SkillIcons.reduxsaga,
+			SkillIcons.cognito
+		],
 		carousel: [],
 		company: COMPANIES.notchteam,
 		thumbnail: BUBBLES_IMG,
@@ -99,7 +120,15 @@ export const PROJECTS: Array<ProjectType> = [
 			'Another advantage of Tumble is its ability to help businesses improve the quality of their laundry services. By providing a centralized platform for laundry management, businesses are able to ensure that all laundry items are washed according to their specific needs, resulting in cleaner and fresher laundry.\n' +
 			'\n' +
 			"Overall, Tumble is a platform that is transforming the way businesses manage their laundry operations. With its innovative approach to laundry automation, user-friendly tools, and focus on efficiency and quality, it is a platform that is well-positioned to help businesses of all sizes and industries achieve success in today's competitive market.",
-		skills: [SkillIcons.typescript, SkillIcons.javascript],
+		skills: [
+			SkillIcons.typescript,
+			SkillIcons.javascript,
+			SkillIcons.nodejs,
+			SkillIcons.aws,
+			SkillIcons.serverless,
+			SkillIcons.git,
+			SkillIcons.github
+		],
 		carousel: [],
 		company: COMPANIES.righbalance,
 		thumbnail: '',
@@ -128,7 +157,21 @@ export const PROJECTS: Array<ProjectType> = [
 		description:
 			'Tiled is a product that offers a customizable, collaborative workspace for teams to organize, prioritize, and track their work.',
 		carousel: [],
-		skills: [SkillIcons.typescript, SkillIcons.javascript],
+		skills: [
+			SkillIcons.typescript,
+			SkillIcons.javascript,
+			SkillIcons.redux,
+			SkillIcons.reduxsaga,
+			SkillIcons.react,
+			SkillIcons.nodejs,
+			SkillIcons.git,
+			SkillIcons.reacttestlibrary,
+			SkillIcons.cypress,
+			SkillIcons.prettier,
+			SkillIcons.eslint,
+			SkillIcons.css,
+			SkillIcons.styledcomponents
+		],
 		duration: {
 			startDate: new Date('July 01, 2022').toDateString(),
 			endDate: new Date('January 10, 2023').toDateString()

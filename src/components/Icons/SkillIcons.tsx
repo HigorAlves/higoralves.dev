@@ -1,11 +1,12 @@
 import Auth0 from '~/assets/svgs/techs/auth0.svg'
-import AwsServices from '~/assets/svgs/techs/aws-services.svg'
-import AWS from '~/assets/svgs/techs/aws.svg'
+import AWS from '~/assets/svgs/techs/aws-services.svg'
 import AwsEc2 from '~/assets/svgs/techs/awsec2.svg'
 import CircleCi from '~/assets/svgs/techs/circleci.svg'
+import Cognito from '~/assets/svgs/techs/cognito.svg'
 import Css from '~/assets/svgs/techs/css.svg'
 import Cypress from '~/assets/svgs/techs/cypress.svg'
 import Docker from '~/assets/svgs/techs/docker.svg'
+import DynamoDB from '~/assets/svgs/techs/dynamodb.svg'
 import Elasticsearch from '~/assets/svgs/techs/elasticsearch.svg'
 import Electron from '~/assets/svgs/techs/electron.svg'
 import ESLint from '~/assets/svgs/techs/eslint.svg'
@@ -42,14 +43,15 @@ import Python from '~/assets/svgs/techs/python.svg'
 import ReactLogo from '~/assets/svgs/techs/react.svg'
 import ReactQuery from '~/assets/svgs/techs/reactquery.svg'
 import ReactRouter from '~/assets/svgs/techs/reactrouter.svg'
-import Reacttestlibrary from '~/assets/svgs/techs/reacttestlibrary.png'
+import Reacttestlibrary from '~/assets/svgs/techs/reacttestlibrary.svg'
 import Redis from '~/assets/svgs/techs/redis.svg'
 import ReduxSaga from '~/assets/svgs/techs/redux-saga.svg'
 import Redux from '~/assets/svgs/techs/redux.svg'
 import Sass from '~/assets/svgs/techs/sass.svg'
 import Serverless from '~/assets/svgs/techs/serverless.svg'
 import Storybook from '~/assets/svgs/techs/storybook.svg'
-import Svelte from '~/assets/svgs/techs/svelte.png'
+import StyledComponents from '~/assets/svgs/techs/styledcomponents.svg'
+import Svelte from '~/assets/svgs/techs/svelte.svg'
 import Swift from '~/assets/svgs/techs/swift.svg'
 import Tailwind from '~/assets/svgs/techs/tailwind.svg'
 import Trpc from '~/assets/svgs/techs/trpc.svg'
@@ -70,18 +72,11 @@ export const SkillIcons: Record<string, Skill> = {
 		logo: Auth0
 	},
 	aws: {
-		id: 'aws',
-		name: 'AWS',
-		website: 'https://aws.amazon.com/',
-		worksWithSince: new Date(2019, 0, 1).toDateString(),
-		logo: AWS
-	},
-	awsservices: {
 		id: 'awsservices',
 		name: 'Amazon Web Services',
 		website: 'https://aws.amazon.com/',
 		worksWithSince: new Date(2019, 0, 1).toDateString(),
-		logo: AwsServices
+		logo: AWS
 	},
 	awsec2: {
 		id: 'awsec2',
@@ -489,5 +484,26 @@ export const SkillIcons: Record<string, Skill> = {
 		website: '',
 		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: Reacttestlibrary
+	},
+	dynamo: {
+		id: 'dynamo',
+		name: 'Dynamo Database',
+		website: '',
+		worksWithSince: new Date(2018, 0, 1).toDateString(),
+		logo: DynamoDB
+	},
+	cognito: {
+		id: 'cognito',
+		name: 'AWS Cognito',
+		website: '',
+		worksWithSince: new Date(2020, 0, 1).toDateString(),
+		logo: Cognito
+	},
+	styledcomponents: {
+		id: 'styledcomponents',
+		name: 'Styled Components',
+		website: '',
+		worksWithSince: new Date(2016, 0, 1).toDateString(),
+		logo: StyledComponents
 	}
 }
