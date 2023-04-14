@@ -249,7 +249,7 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 		name: 'Fabrica de MVP',
 		website: null,
 		address: {
-			city: 'Campinas',
+			city: 'Itapecerica',
 			country: 'Brazil'
 		},
 		duration: {

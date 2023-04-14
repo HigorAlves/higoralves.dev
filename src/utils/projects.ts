@@ -706,7 +706,20 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/hacker-rangers',
 		title: 'Hacker',
 		company: COMPANIES.perallis,
-		about: '',
+		about:
+			'Hacker Rangers is a gamification platform for user education and engagement. It\'s purpose is to lead the employees of an organization to adopt "cybersecure" habits through inherent motivation.',
+		challenges:
+			'As the JAM Stack Front End Developer Lead for the gamification platform for enterprise security, I led the front-end development team to deliver a high-quality user interface and experience. Working closely with the product and design teams to implement designs and features using the JAM stack. I needed to be skilled in reducing technical debts, creating a design system, using continuous integration, and fixing performance issues on the client side.',
+		challengesPoints: [
+			'Lead the front-end development team to implement designs and features using JAM stack',
+			'Collaborate with the product and design teams to ensure high-quality user interface and experience.',
+			'Create and maintain a design system to streamline development and ensure consistency across the platform.',
+			'Reduce technical debt and ensure high code quality through code reviews and testing.',
+			'Implement continuous integration and delivery to improve development speed and quality',
+			'Optimize client-side performance to ensure a fast and responsive user experience',
+			'Collaborate with back-end developers to ensure seamless integration between front-end and back-end systems',
+			'Stay up-to-date with the latest front-end development trends and technologies and recommend improvements to the development process'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
@@ -723,7 +736,19 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/ita-fest',
 		title: 'Ita Fest',
 		company: COMPANIES.fabricademvp,
-		about: '',
+		about:
+			'ItaFest app is your ultimate guide to finding and attending the best events during the carnival season in Brazil. As a senior software engineer working on the development of the app, you would have the opportunity to work on a range of exciting features aimed at making it easy for users to find and attend the most popular carnival events.',
+		challenges:
+			'I was  responsible for designing and implementing many of these features, as well as ensuring that the app is fast, reliable, and user-friendly. You would work closely with a team of designers, product managers, and other engineers to deliver a high-quality app that helps users have an unforgettable carnival experience.',
+		challengesPoints: [
+			'A comprehensive database of carnival events in Brazil, including parades, street parties, and music festivals.',
+			'A powerful search function that allows users to filter events by location, date, time, and event type.',
+			'A map view that shows the location of each event and provides directions to get there.',
+			'Detailed event descriptions, including information on the performers, the schedule, and the cost of admission.',
+			'The ability to create a personalized itinerary of events that you want to attend, and receive notifications when they are about to start.',
+			'User reviews and ratings of events, to help you decide which ones are worth attending.',
+			'Social media integration, allowing you to share your plans with friends and see what events they are attending.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
@@ -734,22 +759,5 @@ export const PROJECTS: Array<ProjectType> = [
 		},
 		description:
 			'A personal project develop to help people from my city to find the best areas and more secure for the Carnival Festival in Brazil.'
-	},
-	{
-		id: 'gol-a-gol',
-		slug: '/projects/gol-a-gol',
-		title: 'Gol a Gol',
-		company: COMPANIES.fabricademvp,
-		about: '',
-		isFeature: false,
-		carousel: [],
-		skills: [SkillIcons.typescript, SkillIcons.javascript],
-		thumbnail: '',
-		duration: {
-			startDate: new Date('March 01, 2018').toDateString(),
-			endDate: new Date('June 01, 2019').toDateString()
-		},
-		description:
-			'A platform that helps soccer fields owners to administrate to rent and create subscriptions for local teams and matchs.'
 	}
 ]
