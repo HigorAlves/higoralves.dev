@@ -487,7 +487,18 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/altoqi',
 		title: 'AltoQI',
 		company: COMPANIES.nkey,
-		about: '',
+		about:
+			'AltoQi is a leading Brazilian software company that specializes in the development of engineering software solutions for the construction industry. The company provides a range of products and services that help architects, engineers, and construction professionals to streamline their workflows, increase productivity, and deliver high-quality projects on time and on budget.',
+		challenges:
+			'I was part of a dynamic and innovative team that is dedicated to delivering high-quality software solutions to the construction industry in Brazil and beyond. Whether you are passionate about software engineering, construction technology, or the intersection of both, AltoQi offers a unique and exciting opportunity to make a real impact in this rapidly evolving field.',
+		challengesPoints: [
+			'Developing and implementing new software solutions that improve the design and construction process, such as building information modeling (BIM) tools, project management software, and energy efficiency analysis software.',
+			"Collaborating with cross-functional teams to develop and maintain AltoQi's software products, ensuring that they are always up-to-date and optimized for a seamless user experience.",
+			"Building and maintaining AltoQi's mobile applications, allowing customers to easily access and manage their projects from their smartphones or tablets.",
+			"Developing and implementing new features and functionality that support the company's growth, such as new engineering products and services, and expansion into new markets.",
+			"Staying up-to-date with the latest technologies and industry trends, and using this knowledge to drive innovation and improve AltoQi's software development capabilities.",
+			'Mentoring junior software engineers and helping to build a strong and collaborative engineering culture within the company.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
