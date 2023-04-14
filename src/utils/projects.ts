@@ -571,7 +571,17 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/videopeel',
 		title: 'VideoPeel',
 		company: COMPANIES.natahouse,
-		about: '',
+		about:
+			"VideoPeel is a leading platform for user-generated video marketing. The company's innovative software allows businesses of all sizes to collect and curate authentic video content from their customers, employees, and other stakeholders, and use it to enhance their marketing campaigns.",
+		challenges:
+			"I was  responsible for developing and maintaining the company's cutting-edge platform, which incorporates a range of technologies such as machine learning, video analysis, and cloud computing. You would work closely with cross-functional teams, including product managers, designers, and other engineers, to build and enhance the platform's capabilities.",
+		challengesPoints: [
+			'Developing new algorithms and machine learning models to analyze user-generated video content, and automatically categorize and curate it for use in marketing campaigns.',
+			"Building and maintaining the company's web and mobile applications, which allow customers to easily upload, manage, and share their video content.",
+			'Developing new features and functionality that help businesses to get the most out of their user-generated video content, such as automated video editing tools, advanced analytics and reporting, and integration with social media platforms.',
+			"Staying up-to-date with the latest video technologies and industry trends, and using this knowledge to drive innovation and improve VideoPeel's software development capabilities.",
+			'Mentoring junior software engineers and helping to build a strong and collaborative engineering culture within the company.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
