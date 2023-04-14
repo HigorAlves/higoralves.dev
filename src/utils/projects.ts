@@ -543,7 +543,18 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/sherlock',
 		title: 'Sherlock',
 		company: COMPANIES.natahouse,
-		about: '',
+		about:
+			'Sherlock Score is a technology company that specializes in fraud detection and prevention. The company offers a range of innovative solutions to help businesses of all sizes to identify and mitigate fraud risks, protecting them from financial losses and reputational damage.',
+		challenges:
+			'I was part of a dynamic and innovative team that is dedicated to helping businesses to fight fraud and protect themselves from financial losses. Whether you are passionate about software engineering, machine learning, or fraud prevention, Sherlock Score offers a unique and exciting opportunity to make a real impact in this important field.',
+		challengesPoints: [
+			'Developing new algorithms and machine learning models to improve fraud detection accuracy and reduce false positives.',
+			"Collaborating with cross-functional teams to integrate Sherlock Score's solutions into customer workflows, ensuring a seamless user experience.",
+			"Building and maintaining Sherlock Score's web and mobile applications, allowing customers to easily access and manage their fraud prevention tools.",
+			"Developing and implementing new features and functionality that support the company's growth, such as new fraud prevention products and services, and expansion into new markets.",
+			"Staying up-to-date with the latest technologies and industry trends, and using this knowledge to drive innovation and improve Sherlock Score's software development capabilities.",
+			'Mentoring junior software engineers and helping to build a strong and collaborative engineering culture within the company.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
