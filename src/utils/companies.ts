@@ -29,8 +29,11 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 		},
 		duration: {
 			startDate: new Date('July 01, 2022').toDateString(),
-			endDate: 'Present',
-			total: totalTime.calculateTimeSinceStartDate(new Date('July 01, 2022'))
+			endDate: new Date('April 15, 2022').toDateString(),
+			total: totalTime.calculateTimeBetweenDates(
+				new Date('July 01, 2022'),
+				new Date('April 15, 2022')
+			)
 		},
 		contract: {
 			employmentType: EmploymentType.CONTRACTOR,
