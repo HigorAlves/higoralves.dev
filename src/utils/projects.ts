@@ -428,7 +428,21 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/monetus',
 		title: 'Monetus',
 		company: COMPANIES.monetus,
-		about: '',
+		about:
+			"Monetus is redefining investing in Brazil. Combining state of the art technology, design and data, Monetus offers an incredible investment experience — one that's simple, profitable and secure. For everyone.  Located in San Pedro Valley, one of the leading startups ecosystems in Latin America, Monetus has raised investments from some of Brazil's most prominent financial market executives.  Using principles of behavioral economics, modern portfolio theory and machine learning, topped off by an amazing customer experience, we build a diversified investment portfolio on your behalf and guide you to achieving your financial goals much faster.",
+		challenges:
+			'I worked with a passionate team to help people achieve financial goals by investing and managing their money effectively. I was responsible for upgrading legacy code to improve performance and accessibility using the JAM stack, React, and React Native. My collaboration with the product and design team ensured that our software met the needs of our customers and exceeded their expectations.',
+		challengesPoints: [
+			'Upgrade legacy code to modern web standards to ensure scalability and maintainability',
+			'Work with the product and design team to deliver features that meet customer needs and exceed expectations',
+			'Develop, test, and deploy high-quality web applications and mobile applications using the JAM stack, React, and React Native',
+			'Ensure code quality through code reviews and testing',
+			'Collaborate with other engineers, designers, and product managers to deliver projects on time and within budget',
+			'Continuously improve our software development process by identifying areas for improvement and implementing changes',
+			'Stay up-to-date with the latest web development trends and technologies and recommend improvements to the development process',
+			'Work with the finance team to ensure compliance with industry regulations and standards',
+			'Monitor application performance and troubleshoot issues to ensure high availability and scalability'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
@@ -445,7 +459,18 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/traders-club',
 		title: 'Traders Club',
 		company: COMPANIES.tradersclub,
-		about: '',
+		about:
+			'TC (formerly known as TC Mover) is a leading Brazilian financial news and analysis platform that provides real-time information and insights to help investors make informed decisions. The company is committed to delivering high-quality financial news and data through its innovative digital platform, which includes real-time news feeds, market analysis, and a range of financial tools and resources.',
+		challenges:
+			'At TC, I was able to be part of a dynamic and innovative team that is dedicated to delivering high-quality financial news and data to investors across Brazil. Whether you are passionate about financial technology, mobile development, or software engineering in general, TC offers a unique and exciting opportunity to make a real impact in the rapidly evolving world of financial services.',
+		challengesPoints: [
+			'Developing and implementing new software solutions that improve the customer experience, such as personalized news feeds, market analysis tools, and real-time financial data visualization.',
+			"Collaborating with cross-functional teams to develop and maintain TC's digital platform, ensuring that it is always up-to-date and optimized for a seamless user experience.",
+			"Building and maintaining TC's mobile applications, allowing customers to easily access and manage their financial news and data from their smartphones or tablets.",
+			"Developing and implementing new features and functionality that support the company's growth, such as new financial products and services, and expansion into new markets.",
+			"Staying up-to-date with the latest technologies and industry trends, and using this knowledge to drive innovation and improve TC's software development capabilities.",
+			'Mentoring junior software engineers and helping to build a strong and collaborative engineering culture within the company.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
