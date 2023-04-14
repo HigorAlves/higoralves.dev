@@ -669,7 +669,17 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/educacao-livre',
 		title: 'Educação Livre',
 		company: COMPANIES.unesco,
-		about: '',
+		about:
+			"Educação Livre is a Brazilian nonprofit organization dedicated to promoting free and open education for all. The organization's mission is to provide access to high-quality educational resources and opportunities to underserved communities, with a focus on empowering young people to become agents of social change and innovation.",
+		challenges:
+			'At Educação Livre, I had the opportunity to work on a range of innovative projects aimed at transforming education in Brazil and beyond.',
+		challengesPoints: [
+			'Developing new software platforms and tools to support open and collaborative learning, such as online learning communities, educational games, and interactive multimedia resources.',
+			'Designing and implementing innovative educational programs and curricula that empower students to become active learners and critical thinkers, with a focus on promoting creativity, collaboration, and social responsibility.',
+			'Collaborating with educators and researchers to conduct cutting-edge research on the impact of open education and technology on learning outcomes and social equity, and to develop new evidence-based approaches to educational practice and policy.',
+			'Contributing to the development of a vibrant and collaborative educational ecosystem in Brazil and beyond, by partnering with other organizations, universities, and educational stakeholders to promote innovation, access, and diversity in education.',
+			'Mentoring and coaching junior software engineers and contributing to the development of a strong and collaborative engineering culture within the organization.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
