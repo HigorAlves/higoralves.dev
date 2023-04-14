@@ -625,7 +625,17 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/elderly-health-care',
 		title: 'Elderly Health Care',
 		company: COMPANIES.fiocruz,
-		about: '',
+		about:
+			'FioCruz, also known as the Oswaldo Cruz Foundation, is a world-renowned Brazilian public health research institution, dedicated to promoting health, science, and technology through innovative research, education, and public policies. With a history spanning more than 120 years, FioCruz has played a critical role in advancing public health in Brazil and beyond, developing new treatments and vaccines, and contributing to the understanding of infectious diseases, environmental health, and other important health issues.',
+		challenges:
+			'I had  opportunity to work on a wide range of cutting-edge projects that leverage advanced technologies such as machine learning, big data, and cloud computing to address some of the most pressing public health challenges of our time. Part of a dynamic and mission-driven team that is dedicated to advancing public health and promoting social justice through cutting-edge research, innovation, and education. If you are passionate about using technology to make a positive impact on society, FioCruz offers an exciting opportunity to work on meaningful projects and contribute to a healthier and more equitable future for all.',
+		challengesPoints: [
+			'Developing new software tools and platforms to support research and innovation in public health, such as data analytics and visualization tools, mobile health applications, and advanced simulation models.',
+			'Collaborating with researchers and public health experts to design and implement innovative research studies that use technology to improve health outcomes and reduce disease transmission.',
+			'Participating in cross-functional teams to develop new vaccines, drugs, and diagnostic tests for a wide range of infectious diseases and other health issues.',
+			'Contributing to the development and implementation of public health policies and interventions, using data-driven insights and innovative technology solutions to improve health outcomes for communities across Brazil and beyond.',
+			'Mentoring and coaching junior software engineers and contributing to the development of a strong and collaborative engineering culture within the organization.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
