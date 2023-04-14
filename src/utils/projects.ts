@@ -598,7 +598,17 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/resale',
 		title: 'Resale',
 		company: COMPANIES.natahouse,
-		about: '',
+		about:
+			'Resale is a leading online platform for buying and selling used and refurbished goods in Brazil. The platform allows consumers to easily search for and purchase high-quality secondhand items across a wide range of categories, from electronics and home appliances.',
+		challenges:
+			'I was part of a dynamic and fast-growing team that is dedicated to making it easier and more affordable for consumers to buy and sell used and refurbished goods. If you are passionate about e-commerce, machine learning, and improving the customer experience, Resale.com.br offers an exciting opportunity to work on cutting-edge projects and make a real impact in this exciting and rapidly-evolving industry.',
+		challengesPoints: [
+			'Developing and implementing new machine learning models to automatically classify and categorize products based on their attributes and features, and improve search and recommendation algorithms.',
+			"Building and maintaining the company's web and mobile applications, which allow customers to easily browse and purchase products from their smartphones and tablets.",
+			'Developing new features and functionality that improve the customer experience, such as real-time chat support, social media integration, and personalized product recommendations.',
+			"Staying up-to-date with the latest e-commerce technologies and trends, and using this knowledge to drive innovation and improve Resale.com.br's software development capabilities.",
+			'Mentoring junior software engineers and helping to build a strong and collaborative engineering culture within the company.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
