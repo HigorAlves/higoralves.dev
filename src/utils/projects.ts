@@ -513,9 +513,20 @@ export const PROJECTS: Array<ProjectType> = [
 	{
 		id: 'take',
 		slug: '/projects/take',
-		title: 'Take',
+		title: 'Take Blip',
 		company: COMPANIES.takeblip,
-		about: '',
+		about:
+			"Take is a leading Brazilian company that specializes in the development of communication software solutions. With a focus on providing powerful and easy-to-use tools for businesses of all sizes, Take's products and services help companies to improve customer engagement, streamline workflows, and drive growth.",
+		challenges:
+			'I was part of a dynamic and innovative team that is dedicated to delivering high-quality software solutions to businesses in Brazil and beyond. Whether you are passionate about software engineering, communication technology, or the intersection of both, Take offers a unique and exciting opportunity to make a real impact in this rapidly evolving field.',
+		challengesPoints: [
+			'Developing and implementing new communication solutions that improve the customer experience, such as chatbots, SMS messaging, and voice assistants.',
+			"Collaborating with cross-functional teams to develop and maintain Take's software products, ensuring that they are always up-to-date and optimized for a seamless user experience.",
+			"Building and maintaining Take's mobile applications, allowing customers to easily access and manage their communication channels from their smartphones or tablets.",
+			"Developing and implementing new features and functionality that support the company's growth, such as new communication products and services, and expansion into new markets.",
+			"Staying up-to-date with the latest technologies and industry trends, and using this knowledge to drive innovation and improve Take's software development capabilities.",
+			'Mentoring junior software engineers and helping to build a strong and collaborative engineering culture within the company.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
