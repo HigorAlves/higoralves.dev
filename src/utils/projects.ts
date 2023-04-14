@@ -652,7 +652,17 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/unesco',
 		title: 'Consultant',
 		company: COMPANIES.unesco,
-		about: '',
+		about:
+			'UNESCO, or the United Nations Educational, Scientific and Cultural Organization, is a specialized agency of the United Nations (UN) that was established in 1945 with a mission to promote international cooperation in education, science, culture, and communication. UNESCO works to advance human rights and social justice through education, scientific research, and cultural preservation and exchange.',
+		challenges:
+			'I had  the opportunity to work on a range of innovative projects aimed at promoting sustainable development, fostering intercultural dialogue, and advancing human rights and social justice. Be part of a dynamic and mission-driven team that is dedicated to advancing human rights and social justice through education, science, and culture. If you are passionate about using technology to promote global development and social change, UNESCO offers an exciting opportunity to work on meaningful projects and contribute to a more just and inclusive world for all.',
+		challengesPoints: [
+			'Developing new software platforms and tools to support open and collaborative learning, such as online learning communities, educational games, and interactive multimedia resources.',
+			'Designing and implementing innovative educational programs and curricula that promote peace, human rights, and intercultural understanding, with a focus on empowering marginalized and vulnerable communities.',
+			'Collaborating with scientists and researchers to address global challenges such as climate change, biodiversity loss, and infectious diseases, and to develop evidence-based solutions that promote sustainable development and well-being for all.',
+			'Contributing to the preservation and promotion of cultural heritage, by working to safeguard endangered languages, monuments, and cultural practices, and by promoting cultural exchange and dialogue among diverse communities.',
+			'Mentoring and coaching junior software engineers and contributing to the development of a strong and collaborative engineering culture within the organization.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
