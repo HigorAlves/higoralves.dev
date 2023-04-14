@@ -369,7 +369,18 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/good-food-market',
 		title: 'Good food Market',
 		company: COMPANIES.xteam,
-		about: '',
+		about:
+			"Make Good Food is a Canadian meal-kit company that offers a range of delicious, easy-to-prepare meals for customers across the country. The company is committed to using fresh, high-quality ingredients and offering a wide range of meal options to meet the diverse dietary needs of its customers. Make Good Food's mission is to make healthy eating easy and accessible for everyone, and to inspire people to try new and exciting flavors from around the world.",
+		challenges:
+			'I was part of a dynamic and innovative team that is dedicated to improving the way people eat and making healthy, delicious meals accessible to everyone. Whether you are passionate about e-commerce, mobile development, or software engineering in general, Make Good Food offers a unique and exciting opportunity to make a real impact in a rapidly growing industry.',
+		challengesPoints: [
+			'Developing and implementing new software solutions that improve the customer experience, such as personalized recommendations, meal planning tools, and recipe suggestions.',
+			"Collaborating with cross-functional teams to develop and maintain Make Good Food's e-commerce platform, ensuring that it is always up-to-date and optimized for a seamless user experience.",
+			"Building and maintaining Make Good Food's mobile applications, allowing customers to easily browse and order meals from their smartphones or tablets.",
+			"Developing and implementing new features and functionality that support the company's growth, such as new payment options, subscription plans, and loyalty programs.",
+			"Staying up-to-date with the latest technologies and industry trends, and using this knowledge to drive innovation and improve Make Good Food's software development capabilities.",
+			'Mentoring junior software engineers and helping to build a strong and collaborative engineering culture within the company.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
@@ -386,7 +397,21 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/toro-investimentos',
 		title: 'Toro',
 		company: COMPANIES.toroinvestimentos,
-		about: '',
+		about:
+			'Toro Investimentos is a leading Brazilian investment platform that provides a range of financial products and services to help customers achieve their investment goals. The company offers a wide range of investment options, including stocks, funds, and ETFs, and is committed to providing easy-to-use tools and resources to help customers make informed investment decisions.',
+		challenges:
+			'As a Software Engineer Leader at one of the biggest stock exchange companies, I led a team of software engineers and worked on critical internal systems. I used my expertise in React, Flutter, and serverless to guide our team and help the company make important decisions while ensuring that all work is done in compliance with regulations. I also need to deeply understand JavaScript, Frontend performance, and serverless architectures.',
+		challengesPoints: [
+			'Led a team of software engineers to develop and maintain internal systems using React, Flutter, and serverless technologies',
+			'Ensure that all work is done in compliance with regulations and company standards',
+			'Work closely with other departments to understand their needs and develop solutions that meet those needs',
+			'Use my expertise in JavaScript and Frontend performance to optimize and improve the efficiency of internal systems',
+			'Maintain and improve existing systems while also developing new systems and features as needed',
+			'Stay up-to-date with the latest trends and technologies in software development and share your knowledge with the team',
+			'Collaborate with other software engineers and architects to design and implement effective solutions',
+			'Provide technical guidance and leadership to the team',
+			'Help the company make important decisions related to software development and technology adoption'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
