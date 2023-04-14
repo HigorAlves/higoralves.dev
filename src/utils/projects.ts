@@ -340,7 +340,19 @@ export const PROJECTS: Array<ProjectType> = [
 		slug: '/projects/telus',
 		title: 'Telus',
 		company: COMPANIES.xteam,
-		about: '',
+		about:
+			'TELUS is a Canadian telecommunications company that provides a wide range of communication and entertainment services to customers across the country. The company offers mobile, internet, television, and home phone services, as well as a range of healthcare and security solutions.\nIs also committed to making a positive impact in the communities it serves, through initiatives that support environmental sustainability, community development, and social innovation. The company has been recognized as a leader in corporate social responsibility, and has been named to the Dow Jones Sustainability World Index for several consecutive years.',
+		challenges:
+			"At TELUS, I had the opportunity to work on a wide range of complex software development projects, leveraging the latest technologies to drive innovation and improve the company's products and services. \nIt was an incredibly rewarding experience, and I was proud to be part of a team that was dedicated to delivering exceptional products and services to customers across Canada. I gained valuable experience in managing complex software projects, developing innovative solutions, and collaborating with cross-functional teams, and I look forward to applying this experience in my future endeavors.",
+		challengesPoints: [
+			"Developing and implementing innovative solutions to improve the reliability and scalability of TELUS's complex telecommunications infrastructure.",
+			"Working with a wide range of stakeholders to develop new products and services that meet the evolving needs of TELUS's customers, while ensuring that these solutions are technically feasible and align with the company's overall strategic goals.",
+			"Staying up-to-date with the latest technologies and industry trends, and determining how to leverage these to drive innovation and improve TELUS's products and services.",
+			"Collaborating with cross-functional teams to develop and implement new software solutions that support TELUS's healthcare and security offerings.",
+			'Managing complex software development projects with multiple stakeholders, and ensuring that they are completed on-time and within budget.',
+			"Identifying and addressing technical challenges related to the integration of TELUS's various products and services, and ensuring that they work seamlessly together.",
+			'Leading and mentoring junior software engineers, and helping to build a strong and collaborative engineering culture within TELUS.'
+		],
 		isFeature: false,
 		carousel: [],
 		skills: [SkillIcons.typescript, SkillIcons.javascript],
