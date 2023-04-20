@@ -466,7 +466,7 @@ export const PROJECTS: Array<ProjectType> = [
 			SkillIcons.serverless,
 			SkillIcons.storybook,
 			SkillIcons.tailwind,
-			SkillIcons.typescripyt,
+			SkillIcons.typescript,
 			SkillIcons.webpack,
 			SkillIcons.cypress,
 			SkillIcons.reacttestlibrary
