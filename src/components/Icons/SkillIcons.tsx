@@ -10,6 +10,7 @@ import DynamoDB from '~/assets/svgs/techs/dynamodb.svg'
 import Elasticsearch from '~/assets/svgs/techs/elasticsearch.svg'
 import Electron from '~/assets/svgs/techs/electron.svg'
 import ESLint from '~/assets/svgs/techs/eslint.svg'
+import Ethereum from '~/assets/svgs/techs/ethereum.svg'
 import Figma from '~/assets/svgs/techs/figma.svg'
 import Firebase from '~/assets/svgs/techs/firebase.svg'
 import Flutter from '~/assets/svgs/techs/flutter.svg'
@@ -50,6 +51,7 @@ import ReduxSaga from '~/assets/svgs/techs/redux-saga.svg'
 import Redux from '~/assets/svgs/techs/redux.svg'
 import Sass from '~/assets/svgs/techs/sass.svg'
 import Serverless from '~/assets/svgs/techs/serverless.svg'
+import Solidity from '~/assets/svgs/techs/solidity.svg'
 import Storybook from '~/assets/svgs/techs/storybook.svg'
 import StyledComponents from '~/assets/svgs/techs/styledcomponents.svg'
 import Svelte from '~/assets/svgs/techs/svelte.svg'
@@ -513,5 +515,19 @@ export const SkillIcons: Record<string, Skill> = {
 		website: '',
 		worksWithSince: new Date(2018, 0, 1).toDateString(),
 		logo: PM2
+	},
+	ethereum: {
+		id: 'ethereum',
+		name: 'Ethereum',
+		website: '',
+		worksWithSince: new Date(2021, 0, 1).toDateString(),
+		logo: Ethereum
+	},
+	solidity: {
+		id: 'solidity',
+		name: 'Solidity',
+		website: '',
+		worksWithSince: new Date(2021, 0, 1).toDateString(),
+		logo: Solidity
 	}
 }
