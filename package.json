@@ -1,6 +1,6 @@
 {
-	"name": "novac.cash",
-	"version": "1.0.0",
+	"name": "higoralves.dev",
+	"version": "1.1.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
