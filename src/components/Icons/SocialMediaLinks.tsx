@@ -4,7 +4,7 @@ import {
 	IconBrandInstagram,
 	IconBrandLinkedin,
 	IconBrandYoutube
-} from '@tabler/icons'
+} from '@tabler/icons-react'
 
 import { Icon } from '~/components/Icons/Icon'
 

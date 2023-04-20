@@ -37,7 +37,7 @@ export function Header({ links }: HeaderMiddleProps) {
 	))
 
 	return (
-		<BaseHeader height={56} mb={60}>
+		<BaseHeader height={56}>
 			<Container fluid={false} className={classes.inner}>
 				<Burger
 					opened={opened}

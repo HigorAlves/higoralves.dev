@@ -1,9 +1,9 @@
 import { ActionIcon, ActionIconProps } from '@mantine/core'
-import { TablerIcon } from '@tabler/icons'
+import { TablerIconsProps } from '@tabler/icons-react'
 import Link from 'next/link'
 
 interface IProps extends ActionIconProps {
-	Icon: TablerIcon
+	Icon: (props: TablerIconsProps) => JSX.Element
 	icon: {
 		size: number
 		stroke: number

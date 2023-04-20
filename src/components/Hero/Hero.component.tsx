@@ -1,4 +1,4 @@
-import { Container, Grid, Text, Title } from '@mantine/core'
+import { Center, Container, Grid, Text, Title } from '@mantine/core'
 import Image from 'next/image'
 
 import ME_PHOTO from '~/assets/images/me/higor-larger.png'
@@ -10,13 +10,8 @@ export function HeroText() {
 	const { classes } = useStyles()
 
 	return (
-		<Container className={classes.wrapper}>
-			<Dots className={classes.dots} style={{ left: 0, top: 200 }} />
-			<Dots className={classes.dots} style={{ left: 60, top: 290 }} />
-			<Dots className={classes.dots} style={{ left: 0, top: 240 }} />
-			<Dots className={classes.dots} style={{ right: 0, top: 260 }} />
-
-			<Grid justify='center' align='center'>
+		<Center style={{ height: '100%' }}>
+			<Grid justify='center' align='center' style={{ height: '100%' }}>
 				<Grid.Col sm={12} md={8} className={classes.inner}>
 					<Title
 						variant='gradient'
@@ -45,6 +40,6 @@ export function HeroText() {
 					/>
 				</Grid.Col>
 			</Grid>
-		</Container>
+		</Center>
 	)
 }

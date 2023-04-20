@@ -5,7 +5,7 @@ export const useStyles = createStyles(theme => ({
 		display: 'flex',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-		height: 56,
+		height: 60,
 		background: theme.colors.dark[7],
 
 		[theme.fn.smallerThan('sm')]: {
