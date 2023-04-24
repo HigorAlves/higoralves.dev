@@ -5,7 +5,8 @@ import {
 	Group,
 	Text,
 	Avatar,
-	Badge
+	Badge,
+	Stack
 } from '@mantine/core'
 import { IconHeart, IconBookmark, IconShare } from '@tabler/icons-react'
 
@@ -15,7 +16,6 @@ interface ArticleCardFooterProps {
 	image: string
 	category: string
 	title: string
-	footer: string
 	description: string
 }
 
@@ -23,7 +23,7 @@ export function ArticleCardFooter({
 	image,
 	category,
 	title,
-	footer
+	description
 }: ArticleCardFooterProps) {
 	const { classes, theme } = useStyles()
 	const author = {
@@ -40,13 +40,15 @@ export function ArticleCardFooter({
 				<Image src={image} alt={title} height={180} />
 			</Card.Section>
 
-			<Text fw={700} className={classes.title} mt='xs'>
-				{title}
-			</Text>
+			<Stack>
+				<Text fw={700} className={classes.title} mt='xs' lineClamp={1}>
+					{title}
+				</Text>
 
-			<Text fw={400} size={'sm'} c={'dimmed'}>
-				{title}
-			</Text>
+				<Text fw={400} size={'sm'} c={'dimmed'} lineClamp={5}>
+					{description}
+				</Text>
+			</Stack>
 
 			<Card.Section className={classes.footer}>
 				<Group position='apart'>
