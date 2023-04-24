@@ -6,8 +6,7 @@ const nextConfig = {
 	// Optionally, add any other Next.js config below
 	reactStrictMode: true,
 	trailingSlash: true,
-	productionBrowserSourceMaps: true,
-	fileExtensions: ['jpg', 'jpeg', 'png', 'svg']
+	productionBrowserSourceMaps: true
 }
 
 module.exports = nextConfig
