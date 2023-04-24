@@ -40,11 +40,10 @@ export function ArticleCardFooter({
 				<Image src={image} alt={title} height={180} />
 			</Card.Section>
 
-			<Stack>
-				<Text fw={700} className={classes.title} mt='xs' lineClamp={1}>
+			<Stack mt='xs' spacing='xs'>
+				<Text fw={700} className={classes.title} lineClamp={2}>
 					{title}
 				</Text>
-
 				<Text fw={400} size={'sm'} c={'dimmed'} lineClamp={5}>
 					{description}
 				</Text>
