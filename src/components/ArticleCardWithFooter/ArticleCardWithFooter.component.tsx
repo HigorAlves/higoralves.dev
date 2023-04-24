@@ -9,6 +9,7 @@ import {
 	Stack
 } from '@mantine/core'
 import { IconHeart, IconBookmark, IconShare } from '@tabler/icons-react'
+import Link from 'next/link'
 
 import { useStyles } from '~/components/ArticleCardWithFooter/ArticleCardWithFooter.styles'
 
@@ -17,13 +18,15 @@ interface ArticleCardFooterProps {
 	category: string
 	title: string
 	description: string
+	slug: string
 }
 
 export function ArticleCardFooter({
 	image,
 	category,
 	title,
-	description
+	description,
+	slug
 }: ArticleCardFooterProps) {
 	const { classes, theme } = useStyles()
 	const author = {
@@ -34,20 +37,24 @@ export function ArticleCardFooter({
 	return (
 		<Card withBorder padding='lg' radius='md' className={classes.card}>
 			<Card.Section mb='sm'>
-				<Badge variant={'filled'} color={'orange'} className={classes.badge}>
-					{category}
-				</Badge>
-				<Image src={image} alt={title} height={180} />
+				<Link href={slug}>
+					<Badge variant={'filled'} color={'orange'} className={classes.badge}>
+						{category}
+					</Badge>
+					<Image src={image} alt={title} height={180} />
+				</Link>
 			</Card.Section>
 
-			<Stack mt='xs' spacing='xs'>
-				<Text fw={700} className={classes.title} lineClamp={2}>
-					{title}
-				</Text>
-				<Text fw={400} size={'sm'} c={'dimmed'} lineClamp={5}>
-					{description}
-				</Text>
-			</Stack>
+			<Link href={slug} style={{ textDecoration: 'none' }}>
+				<Stack mt='xs' spacing='xs'>
+					<Text fw={700} className={classes.title} lineClamp={2}>
+						{title}
+					</Text>
+					<Text fw={400} size={'sm'} c={'dimmed'} lineClamp={5}>
+						{description}
+					</Text>
+				</Stack>
+			</Link>
 
 			<Card.Section className={classes.footer}>
 				<Group position='apart'>

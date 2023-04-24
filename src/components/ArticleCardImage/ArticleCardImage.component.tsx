@@ -1,4 +1,5 @@
-import { createStyles, Paper, Text, Title, Button, rem } from '@mantine/core'
+import { Paper, Text, Title, Button } from '@mantine/core'
+import Link from 'next/link'
 
 import { useStyles } from '~/components/ArticleCardImage/ArticleCardImage.styles'
 
@@ -6,12 +7,14 @@ interface ArticleCardImageProps {
 	image: string
 	title: string
 	category: string
+	slug: string
 }
 
 export function ArticleCardImage({
 	image,
 	title,
-	category
+	category,
+	slug
 }: ArticleCardImageProps) {
 	const { classes } = useStyles()
 
@@ -31,9 +34,11 @@ export function ArticleCardImage({
 					{title}
 				</Title>
 			</div>
-			<Button variant='white' color='dark'>
-				Read article
-			</Button>
+			<Link href={slug}>
+				<Button variant='white' color='dark'>
+					Read article
+				</Button>
+			</Link>
 		</Paper>
 	)
 }

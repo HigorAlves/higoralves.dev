@@ -10,6 +10,7 @@ export * from './Career/Career.component'
 export * from './SkillList/SkillList.component'
 export * from './ArticleCardImage/ArticleCardImage.component'
 export * from './ArticleCardWithFooter/ArticleCardWithFooter.component'
+export * from '~/components/TableOfContentsFloating/TableOfContentsFloating.component'
 
 // ICONS
 export * from './Icons'
