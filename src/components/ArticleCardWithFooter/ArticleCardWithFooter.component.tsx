@@ -27,7 +27,6 @@ export function ArticleCardFooter({
 }: ArticleCardFooterProps) {
 	const { classes, theme } = useStyles()
 	const author = {
-		description: 'haha',
 		image: 'https://avatars.githubusercontent.com/u/11262976?v=4',
 		name: 'Higor Alves'
 	}
