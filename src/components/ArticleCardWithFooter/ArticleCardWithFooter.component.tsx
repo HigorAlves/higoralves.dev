@@ -7,13 +7,18 @@ import {
 	Avatar,
 	Badge,
 	Stack,
-	CopyButton,
-	Button
+	CopyButton
 } from '@mantine/core'
-import { IconHeart, IconBookmark, IconShare } from '@tabler/icons-react'
+import {
+	IconHeart,
+	IconBookmark,
+	IconShare,
+	IconBookmarkOff
+} from '@tabler/icons-react'
 import Link from 'next/link'
 
 import { useStyles } from '~/components/ArticleCardWithFooter/ArticleCardWithFooter.styles'
+import { useBookmark } from '~/hooks'
 
 interface ArticleCardFooterProps {
 	image: string
@@ -31,6 +36,7 @@ export function ArticleCardFooter({
 	slug
 }: ArticleCardFooterProps) {
 	const { classes, theme } = useStyles()
+	const { setBookmark, isBookmarked } = useBookmark(slug)
 	const articleLink = `https://higor.dev${slug}`
 	const author = {
 		image: 'https://avatars.githubusercontent.com/u/11262976?v=4',
@@ -75,12 +81,20 @@ export function ArticleCardFooter({
 								stroke={1.5}
 							/>
 						</ActionIcon>
-						<ActionIcon>
-							<IconBookmark
-								size='1.2rem'
-								color={theme.colors.yellow[6]}
-								stroke={1.5}
-							/>
+						<ActionIcon onClick={setBookmark}>
+							{isBookmarked() ? (
+								<IconBookmark
+									size='1.2rem'
+									color={theme.colors.yellow[6]}
+									stroke={1.5}
+								/>
+							) : (
+								<IconBookmarkOff
+									size='1.2rem'
+									color={theme.colors.gray[6]}
+									stroke={1.5}
+								/>
+							)}
 						</ActionIcon>
 						<CopyButton value={articleLink}>
 							{({ copy }) => (
