@@ -6,7 +6,9 @@ import {
 	Text,
 	Avatar,
 	Badge,
-	Stack
+	Stack,
+	CopyButton,
+	Button
 } from '@mantine/core'
 import { IconHeart, IconBookmark, IconShare } from '@tabler/icons-react'
 import Link from 'next/link'
@@ -29,6 +31,7 @@ export function ArticleCardFooter({
 	slug
 }: ArticleCardFooterProps) {
 	const { classes, theme } = useStyles()
+	const articleLink = `https://higor.dev${slug}`
 	const author = {
 		image: 'https://avatars.githubusercontent.com/u/11262976?v=4',
 		name: 'Higor Alves'
@@ -79,13 +82,17 @@ export function ArticleCardFooter({
 								stroke={1.5}
 							/>
 						</ActionIcon>
-						<ActionIcon>
-							<IconShare
-								size='1.2rem'
-								color={theme.colors.blue[6]}
-								stroke={1.5}
-							/>
-						</ActionIcon>
+						<CopyButton value={articleLink}>
+							{({ copy }) => (
+								<ActionIcon onClick={copy}>
+									<IconShare
+										size='1.2rem'
+										color={theme.colors.blue[6]}
+										stroke={1.5}
+									/>
+								</ActionIcon>
+							)}
+						</CopyButton>
 					</Group>
 				</Group>
 			</Card.Section>
