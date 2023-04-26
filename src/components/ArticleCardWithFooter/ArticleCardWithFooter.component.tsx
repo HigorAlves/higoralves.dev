@@ -36,7 +36,11 @@ export function ArticleCardFooter({
 	slug
 }: ArticleCardFooterProps) {
 	const { classes, theme } = useStyles()
-	const { setBookmark, isBookmarked } = useBookmark(slug)
+	const { isBookmarked, setBookmark } = useBookmark(slug, 'bookmarked-articles')
+	const { isBookmarked: isLoved, setBookmark: setLoved } = useBookmark(
+		slug,
+		'loved-articles'
+	)
 	const articleLink = `https://higor.dev${slug}`
 	const author = {
 		image: 'https://avatars.githubusercontent.com/u/11262976?v=4',
@@ -74,34 +78,34 @@ export function ArticleCardFooter({
 						</Text>
 					</Group>
 					<Group spacing={0}>
-						<ActionIcon>
+						<ActionIcon onClick={setLoved}>
 							<IconHeart
 								size='1.2rem'
-								color={theme.colors.red[6]}
+								color={isLoved ? theme.colors.red[6] : theme.colors.gray[6]}
 								stroke={1.5}
 							/>
 						</ActionIcon>
 						<ActionIcon onClick={setBookmark}>
-							{isBookmarked() ? (
-								<IconBookmark
-									size='1.2rem'
-									color={theme.colors.yellow[6]}
-									stroke={1.5}
-								/>
-							) : (
+							{isBookmarked ? (
 								<IconBookmarkOff
 									size='1.2rem'
 									color={theme.colors.gray[6]}
 									stroke={1.5}
 								/>
+							) : (
+								<IconBookmark
+									size='1.2rem'
+									color={theme.colors.yellow[6]}
+									stroke={1.5}
+								/>
 							)}
 						</ActionIcon>
 						<CopyButton value={articleLink}>
-							{({ copy }) => (
+							{({ copy, copied }) => (
 								<ActionIcon onClick={copy}>
 									<IconShare
 										size='1.2rem'
-										color={theme.colors.blue[6]}
+										color={copied ? theme.colors.blue[6] : theme.colors.blue[8]}
 										stroke={1.5}
 									/>
 								</ActionIcon>
