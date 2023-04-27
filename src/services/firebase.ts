@@ -11,7 +11,8 @@ export default function firebase() {
 	const storage = getStorage(app)
 	const auth = getAuth(app)
 
-	const isLocalHost = process.env.NODE_ENV === 'development'
+	const NODE_ENV = process.env.NODE_ENV
+	const isLocalHost = NODE_ENV === 'development'
 
 	if (isLocalHost) {
 		try {
