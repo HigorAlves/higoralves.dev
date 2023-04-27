@@ -1,4 +1,5 @@
 import { MantineProvider } from '@mantine/core'
+import { Analytics } from '@vercel/analytics/dist/react'
 import type { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -28,7 +29,7 @@ export default function App(props: AppPropsWithLayout) {
 				/>
 				<link rel='shortcut icon' href='/favicon.ico' />
 			</Head>
-
+			<Analytics />
 			<MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
 				<Layout layout={getLayout}>
 					<Component {...pageProps} />
