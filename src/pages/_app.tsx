@@ -1,5 +1,5 @@
 import { MantineProvider } from '@mantine/core'
-import { Analytics } from '@vercel/analytics/dist/react'
+import { Analytics } from '@vercel/analytics/react'
 import type { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
