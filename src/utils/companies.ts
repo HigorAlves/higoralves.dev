@@ -168,7 +168,7 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 		icon: IconBalloon,
 		show: true,
 		contract: {
-			employmentType: EmploymentType.FULLTIME,
+			employmentType: EmploymentType.CONTRACTOR,
 			locationType: LocationType.REMOTE
 		}
 	},
@@ -176,8 +176,10 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 		job: 'Senior Software Engineer',
 		name: 'NKey',
 		website: 'https://www.nkey.com.br',
+		icon: IconBalloon,
+		show: true,
 		contract: {
-			employmentType: EmploymentType.FULLTIME,
+			employmentType: EmploymentType.CONTRACTOR,
 			locationType: LocationType.REMOTE
 		},
 		address: {
@@ -191,9 +193,7 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 				new Date('July 30, 2021'),
 				new Date('June 15, 2022')
 			)
-		},
-		icon: IconBalloon,
-		show: true
+		}
 	},
 	toroinvestimentos: {
 		job: 'Senior Software Engineer',
