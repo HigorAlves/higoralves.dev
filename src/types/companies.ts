@@ -11,6 +11,7 @@ export enum EmploymentType {
 }
 
 export type CompanyName =
+	| 'ask'
 	| '123milhas'
 	| 'zipdev'
 	| 'notchteam'

@@ -17,6 +17,26 @@ import { DateMath } from '~/utils/DateMath'
 const totalTime = new DateMath()
 
 export const COMPANIES: Record<CompanyName, ICompany> = {
+	ask: {
+		job: 'Senior Software Engineer',
+		name: 'AMG - Ask Media Group',
+		website: 'https://ask.com',
+		icon: IconBalloon,
+		show: true,
+		address: {
+			city: 'San Francisco',
+			country: 'United States'
+		},
+		duration: {
+			startDate: new Date('May 15, 2022').toDateString(),
+			endDate: 'present',
+			total: totalTime.calculateTimeSinceStartDate(new Date('May 15, 2022'))
+		},
+		contract: {
+			employmentType: EmploymentType.FULLTIME,
+			locationType: LocationType.REMOTE
+		}
+	},
 	'123milhas': {
 		job: 'Senior Software Engineer',
 		name: 'Grupo 123',
@@ -28,7 +48,7 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
 			country: 'Brazil'
 		},
 		duration: {
-			startDate: new Date('April 24, 2021').toDateString(),
+			startDate: new Date('April 24, 2022').toDateString(),
 			endDate: 'present',
 			total: totalTime.calculateTimeSinceStartDate(new Date('April 24, 2021'))
 		},
