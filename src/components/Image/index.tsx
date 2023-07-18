@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // eslint-disable-next-line import/no-named-default
-import { default as NextImage, ImageProps } from 'next/image'
+import { ImageProps, default as NextImage } from 'next/image'
 
 const Image = ({ className, ...props }: ImageProps) => {
   const [loaded, setLoaded] = useState(false)

@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^13.4.9",
+    "@sentry/nextjs": "^7.58.1",
     "@splidejs/react-splide": "^0.7.12",
     "@t3-oss/env-nextjs": "^0.6.0",
     "@tippyjs/react": "^4.2.6",
