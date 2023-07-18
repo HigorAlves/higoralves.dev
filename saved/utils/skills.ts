@@ -1,5 +1,5 @@
 import { SkillIcons } from '~/components/Icons/SkillIcons'
-import { Skill } from '~/types/projects'
+import { Skill } from '../types/projects'
 
 export const skills: Array<Skill> = [
 	{

@@ -2,8 +2,8 @@ import BUBBLES_IMG from '~/assets/images/projects/bubbles/bubbles.png'
 import SNAPSTRAT_IMG from '~/assets/images/projects/snapstrat/snapStrat.png'
 import TILED_IMG from '~/assets/images/projects/tiled/tiled.png'
 import { SkillIcons } from '~/components/Icons/SkillIcons'
-import { ProjectType } from '~/types/projects'
-import { COMPANIES } from '~/utils/companies'
+import { ProjectType } from '../types/projects'
+import { COMPANIES } from './companies'
 
 export const PROJECTS: Array<ProjectType> = [
 	{

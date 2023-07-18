@@ -11,8 +11,8 @@ import {
 	EmploymentType,
 	ICompany,
 	LocationType
-} from '~/types/companies'
-import { DateMath } from '~/utils/DateMath'
+} from '../types/companies'
+import { DateMath } from './DateMath'
 
 const totalTime = new DateMath()
 

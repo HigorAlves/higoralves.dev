@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image'
 
 import { SkillIcons } from '~/components/Icons/SkillIcons'
-import { ICompany } from '~/types/companies'
+import { ICompany } from './companies'
 
 export type Skill = {
 	id: keyof typeof SkillIcons
