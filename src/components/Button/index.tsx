@@ -18,23 +18,23 @@ const Button = ({ className, href, onClick, children, px, white }: ButtonProps) 
   const spanClasses = 'relative z-10'
 
   return href ? (
-    href.startsWith('mailto:') ? (
+        href.startsWith('mailto:') ? (
       <a href={href} className={classes}>
         <span className={spanClasses}>{children}</span>
         {svgs(white)}
       </a>
-    ) : (
+            ) : (
       <Link href={href} className={classes}>
         <span className={spanClasses}>{children}</span>
         {svgs(white)}
       </Link>
-    )
-  ) : (
+            )
+      ) : (
     <button className={classes} onClick={onClick}>
       <span className={spanClasses}>{children}</span>
       {svgs(white)}
     </button>
-  )
+      )
 }
 
 export default Button

@@ -10,12 +10,12 @@ type ComparisonProps = {}
 const Comparison = ({}: ComparisonProps) => {
   const check = (value: any, enterprise?: boolean) =>
     typeof value === 'boolean' ? (
-      value === true ? (
+          value === true ? (
         <Image src={enterprise ? '/images/check-yellow.svg' : '/images/check.svg'} width={24} height={24} alt="Check" />
-      ) : null
-    ) : (
-      value
-    )
+              ) : null
+        ) : (
+          value
+        )
 
   return (
     <Section>
