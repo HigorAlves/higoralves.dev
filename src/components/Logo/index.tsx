@@ -7,7 +7,7 @@ type LogoProps = {
 
 const Logo = ({ className }: LogoProps) => (
   <Link className={`block w-[11.875rem] ${className || ''}`} href="/">
-    <Image src="/images/brainwave.svg" width={190} height={40} priority={true} alt="Brainwave" />
+    <Image src="/images/brainwave.svg" width={190} height={40} priority={true} alt="Higor Alves Logo" />
   </Link>
 )
 

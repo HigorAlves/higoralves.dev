@@ -30,10 +30,10 @@ const grotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: 'Higor Alves',
-  description: 'Code the world. Feel Free.',
+  description: 'Developer, Nomad, Biker',
   openGraph: {
     type: 'website',
-    description: 'Code the world. Feel Free.',
+    description: 'Developer, Nomad, Biker',
     locale: 'en_US',
     title: 'Higor Alves',
     images: ['%PUBLIC_URL%/fb-og-image.png'],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: 'Higor Alves',
   },
   twitter: {
-    description: 'Code the world. Feel Free.',
+    description: 'Developer, Nomad, Biker',
     title: 'Higor Alves',
     images: ['%PUBLIC_URL%/fb-og-image.png'],
     card: 'summary_large_image',

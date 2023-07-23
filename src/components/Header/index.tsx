@@ -7,12 +7,12 @@ import Button from '../Button'
 import Image from '../Image'
 import Logo from '../Logo'
 
-type HeaderProps = {}
-
-const Header = ({}: HeaderProps) => {
+function Header() {
   const [openNavigation, setOpenNavigation] = useState<boolean>(false)
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
 
-  const toggleNavigation = () => {
+  function toggleNavigation() {
     if (openNavigation) {
       setOpenNavigation(false)
       enablePageScroll()
@@ -22,10 +22,7 @@ const Header = ({}: HeaderProps) => {
     }
   }
 
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-
-  const handleClick = () => {
+  function handleClick() {
     enablePageScroll()
     setOpenNavigation(false)
   }

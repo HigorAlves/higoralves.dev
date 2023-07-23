@@ -1,17 +1,17 @@
 export const navigation = [
   {
     id: '0',
-    title: 'Features',
+    title: 'About',
     url: '/features',
   },
   {
     id: '1',
-    title: 'Pricing',
+    title: 'Blog',
     url: '/pricing',
   },
   {
     id: '2',
-    title: 'How to use',
+    title: 'Experience',
     url: '/how-to-use',
   },
   {
@@ -21,12 +21,17 @@ export const navigation = [
   },
   {
     id: '4',
+    title: 'Projects',
+    url: '/roadmap',
+  },
+  {
+    id: '5',
     title: 'New account',
     url: '/login?new=true',
     onlyMobile: true,
   },
   {
-    id: '5',
+    id: '6',
     title: 'Sign in',
     url: '/login',
     onlyMobile: true,

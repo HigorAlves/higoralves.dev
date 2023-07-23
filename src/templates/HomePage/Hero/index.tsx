@@ -28,9 +28,9 @@ const Hero = ({}: HeroProps) => {
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 mx-auto mb-[3.875rem] max-w-[62rem] text-center md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
-            Explore the Possibilities of&nbsp;AI&nbsp;Chatting with{' '}
-            <span className="relative inline-block">
-              Brainwave
+            Roaming Routes, Rolling Code the adventures of a
+            <span className="relative inline-block px-2">
+              developer
               <Image
                 className="absolute left-0 top-full w-full xl:-mt-2"
                 src="/images/curve.png"
@@ -41,7 +41,7 @@ const Hero = ({}: HeroProps) => {
             </span>
           </h1>
           <p className="body-1 mx-auto mb-6 max-w-3xl text-n-2 lg:mb-8">
-            Unleash the power of AI within Brainwave. Upgrade your productivity with Brainwave, the open AI chat app.
+            Delivering top-tier tech solutions, inspired by diverse cultures and fueled by a nomadic lifestyle.
           </p>
           <Button href="/pricing" white>
             Get started

@@ -2,7 +2,9 @@
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import plugin from 'tailwindcss/plugin'
 
-module.exports = {
+const { withTV } = require('tailwind-variants/transformer')
+
+module.exports = withTV({
   content: [
     './templates/**/*.{js,ts,jsx,tsx,mdx}',
     './index.html',
@@ -129,4 +131,4 @@ module.exports = {
       })
     }),
   ],
-}
+})
