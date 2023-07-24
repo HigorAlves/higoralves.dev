@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
+import { Logo } from '~/components'
 import { navigation } from '~/constants/navigation'
 import { socials } from '~/constants/socials'
 import Image from '../Image'
-import Logo from '../Logo'
 import Section from '../Section'
 
 type FooterProps = {}
