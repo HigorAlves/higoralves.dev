@@ -6,7 +6,7 @@ export const PROJECTS: Array<ProjectType> = [
     id: 'AMG',
     slug: '/projects/AMG',
     title: 'AMG',
-    company: 'COMPANIES.zipdev',
+    company: COMPANIES.ask,
     isFeature: true,
     about:
       "AMG is a highly scalable platform designed to manage millions of clients on a daily basis. At its core, AMG's mission is to provide a robust and efficient system that ensures seamless user management and high-quality customer service. Leveraging advanced JavaScript features, the platform guarantees optimal performance and resiliency.",

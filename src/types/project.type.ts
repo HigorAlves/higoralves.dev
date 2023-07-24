@@ -1,14 +1,13 @@
 import { StaticImageData } from 'next/image'
 
-import { SkillIcons } from '~/components/Icons/SkillIcons'
-import { ICompany } from '~/types/companies'
+import { ICompany } from '~/types/companies.type'
 
 export type Skill = {
-  id: keyof typeof SkillIcons
+  id: string
   name: string
   website: string
   worksWithSince: string
-  logo: JSX.Element | any
+  logo: Element | string
 }
 
 export type ProjectType = {
