@@ -3,6 +3,25 @@ import { IconBalloon, IconFlag, IconHandRock, IconStar, IconTrack } from '@table
 import { CompanyName, EmploymentType, ICompany, LocationType } from '~/types/companies.type'
 
 export const COMPANIES: Record<CompanyName, ICompany> = {
+  doare: {
+    job: 'Senior Software Engineer',
+    name: 'Doare',
+    website: 'https://doare.org',
+    icon: IconBalloon,
+    show: true,
+    address: {
+      city: 'Florianópolis',
+      country: 'Brazil',
+    },
+    duration: {
+      startDate: new Date('June 25, 2023').toDateString(),
+      endDate: 'present',
+    },
+    contract: {
+      employmentType: EmploymentType.CONTRACTOR,
+      locationType: LocationType.REMOTE,
+    },
+  },
   ask: {
     job: 'Senior Software Engineer',
     name: 'AMG - Ask Media Group',
@@ -14,7 +33,7 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
       country: 'United States',
     },
     duration: {
-      startDate: new Date('May 15, 2022').toDateString(),
+      startDate: new Date('May 15, 2023').toDateString(),
       endDate: 'present',
     },
     contract: {
@@ -33,11 +52,11 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
       country: 'Brazil',
     },
     duration: {
-      startDate: new Date('April 24, 2022').toDateString(),
+      startDate: new Date('April 24, 2023').toDateString(),
       endDate: 'present',
     },
     contract: {
-      employmentType: EmploymentType.FULLTIME,
+      employmentType: EmploymentType.CONTRACTOR,
       locationType: LocationType.REMOTE,
     },
   },

@@ -3,6 +3,88 @@ import { ProjectType } from '~/types/project.type'
 
 export const PROJECTS: Array<ProjectType> = [
   {
+    id: 'AMG',
+    slug: '/projects/AMG',
+    title: 'AMG',
+    company: 'COMPANIES.zipdev',
+    isFeature: true,
+    about:
+      "AMG is a highly scalable platform designed to manage millions of clients on a daily basis. At its core, AMG's mission is to provide a robust and efficient system that ensures seamless user management and high-quality customer service. Leveraging advanced JavaScript features, the platform guarantees optimal performance and resiliency.",
+    description:
+      'AMG is a robust and scalable platform that efficiently manages millions of daily clients, providing a reliable and seamless experience. The platform leverages cutting-edge JavaScript techniques to deliver superior performance and user experience.',
+    carousel: [],
+    challenges:
+      "My key responsibility was migrating AMG's entire infrastructure to an automated setup using Terraform and extensively using JavaScript to improve the code quality and the platform's capacity to handle high traffic. I collaborated with principal engineers, ensured optimal platform performance, and contributed to its scalability.",
+    challengesPoints: [
+      'Led the infrastructure migration to an automated setup using Terraform, significantly improving efficiency and reducing manual errors.',
+      "Utilized advanced JavaScript features to improve the codebase's quality, enhancing platform performance and readability.",
+      "Optimized JavaScript code for asynchronous operations, enhancing the platform's ability to handle multiple simultaneous client interactions without blocking I/O operations.",
+      'Implemented JavaScript testing frameworks like Jest and Mocha to ensure the robustness and reliability of the platform.',
+      'Collaborated with principal engineers to address technical challenges, providing strategic input to influence system design and functionality.',
+      'Optimized the platform to handle high volumes of users by improving application code, data structures, and algorithms using JavaScript.',
+      "Implemented monitoring solutions to provide insights into the system's performance, health, and potential issues.",
+      'Ensured platform security by implementing robust measures and regularly conducting security assessments.',
+    ],
+    skills: [],
+    duration: {
+      ...COMPANIES.ask.duration,
+    },
+  },
+  {
+    id: 'Doare',
+    slug: '/projects/doare',
+    title: 'Doare',
+    isFeature: false,
+    carousel: [],
+    company: COMPANIES.doare,
+    duration: {
+      ...COMPANIES.doare.duration,
+    },
+    description:
+      'Doare is a platform aimed at providing efficient and user-friendly payment methods for various organizations in Latin America. The project involved enhancing the code-base and improving the payment methods.',
+    about:
+      'At Doare, I played a key role in helping the team improve the code-base and streamline payment methods to support numerous organizations across Latin America.',
+    challenges:
+      'The key challenges involved revamping the existing code-base, improving the efficiency and reliability of payment methods, and ensuring high-quality service for the organizations.',
+    challengesPoints: [
+      'Improved the quality of the code-base by adopting best coding practices and introducing advanced programming techniques.',
+      'Contributed to the development and implementation of efficient and secure payment methods, thereby enhancing the reliability of financial transactions.',
+      'Collaborated with a diverse team to identify potential areas of improvement and implement effective solutions.',
+      'Leveraged knowledge of regional payment methods to create solutions tailored to Latin American organizations.',
+      'Worked on cross-functional teams to integrate the payment solutions with the existing platform seamlessly.',
+      'Ensured compliance with financial regulations and data security standards.',
+      'Mentored team members, sharing knowledge and expertise to foster a culture of continuous learning and improvement.',
+    ],
+    skills: [],
+  },
+  {
+    id: '123 Milhas',
+    slug: '/projects/123-milhas',
+    title: '123 Milhas',
+    isFeature: false,
+    carousel: [],
+    company: COMPANIES['123milhas'],
+    duration: {
+      ...COMPANIES['123milhas'].duration,
+    },
+    description:
+      "123 Milhas is a dynamic platform aimed at providing efficient and high-quality service to its customers. The project involved building a strong architecture and leading two teams towards achieving the project's goals.",
+    about:
+      'As a team lead at 123 Milhas, I was responsible for creating the architecture of two teams, leading them using JavaScript and TypeScript. I worked on improving performance, conducting testing, and sharing my knowledge with the company to help improve other teams.',
+    challenges:
+      'My role required creating and executing a well-structured architectural plan for two teams, improving code performance, setting up thorough testing procedures, and fostering a culture of knowledge sharing within the company.',
+    challengesPoints: [
+      'Architected and implemented a scalable solution using JavaScript and TypeScript to meet the needs of a growing company.',
+      'Led two teams, providing technical guidance and leadership to ensure effective and efficient project execution.',
+      'Implemented performance enhancements in the JavaScript and TypeScript codebase, leading to significant improvements in application speed and responsiveness.',
+      'Established robust testing procedures using tools such as Jest and Mocha to ensure code reliability and quality.',
+      'Organized and led technical workshops to disseminate best coding practices and knowledge throughout the company.',
+      'Implemented code reviews and pair programming sessions to improve code quality and foster a team learning environment.',
+      'Advised on technology choices and development practices to support other teams in the company.',
+    ],
+    skills: [],
+  },
+  {
     id: 'snapstrat',
     slug: '/projects/snapstrat',
     title: 'SnapStrat',
