@@ -4,13 +4,14 @@ import { usePathname, useSearchParams } from 'next/navigation'
 import { disablePageScroll, enablePageScroll } from 'scroll-lock'
 import { Logo } from '~/components'
 import { NavContainer } from '~/components/Navbar/NavContainer.component'
-import { container, wrapper } from './Navbar.styles'
+import { styles } from './Navbar.styles'
 import Button from '../Button'
 
 export function Navbar() {
   const [openNavigation, setOpenNavigation] = useState<boolean>(false)
   const pathname = usePathname()
   const searchParams = useSearchParams()
+  const { container, wrapper } = styles({ openNavigation })
 
   function toggleNavigation() {
     if (openNavigation) {
@@ -33,7 +34,7 @@ export function Navbar() {
   }, [])
 
   return (
-    <div className={container({ openNavigation })}>
+    <div className={container()}>
       <div className={wrapper()}>
         <Logo />
         <NavContainer openNavigation={openNavigation} pathname={pathname} handleClick={handleClick} />

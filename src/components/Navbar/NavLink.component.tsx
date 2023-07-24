@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { navLinks } from '~/components/Navbar/Navbar.styles'
+import { styles } from '~/components/Navbar/Navbar.styles'
 
 interface Props {
   onlyMobile?: boolean
@@ -8,10 +8,12 @@ interface Props {
   title: string
   onClick: () => void
   pathname: string
+  openNavigation: boolean
 }
 
-export function NavLink({ url, title, id, onlyMobile, onClick, pathname }: Props) {
+export function NavLink({ url, title, id, onlyMobile, onClick, pathname, openNavigation }: Props) {
   const isURLEqualsToPathname = pathname === url
+  const { navLink } = styles({ openNavigation, urlEqualsToPathname: isURLEqualsToPathname, onlyMobile })
 
   function handleClick() {
     if (url.startsWith(pathname)) {
@@ -20,12 +22,7 @@ export function NavLink({ url, title, id, onlyMobile, onClick, pathname }: Props
   }
 
   return (
-    <Link
-      className={navLinks({ onlyMobile, urlEqualsToPathname: isURLEqualsToPathname })}
-      href={url}
-      onClick={handleClick}
-      key={id}
-    >
+    <Link className={navLink()} href={url} onClick={handleClick} key={id}>
       {title}
     </Link>
   )
