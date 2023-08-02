@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
-import { Navbar } from '~/components'
-import Footer from '../Footer'
+import { Footer, Navbar } from '~/components'
 
 type LayoutProps = {
   hideFooter?: boolean
