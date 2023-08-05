@@ -22,7 +22,7 @@ const Benefits = ({}: BenefitsProps) => {
   return (
     <Section className="overflow-hidden">
       <div className="container relative z-2">
-        <Heading className="md:max-w-md lg:max-w-2xl" title="Chat Smarter, Not Harder with Brainwave" />
+        <Heading className="md:max-w-md lg:max-w-2xl" title="Having a hard time being a Nomad Dev?" />
         <Splide
           className="splide-visible max-w-[24rem] md:max-w-none"
           options={{
