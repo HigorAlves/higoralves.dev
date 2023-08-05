@@ -45,7 +45,7 @@ const Hero = ({}: HeroProps) => {
               Get Inspired
             </Button>
           </div>
-          <div className="absolute -top-[64%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+          <div className="absolute -top-[64%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[180%]">
             <Image
               className="w-full"
               src="/images/hero/background.jpg"
