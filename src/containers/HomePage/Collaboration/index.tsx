@@ -9,7 +9,7 @@ export function Collaboration() {
     <Section crosses>
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
-          <h2 className="h2 mb-4 md:mb-8">Work, Hobby & Be Nomad</h2>
+          <h2 className="h2 mb-4 md:mb-8">Work, Hobby & Freedom</h2>
           <ul className="mb-10 max-w-[22.5rem] md:mb-14">
             {content.map((item) => (
               <li className="mb-3 py-3" key={item.id}>

@@ -1,26 +1,26 @@
 export const howItWorks = [
   {
     id: '0',
-    title: 'Sign up',
-    text: 'Create an account with Brainwave - AI chat app by providing your name, email address, and password. Once you sign up, you can start exploring the app.',
+    title: 'Map Next Adventure',
+    text: "I'm plotting my next route, choosing a balance of captivating views, diverse cultures, and places with a reliable internet connection.",
     image: '/images/how-it-works/image-1.png',
   },
   {
     id: '1',
-    title: 'Connect with AI chatbot',
-    text: 'Connect with the AI chatbot to start the conversation. The chatbot uses natural language processing to understand your queries and provide relevant responses.',
-    image: '/images/how-it-works/image-2.png',
+    title: 'Preparation & Planning',
+    text: "I'm loading my saddlebags and tuning up my bike, prepping for the thrilling ride and the new cultural, environmental, and work dynamics at each stop.",
+    image: '/images/how-it-works/image-4.png',
   },
   {
     id: '2',
-    title: 'Get Personalized Advices',
-    text: 'Based on the conversation with the AI chatbot, you will receive personalized recommendations related to your queries. The chatbot is trained to understand your preferences and provide customized suggestions.',
-    image: '/images/how-it-works/image-3.png',
+    title: 'Dive into Adventure',
+    text: "I've kick-started my journey, revving through beautiful terrains, setting up my laptop at varied locales, and engaging with local life.",
+    image: '/images/how-it-works/image-2.png',
   },
   {
     id: '3',
-    title: 'Explore and Engage',
-    text: 'Explore the recommendations provided by the AI chatbot and engage with the app. You can ask questions, provide feedback, and share your experience with the chatbot.',
-    image: '/images/how-it-works/image-4.png',
+    title: 'Code, Explore, Share',
+    text: 'Divide my time between working on software projects, adventuring in the local environment, and sharing my experiences with you!',
+    image: '/images/how-it-works/image-3.png',
   },
 ]

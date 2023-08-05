@@ -41,7 +41,7 @@ const HowItWorks = ({}: HowItWorksProps) => {
                     <Tagline className="mb-4 lg:mb-6">How it work: 0{index + 1}.</Tagline>
                     <h2 className="h2 mb-4 lg:mb-6">{item.title}</h2>
                     <p className="body-2 mb-10 text-n-3">{item.text}</p>
-                    <Button href="/login">Connect now</Button>
+                    <Button href="/login">Join me for a ride</Button>
                     <Arrows
                       className="my-10 lg:hidden"
                       prevClassName="mr-3"
