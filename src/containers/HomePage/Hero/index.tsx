@@ -102,7 +102,6 @@ const Hero = ({}: HeroProps) => {
                 }`}
               ></div>
             </div>
-            {/* </MouseParallax> */}
           </div>
         </div>
         <Logos className="relative z-10 mt-20 hidden lg:block" />

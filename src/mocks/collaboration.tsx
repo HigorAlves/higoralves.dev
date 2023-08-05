@@ -1,19 +1,21 @@
 const text =
-  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter."
+  'Discover the life of a nomadic software developer, where coding and exploration collide. Here, we reimagine the boundaries of work, hobby, and freedom.'
 
 const content = [
   {
     id: '0',
-    title: 'Seamless Integration',
-    text,
+    title: 'Code Unleashed',
+    text: 'Creating robust software solutions, with my laptop and a diverse view as companions.',
   },
   {
     id: '1',
-    title: 'Smart Automation',
+    title: 'Geo-Free Living',
+    text: 'Exploring the planet, each journey enriching my life and invigorating my work.',
   },
   {
     id: '2',
-    title: 'Top-notch Security',
+    title: 'Adventure Unlimited',
+    text: 'Embracing freedom, illustrating a life unbound by geographic constraints.',
   },
 ]
 

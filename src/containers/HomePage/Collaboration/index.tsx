@@ -4,14 +4,12 @@ import Section from '~/components/Section'
 
 import { apps, content, text } from '~/mocks/collaboration'
 
-type CollaborationProps = {}
-
-const Collaboration = ({}: CollaborationProps) => {
+export function Collaboration() {
   return (
     <Section crosses>
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
-          <h2 className="h2 mb-4 md:mb-8">AI chat app for seamless collaboration</h2>
+          <h2 className="h2 mb-4 md:mb-8">Work, Hobby & Be Nomad</h2>
           <ul className="mb-10 max-w-[22.5rem] md:mb-14">
             {content.map((item) => (
               <li className="mb-3 py-3" key={item.id}>
@@ -23,7 +21,7 @@ const Collaboration = ({}: CollaborationProps) => {
               </li>
             ))}
           </ul>
-          <Button>Try it now</Button>
+          <Button>Join this journey</Button>
         </div>
         <div className="mt-15 lg:ml-auto lg:mt-0 xl:w-[37.5rem]">
           <div className="relative lg:mx-auto lg:w-[22.5rem]">
@@ -73,5 +71,3 @@ const Collaboration = ({}: CollaborationProps) => {
     </Section>
   )
 }
-
-export default Collaboration

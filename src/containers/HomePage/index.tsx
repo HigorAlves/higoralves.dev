@@ -2,7 +2,7 @@
 
 import Join from '~/components/Join'
 import Layout from '~/components/Layout'
-import Collaboration from './Collaboration'
+import { Collaboration } from './Collaboration'
 import Features from './Features'
 import Hero from './Hero'
 import HowItWorks from './HowItWorks'
