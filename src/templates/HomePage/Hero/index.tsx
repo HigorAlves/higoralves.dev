@@ -3,9 +3,9 @@ import { ScrollParallax } from 'react-just-parallax'
 import Button from '~/components/Button'
 import Generating from '~/components/Generating'
 import Image from '~/components/Image'
-import Logos from '~/components/Logos'
 import Notification from '~/components/Notification'
 import Section from '~/components/Section'
+import Logos from '~/components/Logos'
 
 type HeroProps = {}
 

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Heading from '~/components/Heading'
-import Logos from '~/components/Logos'
 import PricingList from '~/components/PricingList'
 import Section from '~/components/Section'
+import Logos from '~/components/Logos'
 
 type PricingProps = {}
 

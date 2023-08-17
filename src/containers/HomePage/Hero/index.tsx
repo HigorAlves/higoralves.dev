@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import { Logos } from '~/components'
 import Button from '~/components/Button'
 import Image from '~/components/Image'
-import Logos from '~/components/Logos'
 import Section from '~/components/Section'
 
 type HeroProps = {}
