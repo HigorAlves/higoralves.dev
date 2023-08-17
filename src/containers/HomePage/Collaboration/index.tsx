@@ -30,7 +30,7 @@ export function Collaboration() {
               <div className="m-auto flex aspect-square w-60 rounded-full border border-n-6">
                 <div className="m-auto aspect-square w-[5.75rem] rounded-full bg-conic-gradient p-[0.1875rem]">
                   <div className="flex h-full w-full items-center justify-center rounded-full bg-n-8">
-                    <Image src="/images/brainwave-symbol.svg" width={48} height={48} alt="Brainwave" />
+                    <Image src="/images/logo.svg" width={48} height={48} alt="Higor Alves Logo" />
                   </div>
                 </div>
               </div>
