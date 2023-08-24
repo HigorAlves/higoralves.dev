@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { disablePageScroll, enablePageScroll } from 'scroll-lock'
 import { Logo } from '~/components'
 import { NavContainer } from '~/components/Navbar/NavContainer.component'
@@ -10,7 +9,6 @@ import Button from '../Button'
 export function Navbar() {
   const [openNavigation, setOpenNavigation] = useState<boolean>(false)
   const pathname = usePathname()
-  const searchParams = useSearchParams()
   const { container, wrapper } = styles({ openNavigation })
 
   function toggleNavigation() {
@@ -38,18 +36,6 @@ export function Navbar() {
       <div className={wrapper()}>
         <Logo />
         <NavContainer openNavigation={openNavigation} pathname={pathname} handleClick={handleClick} />
-
-        <Link
-          className={`button mr-8 hidden text-n-1/50 transition-colors hover:text-n-1 lg:block ${
-            searchParams.has('new') ? 'lg:text-n-1' : ''
-          }`}
-          href="/login?new=true"
-        >
-          New account
-        </Link>
-        <Button className="hidden lg:flex" href="/login">
-          Sign in
-        </Button>
 
         <Button data-id={'mobile-menu-toggle'} className="ml-auto lg:hidden" onClick={toggleNavigation} px="px-3">
           <svg className="overflow-visible" width="20" height="12" viewBox="0 0 20 12">

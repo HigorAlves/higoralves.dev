@@ -21,6 +21,7 @@ module.exports = {
     },
   },
   rules: {
+    'multiline-ternary': 0,
     '@next/next/no-html-link-for-pages': 'off',
     'prettier/prettier': ['error', { singleQuote: true, semi: false, printWidth: 120, tabWidth: 2 }],
     'comma-dangle': 0,

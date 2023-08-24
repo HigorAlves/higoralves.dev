@@ -17,12 +17,12 @@ export const svgs = (white: boolean | undefined) => (
     >
       {white ? (
         <polygon fill="white" fillRule="nonzero" points="100 0 100 44 0 44 0 0" />
-          ) : (
+      ) : (
         <>
           <polygon fill="url(#btn-top)" fillRule="nonzero" points="100 42 100 44 0 44 0 42" />
           <polygon fill="url(#btn-bottom)" fillRule="nonzero" points="100 0 100 2 0 2 0 0" />
         </>
-          )}
+      )}
     </svg>
     <svg className="absolute right-0 top-0" width="21" height="44" viewBox="0 0 21 44">
       <path

@@ -1,7 +1,6 @@
 'use client'
 
-import Join from '~/components/Join'
-import Layout from '~/components/Layout'
+import { Join, Layout } from '~/components'
 import { Collaboration } from './Collaboration'
 import Hero from './Hero'
 import HowItWorks from './HowItWorks'

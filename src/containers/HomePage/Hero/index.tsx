@@ -4,9 +4,7 @@ import Button from '~/components/Button'
 import Image from '~/components/Image'
 import Section from '~/components/Section'
 
-type HeroProps = {}
-
-const Hero = ({}: HeroProps) => {
+const Hero = () => {
   const [mounted, setMounted] = useState<boolean>(false)
 
   useEffect(() => {

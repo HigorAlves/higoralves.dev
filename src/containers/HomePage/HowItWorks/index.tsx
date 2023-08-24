@@ -8,9 +8,7 @@ import Tagline from '~/components/Tagline'
 
 import { howItWorks } from '~/mocks/how-it-works'
 
-type HowItWorksProps = {}
-
-const HowItWorks = ({}: HowItWorksProps) => {
+const HowItWorks = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0)
 
   const ref = useRef<any>(null)

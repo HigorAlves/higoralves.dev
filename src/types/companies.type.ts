@@ -1,4 +1,7 @@
-import { TablerIconsProps } from '@tabler/icons-react'
+/* eslint-disable no-unused-vars */
+
+import {JSX} from 'react'
+import {TablerIconsProps} from '@tabler/icons-react'
 
 export enum LocationType {
   REMOTE = 'Remote',

@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import { svgs } from './svgs'
 
@@ -16,25 +17,32 @@ const Button = ({ className, href, onClick, children, px, white }: ButtonProps) 
   } transition-colors hover:text-color-1 ${className || ''}`
 
   const spanClasses = 'relative z-10'
+	const isMail = href && href.startsWith('mailto:')
 
-  return href ? (
-        href.startsWith('mailto:') ? (
+	if (isMail) {
+    return (
       <a href={href} className={classes}>
         <span className={spanClasses}>{children}</span>
         {svgs(white)}
       </a>
-            ) : (
-      <Link href={href} className={classes}>
+    )
+  }
+
+  if (!href) {
+    return (
+      <button className={classes} onClick={onClick}>
         <span className={spanClasses}>{children}</span>
         {svgs(white)}
-      </Link>
-            )
-      ) : (
-    <button className={classes} onClick={onClick}>
+      </button>
+    )
+  }
+
+  return (
+    <Link href={href} className={classes}>
       <span className={spanClasses}>{children}</span>
       {svgs(white)}
-    </button>
-      )
+    </Link>
+  )
 }
 
 export default Button

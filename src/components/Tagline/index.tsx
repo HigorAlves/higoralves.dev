@@ -1,3 +1,4 @@
+import React from 'react'
 import { brackets } from './svgs'
 
 type TaglineProps = {
