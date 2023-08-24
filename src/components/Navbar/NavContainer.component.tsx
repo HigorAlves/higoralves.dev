@@ -15,7 +15,7 @@ export function NavContainer({ openNavigation, pathname, handleClick }: Props) {
   return (
     <nav className={navbar()}>
       <div className={navContainer()}>
-        {navigation.map((item) => (
+        {navigation.map((item: any) => (
           <NavLink key={item.id} {...item} pathname={pathname} onClick={handleClick} openNavigation={openNavigation} />
         ))}
       </div>
