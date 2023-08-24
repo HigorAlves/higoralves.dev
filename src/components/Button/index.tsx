@@ -17,9 +17,9 @@ const Button = ({ className, href, onClick, children, px, white }: ButtonProps) 
   } transition-colors hover:text-color-1 ${className || ''}`
 
   const spanClasses = 'relative z-10'
-	const isMail = href && href.startsWith('mailto:')
+  const isMail = href && href.startsWith('mailto:')
 
-	if (isMail) {
+  if (isMail) {
     return (
       <a href={href} className={classes}>
         <span className={spanClasses}>{children}</span>
