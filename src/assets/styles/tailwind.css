@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+}
+
+/* styles for splide carousel */
+@layer components {
+    .splide-custom .splide__arrow {
+        @apply relative top-0 left-0 right-0 flex items-center justify-center w-12 h-12 bg-transparent border border-solid border-n-4/50 rounded-full transform-none transition-colors hover:border-n-3;
+    }
+
+    .splide-custom .splide__arrow:hover svg {
+        @apply fill-n-1;
+    }
+
+    .splide-custom .splide__arrow svg {
+        @apply w-4 h-4 fill-n-4 transform-none transition-colors;
+    }
+
+    .splide-visible .splide__track {
+        @apply overflow-visible;
+    }
+
+    .splide-pricing .splide__list {
+        @apply lg:grid !important;
+        @apply lg:grid-cols-3 lg:gap-4;
+    }
+
+    .splide-benefits .splide__list {
+        @apply md:grid !important;
+        @apply md:grid-cols-3 md:gap-x-10 md:gap-y-[4.5rem] xl:gap-y-[6rem];
+    }
+}
