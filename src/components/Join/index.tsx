@@ -8,8 +8,8 @@ const Join = ({}: JoinProps) => (
     <div className="container">
       <div className="relative mx-auto max-w-[43.125rem] py-8 md:py-14 xl:py-0">
         <div className="relative z-1 text-center">
-	        <h1 className="h2 mb-6">
-		        Coding is not just a job, but an art. Paint your future{' '}
+          <h1 className="h2 mb-6">
+            Coding is not just a job, but an art. Paint your future{' '}
             <span className="relative inline-block">
               masterpiece
               <Image
@@ -21,9 +21,7 @@ const Join = ({}: JoinProps) => (
               />
             </span>
           </h1>
-          <p className="body-1 mb-8 text-n-4">
-	          The gladdest moment in human life is a departure into unknown lands
-          </p>
+          <p className="body-1 mb-8 text-n-4">The gladdest moment in human life is a departure into unknown lands</p>
         </div>
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[46.5rem] w-[46.5rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-n-2/5">
           <div className="absolute left-1/2 top-1/2 h-[39.25rem] w-[39.25rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-n-2/10"></div>
