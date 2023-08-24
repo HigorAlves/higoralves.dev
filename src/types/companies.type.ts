@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-import {JSX} from 'react'
 import {TablerIconsProps} from '@tabler/icons-react'
 
 export enum LocationType {
@@ -38,7 +37,7 @@ export interface ICompany {
   name: string
   job: string
   website: string | null
-  icon: (props: TablerIconsProps) => JSX.Element
+  icon: (props: TablerIconsProps) => any
   show: boolean
   address: {
     city: string
