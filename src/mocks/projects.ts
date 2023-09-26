@@ -1,5 +1,5 @@
-import { COMPANIES } from '~/constants/companies'
 import { ProjectType } from '~/types/project.type'
+import { COMPANIES } from '~/constants/companies'
 
 export const PROJECTS: Array<ProjectType> = [
   {
