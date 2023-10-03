@@ -27,36 +27,38 @@ const Home: NextPage = () => {
         </Container>
       </AppShell.Header>
 
-      <AppShell.Main pt={`calc(${rem(80)} + var(--mantine-spacing-md))`}>
-        <Container>
-          <Title c={'white'} ta={'center'} mb={'lg'}>
-            Roaming Routes, Rolling Code the adventures of adeveloper
-          </Title>
+      <AppShell.Main pt={`calc(${rem(80)} + var(--mantine-spacing-md))`} style={{ height: 'calc(100vh-60px)' }}>
+        <Center h={'70vh'}>
+          <Container>
+            <Title c={'white'} ta={'center'} mb={'lg'}>
+              Roaming Routes, Rolling Code the adventures of a developer
+            </Title>
 
-          <Title c={'dimmed'} ta={'center'} order={4}>
-            Delivering top-tier tech solutions, inspired by diverse cultures and fueled by a nomadic lifestyle.
-          </Title>
+            <Title c={'dimmed'} ta={'center'} order={4}>
+              Delivering top-tier tech solutions, inspired by diverse cultures and fueled by a nomadic lifestyle.
+            </Title>
 
-          <Space h={'xl'} />
+            <Space h={'xl'} />
 
-          <Center>
-            <Button variant={'outline'} tt={'uppercase'}>
-              Get Inspired
-            </Button>
-          </Center>
-          <Space h={'xl'} />
+            <Center>
+              <Button variant={'outline'} tt={'uppercase'}>
+                Read the Blog
+              </Button>
+            </Center>
+            <Space h={120} />
 
-          <Text c={'dimmed'} tt={'uppercase'} ta={'center'} mb={'xl'} size={'sm'}>
-            HELPING PEOPLE & COMPANIES CREATE BEAUTIFUL PLATFORMS AT
-          </Text>
-          <Flex justify={'space-between'}>
-            <Image src="/images/companies/feature/ask.svg" width={134} height={48} alt="Panda" />
-            <Image src="/images/companies/feature/bubbles.svg" width={114} height={48} alt="Panda" />
-            <Image src="/images/companies/feature/tiled.svg" width={114} height={48} alt="Panda" />
-            <Image src="/images/companies/feature/unesco.svg" width={114} height={48} alt="Panda" />
-            <Image src="/images/companies/feature/xteam.svg" width={114} height={48} alt="Panda" />
-          </Flex>
-        </Container>
+            <Text c={'dimmed'} tt={'uppercase'} ta={'center'} mb={'xl'} size={'sm'}>
+              HELPING PEOPLE & COMPANIES CREATE BEAUTIFUL PLATFORMS AT
+            </Text>
+            <Flex justify={'space-between'}>
+              <Image src="/images/companies/feature/ask.svg" width={134} height={48} alt="Panda" />
+              <Image src="/images/companies/feature/bubbles.svg" width={114} height={48} alt="Panda" />
+              <Image src="/images/companies/feature/tiled.svg" width={114} height={48} alt="Panda" />
+              <Image src="/images/companies/feature/unesco.svg" width={114} height={48} alt="Panda" />
+              <Image src="/images/companies/feature/xteam.svg" width={114} height={48} alt="Panda" />
+            </Flex>
+          </Container>
+        </Center>
       </AppShell.Main>
     </>
   )

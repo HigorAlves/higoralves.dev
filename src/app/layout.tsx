@@ -1,4 +1,3 @@
-import '@splidejs/react-splide/css'
 import 'tippy.js/animations/shift-toward.css'
 import '@mantine/core/styles.css'
 
