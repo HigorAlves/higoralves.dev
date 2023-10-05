@@ -1,7 +1,7 @@
 {
   "name": "higoralves.dev",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "engines": {
@@ -13,6 +13,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "dev:firebase": "firebase emulators:start",
     "build": "next build",
     "build:storybook": "storybook build",
     "start": "next start",
@@ -33,7 +34,6 @@
     "clean": "bash ./scripts/clean.sh",
     "analyze": "ANALYZE=true yarn build",
     "postinstall": "npx patch-package -y",
-    "preinstall": "npx only-allow yarn",
     "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|src/e2e/|.github/README.md|.storybook/|.eslintrc.js' --image graph.svg",
     "release": "semantic-release"
   },
@@ -45,6 +45,7 @@
     "@t3-oss/env-nextjs": "^0.6.1",
     "@tabler/icons-react": "^2.38.0",
     "@tippyjs/react": "^4.2.6",
+    "firebase": "^10.4.0",
     "next": "^13.5.3",
     "next-compose-plugins": "^2.2.1",
     "react": "^18.2.0",
