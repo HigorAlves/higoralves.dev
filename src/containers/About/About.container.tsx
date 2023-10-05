@@ -1,6 +1,7 @@
 'use client'
-import { ActionIcon, Button, Container, Flex, Grid, Group, Space, Text, Title } from '@mantine/core'
+import { ActionIcon, Button, Center, Container, Flex, Grid, Group, Space, Text, Title } from '@mantine/core'
 import { IconArrowRight, IconCheck } from '@tabler/icons-react'
+import Image from 'next/image'
 
 const CATEGORIES = [
   {
@@ -55,6 +56,10 @@ export function About() {
             Discover the life of a nomadic software developer, where coding and exploration collide. Here, we reimagine
             the boundaries of work, hobby, and freedom.
           </Text>
+          <Space h={60} />
+          <Center>
+            <Image src={'/images/help/help.png'} alt={'Help'} width={450} height={350} />
+          </Center>
         </Grid.Col>
       </Grid>
     </Container>
