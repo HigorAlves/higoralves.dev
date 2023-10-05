@@ -1,25 +1,26 @@
 import { useLocalStorage } from '@mantine/hooks'
 
 export function useBookmark(id: string, key: string) {
-	const [bookmarks, setBookmarks] = useLocalStorage<Array<string>>({
-		key,
-		defaultValue: []
-	})
-	function saveArticle() {
-		setBookmarks([...bookmarks, id])
-	}
+  const [bookmarks, setBookmarks] = useLocalStorage<Array<string>>({
+    key,
+    defaultValue: [],
+  })
 
-	function removeSavedArticle() {
-		setBookmarks(bookmarks.filter(article => article !== id))
-	}
+  function saveArticle() {
+    setBookmarks([...bookmarks, id])
+  }
 
-	function handleSaveArticle() {
-		bookmarks.includes(id) ? removeSavedArticle() : saveArticle()
-	}
+  function removeSavedArticle() {
+    setBookmarks(bookmarks.filter((article) => article !== id))
+  }
 
-	return {
-		bookmarks,
-		setBookmark: handleSaveArticle,
-		isBookmarked: bookmarks.includes(id)
-	}
+  function handleSaveArticle() {
+    bookmarks.includes(id) ? removeSavedArticle() : saveArticle()
+  }
+
+  return {
+    bookmarks,
+    setBookmark: handleSaveArticle,
+    isBookmarked: bookmarks.includes(id),
+  }
 }

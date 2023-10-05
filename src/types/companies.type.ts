@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import { TablerIconsProps } from '@tabler/icons-react'
+import {TablerIconsProps} from '@tabler/icons-react'
 
 export enum LocationType {
   REMOTE = 'Remote',
@@ -13,6 +13,8 @@ export enum EmploymentType {
 }
 
 export type CompanyName =
+  | 'arctouch'
+  | 'datum'
   | 'doare'
   | 'ask'
   | '123milhas'

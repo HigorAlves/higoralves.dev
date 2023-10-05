@@ -3,6 +3,44 @@ import { IconBalloon, IconFlag, IconHandRock, IconStar, IconTrack } from '@table
 import { CompanyName, EmploymentType, ICompany, LocationType } from '~/types/companies.type'
 
 export const COMPANIES: Record<CompanyName, ICompany> = {
+  arctouch: {
+    job: 'Senior Software Engineer',
+    name: 'ArchTouch',
+    website: 'https://doare.org',
+    icon: IconBalloon,
+    show: true,
+    address: {
+      city: 'Florianópolis',
+      country: 'Brazil',
+    },
+    duration: {
+      startDate: new Date('Octuber 02, 2023').toDateString(),
+      endDate: 'present',
+    },
+    contract: {
+      employmentType: EmploymentType.FULLTIME,
+      locationType: LocationType.REMOTE,
+    },
+  },
+  datum: {
+    job: 'Senior Software Engineer',
+    name: 'Datum',
+    website: 'https://doare.org',
+    icon: IconBalloon,
+    show: true,
+    address: {
+      city: 'Florianópolis',
+      country: 'Brazil',
+    },
+    duration: {
+      startDate: new Date('September 12, 2023').toDateString(),
+      endDate: 'present',
+    },
+    contract: {
+      employmentType: EmploymentType.CONTRACTOR,
+      locationType: LocationType.REMOTE,
+    },
+  },
   doare: {
     job: 'Senior Software Engineer',
     name: 'Doare',
@@ -53,7 +91,7 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
     },
     duration: {
       startDate: new Date('April 24, 2023').toDateString(),
-      endDate: 'present',
+      endDate: new Date('September 02, 2023').toDateString(),
     },
     contract: {
       employmentType: EmploymentType.CONTRACTOR,

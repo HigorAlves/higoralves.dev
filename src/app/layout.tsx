@@ -3,10 +3,11 @@ import '@mantine/core/styles.css'
 
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
-import { AppShell, ColorSchemeScript, MantineProvider } from '@mantine/core'
+import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 
 // eslint-disable-next-line camelcase
 import { Sora, Source_Code_Pro, Space_Grotesk } from 'next/font/google'
+import { Layout } from '~/layout/index.layout'
 
 const sora = Sora({
   weight: ['300', '400', '600'],
@@ -68,7 +69,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
           defaultColorScheme={'dark'}
         >
-          <AppShell header={{ height: 44 }}>{children}</AppShell>
+          <Layout layout={'basic'} main={children} />
         </MantineProvider>
       </body>
     </html>
