@@ -10,23 +10,20 @@ import { Sora, Source_Code_Pro, Space_Grotesk } from 'next/font/google'
 import { Layout } from '~/layout/index.layout'
 
 const sora = Sora({
-  weight: ['300', '400', '600'],
   subsets: ['latin'],
-  display: 'block',
+  display: 'swap',
   variable: '--font-sora',
 })
 
 const code = Source_Code_Pro({
-  weight: ['400', '600', '700'],
   subsets: ['latin'],
-  display: 'block',
+  display: 'swap',
   variable: '--font-code',
 })
 
 const grotesk = Space_Grotesk({
-  weight: ['300'],
   subsets: ['latin'],
-  display: 'block',
+  display: 'swap',
   variable: '--font-grotesk',
 })
 
@@ -58,14 +55,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${sora.variable} ${code.variable} ${grotesk.variable}`}>
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={`${sora.variable} ${code.variable} ${grotesk.variable}`}>
+      <body>
         <MantineProvider
           theme={{
             primaryColor: 'indigo',
+            fontFamily: 'var(--font-sora), var(--font-grotesk)',
+            fontFamilyMonospace: 'var(--font-code)',
           }}
           defaultColorScheme={'dark'}
         >
