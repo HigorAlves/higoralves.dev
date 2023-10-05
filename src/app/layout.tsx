@@ -1,5 +1,6 @@
 import 'tippy.js/animations/shift-toward.css'
 import '@mantine/core/styles.css'
+import '~/assets/css/global.css'
 
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
@@ -62,7 +63,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <MantineProvider
           theme={{
-            primaryColor: 'indigo',
+            primaryColor: 'orange',
             fontFamily: 'var(--font-sora), var(--font-grotesk)',
             fontFamilyMonospace: 'var(--font-code)',
           }}

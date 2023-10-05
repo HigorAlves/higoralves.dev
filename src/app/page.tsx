@@ -1,27 +1,36 @@
 'use client'
 import type { NextPage } from 'next'
-import { Button, Center, Container, Flex, Space, Text, Title } from '@mantine/core'
+import { Button, Center, Container, Flex, Grid, Space, Text, Title } from '@mantine/core'
 import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <Center h={'70vh'}>
-      <Container>
-        <Title c={'white'} ta={'center'} mb={'lg'}>
-          Roaming Routes, Rolling Code the adventures of a developer
-        </Title>
+    <Center h={'90vh'}>
+      <Container size={'lg'}>
+        <Grid align={'center'}>
+          <Grid.Col span={6}>
+            <Title c={'white'} ta={'center'} mb={'lg'}>
+              Adventures of a developer
+            </Title>
 
-        <Title c={'dimmed'} ta={'center'} order={4}>
-          Delivering top-tier tech solutions, inspired by diverse cultures and fueled by a nomadic lifestyle.
-        </Title>
+            <Title c={'dimmed'} ta={'center'} order={4}>
+              Delivering top-tier tech solutions, inspired by a nomadic lifestyle.
+            </Title>
 
-        <Space h={'xl'} />
+            <Space h={'xl'} />
 
-        <Center>
-          <Button variant={'outline'} tt={'uppercase'}>
-            Read the Blog
-          </Button>
-        </Center>
+            <Center>
+              <Button variant={'outline'} tt={'uppercase'}>
+                Read the Blog
+              </Button>
+            </Center>
+          </Grid.Col>
+
+          <Grid.Col span={4}>
+            <Image src={'/images/help/help.png'} alt={'Help'} width={450} height={350} />
+          </Grid.Col>
+        </Grid>
+
         <Space h={120} />
 
         <Text c={'dimmed'} tt={'uppercase'} ta={'center'} mb={'xl'} size={'sm'}>
