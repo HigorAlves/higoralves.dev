@@ -34,6 +34,7 @@
     "clean": "bash ./scripts/clean.sh",
     "analyze": "ANALYZE=true yarn build",
     "postinstall": "npx patch-package -y",
+    "preinstall": "npx only-allow yarn",
     "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|src/e2e/|.github/README.md|.storybook/|.eslintrc.js' --image graph.svg",
     "release": "semantic-release"
   },
