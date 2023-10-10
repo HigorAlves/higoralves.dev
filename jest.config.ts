@@ -1,19 +1,20 @@
+import type { Config } from 'jest'
+import { defaults } from 'jest-config'
 import nextJest from 'next/jest.js'
 
 const createJestConfig = nextJest({
   dir: './',
 })
 
-/** @type {import('jest').Config} */
-const config = {
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+const config: Config = {
+  moduleFileExtensions: [...defaults.moduleFileExtensions, 'mts'],
   testEnvironment: 'jest-environment-jsdom',
   modulePathIgnorePatterns: ['<rootDir>/dist/', 'cypress'],
   testPathIgnorePatterns: ['<rootDir>/e2e'],
   collectCoverage: true,
   coverageDirectory: './reports/jest/coverage',
   coverageReporters: ['lcov'],
-  testRegex: '(/__tests__/.*|(\\\\.|/)(test))\\\\.[jt]sx?$',
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
   moduleNameMapper: {
     '~/*': '<rootDir>src/$1',
   },
