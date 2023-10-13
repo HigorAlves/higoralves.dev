@@ -16,17 +16,30 @@ on:
       - '*.md'
 
 jobs:
-  eslint:
-    name: Eslint
+  setup:
+    name: Setup
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+
+  eslint:
+    name: Eslint
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs:
+      - setup
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
           node-version-file: .nvmrc
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+          cache: 'yarn'
       - name: Eslint
         run: yarn lint
 
@@ -34,13 +47,14 @@ jobs:
     name: Prettier
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    needs:
+      - setup
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+          cache: 'yarn'
       - name: Prettier
         run: yarn prettier . --check
 
@@ -56,8 +70,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+          cache: 'yarn'
       - name: Run jest with CI option
         run: yarn test:ci
 
@@ -72,12 +85,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: Build Storybook
-        run: yarn build-storybook --quiet
+        run: yarn build:storybook --quiet
       - name: Smoke & Acceptance tests
         run: yarn test:acceptance
 
@@ -93,7 +104,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
       - name: Build NextJS App
         run: yarn build
