@@ -9,7 +9,7 @@ const createJestConfig = nextJest({
 const config: Config = {
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'mts'],
   testEnvironment: 'jest-environment-jsdom',
-  modulePathIgnorePatterns: ['<rootDir>/dist/', 'cypress'],
+  modulePathIgnorePatterns: ['<rootDir>/dist/', 'cypress', '.next'],
   testPathIgnorePatterns: ['<rootDir>/e2e'],
   collectCoverage: true,
   coverageDirectory: './reports/jest/coverage',

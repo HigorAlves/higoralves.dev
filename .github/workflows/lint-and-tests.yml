@@ -74,10 +74,12 @@ jobs:
           node-version-file: .nvmrc
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: Build Storybook
+        run: yarn build-storybook --quiet
       - name: Smoke & Acceptance tests
-        run: |
-          yarn build:storybook --quiet
-          yarn test:acceptance
+        run: yarn test:acceptance
 
   build:
     name: Build
