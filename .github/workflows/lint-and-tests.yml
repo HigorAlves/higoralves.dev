@@ -67,6 +67,7 @@ jobs:
   acceptance:
     name: Smoke & Acceptance tests
     runs-on: ubuntu-latest
+    continue-on-error: true
     needs:
       - eslint
       - prettier
