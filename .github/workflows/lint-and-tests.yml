@@ -68,6 +68,7 @@ jobs:
     name: Smoke & Acceptance tests
     runs-on: ubuntu-latest
     continue-on-error: true
+    timeout-minutes: 10
     needs:
       - eslint
       - prettier
