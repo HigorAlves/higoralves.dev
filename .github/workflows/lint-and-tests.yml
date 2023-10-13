@@ -16,31 +16,6 @@ on:
       - '*.md'
 
 jobs:
-  setup:
-    name: Setup
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v3
-      - name: Cache node modules
-        id: cache-yarn
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ${{ steps.setup.outputs.cache-path }}  # Corrected path
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys:
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - if: ${{ steps.cache-yarn.outputs.cache-hit != 'true' }}
-        name: List the state of node modules
-        continue-on-error: true
-        run: yarn list
-      - name: Install dependencies
-        run: yarn install
-
   eslint:
     name: Eslint
     runs-on: ubuntu-latest
@@ -54,7 +29,6 @@ jobs:
           node-version-file: .nvmrc
           cache: 'yarn'
       - name: Install Dependencies
-        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Eslint
         run: yarn lint
@@ -72,7 +46,6 @@ jobs:
           node-version-file: .nvmrc
           cache: 'yarn'
       - name: Install Dependencies
-        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Prettier
         run: yarn prettier . --check
@@ -91,7 +64,6 @@ jobs:
           node-version-file: .nvmrc
           cache: 'yarn'
       - name: Install Dependencies
-        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Run jest with CI option
         run: yarn test:ci
@@ -108,7 +80,6 @@ jobs:
         with:
           node-version-file: .nvmrc
       - name: Install Dependencies
-        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Install Playwright
         run: npx playwright install --with-deps
@@ -130,7 +101,6 @@ jobs:
         with:
           node-version-file: .nvmrc
       - name: Install Dependencies
-        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Build NextJS App
         run: yarn build
