@@ -57,7 +57,7 @@ jobs:
           node-version-file: .nvmrc
           cache: 'yarn'
       - name: Install Dependencies
-        if: ${{ steps.cache-yarn.outputs.cache-hit != 'true' }}
+        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Eslint
         run: yarn lint
@@ -75,7 +75,7 @@ jobs:
           node-version-file: .nvmrc
           cache: 'yarn'
       - name: Install Dependencies
-        if: ${{ steps.cache-yarn.outputs.cache-hit != 'true' }}
+        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Prettier
         run: yarn prettier . --check
@@ -94,7 +94,7 @@ jobs:
           node-version-file: .nvmrc
           cache: 'yarn'
       - name: Install Dependencies
-        if: ${{ steps.cache-yarn.outputs.cache-hit != 'true' }}
+        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Run jest with CI option
         run: yarn test:ci
@@ -111,7 +111,7 @@ jobs:
         with:
           node-version-file: .nvmrc
       - name: Install Dependencies
-        if: ${{ steps.cache-yarn.outputs.cache-hit != 'true' }}
+        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Install Playwright
         run: npx playwright install --with-deps
@@ -133,7 +133,7 @@ jobs:
         with:
           node-version-file: .nvmrc
       - name: Install Dependencies
-        if: ${{ steps.cache-yarn.outputs.cache-hit != 'true' }}
+        if: steps.cache-yarn.outputs.cache-hit != 'true'
         run: yarn install
       - name: Build NextJS App
         run: yarn build
