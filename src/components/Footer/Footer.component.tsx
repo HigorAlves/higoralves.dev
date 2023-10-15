@@ -1,8 +1,8 @@
 import React from 'react'
-import { ActionIcon, Container, Flex, Group, NavLink, rem, Text } from '@mantine/core'
+import { ActionIcon, Container, Flex, Group, NavLink, rem } from '@mantine/core'
 import { IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react'
-import Image from 'next/image'
 import Link from 'next/link'
+import { Logo } from '~/components'
 
 const links = [
   { link: '#', label: 'Contact' },
@@ -20,12 +20,7 @@ export function Footer() {
   return (
     <Container size={'lg'} pb={'xl'}>
       <Flex align={'center'} justify={'space-between'}>
-        <Flex align={'center'}>
-          <Image src={'/images/logo.svg'} width={40} height={40} alt={'Higor Alves logo'} />
-          <Text c={'white'} pl={'sm'}>
-            Higor Alves
-          </Text>
-        </Flex>
+        <Logo />
 
         <Group>{items}</Group>
 
