@@ -8,23 +8,30 @@ export function Hero() {
       <Container size={'lg'}>
         <Grid align={'center'}>
           <Grid.Col span={6}>
-            <Title c={'white'} ta={'center'} mb={'lg'}>
+            <Text
+              component={Title}
+              c={'white'}
+              ta={'center'}
+              mb={'xs'}
+              variant="gradient"
+              gradient={{ from: 'violet', to: 'indigo', deg: 90 }}
+            >
               Adventures of a developer
-            </Title>
+            </Text>
 
-            <Title c={'dimmed'} ta={'center'} order={4}>
+            <Text c={'dimmed'} ta={'left'} fw={'bold'}>
               Delivering top-tier tech solutions, inspired by a nomadic lifestyle.
-            </Title>
+            </Text>
 
             <Space h={'xl'} />
 
             <Center>
-              <Button variant={'outline'}>Take a look on my blog</Button>
+              <Button variant={'light'}>Take a look on my Work 🏂</Button>
             </Center>
           </Grid.Col>
 
           <Grid.Col span={4}>
-            <Image src={'/images/help/help.png'} alt={'Help'} width={450} height={350} />
+            <Image src={'/images/me/higor-with-tech-around.png'} alt={'Help'} width={400} height={400} />
           </Grid.Col>
         </Grid>
 

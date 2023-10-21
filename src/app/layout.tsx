@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <MantineProvider
           theme={{
-            primaryColor: 'orange',
+            primaryColor: 'violet',
             fontFamily: 'var(--font-sora), var(--font-grotesk)',
             fontFamilyMonospace: 'var(--font-code)',
           }}
