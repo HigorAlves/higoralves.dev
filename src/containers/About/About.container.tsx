@@ -36,11 +36,11 @@ export function About() {
                   <ActionIcon variant="filled" size="sm" radius="sm" aria-label="What I achivied">
                     <IconCheck stroke={1.5} />
                   </ActionIcon>
-                  <Text size={'sm'} c={'white'}>
-                    {item.title}
-                  </Text>
+                  <Text c={'white'}>{item.title}</Text>
                 </Group>
-                <Text c={'dimmed'}>{item.description}</Text>
+                <Text c={'dimmed'} size={'sm'}>
+                  {item.description}
+                </Text>
               </Group>
             ))}
           </Flex>
@@ -52,7 +52,7 @@ export function About() {
         </Grid.Col>
 
         <Grid.Col span={{ base: 12, md: 6 }} offset={2}>
-          <Text size={'md'} c={'dimmed'}>
+          <Text c={'dimmed'}>
             Discover the life of a nomadic software developer, where coding and exploration collide. Here, we reimagine
             the boundaries of work, hobby, and freedom.
           </Text>
