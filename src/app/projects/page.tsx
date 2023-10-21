@@ -1,4 +1,6 @@
-import { Box, Container, Text, Title } from '@mantine/core'
+'use client'
+import { Box, Container, Grid, Text, Title } from '@mantine/core'
+import { ProjectCard } from '~/components'
 
 export default function ProjectsPage() {
   return (
@@ -18,13 +20,28 @@ export default function ProjectsPage() {
         </Text>
       </Box>
 
-      <Box>
+      <Box mb={'xl'}>
         <Title order={3}>Feature Projects</Title>
         <Text c={'dimmed'} mb={'lg'} fw={'thin'} size={'sm'}>
           I pride myself on my ability to adapt to the unique needs of any project. Whether it’s reducing costs through
           process automation, improving efficiency through the development of productivity tools or even creating new
           digital experiences for your brand.
         </Text>
+
+        <Grid>
+          <Grid.Col span={{ md: 3 }}>
+            <ProjectCard />
+          </Grid.Col>
+          <Grid.Col span={{ md: 3 }}>
+            <ProjectCard />
+          </Grid.Col>
+          <Grid.Col span={{ md: 3 }}>
+            <ProjectCard />
+          </Grid.Col>
+          <Grid.Col span={{ md: 3 }}>
+            <ProjectCard />
+          </Grid.Col>
+        </Grid>
       </Box>
 
       <Box>
