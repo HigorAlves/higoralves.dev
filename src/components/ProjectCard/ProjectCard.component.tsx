@@ -1,14 +1,20 @@
 'use client'
 import { Badge, Card, Group, Skeleton, Stack, Text } from '@mantine/core'
 
-export function ProjectCard() {
+interface Props {
+  isFeatured?: boolean
+}
+
+export function ProjectCard({ isFeatured }: Props) {
   return (
     <Card withBorder radius="sm">
-      <Card.Section>
-        <Skeleton height={150} animate={false} />
-      </Card.Section>
+      {isFeatured && (
+        <Card.Section mb={'md'}>
+          <Skeleton height={150} animate={false} />
+        </Card.Section>
+      )}
 
-      <Stack justify="space-between" mt="md">
+      <Stack justify="space-between">
         <Stack gap={0}>
           <Group justify={'space-between'}>
             <Text fw={500}>Arctouch</Text>

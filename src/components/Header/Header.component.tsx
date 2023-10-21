@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Logo } from '~/components'
 
 const links = [
-  { link: '/', label: 'Home' },
+  { link: '/', label: 'Start' },
   { link: '/about', label: 'About' },
   { link: '/articles', label: 'Articles' },
   { link: '/projects', label: 'Projects' },

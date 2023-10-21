@@ -30,6 +30,27 @@ export default function ProjectsPage() {
 
         <Grid>
           <Grid.Col span={{ md: 3 }}>
+            <ProjectCard isFeatured />
+          </Grid.Col>
+          <Grid.Col span={{ md: 3 }}>
+            <ProjectCard isFeatured />
+          </Grid.Col>
+          <Grid.Col span={{ md: 3 }}>
+            <ProjectCard isFeatured />
+          </Grid.Col>
+          <Grid.Col span={{ md: 3 }}>
+            <ProjectCard isFeatured />
+          </Grid.Col>
+        </Grid>
+      </Box>
+
+      <Box>
+        <Title order={3}>All Projects</Title>
+        <Text c={'dimmed'} mb={'lg'} fw={'thin'} size={'sm'}>
+          Some projects are under NDA so they cannot be listed.
+        </Text>
+        <Grid>
+          <Grid.Col span={{ md: 3 }}>
             <ProjectCard />
           </Grid.Col>
           <Grid.Col span={{ md: 3 }}>
@@ -42,13 +63,6 @@ export default function ProjectsPage() {
             <ProjectCard />
           </Grid.Col>
         </Grid>
-      </Box>
-
-      <Box>
-        <Title order={3}>All Projects</Title>
-        <Text c={'dimmed'} mb={'lg'} fw={'thin'} size={'sm'}>
-          Some projects are under NDA so they cannot be listed.
-        </Text>
       </Box>
     </Container>
   )
