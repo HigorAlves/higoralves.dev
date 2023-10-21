@@ -41,11 +41,11 @@ export function Hero() {
           HELPING PEOPLE & COMPANIES CREATE BEAUTIFUL PLATFORMS AT
         </Text>
         <Flex justify={'space-between'}>
-          <Image src="/images/companies/feature/ask.svg" width={134} height={48} alt="Panda" />
-          <Image src="/images/companies/feature/bubbles.svg" width={114} height={48} alt="Panda" />
-          <Image src="/images/companies/feature/tiled.svg" width={114} height={48} alt="Panda" />
-          <Image src="/images/companies/feature/unesco.svg" width={114} height={48} alt="Panda" />
-          <Image src="/images/companies/feature/xteam.svg" width={114} height={48} alt="Panda" />
+          <Image src="/images/companies/logos/dark/ask.svg" width={134} height={48} alt="Panda" />
+          <Image src="/images/companies/logos/dark/bubbles.svg" width={114} height={48} alt="Panda" />
+          <Image src="/images/companies/logos/dark/tiled.svg" width={114} height={48} alt="Panda" />
+          <Image src="/images/companies/logos/dark/unesco.svg" width={114} height={48} alt="Panda" />
+          <Image src="/images/companies/logos/dark/xteam.svg" width={114} height={48} alt="Panda" />
         </Flex>
       </Container>
     </Center>
