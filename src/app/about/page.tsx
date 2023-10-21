@@ -1,5 +1,5 @@
 'use client'
-import { Blockquote, Box, Container, Grid, Image, Text, Title } from '@mantine/core'
+import { Blockquote, Box, Container, Grid, Skeleton, Text, Title } from '@mantine/core'
 
 export default function About() {
   const quote =
@@ -23,16 +23,7 @@ export default function About() {
 
       <Grid justify={'center'} align={'center'}>
         <Grid.Col span={{ lg: 6, md: 6 }}>
-          <Image
-            alt={'Higor Alves'}
-            radius="lg"
-            h={300}
-            w={'auto'}
-            fit={'contain'}
-            src={
-              'https://images.unsplash.com/photo-1688920556232-321bd176d0b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80'
-            }
-          />
+          <Skeleton height={300} radius="md" animate={false} />
         </Grid.Col>
 
         <Grid.Col span={{ lg: 6, md: 6 }}>

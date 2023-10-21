@@ -55,7 +55,7 @@ export default function ProjectsPage() {
           </Grid.Col>
         </Grid>
       </SimpleGrid>
-      <Space h={'xl'} />
+      <Space h={'xs'} />
       <SimpleGrid cols={{ base: 1, xs: 4 }}>
         {getChild(BASE_HEIGHT)}
         <Stack>

@@ -23,7 +23,7 @@ export function About() {
     <Container size={'lg'}>
       <Grid gutter={'xl'}>
         <Grid.Col span={{ base: 12, md: 4 }}>
-          <Title order={1} c={'white'} style={{ fontSize: '3rem' }}>
+          <Title order={1} c={'white'}>
             Work. Hobby. Freedom
           </Title>
 
