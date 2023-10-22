@@ -31,6 +31,62 @@ export const PROJECTS: Array<ProjectType> = [
     },
   },
   {
+    id: 'TIMESHEETBOT',
+    slug: '/projects/timesheetbot',
+    title: 'Timesheet Bot',
+    company: COMPANIES.arctouch,
+    isFeature: true,
+    about:
+      "AMG is a highly scalable platform designed to manage millions of clients on a daily basis. At its core, AMG's mission is to provide a robust and efficient system that ensures seamless user management and high-quality customer service. Leveraging advanced JavaScript features, the platform guarantees optimal performance and resiliency.",
+    description:
+      'AMG is a robust and scalable platform that efficiently manages millions of daily clients, providing a reliable and seamless experience. The platform leverages cutting-edge JavaScript techniques to deliver superior performance and user experience.',
+    carousel: [],
+    challenges:
+      "My key responsibility was migrating AMG's entire infrastructure to an automated setup using Terraform and extensively using JavaScript to improve the code quality and the platform's capacity to handle high traffic. I collaborated with principal engineers, ensured optimal platform performance, and contributed to its scalability.",
+    challengesPoints: [
+      'Led the infrastructure migration to an automated setup using Terraform, significantly improving efficiency and reducing manual errors.',
+      "Utilized advanced JavaScript features to improve the codebase's quality, enhancing platform performance and readability.",
+      "Optimized JavaScript code for asynchronous operations, enhancing the platform's ability to handle multiple simultaneous client interactions without blocking I/O operations.",
+      'Implemented JavaScript testing frameworks like Jest and Mocha to ensure the robustness and reliability of the platform.',
+      'Collaborated with principal engineers to address technical challenges, providing strategic input to influence system design and functionality.',
+      'Optimized the platform to handle high volumes of users by improving application code, data structures, and algorithms using JavaScript.',
+      "Implemented monitoring solutions to provide insights into the system's performance, health, and potential issues.",
+      'Ensured platform security by implementing robust measures and regularly conducting security assessments.',
+    ],
+    skills: [],
+    duration: {
+      ...COMPANIES.arctouch.duration,
+    },
+  },
+  {
+    id: 'RENNER',
+    slug: '/projects/renner',
+    title: 'Renner',
+    company: COMPANIES.datum,
+    isFeature: true,
+    about:
+      "AMG is a highly scalable platform designed to manage millions of clients on a daily basis. At its core, AMG's mission is to provide a robust and efficient system that ensures seamless user management and high-quality customer service. Leveraging advanced JavaScript features, the platform guarantees optimal performance and resiliency.",
+    description:
+      'AMG is a robust and scalable platform that efficiently manages millions of daily clients, providing a reliable and seamless experience. The platform leverages cutting-edge JavaScript techniques to deliver superior performance and user experience.',
+    carousel: [],
+    challenges:
+      "My key responsibility was migrating AMG's entire infrastructure to an automated setup using Terraform and extensively using JavaScript to improve the code quality and the platform's capacity to handle high traffic. I collaborated with principal engineers, ensured optimal platform performance, and contributed to its scalability.",
+    challengesPoints: [
+      'Led the infrastructure migration to an automated setup using Terraform, significantly improving efficiency and reducing manual errors.',
+      "Utilized advanced JavaScript features to improve the codebase's quality, enhancing platform performance and readability.",
+      "Optimized JavaScript code for asynchronous operations, enhancing the platform's ability to handle multiple simultaneous client interactions without blocking I/O operations.",
+      'Implemented JavaScript testing frameworks like Jest and Mocha to ensure the robustness and reliability of the platform.',
+      'Collaborated with principal engineers to address technical challenges, providing strategic input to influence system design and functionality.',
+      'Optimized the platform to handle high volumes of users by improving application code, data structures, and algorithms using JavaScript.',
+      "Implemented monitoring solutions to provide insights into the system's performance, health, and potential issues.",
+      'Ensured platform security by implementing robust measures and regularly conducting security assessments.',
+    ],
+    skills: [],
+    duration: {
+      ...COMPANIES.datum.duration,
+    },
+  },
+  {
     id: 'Doare',
     slug: '/projects/doare',
     title: 'Doare',
@@ -88,7 +144,7 @@ export const PROJECTS: Array<ProjectType> = [
     id: 'snapstrat',
     slug: '/projects/snapstrat',
     title: 'SnapStrat',
-    isFeature: true,
+    isFeature: false,
     carousel: [],
     company: COMPANIES.zipdev,
     duration: {
@@ -251,7 +307,7 @@ export const PROJECTS: Array<ProjectType> = [
     slug: '/projects/tiled',
     title: 'Tiled',
     company: COMPANIES.zipdev,
-    isFeature: true,
+    isFeature: false,
     about:
       "Tiled is a leading platform that enables businesses to create interactive, multimedia content that engages and informs their audience. Founded in 2016, the company has quickly established itself as a leader in the field of content marketing, helping businesses to create more effective and engaging content that drives results.\nAt its core, Tiled is a content creation platform that allows businesses to easily create interactive, multimedia content such as presentations, infographics, and microsites. The platform is designed to be easy to use, with intuitive drag-and-drop tools that allow businesses to create content without the need for specialized technical skills.\nOne of the key advantages of Tiled is its ability to help businesses create more engaging content that resonates with their audience. By creating interactive content that includes multimedia elements such as video, audio, and animations, businesses are able to capture the attention of their audience and keep them engaged for longer periods of time. This leads to increased brand awareness, higher engagement rates, and ultimately, increased revenue.\nAnother advantage of Tiled is its ability to help businesses track and measure the effectiveness of their content. By providing detailed analytics on how their audience interacts with their content, businesses are able to gain valuable insights into what works and what doesn't, and adjust their strategy accordingly.\nOverall, Tiled is a platform that is transforming the way businesses create and deliver content. With its innovative approach to content marketing, intuitive tools, and focus on audience engagement, it is a platform that is well-positioned to help businesses of all sizes and industries achieve success in today's competitive market.",
     description:
@@ -1202,7 +1258,7 @@ export const PROJECTS: Array<ProjectType> = [
   {
     id: 'hacker-rangers',
     slug: '/projects/hacker-rangers',
-    title: 'Hacker',
+    title: 'Hacker Rangers',
     company: COMPANIES.perallis,
     about:
       'Hacker Rangers is a gamification platform for user education and engagement. It\'s purpose is to lead the employees of an organization to adopt "cybersecure" habits through inherent motivation.',
@@ -1262,7 +1318,7 @@ export const PROJECTS: Array<ProjectType> = [
     id: 'ita-fest',
     slug: '/projects/ita-fest',
     title: 'Ita Fest',
-    company: COMPANIES.fabricademvp,
+    company: COMPANIES.novacdevs,
     about:
       'ItaFest app is your ultimate guide to finding and attending the best events during the carnival season in Brazil. As a senior software engineer working on the development of the app, you would have the opportunity to work on a range of exciting features aimed at making it easy for users to find and attend the most popular carnival events.',
     challenges:

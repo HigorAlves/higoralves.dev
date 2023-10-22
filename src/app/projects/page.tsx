@@ -1,8 +1,12 @@
 'use client'
 import { Box, Container, Grid, Text, Title } from '@mantine/core'
 import { ProjectCard } from '~/components'
+import { PROJECTS } from '~/mocks/projects'
 
 export default function ProjectsPage() {
+  const FEATURE_PROJECTS = PROJECTS.filter((project) => project.isFeature)
+  const NORMAL_PROJECTS = PROJECTS.filter((project) => !project.isFeature)
+
   return (
     <Container size={'lg'} mt={'xl'}>
       <Box mb={'xl'}>
@@ -29,18 +33,11 @@ export default function ProjectsPage() {
         </Text>
 
         <Grid>
-          <Grid.Col span={{ md: 3 }}>
-            <ProjectCard isFeatured />
-          </Grid.Col>
-          <Grid.Col span={{ md: 3 }}>
-            <ProjectCard isFeatured />
-          </Grid.Col>
-          <Grid.Col span={{ md: 3 }}>
-            <ProjectCard isFeatured />
-          </Grid.Col>
-          <Grid.Col span={{ md: 3 }}>
-            <ProjectCard isFeatured />
-          </Grid.Col>
+          {FEATURE_PROJECTS.map((project) => (
+            <Grid.Col key={project.slug} span={{ md: 3 }}>
+              <ProjectCard {...project} />
+            </Grid.Col>
+          ))}
         </Grid>
       </Box>
 
@@ -50,18 +47,13 @@ export default function ProjectsPage() {
           Some projects are under NDA so they cannot be listed.
         </Text>
         <Grid>
-          <Grid.Col span={{ md: 3 }}>
-            <ProjectCard />
-          </Grid.Col>
-          <Grid.Col span={{ md: 3 }}>
-            <ProjectCard />
-          </Grid.Col>
-          <Grid.Col span={{ md: 3 }}>
-            <ProjectCard />
-          </Grid.Col>
-          <Grid.Col span={{ md: 3 }}>
-            <ProjectCard />
-          </Grid.Col>
+          <Grid>
+            {NORMAL_PROJECTS.map((project) => (
+              <Grid.Col key={project.slug} span={{ md: 3 }}>
+                <ProjectCard {...project} />
+              </Grid.Col>
+            ))}
+          </Grid>
         </Grid>
       </Box>
     </Container>

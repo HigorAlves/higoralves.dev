@@ -41,25 +41,6 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
       locationType: LocationType.REMOTE,
     },
   },
-  doare: {
-    job: 'Senior Software Engineer',
-    name: 'Doare',
-    website: 'https://doare.org',
-    icon: IconBalloon,
-    show: true,
-    address: {
-      city: 'Florianópolis',
-      country: 'Brazil',
-    },
-    duration: {
-      startDate: new Date('June 25, 2023').toDateString(),
-      endDate: 'present',
-    },
-    contract: {
-      employmentType: EmploymentType.CONTRACTOR,
-      locationType: LocationType.REMOTE,
-    },
-  },
   ask: {
     job: 'Senior Software Engineer',
     name: 'AMG - Ask Media Group',
@@ -76,6 +57,25 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
     },
     contract: {
       employmentType: EmploymentType.FULLTIME,
+      locationType: LocationType.REMOTE,
+    },
+  },
+  doare: {
+    job: 'Technology Consultant',
+    name: 'Doare',
+    website: 'https://doare.org',
+    icon: IconBalloon,
+    show: true,
+    address: {
+      city: 'Florianópolis',
+      country: 'Brazil',
+    },
+    duration: {
+      startDate: new Date('June 25, 2023').toDateString(),
+      endDate: new Date('11/08/2023').toDateString(),
+    },
+    contract: {
+      employmentType: EmploymentType.CONSULTANT,
       locationType: LocationType.REMOTE,
     },
   },
@@ -288,9 +288,9 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
       locationType: LocationType.HYBRID,
     },
   },
-  fabricademvp: {
+  novacdevs: {
     job: 'Software Engineer',
-    name: 'Fabrica de MVP',
+    name: 'Novac Devs',
     website: null,
     address: {
       city: 'Itapecerica',
@@ -360,7 +360,7 @@ export const COMPANIES: Record<CompanyName, ICompany> = {
       endDate: new Date('Apr 01, 2019').toDateString(),
     },
     contract: {
-      employmentType: EmploymentType.FULLTIME,
+      employmentType: EmploymentType.CONSULTANT,
       locationType: LocationType.REMOTE,
     },
   },
