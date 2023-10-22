@@ -5640,10 +5640,10 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.3.tgz#cef09e3ec9af1d63d2a6cc5b383a737e24e6dcf5"
   integrity sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==
 
-"@types/scroll-lock@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@types/scroll-lock/-/scroll-lock-2.1.0.tgz#fe6d8f295f92fc8793e221eec1c0d8d881832524"
-  integrity sha512-KG4pu+bD/s7Tlzv3274suczLNKrATi+9pB1G+kWSgzs55s5Lz9SZSvj2m56XGbFq9HxRV1gdxqZ0wnlq82uj2w==
+"@types/scroll-lock@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@types/scroll-lock/-/scroll-lock-2.1.2.tgz#48532ffa85f34364f16b98c230b31a1fabe08c3b"
+  integrity sha512-dm+DKHJowHnD/b2XZuc4F1dBoJbvgEihUtZRmc5fPgg+OROwY2/SII+qanZcP3kEKbEQPMRhlBkVGr062KV7EQ==
 
 "@types/semver@^7.3.12", "@types/semver@^7.3.4", "@types/semver@^7.5.0":
   version "7.5.0"
