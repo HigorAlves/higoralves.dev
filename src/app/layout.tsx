@@ -9,6 +9,7 @@ import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 // eslint-disable-next-line camelcase
 import { Sora, Source_Code_Pro, Space_Grotesk } from 'next/font/google'
 import { Layout } from '~/layout/index.layout'
+import { theme } from '~/theme/theme'
 
 const sora = Sora({
   subsets: ['latin'],
@@ -61,14 +62,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider
-          theme={{
-            primaryColor: 'violet',
-            fontFamily: 'var(--font-sora), var(--font-grotesk)',
-            fontFamilyMonospace: 'var(--font-code)',
-          }}
-          defaultColorScheme={'dark'}
-        >
+        <MantineProvider theme={theme} defaultColorScheme={'dark'}>
           <Layout layout={'basic'} main={children} />
         </MantineProvider>
       </body>
