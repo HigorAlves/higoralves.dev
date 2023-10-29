@@ -20,9 +20,9 @@ const CATEGORIES = [
 
 export function About() {
   return (
-    <Container size={'lg'}>
+    <Container size={'md'}>
       <Grid gutter={'xl'}>
-        <Grid.Col span={{ base: 12, md: 4 }}>
+        <Grid.Col span={{ base: 12, md: 4, sm: 12 }}>
           <Title order={1} c={'white'}>
             Work. Hobby. Freedom
           </Title>
@@ -51,7 +51,7 @@ export function About() {
           </Button>
         </Grid.Col>
 
-        <Grid.Col span={{ base: 12, md: 6 }} offset={2}>
+        <Grid.Col span={{ base: 12, md: 6, sm: 12 }} offset={{ md: 2, sm: 0 }}>
           <Text c={'dimmed'}>
             Discover the life of a nomadic software developer, where coding and exploration collide. Here, we reimagine
             the boundaries of work, hobby, and freedom.
