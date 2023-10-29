@@ -1,4 +1,4 @@
-import 'react'
+import React from 'react'
 
 type LordIconTrigger = 'hover' | 'click' | 'loop' | 'loop-on-hover' | 'morph' | 'morph-two-way'
 
