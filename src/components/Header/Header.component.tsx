@@ -10,6 +10,7 @@ const links = [
   { link: '/about', label: 'About' },
   { link: '/articles', label: 'Articles' },
   { link: '/projects', label: 'Projects' },
+  { link: '/career', label: 'Career' },
 ]
 
 export function Header() {

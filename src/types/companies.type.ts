@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-import { TablerIconsProps } from '@tabler/icons-react'
-
 export enum LocationType {
   REMOTE = 'Remote',
   HYBRID = 'Hybrid',
@@ -39,9 +37,11 @@ export type CompanyName =
 export interface ICompany {
   name: string
   job: string
-  website: string | null
-  icon: (props: TablerIconsProps) => any
+  website: string
+  icon: string
   show: boolean
+  description: string
+  rating: number
   address: {
     city: string
     country: string

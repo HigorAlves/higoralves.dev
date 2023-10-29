@@ -31,7 +31,7 @@ export default function ProjectsPage() {
           order={1}
           fw={900}
           variant="gradient"
-          gradient={{ from: 'yellow', to: 'orange', deg: 150 }}
+          gradient={{ from: 'blue', to: '#1F32C4', deg: 150 }}
         >
           Explore. Evolve. Learn.
         </Text>

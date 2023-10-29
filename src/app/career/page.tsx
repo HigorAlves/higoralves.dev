@@ -1,8 +1,23 @@
 'use client'
-import { Box, Container, Grid, Paper, Stack, Text, Title } from '@mantine/core'
-import { LordIcon } from '~/components'
+import { Box, Container, Grid, Paper, Rating, Stack, Text, Title } from '@mantine/core'
+import { IconBalloon, IconFlag, IconHandRock, IconStar, IconTrack } from '@tabler/icons-react'
+import { COMPANIES } from '~/mocks/companies'
 
 export default function CareerPage() {
+  const companiesKeys = Object.keys(COMPANIES)
+
+  function renderIcon(icon: string) {
+    return (
+      <>
+        {icon === 'balloon' && <IconBalloon size={30} />}
+        {icon === 'handRock' && <IconHandRock size={30} />}
+        {icon === 'star' && <IconStar size={30} />}
+        {icon === 'flag' && <IconFlag size={30} />}
+        {icon === 'track' && <IconTrack size={30} />}
+      </>
+    )
+  }
+
   return (
     <Container size={'lg'} mt={'xl'}>
       <Box mb={'xl'}>
@@ -11,7 +26,7 @@ export default function CareerPage() {
           order={1}
           fw={900}
           variant="gradient"
-          gradient={{ from: 'green', to: 'lime', deg: 150 }}
+          gradient={{ from: 'yellow', to: 'tomato', deg: 150 }}
         >
           Career. Innovation. Impact.
         </Text>
@@ -22,25 +37,26 @@ export default function CareerPage() {
       </Box>
 
       <Grid>
-        <Grid.Col span={{ sm: 12, md: 3 }}>
-          <Paper radius="sm" p={'xl'} withBorder>
-            <Stack align={'start'} mb={'md'} gap={0}>
-              <LordIcon icon={'/icons/animated/wired-outline-743-web-code.json'} />
-              <Text fw={'bold'} size={'xl'}>
-                ArchTouch
-              </Text>
-              <Text fw={'lighter'} size={'sm'}>
-                Senior Software Engineer
-              </Text>
-            </Stack>
+        {companiesKeys.map((id: string) => (
+          <Grid.Col key={id} span={{ sm: 12, md: 3 }}>
+            <Paper radius="sm" p={'xl'} withBorder component={'a'} href={COMPANIES[id].website} target={'_blank'}>
+              <Stack align={'start'} mb={'md'} gap={0}>
+                {renderIcon(COMPANIES[id].icon)}
+                <Text fw={'bold'} size={'xl'} lineClamp={1}>
+                  {COMPANIES[id].name}
+                </Text>
+                <Text fw={'lighter'} size={'sm'}>
+                  {COMPANIES[id].job}
+                </Text>
+                <Rating value={COMPANIES[id].rating} size={'xs'} fractions={2} readOnly />
+              </Stack>
 
-            <Text size={'sm'} lineClamp={5}>
-              We help companies forge meaningful connections with their customers and employees through lovable apps,
-              websites, and digital products. Since the dawn of the app revolution, we've helped businesses of all
-              sizes, from the Fortune 500 to innovative startups.
-            </Text>
-          </Paper>
-        </Grid.Col>
+              <Text size={'sm'} lineClamp={5}>
+                {COMPANIES[id].description}
+              </Text>
+            </Paper>
+          </Grid.Col>
+        ))}
       </Grid>
     </Container>
   )
