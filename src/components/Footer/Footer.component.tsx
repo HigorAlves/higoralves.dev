@@ -1,5 +1,5 @@
 import React from 'react'
-import { ActionIcon, Container, Flex, Group, NavLink, rem } from '@mantine/core'
+import { ActionIcon, Container, Flex, Group, NavLink } from '@mantine/core'
 import { IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react'
 import Link from 'next/link'
 import { Logo } from '~/components'
@@ -25,14 +25,14 @@ export function Footer() {
         <Group>{items}</Group>
 
         <Group gap="xs" justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+          <ActionIcon size="lg" variant="transparent" radius="xl" color={'white'}>
+            <IconBrandInstagram size={18} stroke={1} />
           </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandLinkedin style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+          <ActionIcon size="lg" variant="transparent" radius="xl" color={'white'}>
+            <IconBrandLinkedin size={18} stroke={1} />
           </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandYoutube style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+          <ActionIcon size="lg" variant="transparent" radius="xl" color={'white'}>
+            <IconBrandYoutube size={18} stroke={1} />
           </ActionIcon>
         </Group>
       </Flex>

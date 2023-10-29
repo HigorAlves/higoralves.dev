@@ -9,11 +9,11 @@ export default function CareerPage() {
   function renderIcon(icon: string) {
     return (
       <>
-        {icon === 'balloon' && <IconBalloon size={30} />}
-        {icon === 'handRock' && <IconHandRock size={30} />}
-        {icon === 'star' && <IconStar size={30} />}
-        {icon === 'flag' && <IconFlag size={30} />}
-        {icon === 'track' && <IconTrack size={30} />}
+        {icon === 'balloon' && <IconBalloon stroke={1} size={30} />}
+        {icon === 'handRock' && <IconHandRock stroke={1} size={30} />}
+        {icon === 'star' && <IconStar stroke={1} size={30} />}
+        {icon === 'flag' && <IconFlag stroke={1} size={30} />}
+        {icon === 'track' && <IconTrack stroke={1} size={30} />}
       </>
     )
   }
