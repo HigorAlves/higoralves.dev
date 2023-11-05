@@ -70,7 +70,7 @@
     "@semantic-release/npm": "^10.0.5",
     "@semantic-release/release-notes-generator": "^11.0.4",
     "@storybook/addon-essentials": "^7.3.2",
-    "@storybook/addon-interactions": "^7.3.2",
+    "@storybook/addon-interactions": "^7.5.2",
     "@storybook/addon-links": "^7.3.2",
     "@storybook/blocks": "^7.3.2",
     "@storybook/nextjs": "^7.3.2",
