@@ -1,27 +1,9 @@
 'use client'
-import {
-  Box,
-  Container,
-  Grid,
-  px,
-  rem,
-  SimpleGrid,
-  Skeleton,
-  Space,
-  Stack,
-  Text,
-  Title,
-  useMantineTheme,
-} from '@mantine/core'
+import { Box, Container, Grid, rem, SimpleGrid, Skeleton, Space, Text, Title } from '@mantine/core'
 
 const PRIMARY_COL_HEIGHT = rem(300)
-const getChild = (height: number) => <Skeleton height={height} radius="md" animate={false} />
-const BASE_HEIGHT = 360
-const getSubHeight = (children: number, spacing: number) =>
-  BASE_HEIGHT / children - spacing * ((children - 1) / children)
 
 export default function ProjectsPage() {
-  const theme = useMantineTheme()
   const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`
   return (
     <Container size={'lg'} mt={'xl'}>
@@ -33,7 +15,7 @@ export default function ProjectsPage() {
           variant="gradient"
           gradient={{ from: 'blue', to: '#1F32C4', deg: 150 }}
         >
-          Explore. Evolve. Learn.
+          Share. Evolve. Learn.
         </Text>
         <Text c={'dimmed'}>
           Embark on a journey of learning and growth with insightful articles and guides. Stay up-to-date with the
@@ -56,19 +38,6 @@ export default function ProjectsPage() {
         </Grid>
       </SimpleGrid>
       <Space h={'xs'} />
-      <SimpleGrid cols={{ base: 1, xs: 4 }}>
-        {getChild(BASE_HEIGHT)}
-        <Stack>
-          {getChild(getSubHeight(2, px(theme.spacing.md) as number))}
-          {getChild(getSubHeight(2, px(theme.spacing.md) as number))}
-        </Stack>
-        <Stack>
-          {getChild(getSubHeight(3, px(theme.spacing.md) as number))}
-          {getChild(getSubHeight(3, px(theme.spacing.md) as number))}
-          {getChild(getSubHeight(3, px(theme.spacing.md) as number))}
-        </Stack>
-        {getChild(BASE_HEIGHT)}
-      </SimpleGrid>
     </Container>
   )
 }

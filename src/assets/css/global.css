@@ -2,3 +2,45 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-3px) translateX(-2px);
+    }
+    100% {
+        transform: translateY(-0px) translateX(0px);
+    }
+}
+
+.waving-image-container {
+    position: relative;
+    overflow: hidden;
+    width: 200px; /* Adjust the width and height according to your image size */
+    height: 200px;
+    border-radius: 50%;
+}
+
+.waving-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: wave 2s linear infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    75% {
+        transform: rotate(135deg);
+    }
+}

@@ -1,5 +1,5 @@
 'use client'
-import { Button, Center, Container, Grid, RingProgress, Space, Text, Title } from '@mantine/core'
+import { Box, Button, Center, Container, Grid, RingProgress, Space, Text, Title } from '@mantine/core'
 import Image from 'next/image'
 
 export function Hero() {
@@ -30,19 +30,113 @@ export function Hero() {
             </Center>
           </Grid.Col>
 
-          <Grid.Col span={{ md: 4, sm: 0 }} visibleFrom={'md'}>
-            <RingProgress
-              size={400}
-              thickness={14}
-              roundCaps
-              sections={[
-                { value: 25, color: 'green' },
-                { value: 25, color: 'yellow' },
-                { value: 25, color: 'blue' },
-                { value: 25, color: 'orange' },
-              ]}
+          <Grid.Col span={{ md: 4, sm: 0 }} visibleFrom={'md'} style={{ position: 'relative' }}>
+            <RingProgress size={400} thickness={7} roundCaps sections={[{ value: 100, color: 'indigo' }]} />
+            <Image
+              src={'/images/me/Profile.jpeg'}
+              alt={''}
+              width={340}
+              height={340}
+              style={{ position: 'absolute', top: '9%', left: '9%', borderRadius: '100%' }}
             />
-            {/* <Image src={'/images/me/higor-with-tech-around.png'} alt={'Help'} width={400} height={400} /> */}
+            <Box
+              bg="white"
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 50,
+                position: 'absolute',
+                top: 50,
+                left: 60,
+                animation: 'float 2s infinite',
+              }}
+            ></Box>
+            <Box
+              bg="white"
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 50,
+                position: 'absolute',
+                top: 50,
+                left: 60,
+                animation: 'float 2.5s infinite',
+              }}
+            ></Box>
+
+            <Box
+              bg="white"
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 50,
+                position: 'absolute',
+                top: 50,
+                right: 60,
+                animation: 'float 2s infinite',
+              }}
+            ></Box>
+            <Box
+              bg="white"
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 50,
+                position: 'absolute',
+                top: 50,
+                right: 60,
+                animation: 'float 2.5s infinite',
+              }}
+            ></Box>
+            <Box
+              bg="white"
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 50,
+                position: 'absolute',
+                bottom: 50,
+                left: 60,
+                animation: 'float 2s infinite',
+              }}
+            ></Box>
+            <Box
+              bg="white"
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 50,
+                position: 'absolute',
+                bottom: 50,
+                left: 60,
+                animation: 'float 2.5s infinite',
+              }}
+            ></Box>
+
+            <Box
+              bg="white"
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 50,
+                position: 'absolute',
+                bottom: 50,
+                right: 60,
+                animation: 'float 2s infinite',
+              }}
+            ></Box>
+            <Box
+              bg="white"
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 50,
+                position: 'absolute',
+                bottom: 50,
+                right: 60,
+                animation: 'float 2.5s infinite',
+              }}
+            ></Box>
           </Grid.Col>
         </Grid>
 
