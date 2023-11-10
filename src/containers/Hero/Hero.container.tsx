@@ -51,6 +51,7 @@ export function Hero() {
                 animation: 'float 2s infinite',
               }}
             ></Box>
+
             <Box
               bg="white"
               style={{
@@ -63,6 +64,20 @@ export function Hero() {
                 animation: 'float 2.5s infinite',
               }}
             ></Box>
+            <Image
+              src={'/images/techs/typescript.svg'}
+              alt={'Typescript'}
+              width={30}
+              height={30}
+              style={{
+                top: 50,
+                left: 60,
+                animation: 'float 2s infinite',
+                position: 'absolute',
+                background: 'white',
+                margin: 10,
+              }}
+            />
 
             <Box
               bg="white"
@@ -88,6 +103,20 @@ export function Hero() {
                 animation: 'float 2.5s infinite',
               }}
             ></Box>
+            <Image
+              src={'/images/techs/reactjs.svg'}
+              alt={'Typescript'}
+              width={30}
+              height={30}
+              style={{
+                position: 'absolute',
+                top: 50,
+                right: 60,
+                animation: 'float 2s infinite',
+                margin: 10,
+              }}
+            />
+
             <Box
               bg="white"
               style={{
@@ -112,6 +141,19 @@ export function Hero() {
                 animation: 'float 2.5s infinite',
               }}
             ></Box>
+            <Image
+              src={'/images/techs/nodejs.svg'}
+              alt={'Typescript'}
+              width={30}
+              height={30}
+              style={{
+                position: 'absolute',
+                bottom: 50,
+                left: 60,
+                animation: 'float 2s infinite',
+                margin: 10,
+              }}
+            />
 
             <Box
               bg="white"
@@ -137,6 +179,19 @@ export function Hero() {
                 animation: 'float 2.5s infinite',
               }}
             ></Box>
+            <Image
+              src={'/images/techs/swift.png'}
+              alt={'Typescript'}
+              width={30}
+              height={30}
+              style={{
+                position: 'absolute',
+                bottom: 50,
+                right: 60,
+                animation: 'float 2s infinite',
+                margin: 10,
+              }}
+            />
           </Grid.Col>
         </Grid>
 
@@ -147,19 +202,19 @@ export function Hero() {
         </Text>
         <Grid justify={'space-between'}>
           <Grid.Col span={{ md: 2, sm: 6 }}>
-            <Image src="/images/companies/logos/dark/ask.svg" width={134} height={48} alt="Ask Media Group logo" />
+            <Image src="/images/companies/logos/dark/unesco.svg" width={124} height={50} alt="Ask Media Group logo" />
           </Grid.Col>
           <Grid.Col span={{ md: 2, sm: 6 }}>
-            <Image src="/images/companies/logos/dark/bubbles.svg" width={114} height={48} alt="Bubbles logo" />
+            <Image src="/images/companies/logos/dark/ask.svg" width={90} height={50} alt="Bubbles logo" />
           </Grid.Col>
           <Grid.Col span={{ md: 2, sm: 6 }}>
-            <Image src="/images/companies/logos/dark/tiled.svg" width={114} height={48} alt="Tiled CO logo" />
+            <Image src="/images/companies/logos/dark/arctouch.svg" width={120} height={50} alt="Tiled CO logo" />
           </Grid.Col>
           <Grid.Col span={{ md: 2, sm: 6 }}>
-            <Image src="/images/companies/logos/dark/unesco.svg" width={114} height={48} alt="Unesco logo" />
+            <Image src="/images/companies/logos/dark/xteam.svg" width={100} height={50} alt="Unesco logo" />
           </Grid.Col>
           <Grid.Col span={{ md: 2, sm: 6 }}>
-            <Image src="/images/companies/logos/dark/xteam.svg" width={114} height={48} alt="Xteam logo" />
+            <Image src="/images/companies/logos/dark/bubbles.svg" width={100} height={50} alt="Xteam logo" />
           </Grid.Col>
         </Grid>
       </Container>
