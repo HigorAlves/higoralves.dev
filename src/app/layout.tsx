@@ -1,4 +1,3 @@
-import 'tippy.js/animations/shift-toward.css'
 import '@mantine/core/styles.css'
 import '~/assets/css/global.css'
 

@@ -29,14 +29,12 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "@lordicon/element": "^1.4.2",
     "@mantine/core": "^7.3.1",
     "@mantine/hooks": "^7.3.1",
     "@next/bundle-analyzer": "^14.0.3",
+    "@sentry/nextjs": "^7.86.0",
     "@t3-oss/env-nextjs": "^0.7.1",
     "@tabler/icons-react": "^2.42.0",
-    "@tippyjs/react": "^4.2.6",
-    "lottie-web": "^5.12.2",
     "next": "^14.0.3",
     "next-compose-plugins": "^2.2.1",
     "react": "^18.2.0",
