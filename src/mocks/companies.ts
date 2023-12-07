@@ -27,7 +27,7 @@ export const COMPANIES: Record<CompanyName | string, ICompany> = {
     job: 'Senior Software Engineer',
     name: 'Datum',
     website: 'https://datumit.com/',
-    rating: 5,
+    rating: 4,
     icon: 'balloon',
     show: true,
     address: {
@@ -36,7 +36,7 @@ export const COMPANIES: Record<CompanyName | string, ICompany> = {
     },
     duration: {
       startDate: new Date('September 12, 2023').toDateString(),
-      endDate: 'present',
+      endDate: new Date('December 12, 2023').toDateString(),
     },
     contract: {
       employmentType: EmploymentType.CONTRACTOR,
