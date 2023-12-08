@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { ActionIcon, Container, Flex, Group, NavLink } from '@mantine/core'
 import { IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react'

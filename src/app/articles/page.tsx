@@ -1,5 +1,6 @@
 'use client'
 import { Box, Container, Grid, rem, SimpleGrid, Skeleton, Space, Text, Title } from '@mantine/core'
+import { ArticleCard } from '~/components'
 
 const PRIMARY_COL_HEIGHT = rem(300)
 
@@ -37,7 +38,14 @@ export default function ProjectsPage() {
           </Grid.Col>
         </Grid>
       </SimpleGrid>
-      <Space h={'xs'} />
+      <Space h={'lg'} />
+
+      <SimpleGrid cols={{ base: 1, sm: 3, lg: 3 }} spacing="lg">
+        <ArticleCard />
+        <ArticleCard />
+        <ArticleCard />
+        <ArticleCard />
+      </SimpleGrid>
     </Container>
   )
 }

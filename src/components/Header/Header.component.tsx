@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { AppShell, Burger, Container, Flex, Group, NavLink } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'

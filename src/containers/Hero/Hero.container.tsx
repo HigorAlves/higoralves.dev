@@ -1,6 +1,7 @@
 'use client'
-import { Box, Button, Center, Container, Grid, RingProgress, Space, Text, Title } from '@mantine/core'
+import { Button, Center, Container, Grid, Space, Text, Title } from '@mantine/core'
 import Image from 'next/image'
+import { RingPhoto } from '~/components'
 
 export function Hero() {
   return (
@@ -31,167 +32,7 @@ export function Hero() {
           </Grid.Col>
 
           <Grid.Col span={{ md: 4, sm: 0 }} visibleFrom={'md'} style={{ position: 'relative' }}>
-            <RingProgress size={400} thickness={7} roundCaps sections={[{ value: 100, color: 'indigo' }]} />
-            <Image
-              src={'/images/me/Profile.jpeg'}
-              alt={''}
-              width={340}
-              height={340}
-              style={{ position: 'absolute', top: '9%', left: '9%', borderRadius: '100%' }}
-            />
-            <Box
-              bg="white"
-              style={{
-                height: 50,
-                width: 50,
-                borderRadius: 50,
-                position: 'absolute',
-                top: 50,
-                left: 60,
-                animation: 'float 2s infinite',
-              }}
-            ></Box>
-
-            <Box
-              bg="white"
-              style={{
-                height: 50,
-                width: 50,
-                borderRadius: 50,
-                position: 'absolute',
-                top: 50,
-                left: 60,
-                animation: 'float 2.5s infinite',
-              }}
-            ></Box>
-            <Image
-              src={'/images/techs/typescript.svg'}
-              alt={'Typescript'}
-              width={30}
-              height={30}
-              style={{
-                top: 50,
-                left: 60,
-                animation: 'float 2s infinite',
-                position: 'absolute',
-                background: 'white',
-                margin: 10,
-              }}
-            />
-
-            <Box
-              bg="white"
-              style={{
-                height: 50,
-                width: 50,
-                borderRadius: 50,
-                position: 'absolute',
-                top: 50,
-                right: 60,
-                animation: 'float 2s infinite',
-              }}
-            ></Box>
-            <Box
-              bg="white"
-              style={{
-                height: 50,
-                width: 50,
-                borderRadius: 50,
-                position: 'absolute',
-                top: 50,
-                right: 60,
-                animation: 'float 2.5s infinite',
-              }}
-            ></Box>
-            <Image
-              src={'/images/techs/reactjs.svg'}
-              alt={'Typescript'}
-              width={30}
-              height={30}
-              style={{
-                position: 'absolute',
-                top: 50,
-                right: 60,
-                animation: 'float 2s infinite',
-                margin: 10,
-              }}
-            />
-
-            <Box
-              bg="white"
-              style={{
-                height: 50,
-                width: 50,
-                borderRadius: 50,
-                position: 'absolute',
-                bottom: 50,
-                left: 60,
-                animation: 'float 2s infinite',
-              }}
-            ></Box>
-            <Box
-              bg="white"
-              style={{
-                height: 50,
-                width: 50,
-                borderRadius: 50,
-                position: 'absolute',
-                bottom: 50,
-                left: 60,
-                animation: 'float 2.5s infinite',
-              }}
-            ></Box>
-            <Image
-              src={'/images/techs/nodejs.svg'}
-              alt={'Typescript'}
-              width={30}
-              height={30}
-              style={{
-                position: 'absolute',
-                bottom: 50,
-                left: 60,
-                animation: 'float 2s infinite',
-                margin: 10,
-              }}
-            />
-
-            <Box
-              bg="white"
-              style={{
-                height: 50,
-                width: 50,
-                borderRadius: 50,
-                position: 'absolute',
-                bottom: 50,
-                right: 60,
-                animation: 'float 2s infinite',
-              }}
-            ></Box>
-            <Box
-              bg="white"
-              style={{
-                height: 50,
-                width: 50,
-                borderRadius: 50,
-                position: 'absolute',
-                bottom: 50,
-                right: 60,
-                animation: 'float 2.5s infinite',
-              }}
-            ></Box>
-            <Image
-              src={'/images/techs/swift.png'}
-              alt={'Typescript'}
-              width={30}
-              height={30}
-              style={{
-                position: 'absolute',
-                bottom: 50,
-                right: 60,
-                animation: 'float 2s infinite',
-                margin: 10,
-              }}
-            />
+            <RingPhoto />
           </Grid.Col>
         </Grid>
 
@@ -200,7 +41,7 @@ export function Hero() {
         <Text c={'dimmed'} tt={'uppercase'} ta={'center'} mb={'xl'} size={'sm'}>
           HELPING PEOPLE & COMPANIES CREATE BEAUTIFUL PLATFORMS AT
         </Text>
-        <Grid justify={'space-between'}>
+        <Grid justify={'space-between'} visibleFrom={'md'}>
           <Grid.Col span={{ md: 2, sm: 6 }}>
             <Image src="/images/companies/logos/dark/unesco.svg" width={124} height={50} alt="Ask Media Group logo" />
           </Grid.Col>
