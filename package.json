@@ -54,7 +54,7 @@
     "react-responsive-masonry": "^2.1.7",
     "react-scroll-into-view": "^2.0.2",
     "scroll-lock": "^2.1.5",
-    "tailwind-variants": "^0.1.13",
+    "tailwind-variants": "^0.1.18",
     "zod": "^3.22.2"
   },
   "devDependencies": {
