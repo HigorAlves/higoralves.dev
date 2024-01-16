@@ -17,10 +17,9 @@ export type ProjectType = {
   thumbnail?: string
   description: string
   about: string
-  challenges: string
-  challengesPoints: Array<string>
   isFeature: boolean
-  skills: Array<Skill>
+  skillsUsed: string[]
+  responsibilities: string[]
   carousel: Array<StaticImageData>
   company: ICompany
   duration: {
