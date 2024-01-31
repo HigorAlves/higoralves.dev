@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-import { TablerIconsProps } from '@tabler/icons-react'
-
 export enum LocationType {
   REMOTE = 'Remote',
   HYBRID = 'Hybrid',
@@ -10,9 +8,12 @@ export enum LocationType {
 export enum EmploymentType {
   FULLTIME = 'Full-time',
   CONTRACTOR = 'Contractor',
+  CONSULTANT = 'Consultant',
 }
 
 export type CompanyName =
+  | 'arctouch'
+  | 'datum'
   | 'doare'
   | 'ask'
   | '123milhas'
@@ -24,7 +25,7 @@ export type CompanyName =
   | 'takeblip'
   | 'monetus'
   | 'natahouse'
-  | 'fabricademvp'
+  | 'novacdevs'
   | 'perallis'
   | 'fiocruz'
   | 'edulivre'
@@ -36,9 +37,11 @@ export type CompanyName =
 export interface ICompany {
   name: string
   job: string
-  website: string | null
-  icon: (props: TablerIconsProps) => any
+  website: string
+  icon: string
   show: boolean
+  description: string
+  rating: number
   address: {
     city: string
     country: string

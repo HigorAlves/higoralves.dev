@@ -1,8 +1,13 @@
 import type { NextPage } from 'next'
-import { HomePage } from '~/containers/HomePage'
+import { About, Hero } from '~/containers'
 
 const Home: NextPage = () => {
-  return <HomePage />
+  return (
+    <>
+      <Hero />
+      <About />
+    </>
+  )
 }
 
 export default Home

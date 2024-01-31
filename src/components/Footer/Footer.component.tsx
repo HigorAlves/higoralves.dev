@@ -1,49 +1,39 @@
+import React from 'react'
+import { ActionIcon, Container, Flex, Group, NavLink } from '@mantine/core'
+import { IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react'
 import Link from 'next/link'
-
 import { Logo } from '~/components'
-import { styles } from '~/components/Footer/Footer.style'
-import { navigation } from '~/constants/navigation'
-import { socials } from '~/constants/socials'
-import Image from '../Image'
-import Section from '../Section'
+
+const links = [
+  { link: '/contact', label: 'Contact' },
+  { link: '/privacy', label: 'Privacy' },
+  { link: '/articles', label: 'Articles' },
+]
 
 export function Footer() {
-  const { section, wrapper } = styles()
+  const items = links.map((link) => <NavLink key={link.link} component={Link} href={link.link} label={link.label} />)
 
   return (
-    <Section className={section()} crosses customPaddings>
-      <div className={wrapper()}>
+    <Container size={'lg'} pb={'xl'}>
+      <Flex align={'center'} justify={'space-between'}>
         <Logo />
-        <nav className="ml-auto hidden items-center justify-center lg:flex">
-          {navigation.slice(0, -1).map((item: any) => (
-            <Link
-              className={
-                'px-12 py-8 font-code text-xs font-semibold uppercase leading-5 text-n-1/50 transition-colors hover:text-n-1'
-              }
-              href={item.url}
-              key={item.id}
-            >
-              {item.title}
-            </Link>
-          ))}
-        </nav>
-      </div>
-      <div className="lg:flex lg:items-center lg:justify-between">
-        <div className="caption hidden text-n-4 lg:block">© {new Date().getFullYear()} UI8</div>
-        <div className="-mx-4 flex justify-center">
-          {socials.map((item: any) => (
-            <a
-              className="mx-4 flex h-10 w-10 items-center justify-center rounded-full bg-n-7 transition-colors hover:bg-n-6"
-              href={item.url}
-              target="_blank"
-              key={item.id}
-              rel="noreferrer"
-            >
-              <Image src={item.iconUrl} width={16} height={16} alt={item.title} />
-            </a>
-          ))}
-        </div>
-      </div>
-    </Section>
+
+        <Flex align={'center'} visibleFrom={'sm'}>
+          {items}
+        </Flex>
+
+        <Group gap="xs" justify="flex-end" wrap="nowrap">
+          <ActionIcon size="lg" variant="transparent" radius="xl" color={'white'}>
+            <IconBrandInstagram size={18} stroke={1} />
+          </ActionIcon>
+          <ActionIcon size="lg" variant="transparent" radius="xl" color={'white'}>
+            <IconBrandLinkedin size={18} stroke={1} />
+          </ActionIcon>
+          <ActionIcon size="lg" variant="transparent" radius="xl" color={'white'}>
+            <IconBrandYoutube size={18} stroke={1} />
+          </ActionIcon>
+        </Group>
+      </Flex>
+    </Container>
   )
 }
